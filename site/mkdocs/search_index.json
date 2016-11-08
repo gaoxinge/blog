@@ -2,12 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "blog", 
-            "title": "blog"
-        }, 
-        {
-            "location": "/#blog", 
-            "text": "", 
+            "text": "Welcome, my friends. I'm Gao Xinge, and it's the first page of my blog.", 
             "title": "blog"
         }
     ]
