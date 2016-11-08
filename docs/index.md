@@ -1,5 +1,1 @@
 # blog
-
-## gaoxinge
-
-## THM-TheoreM

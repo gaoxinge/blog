@@ -2,23 +2,13 @@
     "docs": [
         {
             "location": "/", 
-            "text": "blog\n\n\ngaoxinge\n\n\nTHM-TheoreM", 
+            "text": "blog", 
             "title": "blog"
         }, 
         {
             "location": "/#blog", 
             "text": "", 
             "title": "blog"
-        }, 
-        {
-            "location": "/#gaoxinge", 
-            "text": "", 
-            "title": "gaoxinge"
-        }, 
-        {
-            "location": "/#thm-theorem", 
-            "text": "", 
-            "title": "THM-TheoreM"
         }
     ]
 }
