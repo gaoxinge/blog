@@ -2,23 +2,23 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nCommands\n\n\nProject layout", 
-            "title": "Home"
+            "text": "blog\n\n\ngaoxinge\n\n\nTHM-TheoreM", 
+            "title": "blog"
         }, 
         {
-            "location": "/#welcome-to-mkdocs", 
+            "location": "/#blog", 
             "text": "", 
-            "title": "Welcome to MkDocs"
+            "title": "blog"
         }, 
         {
-            "location": "/#commands", 
+            "location": "/#gaoxinge", 
             "text": "", 
-            "title": "Commands"
+            "title": "gaoxinge"
         }, 
         {
-            "location": "/#project-layout", 
+            "location": "/#thm-theorem", 
             "text": "", 
-            "title": "Project layout"
+            "title": "THM-TheoreM"
         }
     ]
 }
