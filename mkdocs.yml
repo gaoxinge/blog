@@ -2,4 +2,6 @@ site_name: blog
 pages:
 - 博客: index.md
 - 目录: index_目录.md
+- 董伟明的知乎回答: python_董伟明的知乎回答.md
+- 赖明星的知乎回答: python_赖明星的知乎回答.md
 theme: readthedocs
