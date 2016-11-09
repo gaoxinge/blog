@@ -1,1 +1,1 @@
-[blog](https://gaoxinge.github.io/blog/)
+[blog](https://gaoxinge.github.io/blog)

@@ -1,1 +1,0 @@
-Welcome, my friends. I'm Gao Xinge, and it's the first page of my blog.
