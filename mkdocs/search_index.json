@@ -32,8 +32,48 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/", 
-            "text": "\ufeff", 
+            "text": "\ufeff\u8fd9\u662f\u672c\u535a\u5ba2\u7684\u76ee\u5f55\n\n\npython\n\n\n\n\n\n\n\n\n\n\n\n\nc\n\n\nc++", 
             "title": "\u76ee\u5f55"
+        }, 
+        {
+            "location": "/index_\u76ee\u5f55/#python", 
+            "text": "", 
+            "title": "python"
+        }, 
+        {
+            "location": "/index_\u76ee\u5f55/#c", 
+            "text": "", 
+            "title": "c"
+        }, 
+        {
+            "location": "/index_\u76ee\u5f55/#c_1", 
+            "text": "", 
+            "title": "c++"
+        }, 
+        {
+            "location": "/python_python/", 
+            "text": "\ufeff\npython\n\u662f\u4e00\u79cd\u7f16\u7a0b\u8bed\u8a00\uff0c\u7531\nGuido van Rossum\n\u64b0\u5199\uff0c\u5e76\u7531\nPython Software Foundation\n\u7ef4\u62a4\u3002\n\n\n\u57fa\u672c\u4fe1\u606f\n\n\n\n\n\u5b98\u7f51\n\n\nGithub\n\n\n\n\n\u53d7\u6b22\u8fce\n\n\npython\u4e3a\u4ec0\u4e48\u5982\u6b64\u53d7\u6b22\u8fce\uff1f\u4e3b\u8981\u56e0\u4e3apython\u7b80\u6d01\uff0c\u6613\u8bfb\u7684\u8bed\u8a00\u7279\u6027\uff0c\u4ee5\u53ca\u5f3a\u5927\u7684\u7b2c\u4e09\u65b9\u5e93\u7684\u652f\u6301\u3002\n\n\n\u7b2c\u4e09\u65b9\u5e93\n\n\n\u89e3\u91ca\u5668\n\n\n\n\nPython\u89e3\u91ca\u5668\n\n\n\u4e3a\u4ec0\u4e48\u6709\u8fd9\u4e48\u591aPython", 
+            "title": "python"
+        }, 
+        {
+            "location": "/python_python/#_1", 
+            "text": "\u5b98\u7f51  Github", 
+            "title": "\u57fa\u672c\u4fe1\u606f"
+        }, 
+        {
+            "location": "/python_python/#_2", 
+            "text": "python\u4e3a\u4ec0\u4e48\u5982\u6b64\u53d7\u6b22\u8fce\uff1f\u4e3b\u8981\u56e0\u4e3apython\u7b80\u6d01\uff0c\u6613\u8bfb\u7684\u8bed\u8a00\u7279\u6027\uff0c\u4ee5\u53ca\u5f3a\u5927\u7684\u7b2c\u4e09\u65b9\u5e93\u7684\u652f\u6301\u3002", 
+            "title": "\u53d7\u6b22\u8fce"
+        }, 
+        {
+            "location": "/python_python/#_3", 
+            "text": "", 
+            "title": "\u7b2c\u4e09\u65b9\u5e93"
+        }, 
+        {
+            "location": "/python_python/#_4", 
+            "text": "Python\u89e3\u91ca\u5668  \u4e3a\u4ec0\u4e48\u6709\u8fd9\u4e48\u591aPython", 
+            "title": "\u89e3\u91ca\u5668"
         }, 
         {
             "location": "/python_\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54/", 
