@@ -1,4 +1,5 @@
 site_name: blog
 pages:
 - 博客: index.md
+- 目录: index_目录.md
 theme: readthedocs
