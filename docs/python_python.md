@@ -6,11 +6,11 @@ python有自己的[官网](https://www.python.org)和[Github](https://github.com
 
 ## 受欢迎
 
-python为什么如此受欢迎？主要因为python简洁，易读的语言特性，以及有强大的第三方库支持。
+python为什么如此受欢迎？主要因为python简洁，易读的语言特性，以及强大的第三方库支持。
 
 ## 解释器
 
-python拥有许多不同的实现，比如
+python有许多不同的实现，比如
 
 ```
 解释器                  实现语言
@@ -23,4 +23,4 @@ IronPython                C#
 MicroPython               ?
 ```
 
-其中CPython是用的最多的，也是官网支持的解释器。具体可参看[为什么有这么多Python](http://www.open-open.com/lib/view/open1380418623307.html)。
+其中CPython是用的最多的，也是官网支持的解释器，可参见[为什么有这么多Python](http://www.open-open.com/lib/view/open1380418623307.html)。
