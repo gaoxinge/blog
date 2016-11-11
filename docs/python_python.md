@@ -2,16 +2,25 @@
 
 ## 基本信息
 
-- [官网](https://www.python.org)
-- [Github](https://github.com/python)
+python有自己的[官网](https://www.python.org)和[Github](https://github.com/python)，均由python software foundation维护。
 
 ## 受欢迎
 
-python为什么如此受欢迎？主要因为python简洁，易读的语言特性，以及强大的第三方库的支持。
-
-### 第三方库
+python为什么如此受欢迎？主要因为python简洁，易读的语言特性，以及有强大的第三方库支持。
 
 ## 解释器
 
-- [Python解释器](http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001407375700558864523211a5049c4983176de304549c8000)
-- [为什么有这么多Python](http://www.open-open.com/lib/view/open1380418623307.html)
+python拥有许多不同的实现，比如
+
+```
+解释器                  实现语言
+CPython                   C
+PyPy                      Python
+Jython                    Java
+Brython                   JavaScript
+RubyPython                Ruby
+IronPython                C#
+MicroPython               ?
+```
+
+其中CPython是用的最多的，也是官网支持的解释器。具体可参看[为什么有这么多Python](http://www.open-open.com/lib/view/open1380418623307.html)。
