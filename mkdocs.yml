@@ -5,4 +5,6 @@ pages:
 - python: python_python.md
 - 董伟明的知乎回答: python_董伟明的知乎回答.md
 - 赖明星的知乎回答: python_赖明星的知乎回答.md
+- 缩进: python_缩进.md
+- 编码: python_编码.md
 theme: readthedocs
