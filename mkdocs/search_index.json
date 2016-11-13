@@ -87,7 +87,7 @@
         }, 
         {
             "location": "/python_python/", 
-            "text": "\ufeff\npython\n\u662f\u4e00\u79cd\u7f16\u7a0b\u8bed\u8a00\uff0c\u7531\nGuido van Rossum\n\u64b0\u5199\uff0c\u5e76\u7531\nPython Software Foundation\n\u7ef4\u62a4\u3002\n\n\n\u57fa\u672c\u4fe1\u606f\n\n\npython\u6709\u81ea\u5df1\u7684\n\u5b98\u7f51\n\u548c\nGithub\n\uff0c\u5747\u7531python software foundation\u7ef4\u62a4\u3002\n\n\n\u53d7\u6b22\u8fce\n\n\npython\u4e3a\u4ec0\u4e48\u5982\u6b64\u53d7\u6b22\u8fce\uff1f\u4e3b\u8981\u56e0\u4e3apython\u7b80\u6d01\uff0c\u6613\u8bfb\u7684\u8bed\u8a00\u7279\u6027\uff0c\u4ee5\u53ca\u5f3a\u5927\u7684\u7b2c\u4e09\u65b9\u5e93\u652f\u6301\u3002\n\n\n\u89e3\u91ca\u5668\n\n\npython\u6709\u8bb8\u591a\u4e0d\u540c\u7684\u5b9e\u73b0\uff0c\u6bd4\u5982\n\n\n\u89e3\u91ca\u5668                  \u5b9e\u73b0\u8bed\u8a00\nCPython                   C\nPyPy                      Python\nJython                    Java\nBrython                   JavaScript\nRubyPython                Ruby\nIronPython                C#\nMicroPython               ?\n\n\n\n\n\u5176\u4e2dCPython\u662f\u7528\u7684\u6700\u591a\u7684\uff0c\u4e5f\u662f\u5b98\u7f51\u652f\u6301\u7684\u89e3\u91ca\u5668\uff0c\u53ef\u53c2\u89c1\n\u4e3a\u4ec0\u4e48\u6709\u8fd9\u4e48\u591aPython\n\u3002", 
+            "text": "\ufeff\npython\n\u662f\u4e00\u79cd\u7f16\u7a0b\u8bed\u8a00\uff0c\u7531\nGuido van Rossum\n\u64b0\u5199\uff0c\u5e76\u7531\nPython Software Foundation\n\u7ef4\u62a4\u3002\n\n\n\u57fa\u672c\u4fe1\u606f\n\n\npython\u6709\u81ea\u5df1\u7684\n\u5b98\u7f51\n\u548c\nGithub\n\uff0c\u5747\u7531python software foundation\u7ef4\u62a4\u3002\n\n\n\u53d7\u6b22\u8fce\n\n\npython\u4e3a\u4ec0\u4e48\u5982\u6b64\u53d7\u6b22\u8fce\uff1f\u4e3b\u8981\u56e0\u4e3apython\u7b80\u6d01\uff0c\u6613\u8bfb\u7684\u8bed\u8a00\u7279\u6027\uff0c\u4ee5\u53ca\u5f3a\u5927\u7684\u7b2c\u4e09\u65b9\u5e93\u652f\u6301\u3002\n\n\n\u89e3\u91ca\u5668\n\n\npython\u6709\u8bb8\u591a\u4e0d\u540c\u7684\u5b9e\u73b0\uff0c\u6bd4\u5982\n\n\n\u89e3\u91ca\u5668                  \u5b9e\u73b0\u8bed\u8a00\nCPython                   C\nPyPy                      Python\nJython                    Java\nBrython                   JavaScript\nRubyPython                Ruby\nIronPython                C#\nMicroPython               ?\n\n\n\n\n\u5176\u4e2dCPython\u662f\u7528\u7684\u6700\u591a\u7684\uff0c\u4e5f\u662f\u5b98\u7f51\u652f\u6301\u7684\u89e3\u91ca\u5668\uff0c\u53ef\u53c2\u89c1\n\u4e3a\u4ec0\u4e48\u6709\u8fd9\u4e48\u591aPython\n\u3002\n\n\n\u5b89\u88c5\n\n\n\n\n\n\n\u89e3\u91ca\u5668\n\n\n\n\n\n\n\u7f16\u8f91\u5668", 
             "title": "python"
         }, 
         {
@@ -104,6 +104,11 @@
             "location": "/python_python/#_3", 
             "text": "python\u6709\u8bb8\u591a\u4e0d\u540c\u7684\u5b9e\u73b0\uff0c\u6bd4\u5982  \u89e3\u91ca\u5668                  \u5b9e\u73b0\u8bed\u8a00\nCPython                   C\nPyPy                      Python\nJython                    Java\nBrython                   JavaScript\nRubyPython                Ruby\nIronPython                C#\nMicroPython               ?  \u5176\u4e2dCPython\u662f\u7528\u7684\u6700\u591a\u7684\uff0c\u4e5f\u662f\u5b98\u7f51\u652f\u6301\u7684\u89e3\u91ca\u5668\uff0c\u53ef\u53c2\u89c1 \u4e3a\u4ec0\u4e48\u6709\u8fd9\u4e48\u591aPython \u3002", 
             "title": "\u89e3\u91ca\u5668"
+        }, 
+        {
+            "location": "/python_python/#_4", 
+            "text": "\u89e3\u91ca\u5668    \u7f16\u8f91\u5668", 
+            "title": "\u5b89\u88c5"
         }, 
         {
             "location": "/python_\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54/", 
@@ -152,13 +157,63 @@
         }, 
         {
             "location": "/c_c/", 
-            "text": "\ufeff", 
+            "text": "\ufeff## \u6807\u51c6\n\n\n\u7f16\u8bd1\u5668\n\n\nc\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709\n\n\n\n\ngcc\uff1aGNU\n\n\ncl\uff1aMicrosoft\n\n\nclang\n\n\n\n\nUNIX\n\n\nUNIX\u81ea\u5e26\u7f16\u8bd1\u5668cc\uff0c\u4e0d\u5c5e\u4e8e\u4e0a\u8ff0\u7684\u4efb\u4f55\u4e00\u79cd\u3002\n\n\nLinux\n\n\nLinux\u81ea\u5e26\u7f16\u8bd1\u5668gcc\uff0c\u4e0b\u9762\u8bf4\u4e00\u4e0b\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ncc/gcc/g++ test.c # \u751f\u6210a.out\n./a.out           # \u8fd0\u884c\n\ncc/gcc/g++ -o test test.c # \u751f\u6210test\n./test                    # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho $?\n\n\n\n\nWindows\n\n\nWindows\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528vc\uff0cvs\u7b49ide\uff0c\u63d0\u4f9b\u7f16\u8bd1\u5668cl\uff0c\u4f46\u7531\u4e8e\u4f53\u79ef\u8fc7\u5927\uff0c\u672c\u4eba\u5e76\u6ca1\u6709\u5b89\u88c5\u3002\n\n\n\u672c\u4eba\u5b89\u88c5\u4e86MinGW+Notepad++\uff0c\u5373\u4f7f\u7528gcc\uff0c\u4e0b\u9762\u662f\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ngcc/g++ test.c # \u751f\u6210a.exe\na/a.exe        # \u8fd0\u884c\n\ngcc/g++ -o test test.c # \u751f\u6210test.exe\ntest/test.exe          # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho %ERRORLEVEL%\n\n\n\n\nMac\n\n\nMac\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528\u96c6\u6210\u73af\u5883Xcode\uff0c\u5176\u63d0\u4f9b\u591a\u79cdc\u7f16\u8bd1\u5668\u3002", 
             "title": "c"
         }, 
         {
+            "location": "/c_c/#_1", 
+            "text": "c\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709   gcc\uff1aGNU  cl\uff1aMicrosoft  clang", 
+            "title": "\u7f16\u8bd1\u5668"
+        }, 
+        {
+            "location": "/c_c/#unix", 
+            "text": "UNIX\u81ea\u5e26\u7f16\u8bd1\u5668cc\uff0c\u4e0d\u5c5e\u4e8e\u4e0a\u8ff0\u7684\u4efb\u4f55\u4e00\u79cd\u3002", 
+            "title": "UNIX"
+        }, 
+        {
+            "location": "/c_c/#linux", 
+            "text": "Linux\u81ea\u5e26\u7f16\u8bd1\u5668gcc\uff0c\u4e0b\u9762\u8bf4\u4e00\u4e0b\u6ce8\u610f\u4e8b\u9879   \u540e\u7f00c  \u547d\u4ee4   cc/gcc/g++ test.c # \u751f\u6210a.out\n./a.out           # \u8fd0\u884c\n\ncc/gcc/g++ -o test test.c # \u751f\u6210test\n./test                    # \u8fd0\u884c   \u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return   echo $?", 
+            "title": "Linux"
+        }, 
+        {
+            "location": "/c_c/#windows", 
+            "text": "Windows\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528vc\uff0cvs\u7b49ide\uff0c\u63d0\u4f9b\u7f16\u8bd1\u5668cl\uff0c\u4f46\u7531\u4e8e\u4f53\u79ef\u8fc7\u5927\uff0c\u672c\u4eba\u5e76\u6ca1\u6709\u5b89\u88c5\u3002  \u672c\u4eba\u5b89\u88c5\u4e86MinGW+Notepad++\uff0c\u5373\u4f7f\u7528gcc\uff0c\u4e0b\u9762\u662f\u6ce8\u610f\u4e8b\u9879   \u540e\u7f00c  \u547d\u4ee4   gcc/g++ test.c # \u751f\u6210a.exe\na/a.exe        # \u8fd0\u884c\n\ngcc/g++ -o test test.c # \u751f\u6210test.exe\ntest/test.exe          # \u8fd0\u884c   \u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return   echo %ERRORLEVEL%", 
+            "title": "Windows"
+        }, 
+        {
+            "location": "/c_c/#mac", 
+            "text": "Mac\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528\u96c6\u6210\u73af\u5883Xcode\uff0c\u5176\u63d0\u4f9b\u591a\u79cdc\u7f16\u8bd1\u5668\u3002", 
+            "title": "Mac"
+        }, 
+        {
             "location": "/c++_c++/", 
-            "text": "\ufeff", 
+            "text": "\ufeff## \u6807\u51c6\n\n\n\u7f16\u8bd1\u5668\n\n\nc++\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709\n\n\n\n\ng++\uff1aGNU\n\n\ncl\uff1aMicrosoft\n\n\nclang\n\n\n\n\nUNIX\n\n\nUNIX\u81ea\u5e26\u7f16\u8bd1\u5668cc\uff0c \u4e0d\u5c5e\u4e8e\u4e0a\u8ff0\u7684\u4efb\u4f55\u4e00\u79cd\u3002\n\n\nLinux\n\n\nLinux\u81ea\u5e26\u7f16\u8bd1\u5668g++\uff0c\u4e0b\u9762\u8bf4\u4e00\u4e0b\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00cc\uff0ccp\uff0ccpp\uff0ccxx\uff0cC\n\n\n\u547d\u4ee4\n\n\n\n\ncc/gcc/g++ test.cc # \u751f\u6210a.out\n./a.out            # \u8fd0\u884c\n\ncc/gcc/g++ -o test test.cc # \u751f\u6210test\n./test                     # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho $?\n\n\n\n\nWindows\n\n\nWindows\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528vc\uff0cvs\u7b49ide\uff0c\u63d0\u4f9b\u7f16\u8bd1\u5668cl\uff0c\u4f46\u7531\u4e8e\u4f53\u79ef\u8fc7\u5927\uff0c\u672c\u4eba\u5e76\u6ca1\u6709\u5b89\u88c5\u3002\n\n\n\u672c\u4eba\u5b89\u88c5\u4e86MinGW+Notepad++\uff0c\u5373\u4f7f\u7528gcc\uff0c\u4e0b\u9762\u662f\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00cc\uff0ccp\uff0ccpp\uff0ccxx\uff0cC\n\n\n\u547d\u4ee4\n\n\n\n\ngcc/g++ test.cc # \u751f\u6210a.exe\na/a.exe         # \u8fd0\u884c\n\ngcc/g++ -o test test.cc # \u751f\u6210test.exe\ntest/test.exe           # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho %ERRORLEVEL%\n\n\n\n\nMac\n\n\nMac\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528\u96c6\u6210\u73af\u5883Xcode\uff0c\u5176\u63d0\u4f9b\u591a\u79cdc++\u7f16\u8bd1\u5668\u3002", 
             "title": "c++"
+        }, 
+        {
+            "location": "/c++_c++/#_1", 
+            "text": "c++\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709   g++\uff1aGNU  cl\uff1aMicrosoft  clang", 
+            "title": "\u7f16\u8bd1\u5668"
+        }, 
+        {
+            "location": "/c++_c++/#unix", 
+            "text": "UNIX\u81ea\u5e26\u7f16\u8bd1\u5668cc\uff0c \u4e0d\u5c5e\u4e8e\u4e0a\u8ff0\u7684\u4efb\u4f55\u4e00\u79cd\u3002", 
+            "title": "UNIX"
+        }, 
+        {
+            "location": "/c++_c++/#linux", 
+            "text": "Linux\u81ea\u5e26\u7f16\u8bd1\u5668g++\uff0c\u4e0b\u9762\u8bf4\u4e00\u4e0b\u6ce8\u610f\u4e8b\u9879   \u540e\u7f00cc\uff0ccp\uff0ccpp\uff0ccxx\uff0cC  \u547d\u4ee4   cc/gcc/g++ test.cc # \u751f\u6210a.out\n./a.out            # \u8fd0\u884c\n\ncc/gcc/g++ -o test test.cc # \u751f\u6210test\n./test                     # \u8fd0\u884c   \u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return   echo $?", 
+            "title": "Linux"
+        }, 
+        {
+            "location": "/c++_c++/#windows", 
+            "text": "Windows\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528vc\uff0cvs\u7b49ide\uff0c\u63d0\u4f9b\u7f16\u8bd1\u5668cl\uff0c\u4f46\u7531\u4e8e\u4f53\u79ef\u8fc7\u5927\uff0c\u672c\u4eba\u5e76\u6ca1\u6709\u5b89\u88c5\u3002  \u672c\u4eba\u5b89\u88c5\u4e86MinGW+Notepad++\uff0c\u5373\u4f7f\u7528gcc\uff0c\u4e0b\u9762\u662f\u6ce8\u610f\u4e8b\u9879   \u540e\u7f00cc\uff0ccp\uff0ccpp\uff0ccxx\uff0cC  \u547d\u4ee4   gcc/g++ test.cc # \u751f\u6210a.exe\na/a.exe         # \u8fd0\u884c\n\ngcc/g++ -o test test.cc # \u751f\u6210test.exe\ntest/test.exe           # \u8fd0\u884c   \u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return   echo %ERRORLEVEL%", 
+            "title": "Windows"
+        }, 
+        {
+            "location": "/c++_c++/#mac", 
+            "text": "Mac\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528\u96c6\u6210\u73af\u5883Xcode\uff0c\u5176\u63d0\u4f9b\u591a\u79cdc++\u7f16\u8bd1\u5668\u3002", 
+            "title": "Mac"
         }
     ]
 }

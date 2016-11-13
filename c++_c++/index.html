@@ -108,6 +108,21 @@
         
             <ul>
             
+                <li class="toctree-l3"><a href="#_1">编译器</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#unix">UNIX</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#linux">Linux</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#windows">Windows</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#mac">Mac</a></li>
+                
+            
             </ul>
         
     </li>
@@ -145,7 +160,57 @@
           <div role="main">
             <div class="section">
               
-                <p>﻿</p>
+                <p>﻿## 标准</p>
+<h2 id="_1">编译器</h2>
+<p>c++的编译器主要有</p>
+<ul>
+<li>g++：GNU</li>
+<li>cl：Microsoft</li>
+<li>clang</li>
+</ul>
+<h2 id="unix">UNIX</h2>
+<p>UNIX自带编译器cc， 不属于上述的任何一种。</p>
+<h2 id="linux">Linux</h2>
+<p>Linux自带编译器g++，下面说一下注意事项</p>
+<ul>
+<li>后缀cc，cp，cpp，cxx，C</li>
+<li>命令</li>
+</ul>
+<pre><code>cc/gcc/g++ test.cc # 生成a.out
+./a.out            # 运行
+
+cc/gcc/g++ -o test test.cc # 生成test
+./test                     # 运行
+</code></pre>
+
+<ul>
+<li>查看main函数中的return</li>
+</ul>
+<pre><code>echo $?
+</code></pre>
+
+<h2 id="windows">Windows</h2>
+<p>Windows无自带编译器，推荐使用vc，vs等ide，提供编译器cl，但由于体积过大，本人并没有安装。</p>
+<p>本人安装了MinGW+Notepad++，即使用gcc，下面是注意事项</p>
+<ul>
+<li>后缀cc，cp，cpp，cxx，C</li>
+<li>命令</li>
+</ul>
+<pre><code>gcc/g++ test.cc # 生成a.exe
+a/a.exe         # 运行
+
+gcc/g++ -o test test.cc # 生成test.exe
+test/test.exe           # 运行
+</code></pre>
+
+<ul>
+<li>查看main函数中的return</li>
+</ul>
+<pre><code>echo %ERRORLEVEL%
+</code></pre>
+
+<h2 id="mac">Mac</h2>
+<p>Mac无自带编译器，推荐使用集成环境Xcode，其提供多种c++编译器。</p>
               
             </div>
           </div>
