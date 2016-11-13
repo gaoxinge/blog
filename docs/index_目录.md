@@ -10,10 +10,10 @@
 
 ## c
 
-- [c]()
+- [c](https://gaoxinge.github.io/blog/c_c/)
 
 ## c++
 
-- [c++]()
+- [c++](https://gaoxinge.github.io/blog/c%2B%2B_c%2B%2B/)
 
 ## 算法
