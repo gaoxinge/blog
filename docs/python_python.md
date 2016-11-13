@@ -24,3 +24,9 @@ MicroPython               ?
 ```
 
 其中CPython是用的最多的，也是官网支持的解释器，可参见[为什么有这么多Python](http://www.open-open.com/lib/view/open1380418623307.html)。
+
+## 安装
+
+- [解释器](https://www.python.org/downloads)
+
+- [编辑器](https://notepad-plus-plus.org)
