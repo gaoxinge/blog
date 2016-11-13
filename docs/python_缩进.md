@@ -23,17 +23,14 @@ with open('***.py') as f:
   - 自动缩进：无
   - 输入制表符：\t
   - 编译时的制表符：八个空格
-
 - notepad++
   - 自动缩进：\t
   - 输入制表符：\t
   - 编译时的制表符：八个空格
-
 - idle（python自带ide）
   - 自动缩进：四个空格
   - 输入制表符：四个空格
   - 编译时的制表符：\t
-
 - command line（python自带shell）
   - 自动缩进：无
   - 输入制表符：\t
@@ -60,5 +57,5 @@ def f(a,b):
 
 ## 结果
 
-综上，影响代码最关键的因素为编辑器对自动缩进和制表符的解读不同，解决办法是将notepad++的自动缩进和制表符均设置成四个空格，具体参见[Notepad++编辑Pyhton文件的自动缩进的问题（图文）更新到v6.7.9.2](http://blog.csdn.net/seanchan/article/details/7357462)
+综上，影响代码最关键的因素为编辑器对自动缩进和制表符的解读不同，解决办法是将notepad++的自动缩进和制表符均设置成四个空格，具体参见[Notepad++编辑Pyhton文件的自动缩进的问题（图文）更新到v6.7.9.2](http://blog.csdn.net/seanchan/article/details/7357462)。
 
