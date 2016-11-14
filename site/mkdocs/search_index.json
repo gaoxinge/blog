@@ -112,8 +112,23 @@
         }, 
         {
             "location": "/python_\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54/", 
-            "text": "\ufeff\u6574\u7406\u4e86\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\u3002\n\n\n\n\nPython\u5f00\u53d1\u4e2d\u6709\u54ea\u4e9b\u9ad8\u7ea7\u6280\u5de7\n\n\nPython\u6709\u54ea\u4e9b\u4f18\u96c5\u7684\u4ee3\u7801\u5b9e\u73b0", 
+            "text": "\ufeff\u6574\u7406\u4e86\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\u3002\n\n\n\n\nPython\u5f00\u53d1\u4e2d\u6709\u54ea\u4e9b\u9ad8\u7ea7\u6280\u5de7\n\n\nPython\u6709\u54ea\u4e9b\u4f18\u96c5\u7684\u4ee3\u7801\u5b9e\u73b0\n\n\n\n\n\u4e0a\u4e0b\u6587\u7ba1\u7406\u5668\n\n\nBad:\n\n\nf = open('tmp/a', 'a')\nf.write('hello world')\nf.close()\n\n\n\n\nGood:\n\n\nwith open('/tmp/a', 'a') as f:\n    f.write('hello world')\n\n\n\n\nBad:\n\n\nclass OpenContext(object):\n    def __init__(self, filename, mode):\n        self.fp = open(filename, mode)\n\n    def __enter__(self):\n        return self.fp\n\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        self.fp.close()\n\nwith OpenContext('/tmp/a', 'a') as f:\n    f.write('hello world')\n\n\n\n\nGood:\n\n\nfrom contextlib import contextmanager\n\n@contextmanager\ndef make_open_context(filename, mode):\n    fp = open(filename, mode)\n    try:\n        yield fp\n    finally:\n        fp.close()\n\nwith make_open_context('/tmp/a', 'a') as f:\n    f.write('hello world')\n\n\n\n\ntotal_ordering\n\n\nfrom functools import total_ordering\n\n@total_ordering\nclass Size(object):\n    def __init__(self, value):\n        self.value = value\n\n    def __lt__(self, other):\n        return self.value \n other.value\n\n    def __eq__(self, other):\n        return self.value == other.value\n\n\n\n\ninspect\n\n\nimport inspect\n\ndef add(a, b=1):\n    return a + b\n\nprint inspect.getsourcelines(add)\nprint inspect.getargspec(add)\nprint inspect.getcallargs(add, 10, 2)\nprint inspect.isclass(add)\nprint inspect.isfunction(add)", 
             "title": "\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54"
+        }, 
+        {
+            "location": "/python_\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54/#_1", 
+            "text": "Bad:  f = open('tmp/a', 'a')\nf.write('hello world')\nf.close()  Good:  with open('/tmp/a', 'a') as f:\n    f.write('hello world')  Bad:  class OpenContext(object):\n    def __init__(self, filename, mode):\n        self.fp = open(filename, mode)\n\n    def __enter__(self):\n        return self.fp\n\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        self.fp.close()\n\nwith OpenContext('/tmp/a', 'a') as f:\n    f.write('hello world')  Good:  from contextlib import contextmanager\n\n@contextmanager\ndef make_open_context(filename, mode):\n    fp = open(filename, mode)\n    try:\n        yield fp\n    finally:\n        fp.close()\n\nwith make_open_context('/tmp/a', 'a') as f:\n    f.write('hello world')", 
+            "title": "\u4e0a\u4e0b\u6587\u7ba1\u7406\u5668"
+        }, 
+        {
+            "location": "/python_\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54/#total_ordering", 
+            "text": "from functools import total_ordering\n\n@total_ordering\nclass Size(object):\n    def __init__(self, value):\n        self.value = value\n\n    def __lt__(self, other):\n        return self.value   other.value\n\n    def __eq__(self, other):\n        return self.value == other.value", 
+            "title": "total_ordering"
+        }, 
+        {
+            "location": "/python_\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54/#inspect", 
+            "text": "import inspect\n\ndef add(a, b=1):\n    return a + b\n\nprint inspect.getsourcelines(add)\nprint inspect.getargspec(add)\nprint inspect.getcallargs(add, 10, 2)\nprint inspect.isclass(add)\nprint inspect.isfunction(add)", 
+            "title": "inspect"
         }, 
         {
             "location": "/python_\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54/", 
