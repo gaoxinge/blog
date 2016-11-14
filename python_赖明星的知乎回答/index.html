@@ -100,19 +100,22 @@
                 <li class="toctree-l3"><a href="#_1">切片</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_2">交换</a></li>
+                <li class="toctree-l3"><a href="#_2">列表推导式</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_3">列表推导式</a></li>
+                <li class="toctree-l3"><a href="#_3">内置函数</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_4">上下文管理器</a></li>
+                <li class="toctree-l3"><a href="#_4">交换</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_5">装饰器</a></li>
+                <li class="toctree-l3"><a href="#_5">上下文管理器</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_6">动态类型语言</a></li>
+                <li class="toctree-l3"><a href="#_6">装饰器</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_7">动态类型语言</a></li>
                 
             
             </ul>
@@ -208,18 +211,7 @@ Namespaces are one honking great idea -- let's do more of those!
 [8, 7, 6, 5, 4]
 </code></pre>
 
-<h2 id="_2">交换</h2>
-<p>Bad:</p>
-<pre><code class="python">t = a
-a = b
-b = t
-</code></pre>
-
-<p>Good:</p>
-<pre><code class="python">a, b = b, a
-</code></pre>
-
-<h2 id="_3">列表推导式</h2>
+<h2 id="_2">列表推导式</h2>
 <pre><code class="python">&gt;&gt;&gt; [i*i for i in range(1, 21) if i% 2 == 0]
 [4, 16, 36, 64, 100, 144, 196, 256, 324, 400] # 列表
 &gt;&gt;&gt; {i*i for i in range(1, 21) if i% 2 == 0}
@@ -232,7 +224,67 @@ set([64, 144, 36, 100, 324, 256, 16, 400, 196, 4]) # 集合
 {item: os.path.realpath(item) for item in os.listdir(os.path.expanduser('~')) if os.path.isdir(item)}
 </code></pre>
 
-<h2 id="_4">上下文管理器</h2>
+<h2 id="_3">内置函数</h2>
+<ul>
+<li>sum</li>
+<li>sort</li>
+<li>max</li>
+<li>min</li>
+<li>any</li>
+</ul>
+<pre><code class="python">any(...)
+    any(iterable) -&gt; bool
+
+    Return True if bool(x) is True for any x in the iterable.
+    If the iterable is empty, return False.
+</code></pre>
+
+<ul>
+<li>all</li>
+</ul>
+<pre><code class="python">all(...)
+    all(iterable) -&gt; bool
+
+    Return True if bool(x) is True for all values x in the iterable.
+    If the iterable is empty, return True.
+</code></pre>
+
+<ul>
+<li>enumerate</li>
+</ul>
+<pre><code class="python">L = [i*i for i in range(5)]
+
+for index, data in enumerate(L):
+    print index + 1, ':', data
+
+for index, data in enumerate(L,1):
+    print index, ':', data
+</code></pre>
+
+<ul>
+<li>reversed</li>
+</ul>
+<pre><code class="python">L = [1, 2, 3, 4]
+
+for item in L[::-1]:
+    print item
+
+for item in reversed(L):
+    print item
+</code></pre>
+
+<h2 id="_4">交换</h2>
+<p>Bad:</p>
+<pre><code class="python">t = a
+a = b
+b = t
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">a, b = b, a
+</code></pre>
+
+<h2 id="_5">上下文管理器</h2>
 <p>Bad:</p>
 <pre><code class="python">try:
     f = open('/path/to/file', 'r')
@@ -247,7 +299,7 @@ finally:
     print f.read()
 </code></pre>
 
-<h2 id="_5">装饰器</h2>
+<h2 id="_6">装饰器</h2>
 <p>Bad:</p>
 <pre><code class="python">class Store(object):
     def get_food(self, username, food):
@@ -294,7 +346,7 @@ class Storage(object):
         return storage.put(food)
 </code></pre>
 
-<h2 id="_6">动态类型语言</h2>
+<h2 id="_7">动态类型语言</h2>
 <p>Bad:</p>
 <pre><code class="python">def a():
     return 'a'
