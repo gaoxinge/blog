@@ -45,6 +45,71 @@ Namespaces are one honking great idea -- let's do more of those!
 [8, 7, 6, 5, 4]
 ```
 
+## 列表推导式
+
+```python
+>>> [i*i for i in range(1, 21) if i% 2 == 0]
+[4, 16, 36, 64, 100, 144, 196, 256, 324, 400] # 列表
+>>> {i*i for i in range(1, 21) if i% 2 == 0}
+set([64, 144, 36, 100, 324, 256, 16, 400, 196, 4]) # 集合
+>>> {i:i*i for i in range(1, 21) if i% 2 == 0}
+{2: 4, 4: 16, 6: 36, 8: 64, 10: 100, 12: 144, 14: 196, 16: 256, 18: 324, 20: 400} # 字典
+
+[item for item in os.listdir(os.path.expanduser('~')) if os.path.isfile(item)]
+[item for item in os.listdir(os.path.expanduser('~')) if os.path.isdir(item)]
+{item: os.path.realpath(item) for item in os.listdir(os.path.expanduser('~')) if os.path.isdir(item)}
+```
+
+## 内置函数
+
+- sum
+- sort
+- max
+- min
+- any
+
+```python
+any(...)
+    any(iterable) -> bool
+    
+    Return True if bool(x) is True for any x in the iterable.
+    If the iterable is empty, return False.
+```
+
+- all
+
+```python
+all(...)
+    all(iterable) -> bool
+    
+    Return True if bool(x) is True for all values x in the iterable.
+    If the iterable is empty, return True.
+```
+
+- enumerate
+
+```python
+L = [i*i for i in range(5)]
+
+for index, data in enumerate(L):
+    print index + 1, ':', data
+
+for index, data in enumerate(L,1):
+    print index, ':', data
+```
+
+- reversed
+
+```python
+L = [1, 2, 3, 4]
+
+for item in L[::-1]:
+    print item
+
+for item in reversed(L):
+    print item
+```
+
 ## 交换
 
 Bad:
@@ -59,21 +124,6 @@ Good:
 
 ```python
 a, b = b, a
-```
-
-## 列表推导式
-
-```python
->>> [i*i for i in range(1, 21) if i% 2 == 0]
-[4, 16, 36, 64, 100, 144, 196, 256, 324, 400] # 列表
->>> {i*i for i in range(1, 21) if i% 2 == 0}
-set([64, 144, 36, 100, 324, 256, 16, 400, 196, 4]) # 集合
->>> {i:i*i for i in range(1, 21) if i% 2 == 0}
-{2: 4, 4: 16, 6: 36, 8: 64, 10: 100, 12: 144, 14: 196, 16: 256, 18: 324, 20: 400} # 字典
-
-[item for item in os.listdir(os.path.expanduser('~')) if os.path.isfile(item)]
-[item for item in os.listdir(os.path.expanduser('~')) if os.path.isdir(item)]
-{item: os.path.realpath(item) for item in os.listdir(os.path.expanduser('~')) if os.path.isdir(item)}
 ```
 
 ## 上下文管理器
