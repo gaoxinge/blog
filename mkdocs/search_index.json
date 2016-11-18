@@ -32,12 +32,12 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/", 
-            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u5e93\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\n\n\u7b97\u6cd5", 
+            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u5bfc\u5165\n\n\n\u5e93\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\n\n\u7b97\u6cd5", 
             "title": "\u76ee\u5f55"
         }, 
         {
             "location": "/index_\u76ee\u5f55/#python", 
-            "text": "python  \u5e93  \u7f29\u8fdb  \u7f16\u7801  \u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54  \u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54", 
+            "text": "python  \u89c4\u8303  \u7f29\u8fdb  \u7f16\u7801  \u5bfc\u5165  \u5e93  \u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54  \u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54", 
             "title": "python"
         }, 
         {
@@ -57,7 +57,7 @@
         }, 
         {
             "location": "/python_python/", 
-            "text": "\ufeff\npython\n\u662f\u4e00\u79cd\u7f16\u7a0b\u8bed\u8a00\uff0c\u7531\nGuido van Rossum\n\u64b0\u5199\uff0c\u5e76\u7531\nPython Software Foundation\n\u7ef4\u62a4\u3002\n\n\n\u57fa\u672c\u4fe1\u606f\n\n\npython\u6709\u81ea\u5df1\u7684\n\u5b98\u7f51\n\u548c\nGithub\n\uff0c\u5747\u7531python software foundation\u7ef4\u62a4\u3002\n\n\n\u53d7\u6b22\u8fce\n\n\npython\u4e3a\u4ec0\u4e48\u5982\u6b64\u53d7\u6b22\u8fce\uff1f\u4e3b\u8981\u56e0\u4e3apython\u7b80\u6d01\uff0c\u6613\u8bfb\u7684\u8bed\u8a00\u7279\u6027\uff0c\u4ee5\u53ca\u5f3a\u5927\u7684\u7b2c\u4e09\u65b9\u5e93\u652f\u6301\u3002\n\n\n\u89e3\u91ca\u5668\n\n\npython\u6709\u8bb8\u591a\u4e0d\u540c\u7684\u5b9e\u73b0\uff0c\u6bd4\u5982\n\n\n\u89e3\u91ca\u5668                  \u5b9e\u73b0\u8bed\u8a00\nCPython                   C\nPyPy                      Python\nJython                    Java\nBrython                   JavaScript\nRubyPython                Ruby\nIronPython                C#\nMicroPython               ?\n\n\n\n\n\u5176\u4e2dCPython\u662f\u7528\u7684\u6700\u591a\u7684\uff0c\u4e5f\u662f\u5b98\u7f51\u652f\u6301\u7684\u89e3\u91ca\u5668\uff0c\u53ef\u53c2\u89c1\n\u4e3a\u4ec0\u4e48\u6709\u8fd9\u4e48\u591aPython\n\u3002\n\n\n\u5b89\u88c5\n\n\n\n\n\n\n\u89e3\u91ca\u5668\n\n\n\n\n\n\n\u7f16\u8f91\u5668", 
+            "text": "\ufeff\npython\n\u662f\u4e00\u79cd\u7f16\u7a0b\u8bed\u8a00\uff0c\u7531\nGuido van Rossum\n\u64b0\u5199\uff0c\u5e76\u7531\nPython Software Foundation\n\u7ef4\u62a4\u3002\n\n\n\u57fa\u672c\u4fe1\u606f\n\n\npython\u6709\u81ea\u5df1\u7684\n\u5b98\u7f51\n\u548c\nGithub\n\uff0c\u5747\u7531python software foundation\u7ef4\u62a4\u3002\n\n\n\u53d7\u6b22\u8fce\n\n\npython\u4e3a\u4ec0\u4e48\u5982\u6b64\u53d7\u6b22\u8fce\uff1f\u4e3b\u8981\u56e0\u4e3apython\u7b80\u6d01\uff0c\u6613\u8bfb\u7684\u8bed\u8a00\u7279\u6027\uff0c\u4ee5\u53ca\u5f3a\u5927\u7684\u7b2c\u4e09\u65b9\u5e93\u652f\u6301\u3002\n\n\n\u89e3\u91ca\u5668\n\n\npython\u6709\u8bb8\u591a\u4e0d\u540c\u7684\u5b9e\u73b0\uff0c\u6bd4\u5982\n\n\n\u89e3\u91ca\u5668                  \u5b9e\u73b0\u8bed\u8a00\nCPython                   C\nPyPy                      Python\nJython                    Java\nBrython                   JavaScript\nRubyPython                Ruby\nIronPython                C#\nMicroPython               ?\n\n\n\n\n\u5176\u4e2dCPython\u662f\u7528\u7684\u6700\u591a\u7684\uff0c\u4e5f\u662f\u5b98\u7f51\u652f\u6301\u7684\u89e3\u91ca\u5668\uff0c\u53ef\u53c2\u89c1\n\u4e3a\u4ec0\u4e48\u6709\u8fd9\u4e48\u591aPython\n\u3002\n\n\n\u5b89\u88c5\n\n\n\n\npython\n\n\nidle\uff1apython\u81ea\u5e26\u7684ide\n\n\ncommand line\uff1apython\u81ea\u5e26\u7684\u4ea4\u4e92\n\n\npywin32\n\n\n\u6211\u7684\u914d\u7f6e\n\n\n\u89e3\u91ca\u5668\n\n\n\u7f16\u8f91\u5668", 
             "title": "python"
         }, 
         {
@@ -77,13 +77,13 @@
         }, 
         {
             "location": "/python_python/#_4", 
-            "text": "\u89e3\u91ca\u5668    \u7f16\u8f91\u5668", 
+            "text": "python  idle\uff1apython\u81ea\u5e26\u7684ide  command line\uff1apython\u81ea\u5e26\u7684\u4ea4\u4e92  pywin32  \u6211\u7684\u914d\u7f6e  \u89e3\u91ca\u5668  \u7f16\u8f91\u5668", 
             "title": "\u5b89\u88c5"
         }, 
         {
-            "location": "/python_\u5e93/", 
-            "text": "", 
-            "title": "\u5e93"
+            "location": "/python_\u89c4\u8303/", 
+            "text": "\ufeff", 
+            "title": "\u89c4\u8303"
         }, 
         {
             "location": "/python_\u7f29\u8fdb/", 
@@ -114,6 +114,51 @@
             "location": "/python_\u7f16\u7801/", 
             "text": "\ufeff", 
             "title": "\u7f16\u7801"
+        }, 
+        {
+            "location": "/python_\u5bfc\u5165/", 
+            "text": "\ufeff", 
+            "title": "\u5bfc\u5165"
+        }, 
+        {
+            "location": "/python_\u5e93/", 
+            "text": "\ufeffpython\u5982\u6b64\u53d7\u6b22\u8fce\u7684\u4e00\u4e2a\u91cd\u8981\u539f\u56e0\u662f\u5f3a\u5927\u7684\u7b2c\u4e09\u65b9\u5e93\u652f\u6301\u3002\n\n\n\u7ba1\u7406\n\n\nGithub\u4e0a\u7684\npypa\n\u63d0\u4f9b\u4e86\u4e00\u4e2a\u6709\u5173\u5305\u7684\u6307\u5357\nPython Packaging User Guide\n\u3002\u53e6\u5916\u6211\u4eec\u53ef\u4ee5\u901a\u8fc7\u5b98\u7f51\u7684\nPyPI\n\u67e5\u770b\u7b2c\u4e09\u65b9\u5305\u7684\u4fe1\u606f\u3002\u5176\u4e2d\u8bb8\u591a\u5305\u662f\u6258\u7ba1\u5728\nGithub\n\u4e0a\u7684\uff0c\u6bd4\u5982\nKenneth Reitz\n\u4e0b\u7684\u8bb8\u591a\u4ed3\u5e93\u3002\n\n\n\u5305\u7684\u7ba1\u7406\u57fa\u672c\u5206\u4e3a\u4ee5\u4e0b\u516b\u4e2a\u6b65\u9aa4\uff1a\n\n\n\n\n\u6253\u5305\n\n\n\u53d1\u5e03\n\n\n\u4e0b\u8f7d\n\n\n\u5b89\u88c5\n\n\n\u5347\u7ea7\n\n\n\u5378\u8f7d\n\n\n\u67e5\u770b\n\n\n\u4f7f\u7528\n\n\n\n\n\u5de5\u5177\n\n\npython\u6709\u8bb8\u591a\u5305\u7ba1\u7406\u5de5\u5177\uff0c\u5e38\u7528\u7684\u6709distutils\uff0csetuptools\u548cpip\uff0c\u53e6\u5916\nPython\u5305\u7ba1\u7406\u5de5\u5177\u89e3\u60d1\n\u89e3\u91ca\u4e86\u7ba1\u7406\u5de5\u5177\u95f4\u7684\u533a\u522b\u3002\n\n\n\u5b89\u88c5\n\n\n\u5177\u4f53\u53ef\u53c2\u89c1\nwindows\u4e0b\u9762\u5b89\u88c5Python\u548cpip\u7ec8\u6781\u6559\u7a0b\n\u3002\n\n\ndistutils\u548csetuptools\n\n\n\n\n\u6587\u6863\n\n\n\u6587\u6863\n\n\n\u5e38\u7528\u547d\u4ee4\n\n\n\n\n# \u6253\u5305\npython setup.py sdist         # tar.gz\npython setup.py bdist_egg     # egg\npython setup.py bdist_rpm     # rpm\npython setup.py bsist_wininst # exe\n\n# \u5b89\u88c5\npython setup.py install\n\n\n\n\npip\n\n\n\n\n\u6587\u6863\n\n\n\u5e38\u7528\u547d\u4ee4\n\n\n\n\n# \u4e0b\u8f7d\uff0c\u5b89\u88c5\uff0c\u5347\u7ea7\u548c\u5378\u8f7d\npip install requests           # \u4e0b\u8f7d\u548c\u5b89\u88c5\npip install --upgrade requests # \u5347\u7ea7\npip uninstall requests         # \u5378\u8f7d \n\n# \u67e5\u770b\npip list\npip list --outdated\n\n\n\n\n\u6253\u5305\u548c\u53d1\u5e03\n\n\n\u5177\u4f53\u53ef\u53c2\u89c1\u4ee5\u4e0b\u4e09\u7bc7\u6587\u7ae0:\n\n\n\n\n\u5173\u4e8epython\u4e2d\u7684setup.py\n\n\nPython\u5305\u7ba1\u7406\u5de5\u5177\u89e3\u60d1\n\n\n\u5c06\u81ea\u5df1\u5199\u7684Python\u4ee3\u7801\u6253\u5305\u653e\u5230PyPI\u4e0a\n\n\n\n\n\u4e0b\u8f7d\uff0c\u5b89\u88c5\uff0c\u5347\u7ea7\u548c\u5378\u8f7d\n\n\n\u7531\u4e8eWindows\u7528\u6237\u5728\u4f7f\u7528python\u65f6\uff0c\u53ef\u80fd\u4f1a\u56e0Windows\u7684\u7279\u6709\u5c5e\u6027\uff08C/C++\uff09\u5bfc\u81f4\u5305\u7684\u5b89\u88c5\u5931\u8d25\uff0c\u56e0\u6b64\u53ef\u53c2\u8003\u4e0b\u5217\u8d44\u6e90\uff1a\n\n\n\n\nMicrosoft Visual C++ Compiler for Python 2.7\n\uff1apython\u7684cl\u7f16\u8bd1\u5668\n\n\nPython for Windows Extensions\n\uff1apython\u5728Windows\u4e0b\u7684\u7cfb\u7edf\u7f16\u7a0b\n\n\nUnofficial Windows Binaries for Python Extension Packages\n\uff1a\u4e00\u4e9b\u96c6\u6210\u597d\u7684wheel", 
+            "title": "\u5e93"
+        }, 
+        {
+            "location": "/python_\u5e93/#_1", 
+            "text": "Github\u4e0a\u7684 pypa \u63d0\u4f9b\u4e86\u4e00\u4e2a\u6709\u5173\u5305\u7684\u6307\u5357 Python Packaging User Guide \u3002\u53e6\u5916\u6211\u4eec\u53ef\u4ee5\u901a\u8fc7\u5b98\u7f51\u7684 PyPI \u67e5\u770b\u7b2c\u4e09\u65b9\u5305\u7684\u4fe1\u606f\u3002\u5176\u4e2d\u8bb8\u591a\u5305\u662f\u6258\u7ba1\u5728 Github \u4e0a\u7684\uff0c\u6bd4\u5982 Kenneth Reitz \u4e0b\u7684\u8bb8\u591a\u4ed3\u5e93\u3002  \u5305\u7684\u7ba1\u7406\u57fa\u672c\u5206\u4e3a\u4ee5\u4e0b\u516b\u4e2a\u6b65\u9aa4\uff1a   \u6253\u5305  \u53d1\u5e03  \u4e0b\u8f7d  \u5b89\u88c5  \u5347\u7ea7  \u5378\u8f7d  \u67e5\u770b  \u4f7f\u7528", 
+            "title": "\u7ba1\u7406"
+        }, 
+        {
+            "location": "/python_\u5e93/#_2", 
+            "text": "python\u6709\u8bb8\u591a\u5305\u7ba1\u7406\u5de5\u5177\uff0c\u5e38\u7528\u7684\u6709distutils\uff0csetuptools\u548cpip\uff0c\u53e6\u5916 Python\u5305\u7ba1\u7406\u5de5\u5177\u89e3\u60d1 \u89e3\u91ca\u4e86\u7ba1\u7406\u5de5\u5177\u95f4\u7684\u533a\u522b\u3002", 
+            "title": "\u5de5\u5177"
+        }, 
+        {
+            "location": "/python_\u5e93/#_3", 
+            "text": "\u5177\u4f53\u53ef\u53c2\u89c1 windows\u4e0b\u9762\u5b89\u88c5Python\u548cpip\u7ec8\u6781\u6559\u7a0b \u3002", 
+            "title": "\u5b89\u88c5"
+        }, 
+        {
+            "location": "/python_\u5e93/#distutilssetuptools", 
+            "text": "\u6587\u6863  \u6587\u6863  \u5e38\u7528\u547d\u4ee4   # \u6253\u5305\npython setup.py sdist         # tar.gz\npython setup.py bdist_egg     # egg\npython setup.py bdist_rpm     # rpm\npython setup.py bsist_wininst # exe\n\n# \u5b89\u88c5\npython setup.py install", 
+            "title": "distutils\u548csetuptools"
+        }, 
+        {
+            "location": "/python_\u5e93/#pip", 
+            "text": "\u6587\u6863  \u5e38\u7528\u547d\u4ee4   # \u4e0b\u8f7d\uff0c\u5b89\u88c5\uff0c\u5347\u7ea7\u548c\u5378\u8f7d\npip install requests           # \u4e0b\u8f7d\u548c\u5b89\u88c5\npip install --upgrade requests # \u5347\u7ea7\npip uninstall requests         # \u5378\u8f7d \n\n# \u67e5\u770b\npip list\npip list --outdated", 
+            "title": "pip"
+        }, 
+        {
+            "location": "/python_\u5e93/#_4", 
+            "text": "\u5177\u4f53\u53ef\u53c2\u89c1\u4ee5\u4e0b\u4e09\u7bc7\u6587\u7ae0:   \u5173\u4e8epython\u4e2d\u7684setup.py  Python\u5305\u7ba1\u7406\u5de5\u5177\u89e3\u60d1  \u5c06\u81ea\u5df1\u5199\u7684Python\u4ee3\u7801\u6253\u5305\u653e\u5230PyPI\u4e0a", 
+            "title": "\u6253\u5305\u548c\u53d1\u5e03"
+        }, 
+        {
+            "location": "/python_\u5e93/#_5", 
+            "text": "\u7531\u4e8eWindows\u7528\u6237\u5728\u4f7f\u7528python\u65f6\uff0c\u53ef\u80fd\u4f1a\u56e0Windows\u7684\u7279\u6709\u5c5e\u6027\uff08C/C++\uff09\u5bfc\u81f4\u5305\u7684\u5b89\u88c5\u5931\u8d25\uff0c\u56e0\u6b64\u53ef\u53c2\u8003\u4e0b\u5217\u8d44\u6e90\uff1a   Microsoft Visual C++ Compiler for Python 2.7 \uff1apython\u7684cl\u7f16\u8bd1\u5668  Python for Windows Extensions \uff1apython\u5728Windows\u4e0b\u7684\u7cfb\u7edf\u7f16\u7a0b  Unofficial Windows Binaries for Python Extension Packages \uff1a\u4e00\u4e9b\u96c6\u6210\u597d\u7684wheel", 
+            "title": "\u4e0b\u8f7d\uff0c\u5b89\u88c5\uff0c\u5347\u7ea7\u548c\u5378\u8f7d"
         }, 
         {
             "location": "/python_\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54/", 
