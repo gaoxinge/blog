@@ -27,6 +27,10 @@ MicroPython               ?
 
 ## 安装
 
-- [解释器](https://www.python.org/downloads)
-
-- [编辑器](https://notepad-plus-plus.org)
+- python
+  - idle：python自带的ide
+  - command line：python自带的交互
+- [pywin32](https://sourceforge.net/projects/pywin32)
+- 我的配置
+  - [解释器](https://www.python.org/downloads)
+  - [编辑器](https://notepad-plus-plus.org/download)
