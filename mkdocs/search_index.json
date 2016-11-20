@@ -32,12 +32,12 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/", 
-            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u5bfc\u5165\n\n\n\u5e93\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\n\n\u7b97\u6cd5", 
+            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u5bfc\u5165\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\n\n\u7b97\u6cd5", 
             "title": "\u76ee\u5f55"
         }, 
         {
             "location": "/index_\u76ee\u5f55/#python", 
-            "text": "python  \u89c4\u8303  \u7f29\u8fdb  \u7f16\u7801  \u5bfc\u5165  \u5e93  \u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54  \u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54", 
+            "text": "python  \u89c4\u8303  \u7f29\u8fdb  \u7f16\u7801  \u5bfc\u5165  \u5e93  \u8c03\u8bd5  \u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54  \u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54", 
             "title": "python"
         }, 
         {
@@ -159,6 +159,11 @@
             "location": "/python_\u5e93/#_5", 
             "text": "\u7531\u4e8eWindows\u7528\u6237\u5728\u4f7f\u7528python\u65f6\uff0c\u53ef\u80fd\u4f1a\u56e0Windows\u7684\u7279\u6709\u5c5e\u6027\uff08C/C++\uff09\u5bfc\u81f4\u5305\u7684\u5b89\u88c5\u5931\u8d25\uff0c\u56e0\u6b64\u53ef\u53c2\u8003\u4e0b\u5217\u8d44\u6e90\uff1a   Microsoft Visual C++ Compiler for Python 2.7 \uff1apython\u7684cl\u7f16\u8bd1\u5668  Python for Windows Extensions \uff1apython\u5728Windows\u4e0b\u7684\u7cfb\u7edf\u7f16\u7a0b  Unofficial Windows Binaries for Python Extension Packages \uff1a\u4e00\u4e9b\u96c6\u6210\u597d\u7684wheel", 
             "title": "\u4e0b\u8f7d\uff0c\u5b89\u88c5\uff0c\u5347\u7ea7\u548c\u5378\u8f7d"
+        }, 
+        {
+            "location": "/python_\u8c03\u8bd5/", 
+            "text": "\ufeffpython\u8c03\u8bd5\u65b9\u6cd5\u5206\u4e3a\u4e09\u79cd\uff1a\n\n\n\n\n\u5728\u4ee3\u7801\u4e2d\u63d2\u5165print\u8bed\u53e5\n\n\n\u4f7f\u7528\u6a21\u5757\uff0c\u5982pdb\n\n\n\u57fa\u4e8e\u7f16\u8f91\u5668\uff0c\u5982PyCharm\n\n\n\n\n\u5177\u4f53\u65b9\u6cd5\u53ef\u53c2\u89c1\uff1a\n\n\n\n\nPython \u7a0b\u5e8f\u5982\u4f55\u9ad8\u6548\u5730\u8c03\u8bd5\n\n\nPython \u4ee3\u7801\u8c03\u8bd5\u6280\u5de7", 
+            "title": "\u8c03\u8bd5"
         }, 
         {
             "location": "/python_\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54/", 
