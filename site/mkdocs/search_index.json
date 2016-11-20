@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "\ufeff\u6b64\u535a\u5ba2\u7528\u4e8e\u5b66\u4e60\u8bed\u8a00\u548c\u7b97\u6cd5\u3002\n\n\npython\n\n\n\n\nPython\u6838\u5fc3\u7f16\u7a0b\n\n\nPython\u6e90\u7801\u5256\u6790\n\n\nThe Python Tutorial\n\n\n\n\nc\n\n\n\n\nC Primer Plus\n\n\nC\u7a0b\u5e8f\u8bbe\u8ba1\u8bed\u8a00\n\n\n\u6df1\u5165\u7406\u89e3\u8ba1\u7b97\u673a\u7cfb\u7edf\n\n\n\n\nc++\n\n\n\n\nC++ Primer\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\u5bfc\u8bba\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u725b\u5ba2\u7f51", 
+            "text": "\ufeff\u6b64\u535a\u5ba2\u7528\u4e8e\u5b66\u4e60\u8bed\u8a00\u548c\u7b97\u6cd5\u3002\n\n\npython\n\n\n\n\nPython\u6838\u5fc3\u7f16\u7a0b\n\n\n\n\nc\n\n\n\n\nC Primer Plus\n\n\nC\u7a0b\u5e8f\u8bbe\u8ba1\u8bed\u8a00\n\n\n\u6df1\u5165\u7406\u89e3\u8ba1\u7b97\u673a\u7cfb\u7edf\n\n\n\n\nc++\n\n\n\n\nC++ Primer\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\u5bfc\u8bba\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u725b\u5ba2\u7f51", 
             "title": "\u535a\u5ba2"
         }, 
         {
             "location": "/#python", 
-            "text": "Python\u6838\u5fc3\u7f16\u7a0b  Python\u6e90\u7801\u5256\u6790  The Python Tutorial", 
+            "text": "Python\u6838\u5fc3\u7f16\u7a0b", 
             "title": "python"
         }, 
         {
@@ -32,7 +32,7 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/", 
-            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u5bfc\u5165\n\n\n\u5e93\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\n\n\u7b97\u6cd5", 
+            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u5bfc\u5165\n\n\n\u5e93\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\n\n\u7b97\u6cd5", 
             "title": "\u76ee\u5f55"
         }, 
         {
@@ -47,7 +47,7 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/#c_1", 
-            "text": "c++", 
+            "text": "c++  \u89c4\u8303", 
             "title": "c++"
         }, 
         {
@@ -227,11 +227,16 @@
         }, 
         {
             "location": "/c_c/", 
-            "text": "\ufeff## \u6807\u51c6\n\n\n\u7f16\u8bd1\u5668\n\n\nc\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709\n\n\n\n\ngcc\uff1aGNU\n\n\ncl\uff1aMicrosoft\n\n\nclang\n\n\n\n\nUNIX\n\n\nUNIX\u81ea\u5e26\u7f16\u8bd1\u5668cc\uff0c\u4e0d\u5c5e\u4e8e\u4e0a\u8ff0\u7684\u4efb\u4f55\u4e00\u79cd\u3002\n\n\nLinux\n\n\nLinux\u81ea\u5e26\u7f16\u8bd1\u5668gcc\uff0c\u4e0b\u9762\u8bf4\u4e00\u4e0b\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ncc/gcc/g++ test.c # \u751f\u6210a.out\n./a.out           # \u8fd0\u884c\n\ncc/gcc/g++ -o test test.c # \u751f\u6210test\n./test                    # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho $?\n\n\n\n\nWindows\n\n\nWindows\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528vc\uff0cvs\u7b49ide\uff0c\u63d0\u4f9b\u7f16\u8bd1\u5668cl\uff0c\u4f46\u7531\u4e8e\u4f53\u79ef\u8fc7\u5927\uff0c\u672c\u4eba\u5e76\u6ca1\u6709\u5b89\u88c5\u3002\n\n\n\u672c\u4eba\u5b89\u88c5\u4e86MinGW+Notepad++\uff0c\u5373\u4f7f\u7528gcc\uff0c\u4e0b\u9762\u662f\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ngcc/g++ test.c # \u751f\u6210a.exe\na/a.exe        # \u8fd0\u884c\n\ngcc/g++ -o test test.c # \u751f\u6210test.exe\ntest/test.exe          # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho %ERRORLEVEL%\n\n\n\n\nMac\n\n\nMac\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528\u96c6\u6210\u73af\u5883Xcode\uff0c\u5176\u63d0\u4f9b\u591a\u79cdc\u7f16\u8bd1\u5668\u3002", 
+            "text": "\ufeffc\u8bed\u8a00\u7531Thompson\u548cRitchie\u5f00\u53d1\u3002\n\n\n\u6807\u51c6\n\n\n\n\n1989\u5e74\uff0cANSI\u53d1\u5e03\u4e86ANSI C\uff0c\u5b9a\u4e49\u4e86\u8bed\u8a00\u548c\u6807\u51c6\u5e93\uff0c\u79f0\u4e3aC89\u3002\n\n\n1990\u5e74\uff0cISO\u53d1\u5e03\u4e86C90\u3002\n\n\n1999\u5e74\uff0cISO\u53d1\u5e03\u4e86C99\u3002\n\n\n2011\u5e74\uff0cISO\u53d1\u5e03\u4e86C11\u3002\n\n\n\n\n\u7f16\u8bd1\u5668\n\n\nc\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709\n\n\n\n\ngcc\uff1aGNU\n\n\ncl\uff1aMicrosoft\n\n\nclang\n\n\n\n\nUNIX\n\n\nUNIX\u81ea\u5e26\u7f16\u8bd1\u5668cc\uff0c\u4e0d\u5c5e\u4e8e\u4e0a\u8ff0\u7684\u4efb\u4f55\u4e00\u79cd\u3002\n\n\nLinux\n\n\nLinux\u81ea\u5e26\u7f16\u8bd1\u5668gcc\uff0c\u4e0b\u9762\u8bf4\u4e00\u4e0b\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ncc/gcc/g++ test.c # \u751f\u6210a.out\n./a.out           # \u8fd0\u884c\n\ncc/gcc/g++ -o test test.c # \u751f\u6210test\n./test                    # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho $?\n\n\n\n\nWindows\n\n\nWindows\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528vc\uff0cvs\u7b49ide\uff0c\u63d0\u4f9b\u7f16\u8bd1\u5668cl\uff0c\u4f46\u7531\u4e8e\u4f53\u79ef\u8fc7\u5927\uff0c\u672c\u4eba\u5e76\u6ca1\u6709\u5b89\u88c5\u3002\n\n\n\u672c\u4eba\u5b89\u88c5\u4e86MinGW+Notepad++\uff0c\u5373\u4f7f\u7528gcc\uff0c\u4e0b\u9762\u662f\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ngcc/g++ test.c # \u751f\u6210a.exe\na/a.exe        # \u8fd0\u884c\n\ngcc/g++ -o test test.c # \u751f\u6210test.exe\ntest/test.exe          # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho %ERRORLEVEL%\n\n\n\n\nMac\n\n\nMac\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528\u96c6\u6210\u73af\u5883Xcode\uff0c\u5176\u63d0\u4f9b\u591a\u79cdc\u7f16\u8bd1\u5668\u3002", 
             "title": "c"
         }, 
         {
             "location": "/c_c/#_1", 
+            "text": "1989\u5e74\uff0cANSI\u53d1\u5e03\u4e86ANSI C\uff0c\u5b9a\u4e49\u4e86\u8bed\u8a00\u548c\u6807\u51c6\u5e93\uff0c\u79f0\u4e3aC89\u3002  1990\u5e74\uff0cISO\u53d1\u5e03\u4e86C90\u3002  1999\u5e74\uff0cISO\u53d1\u5e03\u4e86C99\u3002  2011\u5e74\uff0cISO\u53d1\u5e03\u4e86C11\u3002", 
+            "title": "\u6807\u51c6"
+        }, 
+        {
+            "location": "/c_c/#_2", 
             "text": "c\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709   gcc\uff1aGNU  cl\uff1aMicrosoft  clang", 
             "title": "\u7f16\u8bd1\u5668"
         }, 
@@ -257,11 +262,16 @@
         }, 
         {
             "location": "/c++_c++/", 
-            "text": "\ufeff## \u6807\u51c6\n\n\n\u7f16\u8bd1\u5668\n\n\nc++\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709\n\n\n\n\ng++\uff1aGNU\n\n\ncl\uff1aMicrosoft\n\n\nclang\n\n\n\n\nUNIX\n\n\nUNIX\u81ea\u5e26\u7f16\u8bd1\u5668cc\uff0c \u4e0d\u5c5e\u4e8e\u4e0a\u8ff0\u7684\u4efb\u4f55\u4e00\u79cd\u3002\n\n\nLinux\n\n\nLinux\u81ea\u5e26\u7f16\u8bd1\u5668g++\uff0c\u4e0b\u9762\u8bf4\u4e00\u4e0b\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00cc\uff0ccp\uff0ccpp\uff0ccxx\uff0cC\n\n\n\u547d\u4ee4\n\n\n\n\ncc/gcc/g++ test.cc # \u751f\u6210a.out\n./a.out            # \u8fd0\u884c\n\ncc/gcc/g++ -o test test.cc # \u751f\u6210test\n./test                     # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho $?\n\n\n\n\nWindows\n\n\nWindows\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528vc\uff0cvs\u7b49ide\uff0c\u63d0\u4f9b\u7f16\u8bd1\u5668cl\uff0c\u4f46\u7531\u4e8e\u4f53\u79ef\u8fc7\u5927\uff0c\u672c\u4eba\u5e76\u6ca1\u6709\u5b89\u88c5\u3002\n\n\n\u672c\u4eba\u5b89\u88c5\u4e86MinGW+Notepad++\uff0c\u5373\u4f7f\u7528gcc\uff0c\u4e0b\u9762\u662f\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00cc\uff0ccp\uff0ccpp\uff0ccxx\uff0cC\n\n\n\u547d\u4ee4\n\n\n\n\ngcc/g++ test.cc # \u751f\u6210a.exe\na/a.exe         # \u8fd0\u884c\n\ngcc/g++ -o test test.cc # \u751f\u6210test.exe\ntest/test.exe           # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho %ERRORLEVEL%\n\n\n\n\nMac\n\n\nMac\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528\u96c6\u6210\u73af\u5883Xcode\uff0c\u5176\u63d0\u4f9b\u591a\u79cdc++\u7f16\u8bd1\u5668\u3002", 
+            "text": "\ufeffc++\u662fc\u8bed\u8a00\u7684\u7ee7\u627f\uff0c\u7531Stroustrup\u5f00\u53d1\u3002\n\n\n\u6807\u51c6\n\n\n\u7f16\u8bd1\u5668\n\n\nc++\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709\n\n\n\n\ng++\uff1aGNU\n\n\ncl\uff1aMicrosoft\n\n\nclang\n\n\n\n\nUNIX\n\n\nUNIX\u81ea\u5e26\u7f16\u8bd1\u5668cc\uff0c \u4e0d\u5c5e\u4e8e\u4e0a\u8ff0\u7684\u4efb\u4f55\u4e00\u79cd\u3002\n\n\nLinux\n\n\nLinux\u81ea\u5e26\u7f16\u8bd1\u5668g++\uff0c\u4e0b\u9762\u8bf4\u4e00\u4e0b\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00cc\uff0ccp\uff0ccpp\uff0ccxx\uff0cC\n\n\n\u547d\u4ee4\n\n\n\n\ncc/gcc/g++ test.cc # \u751f\u6210a.out\n./a.out            # \u8fd0\u884c\n\ncc/gcc/g++ -o test test.cc # \u751f\u6210test\n./test                     # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho $?\n\n\n\n\nWindows\n\n\nWindows\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528vc\uff0cvs\u7b49ide\uff0c\u63d0\u4f9b\u7f16\u8bd1\u5668cl\uff0c\u4f46\u7531\u4e8e\u4f53\u79ef\u8fc7\u5927\uff0c\u672c\u4eba\u5e76\u6ca1\u6709\u5b89\u88c5\u3002\n\n\n\u672c\u4eba\u5b89\u88c5\u4e86MinGW+Notepad++\uff0c\u5373\u4f7f\u7528gcc\uff0c\u4e0b\u9762\u662f\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00cc\uff0ccp\uff0ccpp\uff0ccxx\uff0cC\n\n\n\u547d\u4ee4\n\n\n\n\ngcc/g++ test.cc # \u751f\u6210a.exe\na/a.exe         # \u8fd0\u884c\n\ngcc/g++ -o test test.cc # \u751f\u6210test.exe\ntest/test.exe           # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho %ERRORLEVEL%\n\n\n\n\nMac\n\n\nMac\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528\u96c6\u6210\u73af\u5883Xcode\uff0c\u5176\u63d0\u4f9b\u591a\u79cdc++\u7f16\u8bd1\u5668\u3002", 
             "title": "c++"
         }, 
         {
             "location": "/c++_c++/#_1", 
+            "text": "", 
+            "title": "\u6807\u51c6"
+        }, 
+        {
+            "location": "/c++_c++/#_2", 
             "text": "c++\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709   g++\uff1aGNU  cl\uff1aMicrosoft  clang", 
             "title": "\u7f16\u8bd1\u5668"
         }, 
@@ -284,6 +294,11 @@
             "location": "/c++_c++/#mac", 
             "text": "Mac\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528\u96c6\u6210\u73af\u5883Xcode\uff0c\u5176\u63d0\u4f9b\u591a\u79cdc++\u7f16\u8bd1\u5668\u3002", 
             "title": "Mac"
+        }, 
+        {
+            "location": "/c++_\u89c4\u8303/", 
+            "text": "\ufeff", 
+            "title": "c++"
         }
     ]
 }

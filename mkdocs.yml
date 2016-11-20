@@ -13,5 +13,6 @@ pages:
 - 赖明星的知乎回答: python_赖明星的知乎回答.md
 - c: c_c.md
 - c++: c++_c++.md
+- c++: c++_规范.md
 
 theme: readthedocs
