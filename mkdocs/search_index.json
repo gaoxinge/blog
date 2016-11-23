@@ -82,7 +82,7 @@
         }, 
         {
             "location": "/python_\u89c4\u8303/", 
-            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bpython\u7684\u98ce\u683c\u89c4\u8303\u3002\n\n\nPython Enhancement Proposal\n\n\n\u8fd9\u5c31\u662f\u6211\u4eec\u719f\u6089\u7684\nPEP\n\u3002\n\n\nPEP 0\n\n\nPEP 0\n\uff0c\u5373Index of Python Enhancement Proposals\uff0c\u4e3aPEP\u7684\u76ee\u5f55\u3002\n\n\nPEP 8\n\n\nPEP 20\n\n\nPEP 20\n\uff0c\u5373\u8457\u540d\u7684python\u4e4b\u7985\u3002\n\n\n import this\nThe Zen of Python, by Tim Peters\n\nBeautiful is better than ugly.\nExplicit is better than implicit.\nSimple is better than complex.\nComplex is better than complicated.\nFlat is better than nested.\nSparse is better than dense.\nReadability counts.\nSpecial cases aren't special enough to break the rules.\nAlthough practicality beats purity.\nErrors should never pass silently.\nUnless explicitly silenced.\nIn the face of ambiguity, refuse the temptation to guess.\nThere should be one-- and preferably only one --obvious way to do it.\nAlthough that way may not be obvious at first unless you're Dutch.\nNow is better than never.\nAlthough never is often better than *right* now.\nIf the implementation is hard to explain, it's a bad idea.\nIf the implementation is easy to explain, it may be a good idea.\nNamespaces are one honking great idea -- let's do more of those!\n\n \n\n # \u4f60\u8fd8\u53ef\u4ee5\u5c1d\u8bd5\u4e0b\u9762\u8fd9\u53e5\n\n import antigravity\n\n\n\n\nGoogle\u5f00\u6e90\u9879\u76ee\u98ce\u683c\u6307\u5357\n\n\nGoogle Style Guide\n\u662fGoogel\u4e3a\u4e00\u4e9b\u8bed\u8a00\u5b9a\u5236\u7684\u98ce\u683c\u89c4\u8303\uff0c\u6bd4\u5982python\u3002", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bpython\u7684\u98ce\u683c\u89c4\u8303\u3002\n\n\nPython Enhancement Proposal\n\n\n\u8fd9\u5c31\u662f\u6211\u4eec\u719f\u6089\u7684\nPEP\n\u3002\n\n\nPEP 0\n\n\nPEP 0\n\uff0c\u5373Index of Python Enhancement Proposals\uff0c\u4e3aPEP\u7684\u76ee\u5f55\u3002\n\n\nPEP 7\n\n\nPEP  7\n\uff0c\u5373CPython\u7684c\u4ee3\u7801\u98ce\u683c\u89c4\u8303\u3002\n\n\nPEP 8\n\n\nPEP 8\n\uff0c\u5373python\u7684\u4ee3\u7801\u98ce\u683c\u89c4\u8303\uff0c\u5177\u4f53\u53ef\u53c2\u89c1\n\n\n\n\nStyle Guide for Python Code\n\n\npython\u4ee3\u7801\u98ce\u683c\u6307\u5357\n\n\nPython \u7f16\u7801\u98ce\u683c\u6307\u5357\n\n\n\n\nPEP 20\n\n\nPEP 20\n\uff0c\u5373\u8457\u540d\u7684python\u4e4b\u7985\u3002\n\n\n import this\nThe Zen of Python, by Tim Peters\n\nBeautiful is better than ugly.\nExplicit is better than implicit.\nSimple is better than complex.\nComplex is better than complicated.\nFlat is better than nested.\nSparse is better than dense.\nReadability counts.\nSpecial cases aren't special enough to break the rules.\nAlthough practicality beats purity.\nErrors should never pass silently.\nUnless explicitly silenced.\nIn the face of ambiguity, refuse the temptation to guess.\nThere should be one-- and preferably only one --obvious way to do it.\nAlthough that way may not be obvious at first unless you're Dutch.\nNow is better than never.\nAlthough never is often better than *right* now.\nIf the implementation is hard to explain, it's a bad idea.\nIf the implementation is easy to explain, it may be a good idea.\nNamespaces are one honking great idea -- let's do more of those!\n\n \n\n # \u4f60\u8fd8\u53ef\u4ee5\u5c1d\u8bd5\u4e0b\u9762\u8fd9\u53e5\n\n import antigravity\n\n\n\n\nGoogle\u5f00\u6e90\u9879\u76ee\u98ce\u683c\u6307\u5357\n\n\nGoogle Style Guide\n\u662fGoogel\u4e3a\u4e00\u4e9b\u8bed\u8a00\u5b9a\u5236\u7684\u98ce\u683c\u89c4\u8303\uff0c\u6bd4\u5982python\u3002", 
             "title": "\u89c4\u8303"
         }, 
         {
@@ -96,8 +96,13 @@
             "title": "PEP 0"
         }, 
         {
+            "location": "/python_\u89c4\u8303/#pep-7", 
+            "text": "PEP  7 \uff0c\u5373CPython\u7684c\u4ee3\u7801\u98ce\u683c\u89c4\u8303\u3002", 
+            "title": "PEP 7"
+        }, 
+        {
             "location": "/python_\u89c4\u8303/#pep-8", 
-            "text": "", 
+            "text": "PEP 8 \uff0c\u5373python\u7684\u4ee3\u7801\u98ce\u683c\u89c4\u8303\uff0c\u5177\u4f53\u53ef\u53c2\u89c1   Style Guide for Python Code  python\u4ee3\u7801\u98ce\u683c\u6307\u5357  Python \u7f16\u7801\u98ce\u683c\u6307\u5357", 
             "title": "PEP 8"
         }, 
         {
