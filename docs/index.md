@@ -8,7 +8,6 @@
 
 - [C Primer Plus](https://book.douban.com/subject/1240002)
 - [C程序设计语言](https://book.douban.com/subject/1139336)
-- [深入理解计算机系统](https://book.douban.com/subject/5333562)
 
 ## c++
 

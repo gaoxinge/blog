@@ -85,3 +85,78 @@ print inspect.getcallargs(add, 10, 2)
 print inspect.isclass(add)
 print inspect.isfunction(add)
 ```
+
+## mixin
+
+具体可参见[Python mixin模式](http://python.jobbole.com/84052)。
+
+Bad:
+
+```python
+class SimpleItemContainer(object):
+    def __init__(self, id, item_containers):
+        self.id = id
+        self.data = {}
+        for item in item_containers:
+            self.data[item.id] = item
+```
+
+Good:
+
+```python
+from UserDict import DictMixin
+
+class MyDict(DictMixin):
+    def __init__(self, dict=None, **kwargs):
+        self.data = {}
+        if dict is not None:
+            self.update(dict)
+        if len(kwargs):
+            self.update(kwargs)
+            
+    def __getitem__(self, id):
+        return self.data[id]
+        
+    def __setitem__(self, id, value):
+        self.data[id] = value
+        
+    def __delitem__(self, id):
+        del self.data[id]
+        
+    def keys(self):
+        return self.data.keys()
+```
+
+```python
+from UserDict import DictMixin
+
+class BetterSimpleItemContainer(object, DictMixin):
+    def __getitem__(self, id):
+        return self.data[id]
+        
+    def __setitem__(self, id, value):
+        self.data[id] = value
+        
+    def __del__(self, id):
+        del self.data[id]
+        
+    def keys(self):
+        return self.data.keys()
+```
+
+```python
+class CommonEqualityMixin(object):
+    def __eq__(self, other):
+        return isinstance(other, self.__class__)
+                and self.__dict__ == other.__dict__
+                
+    def __ne__(self, other):
+        return not self.__eq__(other)
+        
+class Foo(commonEqualityMixin):
+    def __init__(self, item):
+        self.item = item
+```
+
+
+
