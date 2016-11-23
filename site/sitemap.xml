@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
      <loc>/index_目录/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
      <loc>/python_python/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -28,7 +28,7 @@
     
     <url>
      <loc>/python_规范/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
      <loc>/python_缩进/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -44,7 +44,7 @@
     
     <url>
      <loc>/python_编码/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -52,7 +52,7 @@
     
     <url>
      <loc>/python_导入/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -60,7 +60,7 @@
     
     <url>
      <loc>/python_库/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -68,7 +68,15 @@
     
     <url>
      <loc>/python_调试/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/python_c/</loc>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -76,7 +84,7 @@
     
     <url>
      <loc>/python_董伟明的知乎回答/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -84,7 +92,7 @@
     
     <url>
      <loc>/python_赖明星的知乎回答/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -92,7 +100,7 @@
     
     <url>
      <loc>/c_c/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -100,7 +108,7 @@
     
     <url>
      <loc>/c++_c++/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -108,7 +116,7 @@
     
     <url>
      <loc>/c++_规范/</loc>
-     <lastmod>2016-11-20</lastmod>
+     <lastmod>2016-11-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
     

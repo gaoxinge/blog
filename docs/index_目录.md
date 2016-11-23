@@ -9,6 +9,7 @@
 - [导入](https://gaoxinge.github.io/blog/python_%E5%AF%BC%E5%85%A5/)
 - [库](https://gaoxinge.github.io/blog/python_%E5%BA%93/)
 - [调试](https://gaoxinge.github.io/blog/python_%E8%B0%83%E8%AF%95/)
+- [c](https://gaoxinge.github.io/blog/python_c/)
 - [董伟明的知乎回答](https://gaoxinge.github.io/blog/python_%E8%91%A3%E4%BC%9F%E6%98%8E%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/)
 - [赖明星的知乎回答](https://gaoxinge.github.io/blog/python_%E8%B5%96%E6%98%8E%E6%98%9F%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/)
 
