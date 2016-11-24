@@ -147,10 +147,13 @@
                 <li class="toctree-l3"><a href="#_5">上下文管理器</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_6">装饰器</a></li>
+                <li class="toctree-l3"><a href="#_6">报错</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_7">动态类型语言</a></li>
+                <li class="toctree-l3"><a href="#_7">装饰器</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_8">动态类型语言</a></li>
                 
             
             </ul>
@@ -341,7 +344,18 @@ finally:
     print f.read()
 </code></pre>
 
-<h2 id="_6">装饰器</h2>
+<h2 id="_6">报错</h2>
+<p>Bad:</p>
+<pre><code class="python">import sys
+sys.stderr.write('It failed!')
+raise SystemExit(1)
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">raise SystemExit('It failed!')
+</code></pre>
+
+<h2 id="_7">装饰器</h2>
 <p>Bad:</p>
 <pre><code class="python">class Store(object):
     def get_food(self, username, food):
@@ -388,7 +402,7 @@ class Storage(object):
         return storage.put(food)
 </code></pre>
 
-<h2 id="_7">动态类型语言</h2>
+<h2 id="_8">动态类型语言</h2>
 <p>Bad:</p>
 <pre><code class="python">def a():
     return 'a'
