@@ -55,9 +55,9 @@ set([64, 144, 36, 100, 324, 256, 16, 400, 196, 4]) # 集合
 >>> {i:i*i for i in range(1, 21) if i% 2 == 0}
 {2: 4, 4: 16, 6: 36, 8: 64, 10: 100, 12: 144, 14: 196, 16: 256, 18: 324, 20: 400} # 字典
 
-[item for item in os.listdir(os.path.expanduser('~')) if os.path.isfile(item)]
-[item for item in os.listdir(os.path.expanduser('~')) if os.path.isdir(item)]
-{item: os.path.realpath(item) for item in os.listdir(os.path.expanduser('~')) if os.path.isdir(item)}
+>>> [item for item in os.listdir(os.path.expanduser('.')) if os.path.isfile(item)]
+>>> [item for item in os.listdir(os.path.expanduser('.')) if os.path.isdir(item)]
+>>> {item: os.path.realpath(item) for item in os.listdir(os.path.expanduser('.'))}
 ```
 
 ## 内置函数
@@ -144,6 +144,22 @@ Good:
 ```python
 with open('/path/to/file', 'r') as f:
     print f.read()
+```
+
+## 报错
+
+Bad:
+
+```python
+import sys
+sys.stderr.write('It failed!')
+raise SystemExit(1)
+```
+
+Good:
+
+```python
+raise SystemExit('It failed!')
 ```
 
 ## 装饰器
