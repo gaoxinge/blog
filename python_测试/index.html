@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>c - blog</title>
+  <title>测试 - blog</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "c";
-    var mkdocs_page_input_path = "c_c.md";
-    var mkdocs_page_url = "/c_c/";
+    var mkdocs_page_name = "\u6d4b\u8bd5";
+    var mkdocs_page_input_path = "python_\u6d4b\u8bd5.md";
+    var mkdocs_page_url = "/python_\u6d4b\u8bd5/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -110,8 +110,12 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../python_%E6%B5%8B%E8%AF%95/">测试</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">测试</a>
+        
+            <ul>
+            
+            </ul>
         
     </li>
 <li>
@@ -138,30 +142,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">c</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#_1">标准</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_2">编译器</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#unix">UNIX</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#linux">Linux</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#windows">Windows</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#mac">Mac</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../c_c/">c</a>
         
     </li>
 <li>
@@ -202,7 +184,7 @@
     
       
     
-    <li>c</li>
+    <li>测试</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -212,64 +194,16 @@
           <div role="main">
             <div class="section">
               
-                <p>﻿c语言由Thompson和Ritchie开发。</p>
-<h2 id="_1">标准</h2>
+                <p>﻿python测试方法分为两种：</p>
 <ul>
-<li>1989年，ANSI发布了ANSI C，定义了语言和标准库，称为C89。</li>
-<li>1990年，ISO发布了C90。</li>
-<li>1999年，ISO发布了C99。</li>
-<li>2011年，ISO发布了C11。</li>
+<li>单元测试</li>
+<li>文档测试</li>
 </ul>
-<h2 id="_2">编译器</h2>
-<p>c的编译器主要有</p>
+<p>具体方法可参见：</p>
 <ul>
-<li>gcc：GNU</li>
-<li>cl：Microsoft</li>
-<li>clang</li>
+<li><a href="http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00140137128705556022982cfd844b38d050add8565dcb9000">单元测试</a></li>
+<li><a href="http://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/00140137398003434356a2635da4a98b4d00670e8aadb2f000">文档测试</a></li>
 </ul>
-<h2 id="unix">UNIX</h2>
-<p>UNIX自带编译器cc，不属于上述的任何一种。</p>
-<h2 id="linux">Linux</h2>
-<p>Linux自带编译器gcc，下面说一下注意事项</p>
-<ul>
-<li>后缀c</li>
-<li>命令</li>
-</ul>
-<pre><code>cc/gcc/g++ test.c # 生成a.out
-./a.out           # 运行
-
-cc/gcc/g++ -o test test.c # 生成test
-./test                    # 运行
-</code></pre>
-
-<ul>
-<li>查看main函数中的return</li>
-</ul>
-<pre><code>echo $?
-</code></pre>
-
-<h2 id="windows">Windows</h2>
-<p>Windows无自带编译器，推荐使用vc，vs等ide，提供编译器cl，但由于体积过大，本人并没有安装。</p>
-<p>本人安装了MinGW+Notepad++，即使用gcc，下面是注意事项</p>
-<ul>
-<li>后缀c</li>
-<li>命令</li>
-</ul>
-<pre><code>gcc/g++ test.c # 生成a.exe
-a/a.exe        # 运行
-
-gcc/g++ -o test test.c # 生成test.exe
-test/test.exe          # 运行
-</code></pre>
-
-<ul>
-<li>查看main函数中的return</li>
-</ul>
-<pre><code>echo %ERRORLEVEL%
-</code></pre>
-
-<h2 id="mac">Mac</h2>
-<p>Mac无自带编译器，推荐使用集成环境Xcode，其提供多种c编译器。</p>
               
             </div>
           </div>
@@ -277,10 +211,10 @@ test/test.exe          # 运行
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../c%2B%2B_c%2B%2B/" class="btn btn-neutral float-right" title="c++">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../python_c/" class="btn btn-neutral float-right" title="c">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../python_%E8%B5%96%E6%98%8E%E6%98%9F%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/" class="btn btn-neutral" title="赖明星的知乎回答"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../python_%E8%B0%83%E8%AF%95/" class="btn btn-neutral" title="调试"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -306,10 +240,10 @@ test/test.exe          # 运行
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../python_%E8%B5%96%E6%98%8E%E6%98%9F%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../python_%E8%B0%83%E8%AF%95/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../c%2B%2B_c%2B%2B/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../python_c/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
