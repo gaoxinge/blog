@@ -1,7 +1,7 @@
 ﻿python调试方法分为三种：
 
-- 在代码中插入print语句
-- 使用模块，如pdb
+- 使用print，assert
+- 使用模块logging，pdb
 - 基于编辑器，如PyCharm
 
 具体方法可参见：
