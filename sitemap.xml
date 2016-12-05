@@ -51,7 +51,7 @@
 
     
     <url>
-     <loc>/python_导入/</loc>
+     <loc>/python_模块/</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -60,6 +60,14 @@
     
     <url>
      <loc>/python_库/</loc>
+     <lastmod>2016-12-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/python_标准库/</loc>
      <lastmod>2016-12-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
