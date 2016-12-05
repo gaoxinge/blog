@@ -3,7 +3,85 @@
 - [Python开发中有哪些高级技巧](https://www.zhihu.com/question/23760468/answer/125478261)
 - [Python有哪些优雅的代码实现](https://www.zhihu.com/question/37751951/answer/125640796)
 
+## 直到找到符合的结果
+
+Bad:
+
+```python
+a = -1
+for i in range(1, 10):
+    if not i % 4:
+        a = i
+        break
+```
+
+Good:
+
+```python
+a = next((i for i in range(1, 10) if not i % 4), -1)
+```
+
+## 直到出现不符合的结果
+
+Bad:
+
+```python
+```
+
+Good:
+
+```python
+```
+
+## 标记区分
+
+```python
+def prime(n):
+    for i in range(2, n-1):
+        if n % i == 0:
+            return i
+    return -1
+```
+
+```python
+def prime(n):
+    for i in range(2, n-1):
+        if n % i == 0:
+            break
+    else:
+        return -1
+    return i
+```
+
+## 字典
+
+Bad:
+
+```python
+t = {}
+t['a'] = {}
+t['a']['b'] = 1 
+t['c'] = 1
+t['d'] = {}
+t['d']['e'] = {}
+t['d']['e']['f'] = 10
+```
+
+Good:
+
+```python
+from collections import defaultdict
+
+tree = lambda: defaultdict(tree)
+t = tree()
+t['a']['b'] = 1
+t['c'] = 1
+t['d']['e']['f'] = 10
+```
+
 ## 上下文管理器
+
+### 文件
 
 Bad:
 
@@ -53,6 +131,12 @@ def make_open_context(filename, mode):
 with make_open_context('/tmp/a', 'a') as f:
     f.write('hello world')
 ```
+
+### 锁
+
+### 异常
+
+## 缓存
 
 ## total_ordering
 
@@ -157,6 +241,3 @@ class Foo(commonEqualityMixin):
     def __init__(self, item):
         self.item = item
 ```
-
-
-

@@ -3,6 +3,7 @@
 ## python
 
 - [Python核心编程](https://book.douban.com/subject/3112503)
+- [Python documentation](https://docs.python.org/2)
 
 ## c
 
