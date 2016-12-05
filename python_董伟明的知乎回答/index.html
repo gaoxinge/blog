@@ -129,7 +129,28 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#_1">上下文管理器</a></li>
+                <li class="toctree-l3"><a href="#_1">直到找到符合的结果</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">直到出现不符合的结果</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_3">标记区分</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_4">字典</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_5">上下文管理器</a></li>
+                
+                    <li><a class="toctree-l4" href="#_6">文件</a></li>
+                
+                    <li><a class="toctree-l4" href="#_7">锁</a></li>
+                
+                    <li><a class="toctree-l4" href="#_8">异常</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_9">缓存</a></li>
                 
             
                 <li class="toctree-l3"><a href="#total_ordering">total_ordering</a></li>
@@ -211,7 +232,66 @@
 <li><a href="https://www.zhihu.com/question/23760468/answer/125478261">Python开发中有哪些高级技巧</a></li>
 <li><a href="https://www.zhihu.com/question/37751951/answer/125640796">Python有哪些优雅的代码实现</a></li>
 </ul>
-<h2 id="_1">上下文管理器</h2>
+<h2 id="_1">直到找到符合的结果</h2>
+<p>Bad:</p>
+<pre><code class="python">a = -1
+for i in range(1, 10):
+    if not i % 4:
+        a = i
+        break
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">a = next((i for i in range(1, 10) if not i % 4), -1)
+</code></pre>
+
+<h2 id="_2">直到出现不符合的结果</h2>
+<p>Bad:</p>
+<pre><code class="python"></code></pre>
+
+<p>Good:</p>
+<pre><code class="python"></code></pre>
+
+<h2 id="_3">标记区分</h2>
+<pre><code class="python">def prime(n):
+    for i in range(2, n-1):
+        if n % i == 0:
+            return i
+    return -1
+</code></pre>
+
+<pre><code class="python">def prime(n):
+    for i in range(2, n-1):
+        if n % i == 0:
+            break
+    else:
+        return -1
+    return i
+</code></pre>
+
+<h2 id="_4">字典</h2>
+<p>Bad:</p>
+<pre><code class="python">t = {}
+t['a'] = {}
+t['a']['b'] = 1 
+t['c'] = 1
+t['d'] = {}
+t['d']['e'] = {}
+t['d']['e']['f'] = 10
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">from collections import defaultdict
+
+tree = lambda: defaultdict(tree)
+t = tree()
+t['a']['b'] = 1
+t['c'] = 1
+t['d']['e']['f'] = 10
+</code></pre>
+
+<h2 id="_5">上下文管理器</h2>
+<h3 id="_6">文件</h3>
 <p>Bad:</p>
 <pre><code class="python">f = open('tmp/a', 'a')
 f.write('hello world')
@@ -253,6 +333,9 @@ with make_open_context('/tmp/a', 'a') as f:
     f.write('hello world')
 </code></pre>
 
+<h3 id="_7">锁</h3>
+<h3 id="_8">异常</h3>
+<h2 id="_9">缓存</h2>
 <h2 id="total_ordering">total_ordering</h2>
 <pre><code class="python">from functools import total_ordering
 
