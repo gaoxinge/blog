@@ -261,12 +261,24 @@ for i in range(1, 10):
 
 <h2 id="_2">直到出现不符合的结果</h2>
 <p>Bad:</p>
-<pre><code class="python"></code></pre>
+<pre><code class="python">blocks = []
+while True:
+    block = f.read(32)
+    if block == '':
+        break
+    blocks.append(block)
+</code></pre>
 
 <p>Good:</p>
-<pre><code class="python"></code></pre>
+<pre><code class="python">from functools import partial
+
+blocks = []
+for block in iter(partial(f.read, 32), ''):
+    blocks.append(block)
+</code></pre>
 
 <h2 id="_3">标记区分</h2>
+<p>Bad:</p>
 <pre><code class="python">def prime(n):
     for i in range(2, n-1):
         if n % i == 0:
@@ -274,6 +286,7 @@ for i in range(1, 10):
     return -1
 </code></pre>
 
+<p>Good:</p>
 <pre><code class="python">def prime(n):
     for i in range(2, n-1):
         if n % i == 0:
@@ -348,8 +361,144 @@ with make_open_context('/tmp/a', 'a') as f:
 </code></pre>
 
 <h3 id="_7">锁</h3>
+<p>Bad:</p>
+<pre><code class="python">import threading
+import time
+
+def print_time(threadName, delay, counter):
+    lock.acquire()
+    print 'Staring', threadName
+    lock.release()
+    while counter:
+        time.sleep(delay)
+        lock.acquire()
+        print '%s: %s' % (threadName, time.ctime(time.time()))
+        lock.release()
+        counter -= 1
+    lock.acquire()
+    print 'Exiting', threadName
+    lock.release()
+
+lock = threading.Lock()
+
+t1 = threading.Thread(target=print_time, args=('Thread-1', 1, 5,))
+t2 = threading.Thread(target=print_time, args=('Thread-2', 2, 5,))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print 'Exiting Main Thread'
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">import threading
+import time
+
+def print_time(threadName, delay, counter):
+    with lock:
+        print 'Staring', threadName
+    while counter:
+        time.sleep(delay)
+        with lock:
+            print '%s: %s' % (threadName, time.ctime(time.time()))
+        counter -= 1
+    with lock:
+        print 'Exiting', threadName
+
+lock = threading.Lock()
+
+t1 = threading.Thread(target=print_time, args=('Thread-1', 1, 5,))
+t2 = threading.Thread(target=print_time, args=('Thread-2', 2, 5,))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print 'Exiting Main Thread'
+</code></pre>
+
 <h3 id="_8">异常</h3>
+<p>Bad:</p>
+<pre><code class="python">import os
+
+try:
+    os.remove('somefile.tmp')
+except OSError:
+    print 'no file'
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">import os
+from contextlib import contextmanager
+
+@contextmanager
+def ignored(*exceptions):
+    try:
+        yield
+    except exceptions:
+        print 'no file'
+
+with ignored(OSError):
+    os.remove('somefile.tmp')
+</code></pre>
+
 <h2 id="_9">缓存</h2>
+<p>Bad:</p>
+<pre><code class="python">import requests
+
+def web_lookup(url, saved={}):
+    if url in saved:
+        return saved[url]
+    page = requests.get(url)
+    saved[url] = page
+    return page
+</code></pre>
+
+<p>Better:</p>
+<pre><code class="python">import requests
+
+def cache(func):
+    saved = {}
+    @wraps(func)
+    def newfunc(*args):
+        if args in saved:
+            return saved[args]
+        result = func(*args)
+        saved[args] = result
+        return result
+    return newfunc
+
+@cache
+def web_lookup(url):
+    return requests.get(url)
+</code></pre>
+
+<p>Good:</p>
+<pre><code>class cached_property(property):
+    def __init__(self, func, name=None, doc=None):
+        self.__name__ = name or func.__name__
+        self.__module__ = func.__module__
+        self.__doc__ = doc or func.__doc__
+        self.func = func
+
+    def __set__(self, obj, value):
+        obj.__dict__[self.__name__] = value
+
+    def __get__(self, obj, type=None):
+        if obj is None:
+            return self
+        value = obj.__dict__.get(self.__name__, _missing)
+        if value is _missing:
+            value = self.func(obj)
+            obj.__dict__[self.__name__] = value
+        return value
+</code></pre>
+
 <h2 id="total_ordering">total_ordering</h2>
 <pre><code class="python">from functools import total_ordering
 
