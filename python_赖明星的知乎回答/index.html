@@ -618,6 +618,44 @@ ProducerThread().start()
 ConsumerThread().start()
 </code></pre>
 
+<pre><code class="python">import requests
+from multiprocessing import Pool
+
+def get_website_data(url):
+    print requests.get(url)
+
+if __name__ == '__main__':
+    pool = Pool(2)
+    urls = [
+        'http://www.google.com',
+        'http://www.baidu.com',
+        'http://www.163.com'
+    ]
+    pool.map(get_website_data, urls)
+</code></pre>
+
+<pre><code class="python">import requests
+from requests.exceptions import ConnectionError
+from multiprocessing.dummy import Pool as ThreadPool
+
+def scrape(url):
+    try:
+        print requests.get(url)
+    except ConnectionError:
+        print 'Error Occured', url
+    finally:
+        print 'URL', url, 'Scraped'
+
+pool = ThreadPool(processes=3)
+urls = [
+    'https://www.baidu.com',
+    'http://www.meituan.com',
+    'http://blog.csdn.net',
+    'http://xxxyxxx.net'
+]
+pool.map(scrape, urls)
+</code></pre>
+
 <h2 id="_13">装饰器</h2>
 <p>Bad:</p>
 <pre><code class="python">class Store(object):
