@@ -125,14 +125,7 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../python_c/">c</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../python_pythonic/">pythonic</a>
+        <a class="" href="../python_c%E5%92%8Cc%2B%2B/">c</a>
         
     </li>
 <li>
@@ -168,6 +161,9 @@
                     <li><a class="toctree-l4" href="#_6">时间复杂度</a></li>
                 
             
+                <li class="toctree-l3"><a href="#else">else</a></li>
+                
+            
                 <li class="toctree-l3"><a href="#_7">内置函数</a></li>
                 
             
@@ -186,21 +182,25 @@
                 
                     <li><a class="toctree-l4" href="#_13">锁</a></li>
                 
-                    <li><a class="toctree-l4" href="#cursor">cursor</a></li>
+                    <li><a class="toctree-l4" href="#_14">游标</a></li>
                 
-                    <li><a class="toctree-l4" href="#_14">运算精度</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_15">并发</a></li>
+                    <li><a class="toctree-l4" href="#_15">运算精度</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_16">装饰器</a></li>
+                <li class="toctree-l3"><a href="#_16">并发</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_17">设计模式</a></li>
+                <li class="toctree-l3"><a href="#_17">装饰器</a></li>
                 
             
                 <li class="toctree-l3"><a href="#_18">动态类型语言</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_19">设计模式</a></li>
+                
+                    <li><a class="toctree-l4" href="#_20">单例模式</a></li>
+                
+                    <li><a class="toctree-l4" href="#_21">工厂模式</a></li>
                 
             
             </ul>
@@ -400,9 +400,32 @@ for val, key in result:
 </code></pre>
 
 <h3 id="_6">时间复杂度</h3>
-<pre><code class="python">list              --- 数组，判断元素有无：慢
+<pre><code>list              --- 数组，判断元素有无：慢
 collections.deque --- 双向链表
 set               --- hash表，判断元素有无：快
+</code></pre>
+
+<h2 id="else">else</h2>
+<pre><code class="python">if xxx:
+    pass
+else:
+    pass
+</code></pre>
+
+<pre><code class="python">while xxx:
+    pass
+else:
+    pass
+</code></pre>
+
+<pre><code class="python">try:
+    pass
+except:
+    pass
+else:
+    pass
+finally:
+    pass
 </code></pre>
 
 <h2 id="_7">内置函数</h2>
@@ -477,6 +500,27 @@ raise SystemExit(1)
 </code></pre>
 
 <h2 id="_10">全局变量</h2>
+<pre><code class="python">import sys
+import test
+
+a = 1
+
+def func1():
+    global a
+    a += 1
+
+def func2():
+    test.a += 1
+
+def func3():
+    module = sys.modules['test']
+    module.a += 1
+
+func1()
+func2()
+func3()
+</code></pre>
+
 <h2 id="_11">上下文管理器</h2>
 <h3 id="_12">文件</h3>
 <p>Bad:</p>
@@ -566,8 +610,16 @@ t2.join()
 print 'Exiting Main Thread'
 </code></pre>
 
-<h3 id="cursor">cursor</h3>
-<h3 id="_14">运算精度</h3>
+<h3 id="_14">游标</h3>
+<pre><code class="python">import MySQLdb
+
+db = MySQLdb.connect('localhost', 'root', 'password')
+with db as cursor:
+    cursor.execute('show databases')
+    print cursor.fetchall()
+</code></pre>
+
+<h3 id="_15">运算精度</h3>
 <pre><code class="python">import decimal
 
 with decimal.localcontext() as ctx:
@@ -575,7 +627,7 @@ with decimal.localcontext() as ctx:
     print decimal.getcontext().prec
 </code></pre>
 
-<h2 id="_15">并发</h2>
+<h2 id="_16">并发</h2>
 <p>Bad:</p>
 <pre><code class="python">import time
 import random
@@ -692,7 +744,7 @@ urls = [
 pool.map(scrape, urls)
 </code></pre>
 
-<h2 id="_16">装饰器</h2>
+<h2 id="_17">装饰器</h2>
 <p>Bad:</p>
 <pre><code class="python">class Store(object):
     def get_food(self, username, food):
@@ -739,7 +791,109 @@ class Storage(object):
         return storage.put(food)
 </code></pre>
 
-<h2 id="_17">设计模式</h2>
+<p>Bad:</p>
+<pre><code class="python">def is_admin(f):
+    def wrapper(*args, **kwargs):
+        if kwargs.get('username') != 'admin':
+            raise Exception(&quot;This user is not allowed to get food&quot;)
+        return f(*args, **kwargs)
+    return wrapper
+
+
+@is_admin
+def barfoo(username='someone'):
+    '''Do crazy stuff'''
+    pass
+
+print barfoo.func_doc
+print barfoo.__name__
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">import functools
+
+def is_admin(f):
+    @functools.wraps(f)
+    def wrapper(*args, **kwargs):
+        if kwargs.get(&quot;username&quot;) != 'admin':
+            raise Exception(&quot;This user is not allowed to get food&quot;)
+        return f(*args, **kwargs)
+    return wrapper
+
+
+@is_admin
+def barfoo(username='someone'):
+    '''Do crazy stuff'''
+    pass
+
+print barfoo.func_doc
+print barfoo.__name__
+</code></pre>
+
+<p>Bad:</p>
+<pre><code class="python">import functools
+
+def check_is_admin(f):
+    @functools.wraps(f)
+    def wrapper(*args, **kwargs):
+        if kwargs.get(&quot;username&quot;) != 'admin':
+            raise Exception(&quot;This user is not allowed to get food&quot;)
+        return f(*args, **kwargs)
+    return wrapper
+
+
+@check_is_admin
+def get_food(username, food='chocolate'):
+    return &quot;{0} get food: {1}&quot;.format(username, food)
+
+print get_food('admin')
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">import functools
+import inspect
+
+def check_is_admin(f):
+    @functools.wraps(f)
+    def wrapper(*args, **kwargs):
+        func_args = inspect.getcallargs(f, *args, **kwargs)
+        if func_args.get(&quot;username&quot;) != 'admin':
+            raise Exception(&quot;This user is not allowed to get food&quot;)
+        return f(*args, **kwargs)
+    return wrapper
+
+
+@check_is_admin
+def get_food(username, food='chocolate'):
+    return &quot;{0} get food: {1}&quot;.format(username, food)
+
+print get_food('admin')
+</code></pre>
+
+<pre><code class="python">import inspect
+import functools
+
+def check_args(parameters):
+    def decorated(f):
+        @functools.wraps
+        def wrapper(*args, **kwargs):
+            func_args = inspect.getcallargs(f, *args, **kwargs)
+            msg = func_args.get('msg')
+
+            for item in parameters:
+                if msg.body_dict.get(item) is None:
+                    return False, &quot;check failed, %s is not found&quot; % item
+
+            return f(*args, **kwargs)
+        return wrapper
+    return decorated
+
+class AsyncMsgHandler(MsgHandler):
+    @check.check_args(['ContainerIdentifier', 'MonitorSecretKey', &quot;InstanceID&quot;, &quot;UUID&quot;])
+    def init_container(self, msg):
+        pass
+</code></pre>
+
 <h2 id="_18">动态类型语言</h2>
 <p>Bad:</p>
 <pre><code class="python">def a():
@@ -790,6 +944,39 @@ if result:
     print result
 else:
     raise Exception('Action not found')
+</code></pre>
+
+<h2 id="_19">设计模式</h2>
+<h3 id="_20">单例模式</h3>
+<pre><code class="python">class Borg:
+    _shared_state = {}
+
+    def __init__(self):
+        self.__dict__ = self.__shared_state
+</code></pre>
+
+<pre><code class="python">def get():
+    if not get.rates:
+        _URL = 'http://www.bankofcanada.ca/stats/assets/csv/fx-seven-day.csv'
+            with urllib.request.urlopen(_URL) as file:
+                for line in file:
+                    pass
+    return get.rates
+</code></pre>
+
+<h3 id="_21">工厂模式</h3>
+<pre><code class="python">class Shape:
+    pass
+
+class Circle(Shape):
+    pass
+
+class Square(Shape):
+    pass
+
+for name in [&quot;Circle&quot;, &quot;Square&quot;]:
+    cls = globals()[name]
+    obj = cls()
 </code></pre>
               
             </div>
