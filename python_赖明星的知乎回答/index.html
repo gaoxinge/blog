@@ -165,33 +165,42 @@
                 
                     <li><a class="toctree-l4" href="#_5">字典</a></li>
                 
-            
-                <li class="toctree-l3"><a href="#_6">内置函数</a></li>
+                    <li><a class="toctree-l4" href="#_6">时间复杂度</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_7">交换</a></li>
+                <li class="toctree-l3"><a href="#_7">内置函数</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_8">报错</a></li>
+                <li class="toctree-l3"><a href="#_8">交换</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_9">上下文管理器</a></li>
-                
-                    <li><a class="toctree-l4" href="#_10">文件</a></li>
-                
-                    <li><a class="toctree-l4" href="#_11">锁</a></li>
+                <li class="toctree-l3"><a href="#_9">报错</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_12">并发</a></li>
+                <li class="toctree-l3"><a href="#_10">全局变量</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_13">装饰器</a></li>
+                <li class="toctree-l3"><a href="#_11">上下文管理器</a></li>
+                
+                    <li><a class="toctree-l4" href="#_12">文件</a></li>
+                
+                    <li><a class="toctree-l4" href="#_13">锁</a></li>
+                
+                    <li><a class="toctree-l4" href="#cursor">cursor</a></li>
+                
+                    <li><a class="toctree-l4" href="#_14">运算精度</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_14">设计模式</a></li>
+                <li class="toctree-l3"><a href="#_15">并发</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_15">动态类型语言</a></li>
+                <li class="toctree-l3"><a href="#_16">装饰器</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_17">设计模式</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_18">动态类型语言</a></li>
                 
             
             </ul>
@@ -390,7 +399,13 @@ for val, key in result:
     print key, ':', val
 </code></pre>
 
-<h2 id="_6">内置函数</h2>
+<h3 id="_6">时间复杂度</h3>
+<pre><code class="python">list              --- 数组，判断元素有无：慢
+collections.deque --- 双向链表
+set               --- hash表，判断元素有无：快
+</code></pre>
+
+<h2 id="_7">内置函数</h2>
 <ul>
 <li>sum</li>
 <li>sort</li>
@@ -439,7 +454,7 @@ for item in reversed(L):
     print item
 </code></pre>
 
-<h2 id="_7">交换</h2>
+<h2 id="_8">交换</h2>
 <p>Bad:</p>
 <pre><code class="python">t = a
 a = b
@@ -450,7 +465,7 @@ b = t
 <pre><code class="python">a, b = b, a
 </code></pre>
 
-<h2 id="_8">报错</h2>
+<h2 id="_9">报错</h2>
 <p>Bad:</p>
 <pre><code class="python">import sys
 sys.stderr.write('It failed!')
@@ -461,8 +476,9 @@ raise SystemExit(1)
 <pre><code class="python">raise SystemExit('It failed!')
 </code></pre>
 
-<h2 id="_9">上下文管理器</h2>
-<h3 id="_10">文件</h3>
+<h2 id="_10">全局变量</h2>
+<h2 id="_11">上下文管理器</h2>
+<h3 id="_12">文件</h3>
 <p>Bad:</p>
 <pre><code class="python">try:
     f = open('/path/to/file', 'r')
@@ -477,7 +493,18 @@ finally:
     print f.read()
 </code></pre>
 
-<h3 id="_11">锁</h3>
+<p>Bad:</p>
+<pre><code class="python">with open('data.txt') as source:
+    with open('target.txt', 'w') as target:
+        target.write(source.read())
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">with open('data.txt') as source, open('target.txt', 'w') as target:
+    target.write(source.read())
+</code></pre>
+
+<h3 id="_13">锁</h3>
 <p>Bad:</p>
 <pre><code class="python">import threading
 import time
@@ -539,7 +566,16 @@ t2.join()
 print 'Exiting Main Thread'
 </code></pre>
 
-<h2 id="_12">并发</h2>
+<h3 id="cursor">cursor</h3>
+<h3 id="_14">运算精度</h3>
+<pre><code class="python">import decimal
+
+with decimal.localcontext() as ctx:
+    ctx.prec = 22
+    print decimal.getcontext().prec
+</code></pre>
+
+<h2 id="_15">并发</h2>
 <p>Bad:</p>
 <pre><code class="python">import time
 import random
@@ -656,7 +692,7 @@ urls = [
 pool.map(scrape, urls)
 </code></pre>
 
-<h2 id="_13">装饰器</h2>
+<h2 id="_16">装饰器</h2>
 <p>Bad:</p>
 <pre><code class="python">class Store(object):
     def get_food(self, username, food):
@@ -703,8 +739,8 @@ class Storage(object):
         return storage.put(food)
 </code></pre>
 
-<h2 id="_14">设计模式</h2>
-<h2 id="_15">动态类型语言</h2>
+<h2 id="_17">设计模式</h2>
+<h2 id="_18">动态类型语言</h2>
 <p>Bad:</p>
 <pre><code class="python">def a():
     return 'a'
