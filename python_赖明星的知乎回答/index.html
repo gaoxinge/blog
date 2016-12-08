@@ -159,22 +159,39 @@
                 <li class="toctree-l3"><a href="#_2">列表推导式</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_3">内置函数</a></li>
+                <li class="toctree-l3"><a href="#_3">数据结构</a></li>
+                
+                    <li><a class="toctree-l4" href="#_4">元组</a></li>
+                
+                    <li><a class="toctree-l4" href="#_5">字典</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_4">交换</a></li>
+                <li class="toctree-l3"><a href="#_6">内置函数</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_5">上下文管理器</a></li>
+                <li class="toctree-l3"><a href="#_7">交换</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_6">报错</a></li>
+                <li class="toctree-l3"><a href="#_8">报错</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_7">装饰器</a></li>
+                <li class="toctree-l3"><a href="#_9">上下文管理器</a></li>
+                
+                    <li><a class="toctree-l4" href="#_10">文件</a></li>
+                
+                    <li><a class="toctree-l4" href="#_11">锁</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_8">动态类型语言</a></li>
+                <li class="toctree-l3"><a href="#_12">并发</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_13">装饰器</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_14">设计模式</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_15">动态类型语言</a></li>
                 
             
             </ul>
@@ -290,7 +307,90 @@ set([64, 144, 36, 100, 324, 256, 16, 400, 196, 4]) # 集合
 &gt;&gt;&gt; {item: os.path.realpath(item) for item in os.listdir(os.path.expanduser('.'))}
 </code></pre>
 
-<h2 id="_3">内置函数</h2>
+<h2 id="_3">数据结构</h2>
+<h3 id="_4">元组</h3>
+<pre><code class="python">from collections import namedtuple
+
+DiskDevice = namedtuple('DiskDevice', ['major_number minor_number device_name read_count read_merged_count',
+                                       'read_sections time_spent_reading write_count write_merged_count ',
+                                       'write_sections time_spent_write io_requests time_spent_doing_io',
+                                       ' weighted_time_spent_doing_io'])
+
+def get_disk_info(disk_name):
+    with open('/proc/diskstats') as f:
+        for line in f:
+            if line.split()[2] == disk_name:
+                return DiskDevice(*(line.split()))
+</code></pre>
+
+<h3 id="_5">字典</h3>
+<p>Bad:</p>
+<pre><code class="python">port = kwargs.get('port')
+if port is None:
+    port = 3306
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">port = kwargs.get('port', 3306)
+</code></pre>
+
+<p>Bad:</p>
+<pre><code class="python">d = {}
+for key, value in pairs:
+    if key not in d:
+        d[key] = []
+    d[key].append(value)
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">from collections import defaultdict
+
+d = defaultdict(list)
+for key, value in pairs:
+    d[key].append(value)
+</code></pre>
+
+<p>Bad:</p>
+<pre><code class="python">d = {}
+with open('/etc/passwd') as f:
+    for line in f:
+        for word in line.strip().split(':'):
+            if word not in d:
+                d[word] = 0
+            d[word] += 1
+</code></pre>
+
+<p>Better:</p>
+<pre><code class="python">from collections import defaultdict
+
+d = defaultdict(int)
+with open('/etc/passwd') as f:
+    for line in f:
+        for word in line.strip().split(':'):
+            d[word] += 1
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">from collections import Counter
+
+word_counts = Counter()
+with open('test.txt') as f:
+    for line in f:
+        word_counts.update(line.strip().split(':'))
+</code></pre>
+
+<p>Bad:</p>
+<pre><code class="python">result = sorted(zip(d.values(), d.keys()), reverse=True)[:3]
+for val, key in result:
+    print  key, ':', val
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">for key, val in word_counts.most_common(3):
+    print key, ':', val
+</code></pre>
+
+<h2 id="_6">内置函数</h2>
 <ul>
 <li>sum</li>
 <li>sort</li>
@@ -339,7 +439,7 @@ for item in reversed(L):
     print item
 </code></pre>
 
-<h2 id="_4">交换</h2>
+<h2 id="_7">交换</h2>
 <p>Bad:</p>
 <pre><code class="python">t = a
 a = b
@@ -350,7 +450,19 @@ b = t
 <pre><code class="python">a, b = b, a
 </code></pre>
 
-<h2 id="_5">上下文管理器</h2>
+<h2 id="_8">报错</h2>
+<p>Bad:</p>
+<pre><code class="python">import sys
+sys.stderr.write('It failed!')
+raise SystemExit(1)
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">raise SystemExit('It failed!')
+</code></pre>
+
+<h2 id="_9">上下文管理器</h2>
+<h3 id="_10">文件</h3>
 <p>Bad:</p>
 <pre><code class="python">try:
     f = open('/path/to/file', 'r')
@@ -365,18 +477,148 @@ finally:
     print f.read()
 </code></pre>
 
-<h2 id="_6">报错</h2>
+<h3 id="_11">锁</h3>
 <p>Bad:</p>
-<pre><code class="python">import sys
-sys.stderr.write('It failed!')
-raise SystemExit(1)
+<pre><code class="python">import threading
+import time
+
+def print_time(threadName, delay, counter):
+    lock.acquire()
+    print 'Staring', threadName
+    lock.release()
+    while counter:
+        time.sleep(delay)
+        lock.acquire()
+        print '%s: %s' % (threadName, time.ctime(time.time()))
+        lock.release()
+        counter -= 1
+    lock.acquire()
+    print 'Exiting', threadName
+    lock.release()
+
+lock = threading.Lock()
+
+t1 = threading.Thread(target=print_time, args=('Thread-1', 1, 5,))
+t2 = threading.Thread(target=print_time, args=('Thread-2', 2, 5,))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print 'Exiting Main Thread'
 </code></pre>
 
 <p>Good:</p>
-<pre><code class="python">raise SystemExit('It failed!')
+<pre><code class="python">import threading
+import time
+
+def print_time(threadName, delay, counter):
+    with lock:
+        print 'Staring', threadName
+    while counter:
+        time.sleep(delay)
+        with lock:
+            print '%s: %s' % (threadName, time.ctime(time.time()))
+        counter -= 1
+    with lock:
+        print 'Exiting', threadName
+
+lock = threading.Lock()
+
+t1 = threading.Thread(target=print_time, args=('Thread-1', 1, 5,))
+t2 = threading.Thread(target=print_time, args=('Thread-2', 2, 5,))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print 'Exiting Main Thread'
 </code></pre>
 
-<h2 id="_7">装饰器</h2>
+<h2 id="_12">并发</h2>
+<p>Bad:</p>
+<pre><code class="python">import time
+import random
+from threading import Thread, Condition
+
+queue = []
+MAX_NUM = 10
+condition = Condition()
+
+class ProducerThread(Thread):
+    def run(self):
+        nums = range(5)
+        global queue
+        while True:
+            condition.acquire()
+            if len(queue) == MAX_NUM:
+                print &quot;Queue full, producer is waiting&quot;
+                condition.wait()
+                print &quot;Space in queue, Consumer notified the producer&quot;
+            num = random.choice(nums)
+            queue.append(num)
+            print &quot;Produced&quot;, num
+            condition.notify()
+            condition.release()
+            time.sleep(random.random())
+
+
+class ConsumerThread(Thread):
+    def run(self):
+        global queue
+        while True:
+            condition.acquire()
+            if not queue:
+                print &quot;Nothing in queue, consumer is waiting&quot;
+                condition.wait()
+                print &quot;Producer added something to queue and notified the consumer&quot;
+            num = queue.pop(0)
+            print &quot;Consumed&quot;, num
+            condition.notify()
+            condition.release()
+            time.sleep(random.random())
+
+
+ProducerThread().start()
+ConsumerThread().start()
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">import time
+import random
+from Queue import Queue
+from threading import Thread
+
+queue = Queue(10)
+
+class ProducerThread(Thread):
+    def run(self):
+        nums = range(5)
+        global queue
+        while True:
+            num = random.choice(nums)
+            queue.put(num)
+            print &quot;Produced&quot;, num
+            time.sleep(random.random())
+
+class ConsumerThread(Thread):
+    def run(self):
+        global queue
+        while True:
+            num = queue.get()
+            queue.task_done()
+            print &quot;Consumed&quot;, num
+            time.sleep(random.random())
+
+ProducerThread().start()
+ConsumerThread().start()
+</code></pre>
+
+<h2 id="_13">装饰器</h2>
 <p>Bad:</p>
 <pre><code class="python">class Store(object):
     def get_food(self, username, food):
@@ -423,7 +665,8 @@ class Storage(object):
         return storage.put(food)
 </code></pre>
 
-<h2 id="_8">动态类型语言</h2>
+<h2 id="_14">设计模式</h2>
+<h2 id="_15">动态类型语言</h2>
 <p>Bad:</p>
 <pre><code class="python">def a():
     return 'a'
