@@ -7,11 +7,12 @@ pages:
 - 规范: python_规范.md
 - 缩进: python_缩进.md
 - 编码: python_编码.md
-- 导入: python_导入.md
+- 模块: python_模块.md
 - 库: python_库.md
+- 标准库: python_标准库.md
 - 调试: python_调试.md
 - 测试: python_测试.md
-- c: python_c.md
+- c和c++: python_c和c++.md
 - 董伟明的知乎回答: python_董伟明的知乎回答.md
 - 赖明星的知乎回答: python_赖明星的知乎回答.md
 - c: c_c.md

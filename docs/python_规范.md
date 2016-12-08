@@ -19,6 +19,7 @@
 - [Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008)
 - [python代码风格指南](https://my.oschina.net/u/1433482/blog/464444?p=1)
 - [Python 编码风格指南](http://python.jobbole.com/84618)
+- [Code Like a Pythonista: Idiomatic Python](http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html)
 
 ### PEP 20
 
@@ -54,4 +55,4 @@ Namespaces are one honking great idea -- let's do more of those!
 
 ## Google开源项目风格指南
 
-[Google Style Guide](http://zh-google-styleguide.readthedocs.io/en/latest/contents/#)是Googel为一些语言定制的风格规范，比如python。
+[Google Style Guide](http://zh-google-styleguide.readthedocs.io/en/latest/contents/#)是Google为一些语言定制的风格规范，比如python。

@@ -26,14 +26,27 @@ a = next((i for i in range(1, 10) if not i % 4), -1)
 Bad:
 
 ```python
+blocks = []
+while True:
+    block = f.read(32)
+    if block == '':
+        break
+    blocks.append(block)
 ```
 
 Good:
 
 ```python
+from functools import partial
+
+blocks = []
+for block in iter(partial(f.read, 32), ''):
+    blocks.append(block)
 ```
 
 ## 标记区分
+
+Bad:
 
 ```python
 def prime(n):
@@ -42,6 +55,8 @@ def prime(n):
             return i
     return -1
 ```
+
+Good:
 
 ```python
 def prime(n):
@@ -134,9 +149,159 @@ with make_open_context('/tmp/a', 'a') as f:
 
 ### 锁
 
+Bad:
+
+```python
+import threading
+import time
+
+def print_time(threadName, delay, counter):
+    lock.acquire()
+    print 'Staring', threadName
+    lock.release()
+    while counter:
+        time.sleep(delay)
+        lock.acquire()
+        print '%s: %s' % (threadName, time.ctime(time.time()))
+        lock.release()
+        counter -= 1
+    lock.acquire()
+    print 'Exiting', threadName
+    lock.release()
+
+lock = threading.Lock()
+
+t1 = threading.Thread(target=print_time, args=('Thread-1', 1, 5,))
+t2 = threading.Thread(target=print_time, args=('Thread-2', 2, 5,))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print 'Exiting Main Thread'
+```
+
+Good:
+
+```python
+import threading
+import time
+
+def print_time(threadName, delay, counter):
+    with lock:
+        print 'Staring', threadName
+    while counter:
+        time.sleep(delay)
+        with lock:
+            print '%s: %s' % (threadName, time.ctime(time.time()))
+        counter -= 1
+    with lock:
+        print 'Exiting', threadName
+
+lock = threading.Lock()
+
+t1 = threading.Thread(target=print_time, args=('Thread-1', 1, 5,))
+t2 = threading.Thread(target=print_time, args=('Thread-2', 2, 5,))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print 'Exiting Main Thread'
+```
+
 ### 异常
 
+Bad:
+
+```python
+import os
+
+try:
+    os.remove('somefile.tmp')
+except OSError:
+    print 'no file'
+```
+
+Good:
+
+```python
+import os
+from contextlib import contextmanager
+
+@contextmanager
+def ignored(*exceptions):
+    try:
+        yield
+    except exceptions:
+        print 'no file'
+
+with ignored(OSError):
+    os.remove('somefile.tmp')
+```
+
 ## 缓存
+
+Bad:
+
+```python
+import requests
+
+def web_lookup(url, saved={}):
+    if url in saved:
+        return saved[url]
+    page = requests.get(url)
+    saved[url] = page
+    return page
+```
+
+Better:
+
+```python
+import requests
+
+def cache(func):
+    saved = {}
+    @wraps(func)
+    def newfunc(*args):
+        if args in saved:
+            return saved[args]
+        result = func(*args)
+        saved[args] = result
+        return result
+    return newfunc
+
+@cache
+def web_lookup(url):
+    return requests.get(url)
+```
+
+Good:
+
+```
+class cached_property(property):
+    def __init__(self, func, name=None, doc=None):
+        self.__name__ = name or func.__name__
+        self.__module__ = func.__module__
+        self.__doc__ = doc or func.__doc__
+        self.func = func
+
+    def __set__(self, obj, value):
+        obj.__dict__[self.__name__] = value
+
+    def __get__(self, obj, type=None):
+        if obj is None:
+            return self
+        value = obj.__dict__.get(self.__name__, _missing)
+        if value is _missing:
+            value = self.func(obj)
+            obj.__dict__[self.__name__] = value
+        return value
+```
 
 ## total_ordering
 
@@ -174,19 +339,6 @@ print inspect.isfunction(add)
 
 具体可参见[Python mixin模式](http://python.jobbole.com/84052)。
 
-Bad:
-
-```python
-class SimpleItemContainer(object):
-    def __init__(self, id, item_containers):
-        self.id = id
-        self.data = {}
-        for item in item_containers:
-            self.data[item.id] = item
-```
-
-Good:
-
 ```python
 from UserDict import DictMixin
 
@@ -214,16 +366,19 @@ class MyDict(DictMixin):
 ```python
 from UserDict import DictMixin
 
-class BetterSimpleItemContainer(object, DictMixin):
+class Item(DictMixin):
+    def __init__(self):
+        self.data = {}
+        
     def __getitem__(self, id):
         return self.data[id]
-        
+
     def __setitem__(self, id, value):
         self.data[id] = value
-        
-    def __del__(self, id):
+
+    def __delitem__(self, id):
         del self.data[id]
-        
+
     def keys(self):
         return self.data.keys()
 ```
@@ -231,13 +386,12 @@ class BetterSimpleItemContainer(object, DictMixin):
 ```python
 class CommonEqualityMixin(object):
     def __eq__(self, other):
-        return isinstance(other, self.__class__)
-                and self.__dict__ == other.__dict__
+        return isinstance(other, self.__class__) and self.__dict__ == other.__dict__
                 
     def __ne__(self, other):
         return not self.__eq__(other)
         
-class Foo(commonEqualityMixin):
+class Foo(CommonEqualityMixin):
     def __init__(self, item):
         self.item = item
 ```

@@ -1,1 +1,1 @@
-﻿
+﻿具体可参见[Python 编码为什么那么蛋疼](https://www.zhihu.com/question/31833164)。

@@ -60,6 +60,146 @@ set([64, 144, 36, 100, 324, 256, 16, 400, 196, 4]) # 集合
 >>> {item: os.path.realpath(item) for item in os.listdir(os.path.expanduser('.'))}
 ```
 
+## 数据结构
+
+### 元组
+
+```python
+from collections import namedtuple
+
+DiskDevice = namedtuple('DiskDevice', ['major_number minor_number device_name read_count read_merged_count',
+                                       'read_sections time_spent_reading write_count write_merged_count ',
+                                       'write_sections time_spent_write io_requests time_spent_doing_io',
+                                       ' weighted_time_spent_doing_io'])
+
+def get_disk_info(disk_name):
+    with open('/proc/diskstats') as f:
+        for line in f:
+            if line.split()[2] == disk_name:
+                return DiskDevice(*(line.split()))
+```
+
+### 字典
+
+Bad:
+
+```python
+port = kwargs.get('port')
+if port is None:
+    port = 3306
+```
+
+Good:
+
+```python
+port = kwargs.get('port', 3306)
+```
+
+Bad:
+
+```python
+d = {}
+for key, value in pairs:
+    if key not in d:
+        d[key] = []
+    d[key].append(value)
+```
+
+Good:
+
+```python
+from collections import defaultdict
+
+d = defaultdict(list)
+for key, value in pairs:
+    d[key].append(value)
+```
+
+Bad:
+
+```python
+d = {}
+with open('/etc/passwd') as f:
+    for line in f:
+        for word in line.strip().split(':'):
+            if word not in d:
+                d[word] = 0
+            d[word] += 1
+```
+
+Better:
+
+```python
+from collections import defaultdict
+
+d = defaultdict(int)
+with open('/etc/passwd') as f:
+    for line in f:
+        for word in line.strip().split(':'):
+            d[word] += 1
+```
+
+Good:
+
+```python
+from collections import Counter
+
+word_counts = Counter()
+with open('test.txt') as f:
+    for line in f:
+        word_counts.update(line.strip().split(':'))
+```
+
+Bad:
+
+```python
+result = sorted(zip(d.values(), d.keys()), reverse=True)[:3]
+for val, key in result:
+    print  key, ':', val
+```
+
+Good:
+
+```python
+for key, val in word_counts.most_common(3):
+    print key, ':', val
+```
+
+### 时间复杂度
+
+```
+list              --- 数组，判断元素有无：慢
+collections.deque --- 双向链表
+set               --- hash表，判断元素有无：快
+```
+
+## else
+
+```python
+if xxx:
+    pass
+else:
+    pass
+```
+
+```python
+while xxx:
+    pass
+else:
+    pass
+```
+
+```python
+try:
+    pass
+except:
+    pass
+else:
+    pass
+finally:
+    pass
+```
+
 ## 内置函数
 
 - sum
@@ -126,7 +266,49 @@ Good:
 a, b = b, a
 ```
 
+## 报错
+
+Bad:
+
+```python
+import sys
+sys.stderr.write('It failed!')
+raise SystemExit(1)
+```
+
+Good:
+
+```python
+raise SystemExit('It failed!')
+```
+
+## 全局变量
+
+```python
+import sys
+import test
+
+a = 1
+
+def func1():
+    global a
+    a += 1
+
+def func2():
+    test.a += 1
+
+def func3():
+    module = sys.modules['test']
+    module.a += 1
+
+func1()
+func2()
+func3()
+```
+
 ## 上下文管理器
+
+### 文件
 
 Bad:
 
@@ -146,20 +328,231 @@ with open('/path/to/file', 'r') as f:
     print f.read()
 ```
 
-## 报错
-
 Bad:
 
 ```python
-import sys
-sys.stderr.write('It failed!')
-raise SystemExit(1)
+with open('data.txt') as source:
+    with open('target.txt', 'w') as target:
+        target.write(source.read())
 ```
 
 Good:
 
 ```python
-raise SystemExit('It failed!')
+with open('data.txt') as source, open('target.txt', 'w') as target:
+    target.write(source.read())
+```
+
+### 锁
+
+Bad:
+
+```python
+import threading
+import time
+
+def print_time(threadName, delay, counter):
+    lock.acquire()
+    print 'Staring', threadName
+    lock.release()
+    while counter:
+        time.sleep(delay)
+        lock.acquire()
+        print '%s: %s' % (threadName, time.ctime(time.time()))
+        lock.release()
+        counter -= 1
+    lock.acquire()
+    print 'Exiting', threadName
+    lock.release()
+
+lock = threading.Lock()
+
+t1 = threading.Thread(target=print_time, args=('Thread-1', 1, 5,))
+t2 = threading.Thread(target=print_time, args=('Thread-2', 2, 5,))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print 'Exiting Main Thread'
+```
+
+Good:
+
+```python
+import threading
+import time
+
+def print_time(threadName, delay, counter):
+    with lock:
+        print 'Staring', threadName
+    while counter:
+        time.sleep(delay)
+        with lock:
+            print '%s: %s' % (threadName, time.ctime(time.time()))
+        counter -= 1
+    with lock:
+        print 'Exiting', threadName
+
+lock = threading.Lock()
+
+t1 = threading.Thread(target=print_time, args=('Thread-1', 1, 5,))
+t2 = threading.Thread(target=print_time, args=('Thread-2', 2, 5,))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print 'Exiting Main Thread'
+```
+
+### 游标
+
+```python
+import MySQLdb
+
+db = MySQLdb.connect('localhost', 'root', 'password')
+with db as cursor:
+    cursor.execute('show databases')
+    print cursor.fetchall()
+```
+
+### 运算精度
+
+```python
+import decimal
+
+with decimal.localcontext() as ctx:
+    ctx.prec = 22
+    print decimal.getcontext().prec
+```
+
+## 并发
+
+Bad:
+
+```python
+import time
+import random
+from threading import Thread, Condition
+    
+queue = []
+MAX_NUM = 10
+condition = Condition()
+
+class ProducerThread(Thread):
+    def run(self):
+        nums = range(5)
+        global queue
+        while True:
+            condition.acquire()
+            if len(queue) == MAX_NUM:
+                print "Queue full, producer is waiting"
+                condition.wait()
+                print "Space in queue, Consumer notified the producer"
+            num = random.choice(nums)
+            queue.append(num)
+            print "Produced", num
+            condition.notify()
+            condition.release()
+            time.sleep(random.random())
+
+
+class ConsumerThread(Thread):
+    def run(self):
+        global queue
+        while True:
+            condition.acquire()
+            if not queue:
+                print "Nothing in queue, consumer is waiting"
+                condition.wait()
+                print "Producer added something to queue and notified the consumer"
+            num = queue.pop(0)
+            print "Consumed", num
+            condition.notify()
+            condition.release()
+            time.sleep(random.random())
+
+
+ProducerThread().start()
+ConsumerThread().start()
+```
+
+Good:
+
+```python
+import time
+import random
+from Queue import Queue
+from threading import Thread
+
+queue = Queue(10)
+
+class ProducerThread(Thread):
+    def run(self):
+        nums = range(5)
+        global queue
+        while True:
+            num = random.choice(nums)
+            queue.put(num)
+            print "Produced", num
+            time.sleep(random.random())
+
+class ConsumerThread(Thread):
+    def run(self):
+        global queue
+        while True:
+            num = queue.get()
+            queue.task_done()
+            print "Consumed", num
+            time.sleep(random.random())
+
+ProducerThread().start()
+ConsumerThread().start()
+```
+
+```python
+import requests
+from multiprocessing import Pool
+    
+def get_website_data(url):
+    print requests.get(url)
+
+if __name__ == '__main__':
+    pool = Pool(2)
+    urls = [
+        'http://www.google.com',
+        'http://www.baidu.com',
+        'http://www.163.com'
+    ]
+    pool.map(get_website_data, urls)
+```
+
+```python
+import requests
+from requests.exceptions import ConnectionError
+from multiprocessing.dummy import Pool as ThreadPool
+
+def scrape(url):
+    try:
+        print requests.get(url)
+    except ConnectionError:
+        print 'Error Occured', url
+    finally:
+        print 'URL', url, 'Scraped'
+
+pool = ThreadPool(processes=3)
+urls = [
+    'https://www.baidu.com',
+    'http://www.meituan.com',
+    'http://blog.csdn.net',
+    'http://xxxyxxx.net'
+]
+pool.map(scrape, urls)
 ```
 
 ## 装饰器
@@ -214,6 +607,118 @@ class Storage(object):
     @check_is_admin
     def put_food(self, username, food):
         return storage.put(food)
+```
+
+Bad:
+
+```python
+def is_admin(f):
+    def wrapper(*args, **kwargs):
+        if kwargs.get('username') != 'admin':
+            raise Exception("This user is not allowed to get food")
+        return f(*args, **kwargs)
+    return wrapper
+
+
+@is_admin
+def barfoo(username='someone'):
+    '''Do crazy stuff'''
+    pass
+
+print barfoo.func_doc
+print barfoo.__name__
+```
+
+Good:
+
+```python
+import functools
+
+def is_admin(f):
+    @functools.wraps(f)
+    def wrapper(*args, **kwargs):
+        if kwargs.get("username") != 'admin':
+            raise Exception("This user is not allowed to get food")
+        return f(*args, **kwargs)
+    return wrapper
+
+
+@is_admin
+def barfoo(username='someone'):
+    '''Do crazy stuff'''
+    pass
+
+print barfoo.func_doc
+print barfoo.__name__
+```
+
+Bad:
+
+```python
+import functools
+
+def check_is_admin(f):
+    @functools.wraps(f)
+    def wrapper(*args, **kwargs):
+        if kwargs.get("username") != 'admin':
+            raise Exception("This user is not allowed to get food")
+        return f(*args, **kwargs)
+    return wrapper
+
+
+@check_is_admin
+def get_food(username, food='chocolate'):
+    return "{0} get food: {1}".format(username, food)
+
+print get_food('admin')
+```
+
+Good:
+
+```python
+import functools
+import inspect
+
+def check_is_admin(f):
+    @functools.wraps(f)
+    def wrapper(*args, **kwargs):
+        func_args = inspect.getcallargs(f, *args, **kwargs)
+        if func_args.get("username") != 'admin':
+            raise Exception("This user is not allowed to get food")
+        return f(*args, **kwargs)
+    return wrapper
+
+
+@check_is_admin
+def get_food(username, food='chocolate'):
+    return "{0} get food: {1}".format(username, food)
+
+print get_food('admin')
+```
+
+```python
+import inspect
+import functools
+
+def check_args(parameters):
+    def decorated(f):
+        @functools.wraps
+        def wrapper(*args, **kwargs):
+            func_args = inspect.getcallargs(f, *args, **kwargs)
+            msg = func_args.get('msg')
+
+            for item in parameters:
+                if msg.body_dict.get(item) is None:
+                    return False, "check failed, %s is not found" % item
+
+            return f(*args, **kwargs)
+        return wrapper
+    return decorated
+
+class AsyncMsgHandler(MsgHandler):
+    @check.check_args(['ContainerIdentifier', 'MonitorSecretKey', "InstanceID", "UUID"])
+    def init_container(self, msg):
+        pass
 ```
 
 ## 动态类型语言
@@ -271,4 +776,43 @@ if result:
     print result
 else:
     raise Exception('Action not found')
+```
+
+## 设计模式
+
+### 单例模式
+
+```python
+class Borg:
+    _shared_state = {}
+
+    def __init__(self):
+        self.__dict__ = self.__shared_state
+```
+
+```python
+def get():
+    if not get.rates:
+        _URL = 'http://www.bankofcanada.ca/stats/assets/csv/fx-seven-day.csv'
+            with urllib.request.urlopen(_URL) as file:
+                for line in file:
+                    pass
+    return get.rates
+```
+
+### 工厂模式
+
+```python
+class Shape:
+    pass
+
+class Circle(Shape):
+    pass
+
+class Square(Shape):
+    pass
+
+for name in ["Circle", "Square"]:
+    cls = globals()[name]
+    obj = cls()
 ```
