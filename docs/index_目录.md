@@ -8,7 +8,6 @@
 - [编码](https://gaoxinge.github.io/blog/python_%E7%BC%96%E7%A0%81/)
 - [模块](https://gaoxinge.github.io/blog/python_%E6%A8%A1%E5%9D%97/)
 - [库](https://gaoxinge.github.io/blog/python_%E5%BA%93/)
-- [标准库](https://gaoxinge.github.io/blog/python_%E6%A0%87%E5%87%86%E5%BA%93/)
 - [调试](https://gaoxinge.github.io/blog/python_%E8%B0%83%E8%AF%95/)
 - [测试](https://gaoxinge.github.io/blog/python_%E6%B5%8B%E8%AF%95/)
 - [c和c++](https://gaoxinge.github.io/blog/python_c%E5%92%8Cc%2B%2B/)
