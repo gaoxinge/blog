@@ -232,7 +232,7 @@
         }, 
         {
             "location": "/python_c\u548cc++/", 
-            "text": "\ufeff\u5177\u4f53\u53ef\u53c2\u89c1\n\n\n\n\n\u86c7\u4e4b\u9b45\u60d1\n\n\n\u5982\u4f55\u5b9e\u73b0 C/C++ \u4e0e Python \u7684\u901a\u4fe1", 
+            "text": "\ufeff\u5177\u4f53\u53ef\u53c2\u89c1\n\n\n\n\nPython\u4e0eC/C++\u6df7\u5408\u7f16\u7a0b\n\n\n\u804a\u804aPython ctypes\u6a21\u5757", 
             "title": "c\u548cc++"
         }, 
         {
