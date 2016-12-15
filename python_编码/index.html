@@ -87,6 +87,24 @@
         
             <ul>
             
+                <li class="toctree-l3"><a href="#_1">字符集与编码</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">文件的编码</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#python">python的编码</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_3">写文件</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_4">读文件</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_5">读网页</a></li>
+                
+            
             </ul>
         
     </li>
@@ -194,7 +212,132 @@
           <div role="main">
             <div class="section">
               
-                <p>﻿具体可参见<a href="https://www.zhihu.com/question/31833164">Python 编码为什么那么蛋疼</a>。</p>
+                <p>﻿具体可参见</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/31833164">Python编码为什么那么蛋疼</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/20179963?refer=python-dev">Python中文处理系列之源代码与文件IO</a></li>
+</ul>
+<h2 id="_1">字符集与编码</h2>
+<p>字符集有</p>
+<ul>
+<li>26个字母（大小写）、10个数字、标点符号、控制符</li>
+<li>GB-18030，GB-2312：中国国家标准，前者是后者的扩展</li>
+<li>GBK：中国全国信息技术标准化技术委员会发布的文件，是GB-2312的扩展，兼容第一项</li>
+<li>Unicode：国际标准，规定于 ISO/IEC 10646</li>
+<li>GB-13000：中国国家标准，为Unicode的子集</li>
+</ul>
+<p>编码有</p>
+<ul>
+<li>ASCII</li>
+<li>GB-18030，GBK，GB-2312：事实上采用EUC-CN</li>
+<li>Unicode，GB-13000：采用多种编码方案，常用的有UTF-8，UTF-16等；这其中，UTF-8由于对ASCII良好的兼容性，广泛用于程序代码、网页设计等中英混合的场合</li>
+</ul>
+<h2 id="_2">文件的编码</h2>
+<pre><code>     编码       解码
+文件 ----&gt; 内存 ----&gt; 文件
+</code></pre>
+
+<ul>
+<li>记事本：在另存为时可以选择</li>
+<li>Notepad++：在格式中可以选择</li>
+</ul>
+<h2 id="python">python的编码</h2>
+<pre><code>basestring子类：str类和unicode类
+str类：print使用str，交互使用repr
+unicode类：print使用unicode，交互使用repr
+
+          编码        解码
+unicode类 ----&gt; str类 ----&gt; unicode类
+</code></pre>
+
+<ul>
+<li>idle：默认环境ascii（sys.getdefaultencoding），需要添加#coding=utf-8（PEP 263）</li>
+<li>command line：默认环境ANSI（sys.getdefaultencoding）</li>
+</ul>
+<pre><code class="python">#coding=utf-8
+
+a = '你好'
+print a
+a = u'你好'
+print a
+</code></pre>
+
+<pre><code class="python">#coding=gbk
+
+a = '你好'
+print a
+a = u'你好'
+print a
+</code></pre>
+
+<ul>
+<li>非国际字符：无需加u</li>
+<li>国际字符：加#coding=utf-8，加u</li>
+</ul>
+<h2 id="_3">写文件</h2>
+<pre><code class="python">#coding=utf-8
+
+a = '你好'
+with open('test.txt', 'w') as f:
+    f.write(a)
+</code></pre>
+
+<pre><code class="python">#coding=utf-8
+
+a = u'你好'
+with open('test.txt', 'w') as f:
+    f.write(a)
+</code></pre>
+
+<pre><code class="python">#coding=gbk
+
+a = '你好'
+with open('test.txt', 'w') as f:
+    f.write(a)
+</code></pre>
+
+<pre><code class="python">#coding=gbk
+
+a = u'你好'
+with open('test.txt', 'w') as f:
+    f.write(a)
+</code></pre>
+
+<p>由于文件的写入必须使用str类，因此unicode必须先编码，再写入，可以考虑下面一些方法：</p>
+<pre><code>#coding=utf-8
+
+a = u'你好'
+with open('test.txt', 'w') as f:
+    f.write(a.encode('utf-8'))
+</code></pre>
+
+<pre><code>#coding=utf-8
+
+a = u'你好'
+with open('test.txt', 'w') as f:
+    f.write(a.encode('gbk'))
+</code></pre>
+
+<pre><code>#coding=utf-8
+import codecs
+
+a = u'你好'
+with open('test.txt', encoding='utf-8', mode='w') as f:
+    f.write(a)
+</code></pre>
+
+<pre><code>#coding=utf-8
+import codecs
+
+a = u'你好'
+with open('test.txt', encoding='gbk', mode='w') as f:
+    f.write(a)
+</code></pre>
+
+<h2 id="_4">读文件</h2>
+<p>和写文件一样，python读取的字符串为str类，要想转化成unicode类，必须事先知道文件的编码：utf-8对应的是utf-8，ANSI对应的是gbk</p>
+<h2 id="_5">读网页</h2>
+<p>和读文件不一样，python读取的字符串为unicode类，要想转化为str类，可以查看response.encoding</p>
               
             </div>
           </div>
