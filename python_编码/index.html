@@ -251,8 +251,8 @@ unicode类 ----&gt; str类 ----&gt; unicode类
 </code></pre>
 
 <ul>
-<li>idle：默认环境ascii（sys.getdefaultencoding），需要添加#coding=utf-8（PEP 263）</li>
-<li>command line：默认环境ANSI（sys.getdefaultencoding）</li>
+<li>idle：默认环境ascii（sys.getdefaultencoding()），需要添加#coding=utf-8（PEP 263）</li>
+<li>command line：默认环境gbk（sys.getdefaultencoding()）</li>
 </ul>
 <pre><code class="python">#coding=utf-8
 
@@ -335,7 +335,7 @@ with open('test.txt', encoding='gbk', mode='w') as f:
 </code></pre>
 
 <h2 id="_4">读文件</h2>
-<p>和写文件一样，python读取的字符串为str类，要想转化成unicode类，必须事先知道文件的编码：utf-8对应的是utf-8，ANSI对应的是gbk</p>
+<p>和写文件一样，python读取的字符串为str类，要想转化为unicode类，必须事先知道文件的编码：utf-8对应的是utf-8，ANSI对应的是gbk</p>
 <h2 id="_5">读网页</h2>
 <p>和读文件不一样，python读取的字符串为unicode类，要想转化为str类，可以查看response.encoding</p>
               
