@@ -3,11 +3,11 @@
 ## python
 
 - [Python核心编程](https://book.douban.com/subject/3112503)
+- [Python Documentation](https://docs.python.org/2)
 
 ## c
 
 - [C Primer Plus](https://book.douban.com/subject/1240002)
-- [C程序设计语言](https://book.douban.com/subject/1139336)
 
 ## c++
 
