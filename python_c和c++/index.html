@@ -122,6 +122,12 @@
         
             <ul>
             
+                <li class="toctree-l3"><a href="#ccpython">c/c++调用Python</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#pythoncc">Python调用c/c++</a></li>
+                
+            
             </ul>
         
     </li>
@@ -199,6 +205,125 @@
 <li><a href="https://zhuanlan.zhihu.com/p/20150641?refer=python-dev">Python与C/C++混合编程</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/20152309?refer=python-dev">聊聊Python ctypes模块</a></li>
 </ul>
+<h2 id="ccpython">c/c++调用Python</h2>
+<p>代码</p>
+<pre><code class="c">//my_python.c
+#include &lt;Python.h&gt;
+
+int main(int argc, char *argv[])
+{
+    Py_SetPythonHome(&quot;C:/Python27&quot;);
+    Py_SetProgramName(argv[0]);
+    Py_Initialize();
+    PyRun_SimpleString(&quot;print 'Hello Python!'\n&quot;);
+    Py_Finalize();
+    return 0;
+}
+</code></pre>
+
+<p>编译</p>
+<pre><code>cl my_python.c -I C:\Python27\include C:\Python27\libs\python27.lib
+</code></pre>
+
+<p>运行</p>
+<pre><code>Hello Python!
+</code></pre>
+
+<p>代码</p>
+<pre><code class="python">#great_module.py
+def great_function(a):
+    return a + 1
+</code></pre>
+
+<pre><code class="c">//my_python.c
+#include &lt;Python.h&gt;
+int great_function_from_python(int a);
+
+int great_function_from_python(int a) 
+{
+    int res;
+    PyObject *pModule, *pFunc;
+    PyObject *pArgs, *pValue;
+
+    // import
+    pModule = PyImport_Import(PyString_FromString(&quot;great_module&quot;));
+
+    // great_module.great_function
+    pFunc = PyObject_GetAttrString(pModule, &quot;great_function&quot;); 
+
+    // build args
+    pArgs = PyTuple_New(1);
+    PyTuple_SetItem(pArgs,0, PyInt_FromLong(a));
+
+    // call
+    pValue = PyObject_CallObject(pFunc, pArgs);
+
+    res = PyInt_AsLong(pValue);
+    return res;
+}
+
+int main(int argc, char *argv[])
+{
+    Py_SetPythonHome(&quot;C:/Python27&quot;);
+    Py_Initialize();
+    printf(&quot;%d&quot;, great_function_from_python(2));
+    Py_Finalize();
+    return 0;
+}
+</code></pre>
+
+<p>编译</p>
+<pre><code>cl my_python.c -I C:\Python27\include C:\Python27\libs\python27.lib
+</code></pre>
+
+<p>运行</p>
+<pre><code>3
+</code></pre>
+
+<h2 id="pythoncc">Python调用c/c++</h2>
+<p>代码</p>
+<pre><code class="c">//great_module.c
+#include &lt;Python.h&gt;
+
+int great_function(int a) {
+    return a + 1;
+}
+
+static PyObject * _great_function(PyObject *self, PyObject *args)
+{
+    int _a;
+    int res;
+
+    if (!PyArg_ParseTuple(args, &quot;i&quot;, &amp;_a))
+        return NULL;
+    res = great_function(_a);
+    return PyLong_FromLong(res);
+}
+
+static PyMethodDef GreateModuleMethods[] = {
+    {
+        &quot;great_function&quot;,
+        _great_function,
+        METH_VARARGS,
+        &quot;&quot;
+    },
+    {NULL, NULL, 0, NULL}
+};
+
+PyMODINIT_FUNC initgreat_module(void) {
+    (void) Py_InitModule(&quot;great_module&quot;, GreateModuleMethods);
+}
+</code></pre>
+
+<p>编译</p>
+<pre><code>cl /LD great_module.c /o great_module.pyd -I C:\Python27\include C:\Python27\libs\python27.lib
+</code></pre>
+
+<p>运行</p>
+<pre><code class="python">&gt;&gt;&gt; from great_module import great_function 
+&gt;&gt;&gt; great_function(2)
+3L
+</code></pre>
               
             </div>
           </div>
