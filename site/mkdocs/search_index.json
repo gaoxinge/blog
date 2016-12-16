@@ -32,7 +32,7 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/", 
-            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\n\n\u7b97\u6cd5", 
+            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303", 
             "title": "\u76ee\u5f55"
         }, 
         {
@@ -49,11 +49,6 @@
             "location": "/index_\u76ee\u5f55/#c_1", 
             "text": "c++  \u89c4\u8303", 
             "title": "c++"
-        }, 
-        {
-            "location": "/index_\u76ee\u5f55/#_1", 
-            "text": "", 
-            "title": "\u7b97\u6cd5"
         }, 
         {
             "location": "/python_python/", 
