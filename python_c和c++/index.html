@@ -122,10 +122,23 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#ccpython">c/c++调用Python</a></li>
+                <li class="toctree-l3"><a href="#ccpython">c/c++调用Python（基础篇）</a></li>
                 
             
-                <li class="toctree-l3"><a href="#pythoncc">Python调用c/c++</a></li>
+                <li class="toctree-l3"><a href="#pythoncc">Python调用c/c++（基础篇）</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#pythoncc_1">Python调用c/c++（高级篇）</a></li>
+                
+                    <li><a class="toctree-l4" href="#ctypes">ctypes</a></li>
+                
+                    <li><a class="toctree-l4" href="#_1">基本类型</a></li>
+                
+                    <li><a class="toctree-l4" href="#_2">数组</a></li>
+                
+                    <li><a class="toctree-l4" href="#_3">指针</a></li>
+                
+                    <li><a class="toctree-l4" href="#_4">函数指针</a></li>
                 
             
             </ul>
@@ -205,7 +218,7 @@
 <li><a href="https://zhuanlan.zhihu.com/p/20150641?refer=python-dev">Python与C/C++混合编程</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/20152309?refer=python-dev">聊聊Python ctypes模块</a></li>
 </ul>
-<h2 id="ccpython">c/c++调用Python</h2>
+<h2 id="ccpython">c/c++调用Python（基础篇）</h2>
 <p>代码</p>
 <pre><code class="c">//my_python.c
 #include &lt;Python.h&gt;
@@ -280,7 +293,7 @@ int main(int argc, char *argv[])
 <pre><code>3
 </code></pre>
 
-<h2 id="pythoncc">Python调用c/c++</h2>
+<h2 id="pythoncc">Python调用c/c++（基础篇）</h2>
 <p>代码</p>
 <pre><code class="c">//great_module.c
 #include &lt;Python.h&gt;
@@ -323,6 +336,181 @@ PyMODINIT_FUNC initgreat_module(void) {
 <pre><code class="python">&gt;&gt;&gt; from great_module import great_function 
 &gt;&gt;&gt; great_function(2)
 3L
+</code></pre>
+
+<h2 id="pythoncc_1">Python调用c/c++（高级篇）</h2>
+<h3 id="ctypes">ctypes</h3>
+<pre><code class="c">//great_module.c
+#include &lt;nmmintrin.h&gt;
+
+#ifdef _MSC_VER
+    #define DLL_EXPORT __declspec( dllexport ) 
+#else
+    #define DLL_EXPORT
+#endif
+
+DLL_EXPORT int great_function(unsigned int n) {
+    return _mm_popcnt_u32(n);
+}
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; from ctypes import *
+&gt;&gt;&gt; great_module = cdll.LoadLibrary('./great_module.dll')
+&gt;&gt;&gt; print great_module.great_function(13)
+</code></pre>
+
+<h3 id="_1">基本类型</h3>
+<pre><code class="python">from ctypes import *
+from platform import *
+
+cdll_names = {
+            'Darwin': 'libc.dylib',
+            'Linux': 'libc.so.6',
+            'Windows': 'msvcrt.dll'
+    }
+
+clib = cdll.LoadLibrary(cdll_names[system()])
+
+# 1
+clib.printf(c_char_p(&quot;Hello %d %f&quot;), c_int(15), c_double(2.3))
+
+# 2
+str_format = c_char_p()
+int_val = c_int()
+double_val = c_double()
+str_format.value = &quot;Hello %d %f&quot;
+int_val.value = 15
+double_val.value = 2.3
+clib.printf(str_format,int_val,double_val)
+</code></pre>
+
+<pre><code class="python">from ctypes import *
+from platform import *
+
+cdll_names = {
+            'Darwin': 'libc.dylib',
+            'Linux': 'libc.so.6',
+            'Windows': 'msvcrt.dll'
+    }
+
+clib = cdll.LoadLibrary(cdll_names[system()])
+
+# 1
+s1 = c_char_p('a')
+s2 = c_char_p('b')
+s3 = clib.strcat(s1, s2)
+print s1.value
+
+# 2
+s1 = c_char_p('a')
+s3 = clib.strcat(s1, 'b')
+print s1.value
+
+# 3
+s3 = clib.strcat('a', 'b')
+print s3
+
+# 4
+clib.strcat.restype = c_char_p
+s4 = clib.strcat('c', 'd')
+print s4
+</code></pre>
+
+<h3 id="_2">数组</h3>
+<pre><code class="c">//great_module.c
+
+#ifdef _MSC_VER
+    #define DLL_EXPORT __declspec( dllexport ) 
+#else
+    #define DLL_EXPORT
+#endif 
+
+DLL_EXPORT int array_get(int a[], int index) {
+    return a[index];
+}
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; from ctypes import *
+&gt;&gt;&gt; great_module = cdll.LoadLibrary('./great_module.dll')
+&gt;&gt;&gt; type_int_array_10 = c_int * 10
+&gt;&gt;&gt; my_array = type_int_array_10()
+&gt;&gt;&gt; my_array[2] = c_int(5)
+&gt;&gt;&gt; print great_module.array_get(my_array,2)
+</code></pre>
+
+<pre><code class="python">from ctypes import *
+
+type_int_array_10 = c_int * 10
+my_array = type_int_array_10()
+my_array[2] = c_int(5)
+</code></pre>
+
+<pre><code class="python">from ctypes import *
+
+type_int_array_10 = c_int * 10
+type_int_array_10_10 = type_int_array_10 * 10
+my_array = type_int_array_10_10()
+my_array[1][2] = 3
+print my_array[1][2]
+</code></pre>
+
+<h3 id="_3">指针</h3>
+<pre><code class="python">from ctypes import *
+
+type_p_int = POINTER(c_int)
+v = c_int(4)
+p_int = type_p_int(v)
+print p_int[0]
+print p_int.contents
+</code></pre>
+
+<pre><code class="python">from ctypes import *
+
+type_p_int = POINTER(c_int)
+v = c_int(4)
+p_int = pointer(v)
+print type(p_int)
+print p_int[0]
+print p_int.contents
+</code></pre>
+
+<h3 id="_4">函数指针</h3>
+<pre><code class="python">from ctypes import *
+from platform import *
+
+cdll_names = {
+            'Darwin' : 'libc.dylib',
+            'Linux'  : 'libc.so.6',
+            'Windows': 'msvcrt.dll'
+        }
+
+clib = cdll.LoadLibrary(cdll_names[system()])
+CMPFUNC = CFUNCTYPE(c_int, POINTER(c_int), POINTER(c_int))
+
+def py_cmp_func(a, b):
+    print type(a)
+    print 'py_cmp_func', a[0], b[0]
+    return a[0] - b[0]
+
+type_array_5 = c_int * 5
+ia = type_array_5(5, 1, 7, 33, 99)
+clib.qsort(ia, len(ia), sizeof(c_int), CMPFUNC(py_cmp_func))
+</code></pre>
+
+<pre><code class="python">from ctypes import *
+from ctypes import wintypes
+
+WNDENUMPROC = WINFUNCTYPE(wintypes.BOOL, wintypes.HWND, wintypes.LPARAM)
+user32 = windll.LoadLibrary('user32.dll')
+
+def EnumWindowsProc(hwnd, lParam):
+    length = user32.GetWindowTextLengthW(hwnd) + 1
+    buffer = create_unicode_buffer(length)
+    user32.GetWindowTextW(hwnd, buffer, length)
+    print buffer.value
+    return True
+
+user32.EnumWindows(WNDENUMPROC(EnumWindowsProc), 0)
 </code></pre>
               
             </div>
