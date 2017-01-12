@@ -534,6 +534,11 @@
             "location": "/c++_\u89c4\u8303/#google", 
             "text": "Google Style Guide \u662fGoogle\u4e3a\u4e00\u4e9b\u8bed\u8a00\u5b9a\u5236\u7684\u98ce\u683c\u89c4\u8303\uff0c\u6bd4\u5982c++\u3002", 
             "title": "Google\u5f00\u6e90\u9879\u76ee\u98ce\u683c\u6307\u5357"
+        }, 
+        {
+            "location": "/algorithm_algorithm/", 
+            "text": "\ufeff\u9879\u76ee\u5730\u5740\u5982\u4e0b\uff1a\n\n\n\n\nalgorithm\n\n\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\n\n\nIntroduction to Programming in Java\n\n\n\u7b97\u6cd5\n\n\n\u7b97\u6cd5\u5bfc\u8bba", 
+            "title": "\u7b97\u6cd5"
         }
     ]
 }
