@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>库 - blog</title>
+  <title>class - blog</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u5e93";
-    var mkdocs_page_input_path = "python_\u5e93.md";
-    var mkdocs_page_url = "/python_\u5e93/";
+    var mkdocs_page_name = "class";
+    var mkdocs_page_input_path = "c++_class.md";
+    var mkdocs_page_url = "/c++_class/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -96,30 +96,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">库</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#_1">管理</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_2">工具</a></li>
-                
-                    <li><a class="toctree-l4" href="#_3">安装</a></li>
-                
-                    <li><a class="toctree-l4" href="#distutilssetuptools">distutils和setuptools</a></li>
-                
-                    <li><a class="toctree-l4" href="#pip">pip</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_4">打包和发布</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_5">下载，安装，升级和卸载</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../python_%E5%BA%93/">库</a>
         
     </li>
 <li>
@@ -188,8 +166,15 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../c%2B%2B_class/">class</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">class</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#google">Google开源项目风格指南</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -223,7 +208,7 @@
     
       
     
-    <li>库</li>
+    <li>class</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -233,69 +218,9 @@
           <div role="main">
             <div class="section">
               
-                <p>﻿python如此受欢迎的一个重要原因是强大的第三方库支持。</p>
-<h2 id="_1">管理</h2>
-<p>Github上的<a href="https://github.com/pypa">pypa</a>提供了一个有关包的指南<a href="https://packaging.python.org">Python Packaging User Guide</a>。另外我们可以通过官网的<a href="https://pypi.python.org/pypi">PyPI</a>查看第三方包的信息。其中许多包是托管在<a href="https://github.com">Github</a>上的，比如<a href="https://github.com/kennethreitz">Kenneth Reitz</a>下的许多仓库。</p>
-<p>包的管理基本分为以下八个步骤：</p>
-<ul>
-<li>打包</li>
-<li>发布</li>
-<li>下载</li>
-<li>安装</li>
-<li>升级</li>
-<li>卸载</li>
-<li>查看</li>
-<li>使用</li>
-</ul>
-<h2 id="_2">工具</h2>
-<p>python有许多包管理工具，常用的有distutils，setuptools和pip，另外<a href="http://www.tuicool.com/articles/FNJZNr">Python包管理工具解惑</a>解释了管理工具间的区别。</p>
-<h3 id="_3">安装</h3>
-<p>具体可参见<a href="http://www.tuicool.com/articles/eiM3Er3">windows下面安装Python和pip终极教程</a>。</p>
-<h3 id="distutilssetuptools">distutils和setuptools</h3>
-<ul>
-<li><a href="https://docs.python.org/2/library/distutils.html">文档</a></li>
-<li><a href="http://peak.telecommunity.com/DevCenter/setuptools">文档</a></li>
-<li>常用命令</li>
-</ul>
-<pre><code># 打包
-python setup.py sdist         # tar.gz
-python setup.py bdist_egg     # egg
-python setup.py bdist_rpm     # rpm
-python setup.py bsist_wininst # exe
-
-# 安装
-python setup.py install
-</code></pre>
-
-<h3 id="pip">pip</h3>
-<ul>
-<li><a href="https://pip.pypa.io/en/stable">文档</a></li>
-<li>常用命令</li>
-</ul>
-<pre><code># 下载，安装，升级和卸载
-pip install requests           # 下载和安装
-pip install --upgrade requests # 升级
-pip uninstall requests         # 卸载 
-
-# 查看
-pip list
-pip list --outdated
-</code></pre>
-
-<h2 id="_4">打包和发布</h2>
-<p>具体可参见以下三篇文章:</p>
-<ul>
-<li><a href="http://python.jobbole.com/82077">关于python中的setup.py</a></li>
-<li><a href="http://www.tuicool.com/articles/FNJZNr">Python包管理工具解惑</a></li>
-<li><a href="http://blog.useasp.net/archive/2014/09/09/packaging-python-libraries-and-upload-to-pypi-python-package-index.aspx">将自己写的Python代码打包放到PyPI上</a></li>
-</ul>
-<h2 id="_5">下载，安装，升级和卸载</h2>
-<p>由于Windows用户在使用python时，可能会因Windows的特有属性（C/C++）导致包的安装失败，因此可参考下列资源：</p>
-<ul>
-<li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=44266">Microsoft Visual C++ Compiler for Python 2.7</a>：python的cl编译器</li>
-<li><a href="https://sourceforge.net/projects/pywin32">Python for Windows Extensions</a>：python在Windows下的系统编程</li>
-<li><a href="http://www.lfd.uci.edu/~gohlke/pythonlibs">Unofficial Windows Binaries for Python Extension Packages</a>：一些集成好的wheel</li>
-</ul>
+                <p>﻿下面我们研究一下c++的风格规范。</p>
+<h2 id="google">Google开源项目风格指南</h2>
+<p><a href="http://zh-google-styleguide.readthedocs.io/en/latest/contents/#">Google Style Guide</a>是Google为一些语言定制的风格规范，比如c++。</p>
               
             </div>
           </div>
@@ -303,10 +228,10 @@ pip list --outdated
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../python_%E8%B0%83%E8%AF%95/" class="btn btn-neutral float-right" title="调试">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../algorithm_algorithm/" class="btn btn-neutral float-right" title="算法">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../python_%E6%A8%A1%E5%9D%97/" class="btn btn-neutral" title="模块"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../c%2B%2B_struct/" class="btn btn-neutral" title="struct"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -332,10 +257,10 @@ pip list --outdated
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../python_%E6%A8%A1%E5%9D%97/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../c%2B%2B_struct/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../python_%E8%B0%83%E8%AF%95/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../algorithm_algorithm/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
