@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>c++ - blog</title>
+  <title>template - blog</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "c++";
-    var mkdocs_page_input_path = "c++_c++.md";
-    var mkdocs_page_url = "/c++_c++/";
+    var mkdocs_page_name = "template";
+    var mkdocs_page_input_path = "c++_template.md";
+    var mkdocs_page_url = "/c++_template/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -145,33 +145,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">c++</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#_1">标准</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_2">编译器</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#unix">UNIX</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#linux">Linux</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#windows">Windows</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#mac">Mac</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_3">兼容</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../c%2B%2B_c%2B%2B/">c++</a>
         
     </li>
 <li>
@@ -198,8 +173,12 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../c%2B%2B_template/">template</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">template</a>
+        
+            <ul>
+            
+            </ul>
         
     </li>
 <li>
@@ -233,7 +212,7 @@
     
       
     
-    <li>c++</li>
+    <li>template</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -243,67 +222,12 @@
           <div role="main">
             <div class="section">
               
-                <p>﻿c++是c语言的继承，由Stroustrup开发。</p>
-<h2 id="_1">标准</h2>
+                <p>﻿下面我们研究一下c++中的template。</p>
+<p>参考资料如下：</p>
 <ul>
-<li>1989年，C++98。</li>
-<li>2003年，C++03。</li>
-<li>2011年，C++11。</li>
-<li>2014年，C++14。</li>
+<li><a href="http://blog.csdn.net/chenchen410/article/details/39502199">C++模板(template)使用介绍</a></li>
+<li><a href="https://github.com/wuye9036/CppTemplateTutorial">CppTemplateTutorial</a></li>
 </ul>
-<h2 id="_2">编译器</h2>
-<p>c++的编译器主要有</p>
-<ul>
-<li>g++：GNU</li>
-<li>cl：Microsoft</li>
-<li>clang</li>
-</ul>
-<h2 id="unix">UNIX</h2>
-<p>UNIX自带编译器cc， 不属于上述的任何一种。</p>
-<h2 id="linux">Linux</h2>
-<p>Linux自带编译器g++，下面说一下注意事项</p>
-<ul>
-<li>后缀cc，cp，cpp，cxx，C</li>
-<li>命令</li>
-</ul>
-<pre><code>cc/gcc/g++ test.cc # 生成a.out
-./a.out            # 运行
-
-cc/gcc/g++ -o test test.cc # 生成test
-./test                     # 运行
-</code></pre>
-
-<ul>
-<li>查看main函数中的return</li>
-</ul>
-<pre><code>echo $?
-</code></pre>
-
-<h2 id="windows">Windows</h2>
-<p>Windows无自带编译器，推荐使用vc，vs等ide，提供编译器cl，但由于体积过大，本人并没有安装。</p>
-<p>本人安装了MinGW+Notepad++，即使用gcc，下面是注意事项</p>
-<ul>
-<li>后缀cc，cp，cpp，cxx，C</li>
-<li>命令</li>
-</ul>
-<pre><code>gcc/g++ test.cc # 生成a.exe
-a/a.exe         # 运行
-
-gcc/g++ -o test test.cc # 生成test.exe
-test/test.exe           # 运行
-</code></pre>
-
-<ul>
-<li>查看main函数中的return</li>
-</ul>
-<pre><code>echo %ERRORLEVEL%
-</code></pre>
-
-<h2 id="mac">Mac</h2>
-<p>Mac无自带编译器，推荐使用集成环境Xcode，其提供多种c++编译器。</p>
-<h2 id="_3">兼容</h2>
-<p>向前兼容的英文为Forwards Compatibility，Forward有“将来”的含义。因此向前兼容就是指：以前的版本支持现在版本生成的数据，现在的版本支持以后的版本数据。就是为win3.1开发的程序能在win10下运行。</p>
-<p>向后兼容（Backward Compatibility），又称作向下兼容（Downward Compatibility）。在计算机中指在一个程序或者类库更新到较新的版本后，用旧的版本程序创建的文档或系统仍能被正常操作或使用，或在旧版本的类库的基础上开发的程序仍能正常编译运行的情况。就是说为win10下开发的程序也能在win3.1下也能运行。</p>
               
             </div>
           </div>
@@ -311,10 +235,10 @@ test/test.exe           # 运行
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../c%2B%2B_%E8%A7%84%E8%8C%83/" class="btn btn-neutral float-right" title="规范">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../algorithm_algorithm/" class="btn btn-neutral float-right" title="算法">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../c_c/" class="btn btn-neutral" title="c"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../c%2B%2B_class/" class="btn btn-neutral" title="class"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -340,10 +264,10 @@ test/test.exe           # 运行
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../c_c/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../c%2B%2B_class/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../c%2B%2B_%E8%A7%84%E8%8C%83/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../algorithm_algorithm/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
