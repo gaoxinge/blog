@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>缩进 - blog</title>
+  <title>模板 - blog</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u7f29\u8fdb";
-    var mkdocs_page_input_path = "python_\u7f29\u8fdb.md";
-    var mkdocs_page_url = "/python_\u7f29\u8fdb/";
+    var mkdocs_page_name = "\u6a21\u677f";
+    var mkdocs_page_input_path = "c++_\u6a21\u677f.md";
+    var mkdocs_page_url = "/c++_\u6a21\u677f/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -75,24 +75,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">缩进</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#_1">研究方式</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_2">编辑器</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_3">转化</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#_4">结果</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../python_%E7%BC%A9%E8%BF%9B/">缩进</a>
         
     </li>
 <li>
@@ -196,8 +180,12 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../c%2B%2B_%E6%A8%A1%E6%9D%BF/">模板</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">模板</a>
+        
+            <ul>
+            
+            </ul>
         
     </li>
 <li>
@@ -245,7 +233,7 @@
     
       
     
-    <li>缩进</li>
+    <li>模板</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -255,57 +243,12 @@
           <div role="main">
             <div class="section">
               
-                <p>﻿python是一个很吃缩进的语言，以空格和制表符开始，必须保持某种一致性，否则会报错。下面是相关术语的翻译</p>
+                <p>﻿下面我们研究一下c++中的template。</p>
+<p>参考资料如下：</p>
 <ul>
-<li>回车/换行：enter</li>
-<li>空格：space</li>
-<li>制表符：tab</li>
+<li><a href="http://blog.csdn.net/chenchen410/article/details/39502199">C++模板(template)使用介绍</a></li>
+<li><a href="https://github.com/wuye9036/CppTemplateTutorial">CppTemplateTutorial</a></li>
 </ul>
-<p>下面我们研究一下不同编辑器对python代码的影响。</p>
-<h2 id="_1">研究方式</h2>
-<p>我们采用两种研究方式，第一种，用不同的编辑器写代码，然后用记事本打开。第二种，在python中输入以下代码</p>
-<pre><code class="python">with open('***.py') as f:
-    s = f.read()
-</code></pre>
-
-<h2 id="_2">编辑器</h2>
-<p>通过上述研究，我们发现影响代码的因素主要为编辑器提供的自动缩进方式，以及其对制表符的解读。</p>
-<ul>
-<li>记事本</li>
-<li>自动缩进：无</li>
-<li>输入制表符：\t</li>
-<li>编译时的制表符：八个空格</li>
-<li>notepad++</li>
-<li>自动缩进：\t</li>
-<li>输入制表符：\t</li>
-<li>编译时的制表符：八个空格</li>
-<li>idle（python自带ide）</li>
-<li>自动缩进：四个空格</li>
-<li>输入制表符：四个空格</li>
-<li>编译时的制表符：\t</li>
-<li>command line（python自带shell）</li>
-<li>自动缩进：无</li>
-<li>输入制表符：\t</li>
-<li>编译时的制表符：八个空格</li>
-</ul>
-<h2 id="_3">转化</h2>
-<p>考虑下面代码</p>
-<pre><code class="python">def f(a,b):
-    a = 1
-    b = 1
-    return a + b
-</code></pre>
-
-<ul>
-<li>把notepad++转化为idle</li>
-</ul>
-<p>直接转化后，编译不会出错，因为所有缩进均为一个制表符。但我们再输入制表符（情况会很复杂，我们假设只改第二行），idle将无法编译，因为这时第二行缩进为八个空格。进一步，再用notepad++打开，又可以编译，因为这时编译时的制表符为八个空格。</p>
-<ul>
-<li>把idle转化为notepad++</li>
-</ul>
-<p>直接转化后，编译不会出错，因为所有缩进均为四个空格。但我们再输入制表符（情况没那么复杂），notepad++将无法编译，原因显然。进一步，再用idle打开，还是不可编译，原因亦显然。</p>
-<h2 id="_4">结果</h2>
-<p>综上，影响代码最关键的因素为编辑器对自动缩进和制表符的解读不同，解决办法是将notepad++的自动缩进和制表符均设置成四个空格，具体参见<a href="http://blog.csdn.net/seanchan/article/details/7357462">Notepad++编辑Pyhton文件的自动缩进的问题（图文）更新到v6.7.9.2</a>。</p>
               
             </div>
           </div>
@@ -313,10 +256,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../python_%E7%BC%96%E7%A0%81/" class="btn btn-neutral float-right" title="编码">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../c%2B%2B_%E5%85%83%E7%BC%96%E7%A8%8B/" class="btn btn-neutral float-right" title="元编程">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../python_%E8%A7%84%E8%8C%83/" class="btn btn-neutral" title="规范"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../c%2B%2B_%E7%B1%BB/" class="btn btn-neutral" title="类"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -342,10 +285,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../python_%E8%A7%84%E8%8C%83/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../c%2B%2B_%E7%B1%BB/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../python_%E7%BC%96%E7%A0%81/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../c%2B%2B_%E5%85%83%E7%BC%96%E7%A8%8B/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
