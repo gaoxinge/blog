@@ -185,6 +185,15 @@
         
             <ul>
             
+                <li class="toctree-l3"><a href="#_1">函数模板</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">结构体模板</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_3">类模板</a></li>
+                
+            
             </ul>
         
     </li>
@@ -249,6 +258,98 @@
 <li><a href="http://blog.csdn.net/chenchen410/article/details/39502199">C++模板(template)使用介绍</a></li>
 <li><a href="https://github.com/wuye9036/CppTemplateTutorial">CppTemplateTutorial</a></li>
 </ul>
+<h2 id="_1">函数模板</h2>
+<pre><code class="c++">#include &lt;iostream&gt;
+using namespace std;
+
+template &lt;typename T&gt; T Min(T x, T y)
+{return x&lt;y ? x : y;}
+
+int main()
+{
+   int n1 = 2;
+   int n2 = 10;
+   cout &lt;&lt; Min(n1, n2) &lt;&lt; endl;
+
+   double d1 = 1.5;
+   double d2 = 5.6;
+   cout &lt;&lt; Min(d1, d2) &lt;&lt; endl;
+
+   return 0;
+}
+</code></pre>
+
+<h2 id="_2">结构体模板</h2>
+<pre><code class="c++">#include &lt;iostream&gt;
+using namespace std;
+
+template &lt;typename T1, typename T2&gt; struct MyStruct
+{
+    private:
+        T1 I;
+        T2 J;
+
+    public:
+        MyStruct(T1 a, T2 b)
+        {
+            I = a;
+            J = b;
+        }
+
+        void show()
+        {cout &lt;&lt; &quot;I = &quot; &lt;&lt; I &lt;&lt; &quot;, J = &quot;  &lt;&lt; J &lt;&lt; &quot;.&quot; &lt;&lt; endl;}
+};
+
+int main()
+{
+   MyStruct&lt;int, int&gt; struct1(3,5);
+   struct1.show();
+
+   MyStruct&lt;int, char&gt; struct2(3, 'a');
+   struct2.show();
+
+   MyStruct&lt;double, int&gt; struct3(2.9, 10);
+   struct3.show();
+
+   return 0;
+}
+</code></pre>
+
+<h2 id="_3">类模板</h2>
+<pre><code class="c++">#include &lt;iostream&gt;
+using namespace std;
+
+template &lt;typename T1, typename T2&gt; class MyClass
+{
+    private:
+        T1 I;
+        T2 J;
+
+    public:
+        MyClass(T1 a, T2 b)
+        {
+            I = a;
+            J = b;
+        }
+
+        void show()
+        {cout &lt;&lt; &quot;I = &quot; &lt;&lt; I &lt;&lt; &quot;, J = &quot;  &lt;&lt; J &lt;&lt; &quot;.&quot; &lt;&lt; endl;}
+};
+
+int main()
+{
+   MyClass&lt;int, int&gt; class1(3,5);
+   class1.show();
+
+   MyClass&lt;int, char&gt; class2(3, 'a');
+   class2.show();
+
+   MyClass&lt;double, int&gt; class3(2.9, 10);
+   class3.show();
+
+   return 0;
+}
+</code></pre>
               
             </div>
           </div>

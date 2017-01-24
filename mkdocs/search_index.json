@@ -552,8 +552,23 @@
         }, 
         {
             "location": "/c++_\u51fd\u6570/", 
-            "text": "\ufeff", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684function\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\n\u503c\u4f20\u9012\u3001\u6307\u9488\u4f20\u9012\u3001\u5f15\u7528\u4f20\u9012\u7684\u533a\u522b\n\n\n\n\n\u503c\u4f20\u9012\n\n\n#include \niostream\n\nusing namespace std;\n\nvoid swap(int a, int b)\n{\n    int temp;\n\n    temp = a;\n    a    = b;\n    b    = temp;\n\n    cout \n a \n \n, \n \n b \n endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(x, y);\n    cout \n x \n \n, \n \n y \n endl; // 1, 2\n\n    return 0;\n}\n\n\n\n\n\u6307\u9488\u4f20\u9012\n\n\n#include \niostream\n\nusing namespace std;\n\nvoid swap(int *a, int *b)\n{\n    int *temp;\n\n    temp = a;\n    a    = b;\n    b    = temp;\n\n    cout \n *a \n \n, \n \n *b \n endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(\nx, \ny);\n    cout \n x \n \n, \n \n y \n endl;  // 1, 2\n\n    return 0;\n}\n\n\n\n\n#include \niostream\n\nusing namespace std;\n\nvoid swap(int *a, int *b)\n{\n    int temp;\n\n    temp = *a;\n    *a   = *b;\n    *b   = temp;\n\n    cout \n *a \n \n, \n \n *b \n endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(\nx, \ny);\n    cout \n x \n \n, \n \n y \n endl;  // 2, 1\n\n    return 0;\n}\n\n\n\n\n\u5f15\u7528\u4f20\u9012\n\n\n#include \niostream\n\nusing namespace std;\n\nvoid swap(int \na,int \nb)\n{\n     int temp;\n\n     temp = a;\n     a    = b;\n     b    = temp;\n\n     cout \n a \n \n, \n \n b \n endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(x,y);\n    cout \n x \n \n, \n \n y \n endl; // 2, 1\n\n    return 0;\n}", 
             "title": "\u51fd\u6570"
+        }, 
+        {
+            "location": "/c++_\u51fd\u6570/#_1", 
+            "text": "#include  iostream \nusing namespace std;\n\nvoid swap(int a, int b)\n{\n    int temp;\n\n    temp = a;\n    a    = b;\n    b    = temp;\n\n    cout   a    ,     b   endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(x, y);\n    cout   x    ,     y   endl; // 1, 2\n\n    return 0;\n}", 
+            "title": "\u503c\u4f20\u9012"
+        }, 
+        {
+            "location": "/c++_\u51fd\u6570/#_2", 
+            "text": "#include  iostream \nusing namespace std;\n\nvoid swap(int *a, int *b)\n{\n    int *temp;\n\n    temp = a;\n    a    = b;\n    b    = temp;\n\n    cout   *a    ,     *b   endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap( x,  y);\n    cout   x    ,     y   endl;  // 1, 2\n\n    return 0;\n}  #include  iostream \nusing namespace std;\n\nvoid swap(int *a, int *b)\n{\n    int temp;\n\n    temp = *a;\n    *a   = *b;\n    *b   = temp;\n\n    cout   *a    ,     *b   endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap( x,  y);\n    cout   x    ,     y   endl;  // 2, 1\n\n    return 0;\n}", 
+            "title": "\u6307\u9488\u4f20\u9012"
+        }, 
+        {
+            "location": "/c++_\u51fd\u6570/#_3", 
+            "text": "#include  iostream \nusing namespace std;\n\nvoid swap(int  a,int  b)\n{\n     int temp;\n\n     temp = a;\n     a    = b;\n     b    = temp;\n\n     cout   a    ,     b   endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(x,y);\n    cout   x    ,     y   endl; // 2, 1\n\n    return 0;\n}", 
+            "title": "\u5f15\u7528\u4f20\u9012"
         }, 
         {
             "location": "/c++_\u7ed3\u6784\u4f53/", 
@@ -597,8 +612,23 @@
         }, 
         {
             "location": "/c++_\u6a21\u677f/", 
-            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684template\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nC++\u6a21\u677f(template)\u4f7f\u7528\u4ecb\u7ecd\n\n\nCppTemplateTutorial", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684template\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nC++\u6a21\u677f(template)\u4f7f\u7528\u4ecb\u7ecd\n\n\nCppTemplateTutorial\n\n\n\n\n\u51fd\u6570\u6a21\u677f\n\n\n#include \niostream\n\nusing namespace std;\n\ntemplate \ntypename T\n T Min(T x, T y)\n{return x\ny ? x : y;}\n\nint main()\n{\n   int n1 = 2;\n   int n2 = 10;\n   cout \n Min(n1, n2) \n endl;\n\n   double d1 = 1.5;\n   double d2 = 5.6;\n   cout \n Min(d1, d2) \n endl;\n\n   return 0;\n}\n\n\n\n\n\u7ed3\u6784\u4f53\u6a21\u677f\n\n\n#include \niostream\n\nusing namespace std;\n\ntemplate \ntypename T1, typename T2\n struct MyStruct\n{\n    private:\n        T1 I;\n        T2 J;\n\n    public:\n        MyStruct(T1 a, T2 b)\n        {\n            I = a;\n            J = b;\n        }\n\n        void show()\n        {cout \n \nI = \n \n I \n \n, J = \n  \n J \n \n.\n \n endl;}\n};\n\nint main()\n{\n   MyStruct\nint, int\n struct1(3,5);\n   struct1.show();\n\n   MyStruct\nint, char\n struct2(3, 'a');\n   struct2.show();\n\n   MyStruct\ndouble, int\n struct3(2.9, 10);\n   struct3.show();\n\n   return 0;\n}\n\n\n\n\n\u7c7b\u6a21\u677f\n\n\n#include \niostream\n\nusing namespace std;\n\ntemplate \ntypename T1, typename T2\n class MyClass\n{\n    private:\n        T1 I;\n        T2 J;\n\n    public:\n        MyClass(T1 a, T2 b)\n        {\n            I = a;\n            J = b;\n        }\n\n        void show()\n        {cout \n \nI = \n \n I \n \n, J = \n  \n J \n \n.\n \n endl;}\n};\n\nint main()\n{\n   MyClass\nint, int\n class1(3,5);\n   class1.show();\n\n   MyClass\nint, char\n class2(3, 'a');\n   class2.show();\n\n   MyClass\ndouble, int\n class3(2.9, 10);\n   class3.show();\n\n   return 0;\n}", 
             "title": "\u6a21\u677f"
+        }, 
+        {
+            "location": "/c++_\u6a21\u677f/#_1", 
+            "text": "#include  iostream \nusing namespace std;\n\ntemplate  typename T  T Min(T x, T y)\n{return x y ? x : y;}\n\nint main()\n{\n   int n1 = 2;\n   int n2 = 10;\n   cout   Min(n1, n2)   endl;\n\n   double d1 = 1.5;\n   double d2 = 5.6;\n   cout   Min(d1, d2)   endl;\n\n   return 0;\n}", 
+            "title": "\u51fd\u6570\u6a21\u677f"
+        }, 
+        {
+            "location": "/c++_\u6a21\u677f/#_2", 
+            "text": "#include  iostream \nusing namespace std;\n\ntemplate  typename T1, typename T2  struct MyStruct\n{\n    private:\n        T1 I;\n        T2 J;\n\n    public:\n        MyStruct(T1 a, T2 b)\n        {\n            I = a;\n            J = b;\n        }\n\n        void show()\n        {cout    I =     I    , J =      J    .    endl;}\n};\n\nint main()\n{\n   MyStruct int, int  struct1(3,5);\n   struct1.show();\n\n   MyStruct int, char  struct2(3, 'a');\n   struct2.show();\n\n   MyStruct double, int  struct3(2.9, 10);\n   struct3.show();\n\n   return 0;\n}", 
+            "title": "\u7ed3\u6784\u4f53\u6a21\u677f"
+        }, 
+        {
+            "location": "/c++_\u6a21\u677f/#_3", 
+            "text": "#include  iostream \nusing namespace std;\n\ntemplate  typename T1, typename T2  class MyClass\n{\n    private:\n        T1 I;\n        T2 J;\n\n    public:\n        MyClass(T1 a, T2 b)\n        {\n            I = a;\n            J = b;\n        }\n\n        void show()\n        {cout    I =     I    , J =      J    .    endl;}\n};\n\nint main()\n{\n   MyClass int, int  class1(3,5);\n   class1.show();\n\n   MyClass int, char  class2(3, 'a');\n   class2.show();\n\n   MyClass double, int  class3(2.9, 10);\n   class3.show();\n\n   return 0;\n}", 
+            "title": "\u7c7b\u6a21\u677f"
         }, 
         {
             "location": "/c++_\u5143\u7f16\u7a0b/", 
