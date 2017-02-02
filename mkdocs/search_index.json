@@ -32,7 +32,7 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/", 
-            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u6a21\u677f\n\n\n\u5143\u7f16\u7a0b\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
+            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b\n\n\n\u6a21\u677f\n\n\n\u5143\u7f16\u7a0b\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
             "title": "\u76ee\u5f55"
         }, 
         {
@@ -47,7 +47,7 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/#c_1", 
-            "text": "c++  \u89c4\u8303  \u51fd\u6570  \u7ed3\u6784\u4f53  \u7c7b  \u6a21\u677f  \u5143\u7f16\u7a0b", 
+            "text": "c++  \u89c4\u8303  \u51fd\u6570  \u7ed3\u6784\u4f53  \u7c7b  \u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b  \u6a21\u677f  \u5143\u7f16\u7a0b", 
             "title": "c++"
         }, 
         {
@@ -609,6 +609,11 @@
             "location": "/c++_\u7c7b/", 
             "text": "\ufeff", 
             "title": "\u7c7b"
+        }, 
+        {
+            "location": "/c++_\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b/", 
+            "text": "\ufeff", 
+            "title": "\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b"
         }, 
         {
             "location": "/c++_\u6a21\u677f/", 
