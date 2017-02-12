@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>规范 - blog</title>
+  <title>条件和循环 - blog</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u89c4\u8303";
-    var mkdocs_page_input_path = "python_\u89c4\u8303.md";
-    var mkdocs_page_url = "/python_\u89c4\u8303/";
+    var mkdocs_page_name = "\u6761\u4ef6\u548c\u5faa\u73af";
+    var mkdocs_page_input_path = "python_\u6761\u4ef6\u548c\u5faa\u73af.md";
+    var mkdocs_page_url = "/python_\u6761\u4ef6\u548c\u5faa\u73af/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -68,26 +68,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">规范</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#python-enhancement-proposal">Python Enhancement Proposal</a></li>
-                
-                    <li><a class="toctree-l4" href="#pep-0">PEP 0</a></li>
-                
-                    <li><a class="toctree-l4" href="#pep-7">PEP 7</a></li>
-                
-                    <li><a class="toctree-l4" href="#pep-8">PEP 8</a></li>
-                
-                    <li><a class="toctree-l4" href="#pep-20">PEP 20</a></li>
-                
-            
-                <li class="toctree-l3"><a href="#google">Google开源项目风格指南</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../python_%E8%A7%84%E8%8C%83/">规范</a>
         
     </li>
 <li>
@@ -156,8 +138,27 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../python_%E6%9D%A1%E4%BB%B6%E5%92%8C%E5%BE%AA%E7%8E%AF/">条件和循环</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">条件和循环</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#for">for</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_1">容器</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">可迭代对象</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_3">迭代器</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_4">生成器</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -261,7 +262,7 @@
     
       
     
-    <li>规范</li>
+    <li>条件和循环</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -271,52 +272,56 @@
           <div role="main">
             <div class="section">
               
-                <p>﻿下面我们研究一下python的风格规范。</p>
-<h2 id="python-enhancement-proposal">Python Enhancement Proposal</h2>
-<p>这就是我们熟悉的<a href="https://www.python.org/dev/peps">PEP</a>。</p>
-<h3 id="pep-0">PEP 0</h3>
-<p><a href="https://www.python.org/dev/peps">PEP 0</a>，即Index of Python Enhancement Proposals，为PEP的目录。</p>
-<h3 id="pep-7">PEP 7</h3>
-<p><a href="https://www.python.org/dev/peps/pep-0007">PEP  7</a>，即CPython的c代码风格规范。</p>
-<h3 id="pep-8">PEP 8</h3>
-<p><a href="https://www.python.org/dev/peps/pep-0008">PEP 8</a>，即python的代码风格规范，具体可参见</p>
+                <p>﻿下面我们研究python中的条件和循环。</p>
+<p>参考资料如下：</p>
 <ul>
-<li><a href="https://www.python.org/dev/peps/pep-0008">Style Guide for Python Code</a></li>
-<li><a href="https://my.oschina.net/u/1433482/blog/464444?p=1">python代码风格指南</a></li>
-<li><a href="http://python.jobbole.com/84618">Python 编码风格指南</a></li>
-<li><a href="http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html">Code Like a Pythonista: Idiomatic Python</a></li>
+<li><a href="http://www.cnblogs.com/scolia/p/5690210.html">自定义序列</a></li>
+<li><a href="http://nvie.com/posts/iterators-vs-generators">Iterables vs. Iterators vs. Generators</a></li>
 </ul>
-<h3 id="pep-20">PEP 20</h3>
-<p><a href="https://www.python.org/dev/peps/pep-0020">PEP 20</a>，即著名的python之禅。</p>
-<pre><code class="python">&gt;&gt;&gt; import this
-The Zen of Python, by Tim Peters
+<h2 id="for">for</h2>
+<p>使用的是可迭代对象。</p>
+<h2 id="_1">容器</h2>
+<p>实现了<strong>getitem</strong>方法。</p>
+<ul>
+<li>列表推导式</li>
+</ul>
+<pre><code class="python">class Foo(object):
+    def __init__(self):
+        self.x = {}
+        self.__index = -1
 
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
-&gt;&gt;&gt; 
-&gt;&gt;&gt; # 你还可以尝试下面这句
-&gt;&gt;&gt; import antigravity
+    def __setitem__(self, key, value):
+        self.x[key] = value 
+
+    def __getitem__(self, key):
+        self.__index += 1
+        if self.__index == len(self.x):
+            self.__index = -1
+            raise IndexError # raise StopIteration or raise StopIteration()
+        return self.x[self.__index]
+
+foo = Foo()
+foo[0] = 1
+foo[1] = 2
+foo[2] = 3
+for i in foo:
+    print i
 </code></pre>
 
-<h2 id="google">Google开源项目风格指南</h2>
-<p><a href="http://zh-google-styleguide.readthedocs.io/en/latest/contents/#">Google Style Guide</a>是Google为一些语言定制的风格规范，比如python。</p>
+<h2 id="_2">可迭代对象</h2>
+<p>实现了<strong>iter</strong>方法。</p>
+<h2 id="_3">迭代器</h2>
+<p>实现了next方法。</p>
+<h2 id="_4">生成器</h2>
+<p>不通过<strong>iter</strong>和next实现，只可以迭代一次。</p>
+<ul>
+<li>
+<p>生成器表达式</p>
+</li>
+<li>
+<p>生成器函数</p>
+</li>
+</ul>
               
             </div>
           </div>
@@ -324,10 +329,10 @@ Namespaces are one honking great idea -- let's do more of those!
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../python_%E7%BC%A9%E8%BF%9B/" class="btn btn-neutral float-right" title="缩进">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../c_c/" class="btn btn-neutral float-right" title="c">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../python_python/" class="btn btn-neutral" title="python"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../python_%E8%B5%96%E6%98%8E%E6%98%9F%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/" class="btn btn-neutral" title="赖明星的知乎回答"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -353,10 +358,10 @@ Namespaces are one honking great idea -- let's do more of those!
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../python_python/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../python_%E8%B5%96%E6%98%8E%E6%98%9F%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../python_%E7%BC%A9%E8%BF%9B/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../c_c/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

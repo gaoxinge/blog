@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "\ufeff\u6b64\u535a\u5ba2\u7528\u4e8e\u5b66\u4e60\u8bed\u8a00\u548c\u7b97\u6cd5\u3002\n\n\npython\n\n\n\n\nPython\u6838\u5fc3\u7f16\u7a0b\n\n\nPython Documentation\n\n\n\n\nc\n\n\n\n\nC Primer Plus\n\n\n\u6df1\u5165\u7406\u89e3\u8ba1\u7b97\u673a\u7cfb\u7edf\n\n\n\n\nc++\n\n\n\n\nC++ Primer\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\u5bfc\u8bba\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u725b\u5ba2\u7f51", 
+            "text": "\ufeff\u6b64\u535a\u5ba2\u7528\u4e8e\u5b66\u4e60\u8bed\u8a00\u548c\u7b97\u6cd5\u3002\n\n\npython\n\n\n\n\nPython\u6838\u5fc3\u7f16\u7a0b\n\n\nPython Documentation\n\n\n\n\nc\n\n\n\n\nC\u7a0b\u5e8f\u8bbe\u8ba1\u8bed\u8a00\n\n\nC Primer Plus\n\n\n\n\nc++\n\n\n\n\nC++ Primer\n\n\nEffective C++\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\u5bfc\u8bba\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u725b\u5ba2\u7f51", 
             "title": "\u535a\u5ba2"
         }, 
         {
@@ -12,12 +12,12 @@
         }, 
         {
             "location": "/#c", 
-            "text": "C Primer Plus  \u6df1\u5165\u7406\u89e3\u8ba1\u7b97\u673a\u7cfb\u7edf", 
+            "text": "C\u7a0b\u5e8f\u8bbe\u8ba1\u8bed\u8a00  C Primer Plus", 
             "title": "c"
         }, 
         {
             "location": "/#c_1", 
-            "text": "C++ Primer", 
+            "text": "C++ Primer  Effective C++", 
             "title": "c++"
         }, 
         {
@@ -32,12 +32,12 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/", 
-            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b\n\n\n\u6a21\u677f\n\n\n\u5143\u7f16\u7a0b\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
+            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u6761\u4ef6\u548c\u5faa\u73af\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b\n\n\n\u6a21\u677f\n\n\n\u5143\u7f16\u7a0b\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
             "title": "\u76ee\u5f55"
         }, 
         {
             "location": "/index_\u76ee\u5f55/#python", 
-            "text": "python  \u89c4\u8303  \u7f29\u8fdb  \u7f16\u7801  \u6a21\u5757  \u5e93  \u8c03\u8bd5  \u6d4b\u8bd5  c\u548cc++  \u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54  \u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54", 
+            "text": "python  \u89c4\u8303  \u7f29\u8fdb  \u7f16\u7801  \u6a21\u5757  \u5e93  \u8c03\u8bd5  \u6d4b\u8bd5  c\u548cc++  \u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54  \u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54  \u6761\u4ef6\u548c\u5faa\u73af", 
             "title": "python"
         }, 
         {
@@ -466,6 +466,36 @@
             "title": "\u5de5\u5382\u6a21\u5f0f"
         }, 
         {
+            "location": "/python_\u6761\u4ef6\u548c\u5faa\u73af/", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u6761\u4ef6\u548c\u5faa\u73af\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\n\u81ea\u5b9a\u4e49\u5e8f\u5217\n\n\nIterables vs. Iterators vs. Generators\n\n\n\n\nfor\n\n\n\u4f7f\u7528\u7684\u662f\u53ef\u8fed\u4ee3\u5bf9\u8c61\u3002\n\n\n\u5bb9\u5668\n\n\n\u5b9e\u73b0\u4e86\ngetitem\n\u65b9\u6cd5\u3002\n\n\n\n\n\u5217\u8868\u63a8\u5bfc\u5f0f\n\n\n\n\nclass Foo(object):\n    def __init__(self):\n        self.x = {}\n        self.__index = -1\n\n    def __setitem__(self, key, value):\n        self.x[key] = value \n\n    def __getitem__(self, key):\n        self.__index += 1\n        if self.__index == len(self.x):\n            self.__index = -1\n            raise IndexError # raise StopIteration or raise StopIteration()\n        return self.x[self.__index]\n\nfoo = Foo()\nfoo[0] = 1\nfoo[1] = 2\nfoo[2] = 3\nfor i in foo:\n    print i\n\n\n\n\n\u53ef\u8fed\u4ee3\u5bf9\u8c61\n\n\n\u5b9e\u73b0\u4e86\niter\n\u65b9\u6cd5\u3002\n\n\n\u8fed\u4ee3\u5668\n\n\n\u5b9e\u73b0\u4e86next\u65b9\u6cd5\u3002\n\n\n\u751f\u6210\u5668\n\n\n\u4e0d\u901a\u8fc7\niter\n\u548cnext\u5b9e\u73b0\uff0c\u53ea\u53ef\u4ee5\u8fed\u4ee3\u4e00\u6b21\u3002\n\n\n\n\n\n\n\u751f\u6210\u5668\u8868\u8fbe\u5f0f\n\n\n\n\n\n\n\u751f\u6210\u5668\u51fd\u6570", 
+            "title": "\u6761\u4ef6\u548c\u5faa\u73af"
+        }, 
+        {
+            "location": "/python_\u6761\u4ef6\u548c\u5faa\u73af/#for", 
+            "text": "\u4f7f\u7528\u7684\u662f\u53ef\u8fed\u4ee3\u5bf9\u8c61\u3002", 
+            "title": "for"
+        }, 
+        {
+            "location": "/python_\u6761\u4ef6\u548c\u5faa\u73af/#_1", 
+            "text": "\u5b9e\u73b0\u4e86 getitem \u65b9\u6cd5\u3002   \u5217\u8868\u63a8\u5bfc\u5f0f   class Foo(object):\n    def __init__(self):\n        self.x = {}\n        self.__index = -1\n\n    def __setitem__(self, key, value):\n        self.x[key] = value \n\n    def __getitem__(self, key):\n        self.__index += 1\n        if self.__index == len(self.x):\n            self.__index = -1\n            raise IndexError # raise StopIteration or raise StopIteration()\n        return self.x[self.__index]\n\nfoo = Foo()\nfoo[0] = 1\nfoo[1] = 2\nfoo[2] = 3\nfor i in foo:\n    print i", 
+            "title": "\u5bb9\u5668"
+        }, 
+        {
+            "location": "/python_\u6761\u4ef6\u548c\u5faa\u73af/#_2", 
+            "text": "\u5b9e\u73b0\u4e86 iter \u65b9\u6cd5\u3002", 
+            "title": "\u53ef\u8fed\u4ee3\u5bf9\u8c61"
+        }, 
+        {
+            "location": "/python_\u6761\u4ef6\u548c\u5faa\u73af/#_3", 
+            "text": "\u5b9e\u73b0\u4e86next\u65b9\u6cd5\u3002", 
+            "title": "\u8fed\u4ee3\u5668"
+        }, 
+        {
+            "location": "/python_\u6761\u4ef6\u548c\u5faa\u73af/#_4", 
+            "text": "\u4e0d\u901a\u8fc7 iter \u548cnext\u5b9e\u73b0\uff0c\u53ea\u53ef\u4ee5\u8fed\u4ee3\u4e00\u6b21\u3002    \u751f\u6210\u5668\u8868\u8fbe\u5f0f    \u751f\u6210\u5668\u51fd\u6570", 
+            "title": "\u751f\u6210\u5668"
+        }, 
+        {
             "location": "/c_c/", 
             "text": "\ufeffc\u8bed\u8a00\u7531Thompson\u548cRitchie\u5f00\u53d1\u3002\n\n\n\u6807\u51c6\n\n\n\n\n1989\u5e74\uff0cANSI\u53d1\u5e03\u4e86ANSI C\uff0c\u5b9a\u4e49\u4e86\u8bed\u8a00\u548c\u6807\u51c6\u5e93\uff0c\u79f0\u4e3aC89\u3002\n\n\n1990\u5e74\uff0cISO\u53d1\u5e03\u4e86C90\u3002\n\n\n1999\u5e74\uff0cISO\u53d1\u5e03\u4e86C99\u3002\n\n\n2011\u5e74\uff0cISO\u53d1\u5e03\u4e86C11\u3002\n\n\n\n\n\u7f16\u8bd1\u5668\n\n\nc\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709\n\n\n\n\ngcc\uff1aGNU\n\n\ncl\uff1aMicrosoft\n\n\nclang\n\n\n\n\nUNIX\n\n\nUNIX\u81ea\u5e26\u7f16\u8bd1\u5668cc\uff0c\u4e0d\u5c5e\u4e8e\u4e0a\u8ff0\u7684\u4efb\u4f55\u4e00\u79cd\u3002\n\n\nLinux\n\n\nLinux\u81ea\u5e26\u7f16\u8bd1\u5668gcc\uff0c\u4e0b\u9762\u8bf4\u4e00\u4e0b\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ncc/gcc/g++ test.c # \u751f\u6210a.out\n./a.out           # \u8fd0\u884c\n\ncc/gcc/g++ -o test test.c # \u751f\u6210test\n./test                    # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho $?\n\n\n\n\nWindows\n\n\nWindows\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528vc\uff0cvs\u7b49ide\uff0c\u63d0\u4f9b\u7f16\u8bd1\u5668cl\uff0c\u4f46\u7531\u4e8e\u4f53\u79ef\u8fc7\u5927\uff0c\u672c\u4eba\u5e76\u6ca1\u6709\u5b89\u88c5\u3002\n\n\n\u672c\u4eba\u5b89\u88c5\u4e86MinGW+Notepad++\uff0c\u5373\u4f7f\u7528gcc\uff0c\u4e0b\u9762\u662f\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ngcc/g++ test.c # \u751f\u6210a.exe\na/a.exe        # \u8fd0\u884c\n\ngcc/g++ -o test test.c # \u751f\u6210test.exe\ntest/test.exe          # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho %ERRORLEVEL%\n\n\n\n\nMac\n\n\nMac\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528\u96c6\u6210\u73af\u5883Xcode\uff0c\u5176\u63d0\u4f9b\u591a\u79cdc\u7f16\u8bd1\u5668\u3002", 
             "title": "c"
@@ -637,7 +667,7 @@
         }, 
         {
             "location": "/c++_\u5143\u7f16\u7a0b/", 
-            "text": "\ufeff", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684\u5143\u7f16\u7a0b\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nCppTemplateTutorial\n\n\nModern C++ Design", 
             "title": "\u5143\u7f16\u7a0b"
         }, 
         {
