@@ -7,11 +7,13 @@
 
 ## c
 
+- [C程序设计语言](https://book.douban.com/subject/1139336)
 - [C Primer Plus](https://book.douban.com/subject/1240002)
 
 ## c++
 
 - [C++ Primer](https://book.douban.com/subject/24089577)
+- [Effective C++](https://book.douban.com/subject/1842426)
 
 ## 算法
 

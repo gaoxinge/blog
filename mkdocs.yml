@@ -1,21 +1,30 @@
 site_name: blog
 
 pages:
-- 博客: index.md
-- 目录: index_目录.md
-- python: python_python.md
-- 规范: python_规范.md
-- 缩进: python_缩进.md
-- 编码: python_编码.md
-- 模块: python_模块.md
-- 库: python_库.md
-- 调试: python_调试.md
-- 测试: python_测试.md
-- c和c++: python_c和c++.md
+- 博客:             index.md
+- 目录:             index_目录.md
+- python:           python_python.md
+- 规范:             python_规范.md
+- 缩进:             python_缩进.md
+- 编码:             python_编码.md
+- 模块:             python_模块.md
+- 库:               python_库.md
+- 调试:             python_调试.md
+- 测试:             python_测试.md
+- c和c++:           python_c和c++.md
 - 董伟明的知乎回答: python_董伟明的知乎回答.md
 - 赖明星的知乎回答: python_赖明星的知乎回答.md
-- c: c_c.md
-- c++: c++_c++.md
-- 规范: c++_规范.md
+- 条件和循环:       python_条件和循环.md
+- c:                c_c.md
+- c++:              c++_c++.md
+- 规范:             c++_规范.md
+- 函数:             c++_函数.md
+- 结构体:           c++_结构体.md
+- 类:               c++_类.md
+- 面对对象编程:    c++_面对对象编程.md
+- 模板:             c++_模板.md
+- 元编程:           c++_元编程.md
+- 算法:             algorithm_algorithm.md
+- 网站:             leetcode_leetcode.md
 
 theme: readthedocs
