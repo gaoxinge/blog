@@ -150,6 +150,35 @@
         
             <ul>
             
+                <li class="toctree-l3"><a href="#_1">改变引用：一切皆变量</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">命名空间</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_3">作用域</a></li>
+                
+                    <li><a class="toctree-l4" href="#_4">例子</a></li>
+                
+                    <li><a class="toctree-l4" href="#_5">例子</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#legb">LEGB</a></li>
+                
+                    <li><a class="toctree-l4" href="#_6">例子</a></li>
+                
+                    <li><a class="toctree-l4" href="#_7">例子</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#localsglobals">locals和globals</a></li>
+                
+                    <li><a class="toctree-l4" href="#_8">当前作用域</a></li>
+                
+                    <li><a class="toctree-l4" href="#locals">locals</a></li>
+                
+                    <li><a class="toctree-l4" href="#globals">globals</a></li>
+                
+            
             </ul>
         
     </li>
@@ -271,6 +300,107 @@
 <li><a href="https://zhuanlan.zhihu.com/p/25223919">Python LEGB 原则</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/23926957">Python是一种纯粹的语言</a></li>
 </ul>
+<h2 id="_1">改变引用：一切皆变量</h2>
+<ul>
+<li>
+<p>赋值</p>
+</li>
+<li>
+<p>函数</p>
+</li>
+<li>
+<p>类</p>
+</li>
+<li>
+<p>模块</p>
+</li>
+<li>
+<p>参数</p>
+</li>
+</ul>
+<h2 id="_2">命名空间</h2>
+<p>命名空间指的是键为名字，值为对象的字典。如</p>
+<pre><code class="python">a_namespace = {'name_a': object_1, 'name_b': object_2}
+</code></pre>
+
+<h2 id="_3">作用域</h2>
+<p>作用域是特殊的命名空间，反映了部分代码的引用状况。变量的作用域在编译时确定，值在运行时确定。</p>
+<h3 id="_4">例子</h3>
+<pre><code class="python">import requests
+
+a = 1
+
+def f(b):
+    c = 1
+
+    def g():
+        d = 1
+        return d
+
+    return c
+
+class foo:
+    pass
+</code></pre>
+
+<p>作用域为</p>
+<pre><code class="python">g_namespace.keys() = ['d']
+f_namespace.keys() = ['c', 'g']
+global_namespace.keys()  = ['requests', 'a', 'f', 'foo']
+builtins_namespace.keys() = ['__builtins__']
+</code></pre>
+
+<h3 id="_5">例子</h3>
+<pre><code class="python">if True:
+    a = 1
+
+print a # 1
+</code></pre>
+
+<pre><code class="python">for x in range(4):
+    print x
+
+print x # 3
+</code></pre>
+
+<h2 id="legb">LEGB</h2>
+<p>LEGB是变量搜索作用域是的顺序：local（当前作用域）---&gt;enclosure---&gt;global----&gt;builtins。变量搜索在运行时确定。</p>
+<h3 id="_6">例子</h3>
+<pre><code class="python">def f():
+    a = b
+    return a
+</code></pre>
+
+<h3 id="_7">例子</h3>
+<pre><code class="python">class A:
+    a = 1
+
+    class B:
+        b = a
+</code></pre>
+
+<pre><code class="python">class A:
+    a = 1
+
+    class B:
+        b = A.a
+</code></pre>
+
+<pre><code class="python">class A:
+    a = 1
+
+    class B:
+        def __init__(self):
+            b = A.a
+</code></pre>
+
+<h2 id="localsglobals">locals和globals</h2>
+<h3 id="_8">当前作用域</h3>
+<p>类中的当前作用域比较奇怪。</p>
+<h3 id="locals">locals</h3>
+<p>locals()返回当前作用域。</p>
+<h3 id="globals">globals</h3>
+<p>globals()返回global_namespace和builtins_namespace。</p>
               
             </div>
           </div>
