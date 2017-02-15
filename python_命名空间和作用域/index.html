@@ -169,10 +169,12 @@
                 
                     <li><a class="toctree-l4" href="#_7">例子</a></li>
                 
+                    <li><a class="toctree-l4" href="#_8">例子</a></li>
+                
             
                 <li class="toctree-l3"><a href="#localsglobals">locals和globals</a></li>
                 
-                    <li><a class="toctree-l4" href="#_8">当前作用域</a></li>
+                    <li><a class="toctree-l4" href="#_9">当前作用域</a></li>
                 
                     <li><a class="toctree-l4" href="#locals">locals</a></li>
                 
@@ -372,6 +374,31 @@ print x # 3
 </code></pre>
 
 <h3 id="_7">例子</h3>
+<pre><code class="python">def multipliers(n):
+    funcs = []
+    for i in range(0, n):
+        def _func(b):
+            return i * b
+        funcs.append(_func)
+    return funcs
+
+ms = multipliers(10)
+print ms[2](3) # 27
+</code></pre>
+
+<pre><code class="python">def multipliers(n):
+    funcs = []
+    for i in range(0, n):
+        def _func(b):
+            return i * b
+        funcs.append(_func(3)))
+    return funcs
+
+ms = multipliers(10)
+print ms[2] # 6
+</code></pre>
+
+<h3 id="_8">例子</h3>
 <pre><code class="python">class A:
     a = 1
 
@@ -395,7 +422,7 @@ print x # 3
 </code></pre>
 
 <h2 id="localsglobals">locals和globals</h2>
-<h3 id="_8">当前作用域</h3>
+<h3 id="_9">当前作用域</h3>
 <p>类中的当前作用域比较奇怪。</p>
 <h3 id="locals">locals</h3>
 <p>locals()返回当前作用域。</p>
