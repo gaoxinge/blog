@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "\ufeff\u6b64\u535a\u5ba2\u7528\u4e8e\u5b66\u4e60\u8bed\u8a00\u548c\u7b97\u6cd5\u3002\n\n\npython\n\n\n\n\nPython\u6838\u5fc3\u7f16\u7a0b\n\n\nPython Documentation\n\n\n\n\nc\n\n\n\n\nC\u7a0b\u5e8f\u8bbe\u8ba1\u8bed\u8a00\n\n\nC Primer Plus\n\n\n\n\nc++\n\n\n\n\nC++ Primer\n\n\nEffective C++\n\n\ncplusplus.com\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\u5bfc\u8bba\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u725b\u5ba2\u7f51", 
+            "text": "\ufeff\u6b64\u535a\u5ba2\u7528\u4e8e\u5b66\u4e60\u8bed\u8a00\u548c\u7b97\u6cd5\u3002\n\n\npython\n\n\n\n\nPython\u6838\u5fc3\u7f16\u7a0b\n\n\nPython Documentation\n\n\n\n\nc\n\n\n\n\nC\u7a0b\u5e8f\u8bbe\u8ba1\u8bed\u8a00\n\n\nC Primer Plus\n\n\n\n\nc++\n\n\n\n\nC++ Primer\n\n\nEffective C++\n\n\ncplusplus.com\n\n\n\n\n\u8bbe\u8ba1\u6a21\u5f0f\n\n\n\n\ndesign patterns for humans\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\u5bfc\u8bba\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u725b\u5ba2\u7f51", 
             "title": "\u535a\u5ba2"
         }, 
         {
@@ -22,11 +22,16 @@
         }, 
         {
             "location": "/#_1", 
+            "text": "design patterns for humans", 
+            "title": "\u8bbe\u8ba1\u6a21\u5f0f"
+        }, 
+        {
+            "location": "/#_2", 
             "text": "\u7b97\u6cd5\u5bfc\u8bba", 
             "title": "\u7b97\u6cd5"
         }, 
         {
-            "location": "/#_2", 
+            "location": "/#_3", 
             "text": "\u725b\u5ba2\u7f51", 
             "title": "\u7f51\u7ad9"
         }, 
