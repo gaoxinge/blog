@@ -14,6 +14,11 @@
 
 - [C++ Primer](https://book.douban.com/subject/24089577)
 - [Effective C++](https://book.douban.com/subject/1842426)
+- [cplusplus.com](http://www.cplusplus.com)
+
+## 设计模式
+
+- [design patterns for humans](https://github.com/kamranahmedse/design-patterns-for-humans)
 
 ## 算法
 

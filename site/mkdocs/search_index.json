@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/", 
-            "text": "\ufeff\u6b64\u535a\u5ba2\u7528\u4e8e\u5b66\u4e60\u8bed\u8a00\u548c\u7b97\u6cd5\u3002\n\n\npython\n\n\n\n\nPython\u6838\u5fc3\u7f16\u7a0b\n\n\nPython Documentation\n\n\n\n\nc\n\n\n\n\nC\u7a0b\u5e8f\u8bbe\u8ba1\u8bed\u8a00\n\n\nC Primer Plus\n\n\n\n\nc++\n\n\n\n\nC++ Primer\n\n\nEffective C++\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\u5bfc\u8bba\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u725b\u5ba2\u7f51", 
+            "text": "\ufeff\u6b64\u535a\u5ba2\u7528\u4e8e\u5b66\u4e60\u8bed\u8a00\u548c\u7b97\u6cd5\u3002\n\n\npython\n\n\n\n\nPython\u6838\u5fc3\u7f16\u7a0b\n\n\nPython Documentation\n\n\n\n\nc\n\n\n\n\nC\u7a0b\u5e8f\u8bbe\u8ba1\u8bed\u8a00\n\n\nC Primer Plus\n\n\n\n\nc++\n\n\n\n\nC++ Primer\n\n\nEffective C++\n\n\ncplusplus.com\n\n\n\n\n\u8bbe\u8ba1\u6a21\u5f0f\n\n\n\n\ndesign patterns for humans\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\u5bfc\u8bba\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u725b\u5ba2\u7f51", 
             "title": "\u535a\u5ba2"
         }, 
         {
@@ -17,27 +17,32 @@
         }, 
         {
             "location": "/#c_1", 
-            "text": "C++ Primer  Effective C++", 
+            "text": "C++ Primer  Effective C++  cplusplus.com", 
             "title": "c++"
         }, 
         {
             "location": "/#_1", 
+            "text": "design patterns for humans", 
+            "title": "\u8bbe\u8ba1\u6a21\u5f0f"
+        }, 
+        {
+            "location": "/#_2", 
             "text": "\u7b97\u6cd5\u5bfc\u8bba", 
             "title": "\u7b97\u6cd5"
         }, 
         {
-            "location": "/#_2", 
+            "location": "/#_3", 
             "text": "\u725b\u5ba2\u7f51", 
             "title": "\u7f51\u7ad9"
         }, 
         {
             "location": "/index_\u76ee\u5f55/", 
-            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u6761\u4ef6\u548c\u5faa\u73af\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b\n\n\n\u6a21\u677f\n\n\n\u5143\u7f16\u7a0b\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
+            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u6761\u4ef6\u548c\u5faa\u73af\n\n\n\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b\n\n\n\u6a21\u677f\n\n\n\u5143\u7f16\u7a0b\n\n\nSTL\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
             "title": "\u76ee\u5f55"
         }, 
         {
             "location": "/index_\u76ee\u5f55/#python", 
-            "text": "python  \u89c4\u8303  \u7f29\u8fdb  \u7f16\u7801  \u6a21\u5757  \u5e93  \u8c03\u8bd5  \u6d4b\u8bd5  c\u548cc++  \u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54  \u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54  \u6761\u4ef6\u548c\u5faa\u73af", 
+            "text": "python  \u89c4\u8303  \u7f29\u8fdb  \u7f16\u7801  \u6a21\u5757  \u5e93  \u8c03\u8bd5  \u6d4b\u8bd5  c\u548cc++  \u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54  \u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54  \u6761\u4ef6\u548c\u5faa\u73af  \u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df", 
             "title": "python"
         }, 
         {
@@ -47,7 +52,7 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/#c_1", 
-            "text": "c++  \u89c4\u8303  \u51fd\u6570  \u7ed3\u6784\u4f53  \u7c7b  \u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b  \u6a21\u677f  \u5143\u7f16\u7a0b", 
+            "text": "c++  \u89c4\u8303  \u51fd\u6570  \u7ed3\u6784\u4f53  \u7c7b  \u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b  \u6a21\u677f  \u5143\u7f16\u7a0b  STL", 
             "title": "c++"
         }, 
         {
@@ -496,6 +501,76 @@
             "title": "\u751f\u6210\u5668"
         }, 
         {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nPython\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df\u7aa5\u63a2\n\n\nPython LEGB \u539f\u5219\n\n\nPython\u662f\u4e00\u79cd\u7eaf\u7cb9\u7684\u8bed\u8a00\n\n\n\n\n\u6539\u53d8\u5f15\u7528\uff1a\u4e00\u5207\u7686\u53d8\u91cf\n\n\n\n\n\n\n\u8d4b\u503c\n\n\n\n\n\n\n\u51fd\u6570\n\n\n\n\n\n\n\u7c7b\n\n\n\n\n\n\n\u6a21\u5757\n\n\n\n\n\n\n\u53c2\u6570\n\n\n\n\n\n\n\u547d\u540d\u7a7a\u95f4\n\n\n\u547d\u540d\u7a7a\u95f4\u6307\u7684\u662f\u952e\u4e3a\u540d\u5b57\uff0c\u503c\u4e3a\u5bf9\u8c61\u7684\u5b57\u5178\u3002\u5982\n\n\na_namespace = {'name_a': object_1, 'name_b': object_2}\n\n\n\n\n\u4f5c\u7528\u57df\n\n\n\u4f5c\u7528\u57df\u662f\u7279\u6b8a\u7684\u547d\u540d\u7a7a\u95f4\uff0c\u53cd\u6620\u4e86\u90e8\u5206\u4ee3\u7801\u7684\u5f15\u7528\u72b6\u51b5\u3002\u53d8\u91cf\u7684\u4f5c\u7528\u57df\u5728\u7f16\u8bd1\u65f6\u786e\u5b9a\uff0c\u503c\u5728\u8fd0\u884c\u65f6\u786e\u5b9a\u3002\n\n\n\u4f8b\u5b50\n\n\nimport requests\n\na = 1\n\ndef f(b):\n    c = 1\n\n    def g():\n        d = 1\n        return d\n\n    return c\n\nclass foo:\n    pass\n\n\n\n\n\u4f5c\u7528\u57df\u4e3a\n\n\ng_namespace.keys() = ['d']\nf_namespace.keys() = ['c', 'g']\nglobal_namespace.keys()  = ['requests', 'a', 'f', 'foo']\nbuiltins_namespace.keys() = ['__builtins__']\n\n\n\n\n\u4f8b\u5b50\n\n\nif True:\n    a = 1\n\nprint a # 1\n\n\n\n\nfor x in range(4):\n    print x\n\nprint x # 3\n\n\n\n\nLEGB\n\n\nLEGB\u662f\u53d8\u91cf\u641c\u7d22\u4f5c\u7528\u57df\u662f\u7684\u987a\u5e8f\uff1alocal\uff08\u5f53\u524d\u4f5c\u7528\u57df\uff09---\nenclosure---\nglobal----\nbuiltins\u3002\u53d8\u91cf\u641c\u7d22\u5728\u8fd0\u884c\u65f6\u786e\u5b9a\u3002\n\n\n\u4f8b\u5b50\n\n\ndef f():\n    a = b\n    return a\n\n\n\n\n\u4f8b\u5b50\n\n\ndef multipliers(n):\n    funcs = []\n    for i in range(0, n):\n        def _func(b):\n            return i * b\n        funcs.append(_func)\n    return funcs\n\nms = multipliers(10)\nprint ms[2](3) # 27\n\n\n\n\ndef multipliers(n):\n    funcs = []\n    for i in range(0, n):\n        def _func(b):\n            return i * b\n        funcs.append(_func(3)))\n    return funcs\n\nms = multipliers(10)\nprint ms[2] # 6\n\n\n\n\n\u4f8b\u5b50\n\n\nclass A:\n    a = 1\n\n    class B:\n        b = a\n\n\n\n\nclass A:\n    a = 1\n\n    class B:\n        b = A.a\n\n\n\n\nclass A:\n    a = 1\n\n    class B:\n        def __init__(self):\n            b = A.a\n\n\n\n\nlocals\u548cglobals\n\n\n\u5f53\u524d\u4f5c\u7528\u57df\n\n\n\u7c7b\u4e2d\u7684\u5f53\u524d\u4f5c\u7528\u57df\u6bd4\u8f83\u5947\u602a\u3002\n\n\nlocals\n\n\nlocals()\u8fd4\u56de\u5f53\u524d\u4f5c\u7528\u57df\u3002\n\n\nglobals\n\n\nglobals()\u8fd4\u56deglobal_namespace\u548cbuiltins_namespace\u3002", 
+            "title": "\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df"
+        }, 
+        {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#_1", 
+            "text": "\u8d4b\u503c    \u51fd\u6570    \u7c7b    \u6a21\u5757    \u53c2\u6570", 
+            "title": "\u6539\u53d8\u5f15\u7528\uff1a\u4e00\u5207\u7686\u53d8\u91cf"
+        }, 
+        {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#_2", 
+            "text": "\u547d\u540d\u7a7a\u95f4\u6307\u7684\u662f\u952e\u4e3a\u540d\u5b57\uff0c\u503c\u4e3a\u5bf9\u8c61\u7684\u5b57\u5178\u3002\u5982  a_namespace = {'name_a': object_1, 'name_b': object_2}", 
+            "title": "\u547d\u540d\u7a7a\u95f4"
+        }, 
+        {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#_3", 
+            "text": "\u4f5c\u7528\u57df\u662f\u7279\u6b8a\u7684\u547d\u540d\u7a7a\u95f4\uff0c\u53cd\u6620\u4e86\u90e8\u5206\u4ee3\u7801\u7684\u5f15\u7528\u72b6\u51b5\u3002\u53d8\u91cf\u7684\u4f5c\u7528\u57df\u5728\u7f16\u8bd1\u65f6\u786e\u5b9a\uff0c\u503c\u5728\u8fd0\u884c\u65f6\u786e\u5b9a\u3002", 
+            "title": "\u4f5c\u7528\u57df"
+        }, 
+        {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#_4", 
+            "text": "import requests\n\na = 1\n\ndef f(b):\n    c = 1\n\n    def g():\n        d = 1\n        return d\n\n    return c\n\nclass foo:\n    pass  \u4f5c\u7528\u57df\u4e3a  g_namespace.keys() = ['d']\nf_namespace.keys() = ['c', 'g']\nglobal_namespace.keys()  = ['requests', 'a', 'f', 'foo']\nbuiltins_namespace.keys() = ['__builtins__']", 
+            "title": "\u4f8b\u5b50"
+        }, 
+        {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#_5", 
+            "text": "if True:\n    a = 1\n\nprint a # 1  for x in range(4):\n    print x\n\nprint x # 3", 
+            "title": "\u4f8b\u5b50"
+        }, 
+        {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#legb", 
+            "text": "LEGB\u662f\u53d8\u91cf\u641c\u7d22\u4f5c\u7528\u57df\u662f\u7684\u987a\u5e8f\uff1alocal\uff08\u5f53\u524d\u4f5c\u7528\u57df\uff09--- enclosure--- global---- builtins\u3002\u53d8\u91cf\u641c\u7d22\u5728\u8fd0\u884c\u65f6\u786e\u5b9a\u3002", 
+            "title": "LEGB"
+        }, 
+        {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#_6", 
+            "text": "def f():\n    a = b\n    return a", 
+            "title": "\u4f8b\u5b50"
+        }, 
+        {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#_7", 
+            "text": "def multipliers(n):\n    funcs = []\n    for i in range(0, n):\n        def _func(b):\n            return i * b\n        funcs.append(_func)\n    return funcs\n\nms = multipliers(10)\nprint ms[2](3) # 27  def multipliers(n):\n    funcs = []\n    for i in range(0, n):\n        def _func(b):\n            return i * b\n        funcs.append(_func(3)))\n    return funcs\n\nms = multipliers(10)\nprint ms[2] # 6", 
+            "title": "\u4f8b\u5b50"
+        }, 
+        {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#_8", 
+            "text": "class A:\n    a = 1\n\n    class B:\n        b = a  class A:\n    a = 1\n\n    class B:\n        b = A.a  class A:\n    a = 1\n\n    class B:\n        def __init__(self):\n            b = A.a", 
+            "title": "\u4f8b\u5b50"
+        }, 
+        {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#localsglobals", 
+            "text": "", 
+            "title": "locals\u548cglobals"
+        }, 
+        {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#_9", 
+            "text": "\u7c7b\u4e2d\u7684\u5f53\u524d\u4f5c\u7528\u57df\u6bd4\u8f83\u5947\u602a\u3002", 
+            "title": "\u5f53\u524d\u4f5c\u7528\u57df"
+        }, 
+        {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#locals", 
+            "text": "locals()\u8fd4\u56de\u5f53\u524d\u4f5c\u7528\u57df\u3002", 
+            "title": "locals"
+        }, 
+        {
+            "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#globals", 
+            "text": "globals()\u8fd4\u56deglobal_namespace\u548cbuiltins_namespace\u3002", 
+            "title": "globals"
+        }, 
+        {
             "location": "/c_c/", 
             "text": "\ufeffc\u8bed\u8a00\u7531Thompson\u548cRitchie\u5f00\u53d1\u3002\n\n\n\u6807\u51c6\n\n\n\n\n1989\u5e74\uff0cANSI\u53d1\u5e03\u4e86ANSI C\uff0c\u5b9a\u4e49\u4e86\u8bed\u8a00\u548c\u6807\u51c6\u5e93\uff0c\u79f0\u4e3aC89\u3002\n\n\n1990\u5e74\uff0cISO\u53d1\u5e03\u4e86C90\u3002\n\n\n1999\u5e74\uff0cISO\u53d1\u5e03\u4e86C99\u3002\n\n\n2011\u5e74\uff0cISO\u53d1\u5e03\u4e86C11\u3002\n\n\n\n\n\u7f16\u8bd1\u5668\n\n\nc\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709\n\n\n\n\ngcc\uff1aGNU\n\n\ncl\uff1aMicrosoft\n\n\nclang\n\n\n\n\nUNIX\n\n\nUNIX\u81ea\u5e26\u7f16\u8bd1\u5668cc\uff0c\u4e0d\u5c5e\u4e8e\u4e0a\u8ff0\u7684\u4efb\u4f55\u4e00\u79cd\u3002\n\n\nLinux\n\n\nLinux\u81ea\u5e26\u7f16\u8bd1\u5668gcc\uff0c\u4e0b\u9762\u8bf4\u4e00\u4e0b\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ncc/gcc/g++ test.c # \u751f\u6210a.out\n./a.out           # \u8fd0\u884c\n\ncc/gcc/g++ -o test test.c # \u751f\u6210test\n./test                    # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho $?\n\n\n\n\nWindows\n\n\nWindows\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528vc\uff0cvs\u7b49ide\uff0c\u63d0\u4f9b\u7f16\u8bd1\u5668cl\uff0c\u4f46\u7531\u4e8e\u4f53\u79ef\u8fc7\u5927\uff0c\u672c\u4eba\u5e76\u6ca1\u6709\u5b89\u88c5\u3002\n\n\n\u672c\u4eba\u5b89\u88c5\u4e86MinGW+Notepad++\uff0c\u5373\u4f7f\u7528gcc\uff0c\u4e0b\u9762\u662f\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ngcc/g++ test.c # \u751f\u6210a.exe\na/a.exe        # \u8fd0\u884c\n\ngcc/g++ -o test test.c # \u751f\u6210test.exe\ntest/test.exe          # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho %ERRORLEVEL%\n\n\n\n\nMac\n\n\nMac\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528\u96c6\u6210\u73af\u5883Xcode\uff0c\u5176\u63d0\u4f9b\u591a\u79cdc\u7f16\u8bd1\u5668\u3002", 
             "title": "c"
@@ -671,13 +746,33 @@
             "title": "\u5143\u7f16\u7a0b"
         }, 
         {
+            "location": "/c++_STL/", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684STL\u3002\n\n\nstring\n\n\n\u4e0e\u5176\u4ed6\u7c7b\u578b\u76f8\u4e92\u8f6c\u5316\n\n\n\n\nstring\u8f6c\u5316\u4e3aint\n\n\nstring\u4e0eint\u76f8\u4e92\u8f6c\u5316\n\n\n\n\nfind\n\n\n\n\nfind\n\n\nfind", 
+            "title": "STL"
+        }, 
+        {
+            "location": "/c++_STL/#string", 
+            "text": "", 
+            "title": "string"
+        }, 
+        {
+            "location": "/c++_STL/#_1", 
+            "text": "string\u8f6c\u5316\u4e3aint  string\u4e0eint\u76f8\u4e92\u8f6c\u5316", 
+            "title": "\u4e0e\u5176\u4ed6\u7c7b\u578b\u76f8\u4e92\u8f6c\u5316"
+        }, 
+        {
+            "location": "/c++_STL/#find", 
+            "text": "find  find", 
+            "title": "find"
+        }, 
+        {
             "location": "/algorithm_algorithm/", 
             "text": "\ufeff\u9879\u76ee\u5730\u5740\u5982\u4e0b\uff1a\n\n\n\n\nalgorithm\n\n\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nJava\u9762\u5411\u5bf9\u8c61\u7a0b\u5e8f\u8bbe\u8ba1\u5165\u95e8\n\n\nIntroduction to Programming in Java\n\n\n\u7b97\u6cd5\n\n\n\u7b97\u6cd5\u5bfc\u8bba", 
             "title": "\u7b97\u6cd5"
         }, 
         {
             "location": "/leetcode_leetcode/", 
-            "text": "\ufeff\u9879\u76ee\u5730\u5740\u5982\u4e0b\uff1a\n\n\n\n\nleetcode", 
+            "text": "\ufeff\u9879\u76ee\u5730\u5740\u5982\u4e0b\uff1a\n\n\n\n\nleetcode\n\n\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\n\u725b\u5ba2\u7f51", 
             "title": "\u7f51\u7ad9"
         }
     ]
