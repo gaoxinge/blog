@@ -37,12 +37,12 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/", 
-            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u6761\u4ef6\u548c\u5faa\u73af\n\n\nsuper\n\n\n\u9b54\u672f\u65b9\u6cd5\n\n\ncall\n\n\n\u5c5e\u6027\n\n\n\u63cf\u8ff0\u7b26\n\n\n\u88c5\u9970\u5668\n\n\n\u5143\u7c7b\n\n\n\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df\n\n\n\u6e90\u7801\u5256\u6790\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b\n\n\n\u6a21\u677f\n\n\n\u5143\u7f16\u7a0b\n\n\nSTL\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
+            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u6761\u4ef6\u548c\u5faa\u73af\n\n\nsuper\n\n\n\u9b54\u672f\u65b9\u6cd5\n\n\ncall\n\n\n\u5c5e\u6027\n\n\n\u63cf\u8ff0\u7b26\n\n\n\u5143\u7c7b\n\n\n\u88c5\u9970\u5668\n\n\n\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df\n\n\n\u6e90\u7801\u5256\u6790\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b\n\n\n\u6a21\u677f\n\n\n\u5143\u7f16\u7a0b\n\n\nSTL\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
             "title": "\u76ee\u5f55"
         }, 
         {
             "location": "/index_\u76ee\u5f55/#python", 
-            "text": "python  \u89c4\u8303  \u7f29\u8fdb  \u7f16\u7801  \u6a21\u5757  \u5e93  \u8c03\u8bd5  \u6d4b\u8bd5  c\u548cc++  \u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54  \u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54  \u6761\u4ef6\u548c\u5faa\u73af  super  \u9b54\u672f\u65b9\u6cd5  call  \u5c5e\u6027  \u63cf\u8ff0\u7b26  \u88c5\u9970\u5668  \u5143\u7c7b  \u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df  \u6e90\u7801\u5256\u6790", 
+            "text": "python  \u89c4\u8303  \u7f29\u8fdb  \u7f16\u7801  \u6a21\u5757  \u5e93  \u8c03\u8bd5  \u6d4b\u8bd5  c\u548cc++  \u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54  \u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54  \u6761\u4ef6\u548c\u5faa\u73af  super  \u9b54\u672f\u65b9\u6cd5  call  \u5c5e\u6027  \u63cf\u8ff0\u7b26  \u5143\u7c7b  \u88c5\u9970\u5668  \u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df  \u6e90\u7801\u5256\u6790", 
             "title": "python"
         }, 
         {
@@ -526,11 +526,6 @@
             "title": "\u63cf\u8ff0\u7b26"
         }, 
         {
-            "location": "/python_\u7c7b\u4e4b\u88c5\u9970\u5668/", 
-            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u88c5\u9970\u5668\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a", 
-            "title": "\u88c5\u9970\u5668"
-        }, 
-        {
             "location": "/python_\u5143\u7c7b/", 
             "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u5143\u7c7b\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nPython\u8fdb\u9636\uff1a\u4e00\u6b65\u6b65\u7406\u89e3Python\u4e2d\u7684\u5143\u7c7bmetaclass\n\n\nPython\u00b7\u5143\u7c7b\uff08Meta Class\uff09\u53ca\u5176\u5e94\u7528\n\n\nPython\u00b7\u5143\u7c7b\uff08Meta Class\uff09\u53ca\u5176\u5e94\u7528\uff08\u4e8c\uff09\n\n\n\n\n\u51fd\u6570\u5f0f\u521b\u5efa\n\n\ndef upper_attr(future_class_name, future_class_parents, future_class_attr):\n\n    uppercase_attr = {}\n\n    for name, val in future_class_attr.items():\n        if not name.startswith('__'):\n            uppercase_attr[name.upper()] = val\n        else:\n            uppercase_attr[name] = val\n\n    return type(future_class_name, future_class_parents, uppercase_attr)\n\n\n\n\nclass Foo(object):\n\n    __metaclass__ = upper_attr\n\n    bar = 'bip'\n\nFoo = upper_attr('Foo', (object, ), {'bar': 'bip'})\n\n\n\n\n\u7c7b\u5f0f\u521b\u5efa\n\n\nclass UpperAttrMetaClass(type):\n\n    def __new__(cls, name, bases, attr):\n        uppercase_attr = {}\n\n        for name, val in attr.items():\n            if not name.startswith('__'):\n                uppercase_attr[name.upper()] = val\n            else:\n                uppercase_attr[name] = val\n\n        return super(UpperAttrMetaClass, cls).__new__(cls, name, bases, uppercase_attr)\n\n\n\n\nclass Foo(object):\n\n    __metaclass__ = UpperAttrMetaClass\n\n    bar = 'bip'\n\nFoo = UpperAttrMetaClass('Foo', (object, ), {'bar': 'bip'})", 
             "title": "\u5143\u7c7b"
@@ -543,6 +538,21 @@
         {
             "location": "/python_\u5143\u7c7b/#_2", 
             "text": "class UpperAttrMetaClass(type):\n\n    def __new__(cls, name, bases, attr):\n        uppercase_attr = {}\n\n        for name, val in attr.items():\n            if not name.startswith('__'):\n                uppercase_attr[name.upper()] = val\n            else:\n                uppercase_attr[name] = val\n\n        return super(UpperAttrMetaClass, cls).__new__(cls, name, bases, uppercase_attr)  class Foo(object):\n\n    __metaclass__ = UpperAttrMetaClass\n\n    bar = 'bip'\n\nFoo = UpperAttrMetaClass('Foo', (object, ), {'bar': 'bip'})", 
+            "title": "\u7c7b\u5f0f\u521b\u5efa"
+        }, 
+        {
+            "location": "/python_\u88c5\u9970\u5668/", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u88c5\u9970\u5668\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nPython\u8fdb\u9636: \u901a\u8fc7\u5b9e\u4f8b\u8be6\u89e3\u88c5\u9970\u5668\uff08\u9644\u4ee3\u7801\uff09\n\n\n\n\n\u51fd\u6570\u5f0f\u521b\u5efa\n\n\ndef Decorator(f):\n    def wrapper(*args, **kwargs):\n        print '%s called' % f.__name__\n        result = f(*args, **kwargs)\n        print '%s end' % f.__name__\n        return result\n    return wrapper\n\n@Decorator\ndef test06(a, b, c):\n    print 'in function test06, a=%s, b=%s, c=%s' % (a, b, c)\n    return 1\n\nprint test06(1,2,3)\n\n\n\n\n\u7c7b\u5f0f\u521b\u5efa\n\n\nclass Decorator(object):\n\n    def __init__(self, f):\n        self.f = f\n\n    def __call__(self, *args, **kwargs):\n        print '%s called' % self.f.__name__\n        result = self.f(*args, **kwargs)\n        print '%s end' % self.f.__name__\n        return result\n\n@Decorator\ndef test06(a, b, c):\n    print 'in function test06, a=%s, b=%s, c=%s' % (a, b, c)\n    return 1\n\nprint test06(1,2,3)", 
+            "title": "\u88c5\u9970\u5668"
+        }, 
+        {
+            "location": "/python_\u88c5\u9970\u5668/#_1", 
+            "text": "def Decorator(f):\n    def wrapper(*args, **kwargs):\n        print '%s called' % f.__name__\n        result = f(*args, **kwargs)\n        print '%s end' % f.__name__\n        return result\n    return wrapper\n\n@Decorator\ndef test06(a, b, c):\n    print 'in function test06, a=%s, b=%s, c=%s' % (a, b, c)\n    return 1\n\nprint test06(1,2,3)", 
+            "title": "\u51fd\u6570\u5f0f\u521b\u5efa"
+        }, 
+        {
+            "location": "/python_\u88c5\u9970\u5668/#_2", 
+            "text": "class Decorator(object):\n\n    def __init__(self, f):\n        self.f = f\n\n    def __call__(self, *args, **kwargs):\n        print '%s called' % self.f.__name__\n        result = self.f(*args, **kwargs)\n        print '%s end' % self.f.__name__\n        return result\n\n@Decorator\ndef test06(a, b, c):\n    print 'in function test06, a=%s, b=%s, c=%s' % (a, b, c)\n    return 1\n\nprint test06(1,2,3)", 
             "title": "\u7c7b\u5f0f\u521b\u5efa"
         }, 
         {

@@ -18,8 +18,8 @@
   <script>
     // Current page data
     var mkdocs_page_name = "\u88c5\u9970\u5668";
-    var mkdocs_page_input_path = "python_\u7c7b\u4e4b\u88c5\u9970\u5668.md";
-    var mkdocs_page_url = "/python_\u7c7b\u4e4b\u88c5\u9970\u5668/";
+    var mkdocs_page_input_path = "python_\u88c5\u9970\u5668.md";
+    var mkdocs_page_url = "/python_\u88c5\u9970\u5668/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -180,19 +180,25 @@
 <li>
           
             <li>
-    <li class="toctree-l1 current">
-        <a class="current" href="./">装饰器</a>
-        
-            <ul>
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../python_%E5%85%83%E7%B1%BB/">元类</a>
         
     </li>
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../python_%E5%85%83%E7%B1%BB/">元类</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">装饰器</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">函数式创建</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">类式创建</a></li>
+                
+            
+            </ul>
         
     </li>
 <li>
@@ -329,6 +335,45 @@
               
                 <p>﻿下面我们研究python中的装饰器。</p>
 <p>参考资料如下：</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/23510985">Python进阶: 通过实例详解装饰器（附代码）</a></li>
+</ul>
+<h2 id="_1">函数式创建</h2>
+<pre><code class="python">def Decorator(f):
+    def wrapper(*args, **kwargs):
+        print '%s called' % f.__name__
+        result = f(*args, **kwargs)
+        print '%s end' % f.__name__
+        return result
+    return wrapper
+
+@Decorator
+def test06(a, b, c):
+    print 'in function test06, a=%s, b=%s, c=%s' % (a, b, c)
+    return 1
+
+print test06(1,2,3)
+</code></pre>
+
+<h2 id="_2">类式创建</h2>
+<pre><code class="python">class Decorator(object):
+
+    def __init__(self, f):
+        self.f = f
+
+    def __call__(self, *args, **kwargs):
+        print '%s called' % self.f.__name__
+        result = self.f(*args, **kwargs)
+        print '%s end' % self.f.__name__
+        return result
+
+@Decorator
+def test06(a, b, c):
+    print 'in function test06, a=%s, b=%s, c=%s' % (a, b, c)
+    return 1
+
+print test06(1,2,3)
+</code></pre>
               
             </div>
           </div>
@@ -336,10 +381,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../python_%E5%85%83%E7%B1%BB/" class="btn btn-neutral float-right" title="元类">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../python_%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/" class="btn btn-neutral float-right" title="命名空间和作用域">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../python_%E7%B1%BB%E4%B9%8B%E6%8F%8F%E8%BF%B0%E7%AC%A6/" class="btn btn-neutral" title="描述符"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../python_%E5%85%83%E7%B1%BB/" class="btn btn-neutral" title="元类"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -365,10 +410,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../python_%E7%B1%BB%E4%B9%8B%E6%8F%8F%E8%BF%B0%E7%AC%A6/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../python_%E5%85%83%E7%B1%BB/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../python_%E5%85%83%E7%B1%BB/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../python_%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
