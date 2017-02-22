@@ -522,7 +522,7 @@
         }, 
         {
             "location": "/python_\u7c7b\u4e4b\u63cf\u8ff0\u7b26/", 
-            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u63cf\u8ff0\u7b26\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\n\u5982\u4f55\u7406\u89e3Python\u7684Descriptor\n\n\n\u5982\u4f55\u7406\u89e3Python\u7684Descriptor\n\n\nPython Unbound/Bound method object\n\n\nPython\u4e2d\u7684classmethod\u548cstaticmethod\u6709\u4ec0\u4e48\u5177\u4f53\u7528\u9014", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u63cf\u8ff0\u7b26\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\n\u5982\u4f55\u7406\u89e3Python\u7684Descriptor\n\n\n\u5982\u4f55\u7406\u89e3Python\u7684Descriptor\n\n\nPython Unbound/Bound method object\n\n\nPython\u4e2d\u7684classmethod\u548cstaticmethod\u6709\u4ec0\u4e48\u5177\u4f53\u7528\u9014\n\n\nPython\u4e2d\u7684method", 
             "title": "\u63cf\u8ff0\u7b26"
         }, 
         {
