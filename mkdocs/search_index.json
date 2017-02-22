@@ -531,9 +531,19 @@
             "title": "\u88c5\u9970\u5668"
         }, 
         {
-            "location": "/python_\u7c7b\u4e4b\u5143\u7c7b/", 
-            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u5143\u7c7b\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nPython\u8fdb\u9636\uff1a\u4e00\u6b65\u6b65\u7406\u89e3Python\u4e2d\u7684\u5143\u7c7bmetaclass\n\n\nPython\u00b7\u5143\u7c7b\uff08Meta Class\uff09\u53ca\u5176\u5e94\u7528\n\n\nPython\u00b7\u5143\u7c7b\uff08Meta Class\uff09\u53ca\u5176\u5e94\u7528\uff08\u4e8c\uff09", 
+            "location": "/python_\u5143\u7c7b/", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u5143\u7c7b\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nPython\u8fdb\u9636\uff1a\u4e00\u6b65\u6b65\u7406\u89e3Python\u4e2d\u7684\u5143\u7c7bmetaclass\n\n\nPython\u00b7\u5143\u7c7b\uff08Meta Class\uff09\u53ca\u5176\u5e94\u7528\n\n\nPython\u00b7\u5143\u7c7b\uff08Meta Class\uff09\u53ca\u5176\u5e94\u7528\uff08\u4e8c\uff09\n\n\n\n\n\u51fd\u6570\u5f0f\u521b\u5efa\n\n\ndef upper_attr(future_class_name, future_class_parents, future_class_attr):\n\n    uppercase_attr = {}\n\n    for name, val in future_class_attr.items():\n        if not name.startswith('__'):\n            uppercase_attr[name.upper()] = val\n        else:\n            uppercase_attr[name] = val\n\n    return type(future_class_name, future_class_parents, uppercase_attr)\n\n\n\n\nclass Foo(object):\n\n    __metaclass__ = upper_attr\n\n    bar = 'bip'\n\nFoo = upper_attr('Foo', (object, ), {'bar': 'bip'})\n\n\n\n\n\u7c7b\u5f0f\u521b\u5efa\n\n\nclass UpperAttrMetaClass(type):\n\n    def __new__(cls, name, bases, attr):\n        uppercase_attr = {}\n\n        for name, val in attr.items():\n            if not name.startswith('__'):\n                uppercase_attr[name.upper()] = val\n            else:\n                uppercase_attr[name] = val\n\n        return super(UpperAttrMetaClass, cls).__new__(cls, name, bases, uppercase_attr)\n\n\n\n\nclass Foo(object):\n\n    __metaclass__ = UpperAttrMetaClass\n\n    bar = 'bip'\n\nFoo = UpperAttrMetaClass('Foo', (object, ), {'bar': 'bip'})", 
             "title": "\u5143\u7c7b"
+        }, 
+        {
+            "location": "/python_\u5143\u7c7b/#_1", 
+            "text": "def upper_attr(future_class_name, future_class_parents, future_class_attr):\n\n    uppercase_attr = {}\n\n    for name, val in future_class_attr.items():\n        if not name.startswith('__'):\n            uppercase_attr[name.upper()] = val\n        else:\n            uppercase_attr[name] = val\n\n    return type(future_class_name, future_class_parents, uppercase_attr)  class Foo(object):\n\n    __metaclass__ = upper_attr\n\n    bar = 'bip'\n\nFoo = upper_attr('Foo', (object, ), {'bar': 'bip'})", 
+            "title": "\u51fd\u6570\u5f0f\u521b\u5efa"
+        }, 
+        {
+            "location": "/python_\u5143\u7c7b/#_2", 
+            "text": "class UpperAttrMetaClass(type):\n\n    def __new__(cls, name, bases, attr):\n        uppercase_attr = {}\n\n        for name, val in attr.items():\n            if not name.startswith('__'):\n                uppercase_attr[name.upper()] = val\n            else:\n                uppercase_attr[name] = val\n\n        return super(UpperAttrMetaClass, cls).__new__(cls, name, bases, uppercase_attr)  class Foo(object):\n\n    __metaclass__ = UpperAttrMetaClass\n\n    bar = 'bip'\n\nFoo = UpperAttrMetaClass('Foo', (object, ), {'bar': 'bip'})", 
+            "title": "\u7c7b\u5f0f\u521b\u5efa"
         }, 
         {
             "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/", 

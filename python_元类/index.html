@@ -18,8 +18,8 @@
   <script>
     // Current page data
     var mkdocs_page_name = "\u5143\u7c7b";
-    var mkdocs_page_input_path = "python_\u7c7b\u4e4b\u5143\u7c7b.md";
-    var mkdocs_page_url = "/python_\u7c7b\u4e4b\u5143\u7c7b/";
+    var mkdocs_page_input_path = "python_\u5143\u7c7b.md";
+    var mkdocs_page_url = "/python_\u5143\u7c7b/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -192,6 +192,12 @@
         
             <ul>
             
+                <li class="toctree-l3"><a href="#_1">函数式创建</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">类式创建</a></li>
+                
+            
             </ul>
         
     </li>
@@ -334,6 +340,52 @@
 <li><a href="https://zhuanlan.zhihu.com/p/24633374">Python·元类（Meta Class）及其应用</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/25184903">Python·元类（Meta Class）及其应用（二）</a></li>
 </ul>
+<h3 id="_1">函数式创建</h3>
+<pre><code class="python">def upper_attr(future_class_name, future_class_parents, future_class_attr):
+
+    uppercase_attr = {}
+
+    for name, val in future_class_attr.items():
+        if not name.startswith('__'):
+            uppercase_attr[name.upper()] = val
+        else:
+            uppercase_attr[name] = val
+
+    return type(future_class_name, future_class_parents, uppercase_attr)
+</code></pre>
+
+<pre><code class="python">class Foo(object):
+
+    __metaclass__ = upper_attr
+
+    bar = 'bip'
+
+Foo = upper_attr('Foo', (object, ), {'bar': 'bip'})
+</code></pre>
+
+<h3 id="_2">类式创建</h3>
+<pre><code class="python">class UpperAttrMetaClass(type):
+
+    def __new__(cls, name, bases, attr):
+        uppercase_attr = {}
+
+        for name, val in attr.items():
+            if not name.startswith('__'):
+                uppercase_attr[name.upper()] = val
+            else:
+                uppercase_attr[name] = val
+
+        return super(UpperAttrMetaClass, cls).__new__(cls, name, bases, uppercase_attr)
+</code></pre>
+
+<pre><code class="python">class Foo(object):
+
+    __metaclass__ = UpperAttrMetaClass
+
+    bar = 'bip'
+
+Foo = UpperAttrMetaClass('Foo', (object, ), {'bar': 'bip'})
+</code></pre>
               
             </div>
           </div>
