@@ -115,14 +115,6 @@
 
     
     <url>
-     <loc>/python_函数之装饰器/</loc>
-     <lastmod>2017-02-22</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
      <loc>/python_类之super/</loc>
      <lastmod>2017-02-22</lastmod>
      <changefreq>daily</changefreq>
@@ -156,6 +148,14 @@
     
     <url>
      <loc>/python_类之描述符/</loc>
+     <lastmod>2017-02-22</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/python_类之装饰器/</loc>
      <lastmod>2017-02-22</lastmod>
      <changefreq>daily</changefreq>
     </url>
