@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>魔术方法 - blog</title>
+  <title>类 - blog</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u9b54\u672f\u65b9\u6cd5";
-    var mkdocs_page_input_path = "python_\u7c7b\u4e4b\u9b54\u672f\u65b9\u6cd5.md";
-    var mkdocs_page_url = "/python_\u7c7b\u4e4b\u9b54\u672f\u65b9\u6cd5/";
+    var mkdocs_page_name = "\u7c7b";
+    var mkdocs_page_input_path = "python_\u7c7b.md";
+    var mkdocs_page_url = "/python_\u7c7b/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -145,40 +145,18 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../python_%E7%B1%BB%E4%B9%8Bsuper/">super</a>
-        
-    </li>
-<li>
-          
-            <li>
     <li class="toctree-l1 current">
-        <a class="current" href="./">魔术方法</a>
+        <a class="current" href="./">类</a>
         
             <ul>
             
+                <li class="toctree-l3"><a href="#_1">属性</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_2">特殊的描述符</a></li>
+                
+            
             </ul>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../python_%E7%B1%BB%E4%B9%8Bcall/">call</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../python_%E7%B1%BB%E4%B9%8B%E5%B1%9E%E6%80%A7/">属性</a>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../python_%E7%B1%BB%E4%B9%8B%E6%8F%8F%E8%BF%B0%E7%AC%A6/">描述符</a>
         
     </li>
 <li>
@@ -317,7 +295,7 @@
     
       
     
-    <li>魔术方法</li>
+    <li>类</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -327,12 +305,177 @@
           <div role="main">
             <div class="section">
               
-                <p>﻿下面我们研究python中的魔术方法。</p>
+                <p>﻿下面我们研究python中的类。</p>
 <p>参考资料如下：</p>
 <ul>
 <li><a href="https://zhuanlan.zhihu.com/p/24567545">Python进阶：实例讲解Python中的魔法函数（Magic Methods）</a></li>
 <li><a href="http://pycoders-weekly-chinese.readthedocs.io/en/latest/issue6/a-guide-to-pythons-magic-methods.html">Python魔术方法指南</a></li>
+<li><a href="https://www.zhihu.com/question/25391709/answer/30634637">如何理解Python的Descriptor</a></li>
+<li><a href="https://www.zhihu.com/question/25391709/answer/30715222">如何理解Python的Descriptor</a></li>
+<li><a href="http://www.jianshu.com/p/4b871019ef96">Python Unbound/Bound method object</a></li>
+<li><a href="https://www.zhihu.com/question/20021164/answer/18224953">Python中的classmethod和staticmethod有什么具体用途</a></li>
+<li><a href="http://blog.jobbole.com/53989">Python中的method</a></li>
 </ul>
+<h2 id="_1">属性</h2>
+<pre><code>def __getattribute__(self, f):
+</code></pre>
+
+<h2 id="_2">特殊的描述符</h2>
+<pre><code class="python">import re
+
+class UnboundMethod(object):
+
+    def __init__(self, f):
+        self.f = f
+
+    def __call__(self, *args, **kwargs):
+        return self.f(*args, **kwargs)
+
+    def __str__(self):
+        return '&lt;unbound method %s&gt;' % self.f.__name__
+
+    __repr__ = __str__
+
+class BoundMethod(object):
+
+    def __init__(self, f, obj):
+        self.f = f
+        self.obj = obj
+
+    def __call__(self, *args, **kwargs):
+        return self.f(self.obj, *args, **kwargs)
+
+    def __str__(self):
+        return '&lt;bound method %s of %s&gt;' % (self.f.__name__, self.obj)
+
+    __repr__ = __str__
+
+class InstanceMethod(object):
+
+    def __init__(self, f):
+        self.f = f
+
+    def __get__(self, obj, typ=None):
+        if obj is None:
+            return UnboundMethod(self.f)
+        else:
+            return BoundMethod(self.f, obj)
+
+class ClassMethod(object):
+
+    def __init__(self, f):
+        self.f = f
+
+    def __get__(self, obj, typ=None):
+        return BoundMethod(self.f, typ)
+
+class StaticMethod(object):
+
+    def __init__(self, f):
+        self.f = f
+
+    def __get__(self, obj, typ=None):
+        return self.f
+
+class Property(object):
+
+    def __init__(self, fget=None, fset=None, fdel=None, doc=None):
+        self.fget = fget
+        self.fset = fset
+        self.fdel = fdel
+
+        if not doc and not fget:
+            doc = fget.__doc__
+
+        self.__doc__ = doc
+
+    def __get__(self, obj, typ=None):
+        if not obj:
+            return self
+        if not self.fget:
+            raise AttributeError('unreadable attribute')
+        return self.fget(obj)
+
+    def __set__(self, obj, value):
+        if not self.fset:
+            raise AttributeError('can\'t set attribute')
+        self.fset(obj, value)
+
+    def __delete__(self, obj):
+        if not self.fdel:
+            raise AttributeError('can\'t delete attribute')
+        self.fdel(obj)
+
+    def getter(self, fget):
+        return self.__class__(fget, self.fset, self.fdel, self.__doc__)
+
+    def setter(self, fset):
+        return self.__class__(self.fget, fset, self.fdel, self.__doc__)
+
+    def deleter(self, fdel):
+        return self.__class__(self.fget, self.fset, fdel, self.__doc__)
+
+class Animal(object):
+
+    def __init__(self, name):
+        self.name = name
+
+    @InstanceMethod
+    def getName(self):
+        return self.name
+
+class Person(object):
+
+    kind = 'person'
+
+    @ClassMethod
+    def getKind(cls):
+        return cls.kind
+
+class Child(object):
+
+    @StaticMethod
+    def hello():
+        print 'hello'
+
+class Student(object):
+
+    def getEmail(self):
+        if '_email' not in self.__dict__:
+            raise Exception('no email')
+        return self._email
+
+    def setEmail(self, value):
+        result = re.match('\w+@\w+\.\w+', value)
+        if not result:
+            raise Exception('not valid')
+        self._email = value
+
+    def delEmail(self):
+        del self._email
+
+    email = property(getEmail, setEmail, delEmail, 'email property')
+
+if __name__ == '__main__':
+
+    print Animal.getName
+    print Animal('who').getName
+
+    print Person.getKind
+    print Person().getKind
+
+    print Child.hello
+    print Child().hello
+
+    student = Student()
+    # print student.email
+    # student.email = 'asdf123'
+    student.email = 'xxx@qq.com'
+    print student.email
+    del student.email
+    # print student.email
+
+</code></pre>
               
             </div>
           </div>
@@ -340,10 +483,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../python_%E7%B1%BB%E4%B9%8Bcall/" class="btn btn-neutral float-right" title="call">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../python_%E5%85%83%E7%B1%BB/" class="btn btn-neutral float-right" title="元类">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../python_%E7%B1%BB%E4%B9%8Bsuper/" class="btn btn-neutral" title="super"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../python_%E6%9D%A1%E4%BB%B6%E5%92%8C%E5%BE%AA%E7%8E%AF/" class="btn btn-neutral" title="条件和循环"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -369,10 +512,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../python_%E7%B1%BB%E4%B9%8Bsuper/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../python_%E6%9D%A1%E4%BB%B6%E5%92%8C%E5%BE%AA%E7%8E%AF/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../python_%E7%B1%BB%E4%B9%8Bcall/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../python_%E5%85%83%E7%B1%BB/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
