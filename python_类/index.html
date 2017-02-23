@@ -319,7 +319,30 @@
 <li><a href="http://blog.jobbole.com/53989">Python中的method</a></li>
 </ul>
 <h2 id="_1">属性</h2>
-<pre><code>def __getattribute__(self, f):
+<pre><code>def __getattribute__(self, item):
+
+    def class_lookup(cls, item):
+        v = cls.__dict__.get(item)
+        if v is not None:
+            return v, cls
+        for x in cls.__bases__:
+            v, c = class_lookup(x, item)
+            if v is not None:
+                return v, c
+        return None, None
+
+    v, cls = class_lookup(type(self), item)
+    if (v is not None) and hasattr(v, '__get__') and hasattr(v, '__set__'):
+        return v.__get__(self, cls)
+    w = self.__dict__.get(item)
+    if w is not None:
+        return w
+    if v is not None:
+        if hasattr(v, '__get__'):
+            return v.__get__(self, cls)
+        else:
+            return v
+    raise AttributeError(type(self), item)
 </code></pre>
 
 <h2 id="_2">特殊的描述符</h2>
