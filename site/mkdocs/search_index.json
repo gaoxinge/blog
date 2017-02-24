@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/", 
-            "text": "\ufeff\u6b64\u535a\u5ba2\u7528\u4e8e\u5b66\u4e60\u8bed\u8a00\u548c\u7b97\u6cd5\u3002\n\n\npython\n\n\n\n\nPython\u6838\u5fc3\u7f16\u7a0b\n\n\nPython Documentation\n\n\n\n\nc\n\n\n\n\nC\u7a0b\u5e8f\u8bbe\u8ba1\u8bed\u8a00\n\n\nC Primer Plus\n\n\n\n\nc++\n\n\n\n\nC++ Primer\n\n\nEffective C++\n\n\ncplusplus.com\n\n\n\n\n\u8bbe\u8ba1\u6a21\u5f0f\n\n\n\n\ndesign patterns for humans\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\u5bfc\u8bba\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u725b\u5ba2\u7f51", 
+            "text": "\ufeff\u6b64\u535a\u5ba2\u7528\u4e8e\u5b66\u4e60\u8bed\u8a00\u548c\u7b97\u6cd5\u3002\n\n\npython\n\n\n\n\nPython\u6838\u5fc3\u7f16\u7a0b\n\n\nPython\u6e90\u7801\u5256\u6790\n\n\nPython Documentation\n\n\n\n\nc\n\n\n\n\nC\u7a0b\u5e8f\u8bbe\u8ba1\u8bed\u8a00\n\n\nC Primer Plus\n\n\n\n\nc++\n\n\n\n\nC++ Primer\n\n\nEffective C++\n\n\ncplusplus.com\n\n\n\n\n\u8bbe\u8ba1\u6a21\u5f0f\n\n\n\n\ndesign patterns for humans\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\u5bfc\u8bba\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u725b\u5ba2\u7f51", 
             "title": "\u535a\u5ba2"
         }, 
         {
             "location": "/#python", 
-            "text": "Python\u6838\u5fc3\u7f16\u7a0b  Python Documentation", 
+            "text": "Python\u6838\u5fc3\u7f16\u7a0b  Python\u6e90\u7801\u5256\u6790  Python Documentation", 
             "title": "python"
         }, 
         {
@@ -37,12 +37,12 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/", 
-            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u6761\u4ef6\u548c\u5faa\u73af\n\n\n\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b\n\n\n\u6a21\u677f\n\n\n\u5143\u7f16\u7a0b\n\n\nSTL\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
+            "text": "\ufeff\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u6761\u4ef6\u548c\u5faa\u73af\n\n\n\u7c7b\n\n\n\u5143\u7c7b\n\n\n\u88c5\u9970\u5668\n\n\n\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df\n\n\n\u6e90\u7801\u5256\u6790\n\n\n\n\nc\n\n\n\n\nc\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b\n\n\n\u6a21\u677f\n\n\n\u5143\u7f16\u7a0b\n\n\nSTL\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
             "title": "\u76ee\u5f55"
         }, 
         {
             "location": "/index_\u76ee\u5f55/#python", 
-            "text": "python  \u89c4\u8303  \u7f29\u8fdb  \u7f16\u7801  \u6a21\u5757  \u5e93  \u8c03\u8bd5  \u6d4b\u8bd5  c\u548cc++  \u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54  \u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54  \u6761\u4ef6\u548c\u5faa\u73af  \u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df", 
+            "text": "python  \u89c4\u8303  \u7f29\u8fdb  \u7f16\u7801  \u6a21\u5757  \u5e93  \u8c03\u8bd5  \u6d4b\u8bd5  c\u548cc++  \u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54  \u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54  \u6761\u4ef6\u548c\u5faa\u73af  \u7c7b  \u5143\u7c7b  \u88c5\u9970\u5668  \u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df  \u6e90\u7801\u5256\u6790", 
             "title": "python"
         }, 
         {
@@ -501,6 +501,46 @@
             "title": "\u751f\u6210\u5668"
         }, 
         {
+            "location": "/python_\u7c7b/", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u7c7b\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nPython\u8fdb\u9636\uff1a\u5b9e\u4f8b\u8bb2\u89e3Python\u4e2d\u7684\u9b54\u6cd5\u51fd\u6570\uff08Magic Methods\uff09\n\n\nPython\u7684Magic Methods\u6307\u5357\n\n\nPython\u9b54\u672f\u65b9\u6cd5\u6307\u5357\n\n\nPython \ngetattribute\n vs \ngetattr\n \u6d45\u8c08\n\n\n\u5982\u4f55\u7406\u89e3Python\u7684Descriptor\n\n\n\u5982\u4f55\u7406\u89e3Python\u7684Descriptor\n\n\nPython Unbound/Bound method object\n\n\nPython\u4e2d\u7684classmethod\u548cstaticmethod\u6709\u4ec0\u4e48\u5177\u4f53\u7528\u9014\n\n\nPython\u4e2d\u7684method\n\n\n\n\n\u5b9e\u4f8b\u7684\u5c5e\u6027\u8bbf\u95ee\n\n\ndef __getattribute__(self, item):\n    return super(A, self).__getattribute__(item)\n\ndef __getattribute__(self, item):\n\n    def class_lookup(cls, item):\n        v = cls.__dict__.get(item)\n        if v is not None:\n            return v, cls\n        for x in cls.__bases__:\n            v, c = class_lookup(x, item)\n            if v is not None:\n                return v, c\n        return None, None\n\n    v, cls = class_lookup(type(self), item)\n    if (v is not None) and hasattr(v, '__get__') and hasattr(v, '__set__'):\n        return v.__get__(self, cls)\n    w = self.__dict__.get(item)\n    if w is not None:\n        return w\n    if v is not None:\n        if hasattr(v, '__get__'):\n            return v.__get__(self, cls)\n        else:\n            return v\n    raise AttributeError(type(self), item)\n\n\n\n\n\u51fd\u6570\u662f\u4ee3\u7801\u5bf9\u8c61\u7684\u5305\u88c5\uff0c\u5b9e\u4f8b\u65b9\u6cd5\uff0c\u7c7b\u65b9\u6cd5\uff0c\u9759\u6001\u65b9\u6cd5\u662f\u51fd\u6570\u7684\u5305\u88c5\u3002\u8fd9\u5f71\u54cd\u7c7b\u8c03\u7528\u65b9\u6cd5\u7684\u65b9\u5f0f\u3002\n\n\nclass ClassMethod(object):\n\n    def __init__(self, f):\n        self.f = f\n\n    def __get__(self, obj, typ=None):\n        return self.f.__get__(typ, type)\n\nclass StaticMethod(object):\n\n    def __init__(self, f):\n        self.f = f\n\n    def __get__(self, obj, typ=None):\n        return self.f\n\nclass Property(object):\n\n    def __init__(self, fget=None, fset=None, fdel=None, doc=None):\n        self.fget = fget\n        self.fset = fset\n        self.fdel = fdel\n\n        if not doc and not fget:\n            doc = fget.__doc__\n\n        self.__doc__ = doc\n\n    def __get__(self, obj, typ=None):\n        if not obj:\n            return self\n        if not self.fget:\n            raise AttributeError('unreadable attribute')\n        return self.fget(obj)\n\n    def __set__(self, obj, value):\n        if not self.fset:\n            raise AttributeError('can\\'t set attribute')\n        self.fset(obj, value)\n\n    def __delete__(self, obj):\n        if not self.fdel:\n            raise AttributeError('can\\'t delete attribute')\n        self.fdel(obj)\n\n    def getter(self, fget):\n        return self.__class__(fget, self.fset, self.fdel, self.__doc__)\n\n    def setter(self, fset):\n        return self.__class__(self.fget, fset, self.fdel, self.__doc__)\n\n    def deleter(self, fdel):\n        return self.__class__(self.fget, self.fset, fdel, self.__doc__)\n\n\n\n\ndef F(self):\n    print 1\nf = F\n\ndef G(cls):\n    print 1\ng = classmethod(G)\n\ndef H():\n    print 1\nh = staticmethod(H)\n\nclass A(object):\n    pass\n\nA.f = f # \u5b9e\u4f8b\u65b9\u6cd5\nA.g = g # \u7c7b\u65b9\u6cd5\nA.h = h # \u9759\u6001\u65b9\u6cd5\n\na = A()\n# a.f() = a.__class__.__dict__['f'].__get__(a, A)() = f.__get__(a, A)() = f(a)\n# a.g() = a.__class__.__dict__['g'].__get__(a, A)() = h.__get__(a, A)() = g(A)\n# a.h() = a.__class__.__dict__['h'].__get__(a, A)() = g.__get__(a, A)() = h()", 
+            "title": "\u7c7b"
+        }, 
+        {
+            "location": "/python_\u7c7b/#_1", 
+            "text": "def __getattribute__(self, item):\n    return super(A, self).__getattribute__(item)\n\ndef __getattribute__(self, item):\n\n    def class_lookup(cls, item):\n        v = cls.__dict__.get(item)\n        if v is not None:\n            return v, cls\n        for x in cls.__bases__:\n            v, c = class_lookup(x, item)\n            if v is not None:\n                return v, c\n        return None, None\n\n    v, cls = class_lookup(type(self), item)\n    if (v is not None) and hasattr(v, '__get__') and hasattr(v, '__set__'):\n        return v.__get__(self, cls)\n    w = self.__dict__.get(item)\n    if w is not None:\n        return w\n    if v is not None:\n        if hasattr(v, '__get__'):\n            return v.__get__(self, cls)\n        else:\n            return v\n    raise AttributeError(type(self), item)  \u51fd\u6570\u662f\u4ee3\u7801\u5bf9\u8c61\u7684\u5305\u88c5\uff0c\u5b9e\u4f8b\u65b9\u6cd5\uff0c\u7c7b\u65b9\u6cd5\uff0c\u9759\u6001\u65b9\u6cd5\u662f\u51fd\u6570\u7684\u5305\u88c5\u3002\u8fd9\u5f71\u54cd\u7c7b\u8c03\u7528\u65b9\u6cd5\u7684\u65b9\u5f0f\u3002  class ClassMethod(object):\n\n    def __init__(self, f):\n        self.f = f\n\n    def __get__(self, obj, typ=None):\n        return self.f.__get__(typ, type)\n\nclass StaticMethod(object):\n\n    def __init__(self, f):\n        self.f = f\n\n    def __get__(self, obj, typ=None):\n        return self.f\n\nclass Property(object):\n\n    def __init__(self, fget=None, fset=None, fdel=None, doc=None):\n        self.fget = fget\n        self.fset = fset\n        self.fdel = fdel\n\n        if not doc and not fget:\n            doc = fget.__doc__\n\n        self.__doc__ = doc\n\n    def __get__(self, obj, typ=None):\n        if not obj:\n            return self\n        if not self.fget:\n            raise AttributeError('unreadable attribute')\n        return self.fget(obj)\n\n    def __set__(self, obj, value):\n        if not self.fset:\n            raise AttributeError('can\\'t set attribute')\n        self.fset(obj, value)\n\n    def __delete__(self, obj):\n        if not self.fdel:\n            raise AttributeError('can\\'t delete attribute')\n        self.fdel(obj)\n\n    def getter(self, fget):\n        return self.__class__(fget, self.fset, self.fdel, self.__doc__)\n\n    def setter(self, fset):\n        return self.__class__(self.fget, fset, self.fdel, self.__doc__)\n\n    def deleter(self, fdel):\n        return self.__class__(self.fget, self.fset, fdel, self.__doc__)  def F(self):\n    print 1\nf = F\n\ndef G(cls):\n    print 1\ng = classmethod(G)\n\ndef H():\n    print 1\nh = staticmethod(H)\n\nclass A(object):\n    pass\n\nA.f = f # \u5b9e\u4f8b\u65b9\u6cd5\nA.g = g # \u7c7b\u65b9\u6cd5\nA.h = h # \u9759\u6001\u65b9\u6cd5\n\na = A()\n# a.f() = a.__class__.__dict__['f'].__get__(a, A)() = f.__get__(a, A)() = f(a)\n# a.g() = a.__class__.__dict__['g'].__get__(a, A)() = h.__get__(a, A)() = g(A)\n# a.h() = a.__class__.__dict__['h'].__get__(a, A)() = g.__get__(a, A)() = h()", 
+            "title": "\u5b9e\u4f8b\u7684\u5c5e\u6027\u8bbf\u95ee"
+        }, 
+        {
+            "location": "/python_\u5143\u7c7b/", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u5143\u7c7b\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nPython\u8fdb\u9636\uff1a\u4e00\u6b65\u6b65\u7406\u89e3Python\u4e2d\u7684\u5143\u7c7bmetaclass\n\n\nPython\u00b7\u5143\u7c7b\uff08Meta Class\uff09\u53ca\u5176\u5e94\u7528\n\n\nPython\u00b7\u5143\u7c7b\uff08Meta Class\uff09\u53ca\u5176\u5e94\u7528\uff08\u4e8c\uff09\n\n\n\n\n\u51fd\u6570\u5f0f\u521b\u5efa\n\n\ndef upper_attr(future_class_name, future_class_parents, future_class_attr):\n\n    uppercase_attr = {}\n\n    for name, val in future_class_attr.items():\n        if not name.startswith('__'):\n            uppercase_attr[name.upper()] = val\n        else:\n            uppercase_attr[name] = val\n\n    return type(future_class_name, future_class_parents, uppercase_attr)\n\n\n\n\nclass Foo(object):\n\n    __metaclass__ = upper_attr\n\n    bar = 'bip'\n\nFoo = upper_attr('Foo', (object, ), {'bar': 'bip'})\n\n\n\n\n\u7c7b\u5f0f\u521b\u5efa\n\n\nclass UpperAttrMetaClass(type):\n\n    def __new__(cls, name, bases, attr):\n        uppercase_attr = {}\n\n        for name, val in attr.items():\n            if not name.startswith('__'):\n                uppercase_attr[name.upper()] = val\n            else:\n                uppercase_attr[name] = val\n\n        return super(UpperAttrMetaClass, cls).__new__(cls, name, bases, uppercase_attr)\n\n\n\n\nclass Foo(object):\n\n    __metaclass__ = UpperAttrMetaClass\n\n    bar = 'bip'\n\nFoo = UpperAttrMetaClass('Foo', (object, ), {'bar': 'bip'})", 
+            "title": "\u5143\u7c7b"
+        }, 
+        {
+            "location": "/python_\u5143\u7c7b/#_1", 
+            "text": "def upper_attr(future_class_name, future_class_parents, future_class_attr):\n\n    uppercase_attr = {}\n\n    for name, val in future_class_attr.items():\n        if not name.startswith('__'):\n            uppercase_attr[name.upper()] = val\n        else:\n            uppercase_attr[name] = val\n\n    return type(future_class_name, future_class_parents, uppercase_attr)  class Foo(object):\n\n    __metaclass__ = upper_attr\n\n    bar = 'bip'\n\nFoo = upper_attr('Foo', (object, ), {'bar': 'bip'})", 
+            "title": "\u51fd\u6570\u5f0f\u521b\u5efa"
+        }, 
+        {
+            "location": "/python_\u5143\u7c7b/#_2", 
+            "text": "class UpperAttrMetaClass(type):\n\n    def __new__(cls, name, bases, attr):\n        uppercase_attr = {}\n\n        for name, val in attr.items():\n            if not name.startswith('__'):\n                uppercase_attr[name.upper()] = val\n            else:\n                uppercase_attr[name] = val\n\n        return super(UpperAttrMetaClass, cls).__new__(cls, name, bases, uppercase_attr)  class Foo(object):\n\n    __metaclass__ = UpperAttrMetaClass\n\n    bar = 'bip'\n\nFoo = UpperAttrMetaClass('Foo', (object, ), {'bar': 'bip'})", 
+            "title": "\u7c7b\u5f0f\u521b\u5efa"
+        }, 
+        {
+            "location": "/python_\u88c5\u9970\u5668/", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u88c5\u9970\u5668\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nPython\u8fdb\u9636: \u901a\u8fc7\u5b9e\u4f8b\u8be6\u89e3\u88c5\u9970\u5668\uff08\u9644\u4ee3\u7801\uff09\n\n\n\n\n\u51fd\u6570\u5f0f\u521b\u5efa\n\n\ndef Decorator(f):\n    def wrapper(*args, **kwargs):\n        print '%s called' % f.__name__\n        result = f(*args, **kwargs)\n        print '%s end' % f.__name__\n        return result\n    return wrapper\n\n@Decorator\ndef test06(a, b, c):\n    print 'in function test06, a=%s, b=%s, c=%s' % (a, b, c)\n    return 1\n\nprint test06(1,2,3)\n\n\n\n\n\u7c7b\u5f0f\u521b\u5efa\n\n\nclass Decorator(object):\n\n    def __init__(self, f):\n        self.f = f\n\n    def __call__(self, *args, **kwargs):\n        print '%s called' % self.f.__name__\n        result = self.f(*args, **kwargs)\n        print '%s end' % self.f.__name__\n        return result\n\n@Decorator\ndef test06(a, b, c):\n    print 'in function test06, a=%s, b=%s, c=%s' % (a, b, c)\n    return 1\n\nprint test06(1,2,3)", 
+            "title": "\u88c5\u9970\u5668"
+        }, 
+        {
+            "location": "/python_\u88c5\u9970\u5668/#_1", 
+            "text": "def Decorator(f):\n    def wrapper(*args, **kwargs):\n        print '%s called' % f.__name__\n        result = f(*args, **kwargs)\n        print '%s end' % f.__name__\n        return result\n    return wrapper\n\n@Decorator\ndef test06(a, b, c):\n    print 'in function test06, a=%s, b=%s, c=%s' % (a, b, c)\n    return 1\n\nprint test06(1,2,3)", 
+            "title": "\u51fd\u6570\u5f0f\u521b\u5efa"
+        }, 
+        {
+            "location": "/python_\u88c5\u9970\u5668/#_2", 
+            "text": "class Decorator(object):\n\n    def __init__(self, f):\n        self.f = f\n\n    def __call__(self, *args, **kwargs):\n        print '%s called' % self.f.__name__\n        result = self.f(*args, **kwargs)\n        print '%s end' % self.f.__name__\n        return result\n\n@Decorator\ndef test06(a, b, c):\n    print 'in function test06, a=%s, b=%s, c=%s' % (a, b, c)\n    return 1\n\nprint test06(1,2,3)", 
+            "title": "\u7c7b\u5f0f\u521b\u5efa"
+        }, 
+        {
             "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/", 
             "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nPython\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df\u7aa5\u63a2\n\n\nPython LEGB \u539f\u5219\n\n\nPython\u662f\u4e00\u79cd\u7eaf\u7cb9\u7684\u8bed\u8a00\n\n\n\n\n\u6539\u53d8\u5f15\u7528\uff1a\u4e00\u5207\u7686\u53d8\u91cf\n\n\n\n\n\n\n\u8d4b\u503c\n\n\n\n\n\n\n\u51fd\u6570\n\n\n\n\n\n\n\u7c7b\n\n\n\n\n\n\n\u6a21\u5757\n\n\n\n\n\n\n\u53c2\u6570\n\n\n\n\n\n\n\u547d\u540d\u7a7a\u95f4\n\n\n\u547d\u540d\u7a7a\u95f4\u6307\u7684\u662f\u952e\u4e3a\u540d\u5b57\uff0c\u503c\u4e3a\u5bf9\u8c61\u7684\u5b57\u5178\u3002\u5982\n\n\na_namespace = {'name_a': object_1, 'name_b': object_2}\n\n\n\n\n\u4f5c\u7528\u57df\n\n\n\u4f5c\u7528\u57df\u662f\u7279\u6b8a\u7684\u547d\u540d\u7a7a\u95f4\uff0c\u53cd\u6620\u4e86\u90e8\u5206\u4ee3\u7801\u7684\u5f15\u7528\u72b6\u51b5\u3002\u53d8\u91cf\u7684\u4f5c\u7528\u57df\u5728\u7f16\u8bd1\u65f6\u786e\u5b9a\uff0c\u503c\u5728\u8fd0\u884c\u65f6\u786e\u5b9a\u3002\n\n\n\u4f8b\u5b50\n\n\nimport requests\n\na = 1\n\ndef f(b):\n    c = 1\n\n    def g():\n        d = 1\n        return d\n\n    return c\n\nclass foo:\n    pass\n\n\n\n\n\u4f5c\u7528\u57df\u4e3a\n\n\ng_namespace.keys() = ['d']\nf_namespace.keys() = ['c', 'g']\nglobal_namespace.keys()  = ['requests', 'a', 'f', 'foo']\nbuiltins_namespace.keys() = ['__builtins__']\n\n\n\n\n\u4f8b\u5b50\n\n\nif True:\n    a = 1\n\nprint a # 1\n\n\n\n\nfor x in range(4):\n    print x\n\nprint x # 3\n\n\n\n\nLEGB\n\n\nLEGB\u662f\u53d8\u91cf\u641c\u7d22\u4f5c\u7528\u57df\u662f\u7684\u987a\u5e8f\uff1alocal\uff08\u5f53\u524d\u4f5c\u7528\u57df\uff09---\nenclosure---\nglobal----\nbuiltins\u3002\u53d8\u91cf\u641c\u7d22\u5728\u8fd0\u884c\u65f6\u786e\u5b9a\u3002\n\n\n\u4f8b\u5b50\n\n\ndef f():\n    a = b\n    return a\n\n\n\n\n\u4f8b\u5b50\n\n\ndef multipliers(n):\n    funcs = []\n    for i in range(0, n):\n        def _func(b):\n            return i * b\n        funcs.append(_func)\n    return funcs\n\nms = multipliers(10)\nprint ms[2](3) # 27\n\n\n\n\ndef multipliers(n):\n    funcs = []\n    for i in range(0, n):\n        def _func(b):\n            return i * b\n        funcs.append(_func(3)))\n    return funcs\n\nms = multipliers(10)\nprint ms[2] # 6\n\n\n\n\n\u4f8b\u5b50\n\n\nclass A:\n    a = 1\n\n    class B:\n        b = a\n\n\n\n\nclass A:\n    a = 1\n\n    class B:\n        b = A.a\n\n\n\n\nclass A:\n    a = 1\n\n    class B:\n        def __init__(self):\n            b = A.a\n\n\n\n\nlocals\u548cglobals\n\n\n\u5f53\u524d\u4f5c\u7528\u57df\n\n\n\u7c7b\u4e2d\u7684\u5f53\u524d\u4f5c\u7528\u57df\u6bd4\u8f83\u5947\u602a\u3002\n\n\nlocals\n\n\nlocals()\u8fd4\u56de\u5f53\u524d\u4f5c\u7528\u57df\u3002\n\n\nglobals\n\n\nglobals()\u8fd4\u56deglobal_namespace\u548cbuiltins_namespace\u3002", 
             "title": "\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df"
@@ -569,6 +609,11 @@
             "location": "/python_\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df/#globals", 
             "text": "globals()\u8fd4\u56deglobal_namespace\u548cbuiltins_namespace\u3002", 
             "title": "globals"
+        }, 
+        {
+            "location": "/python_\u6e90\u7801\u5256\u6790/", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76python\u4e2d\u7684\u6e90\u7801\u5256\u6790\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nPython\u6e90\u7801\u5256\u6790\n\n\nPython\u6e90\u7801\u9605\u8bfb", 
+            "title": "\u6e90\u7801\u5256\u6790"
         }, 
         {
             "location": "/c_c/", 
@@ -747,7 +792,7 @@
         }, 
         {
             "location": "/c++_STL/", 
-            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684STL\u3002\n\n\nstring\n\n\n\u4e0e\u5176\u4ed6\u7c7b\u578b\u76f8\u4e92\u8f6c\u5316\n\n\n\n\nstring\u8f6c\u5316\u4e3aint\n\n\nstring\u4e0eint\u76f8\u4e92\u8f6c\u5316\n\n\n\n\nfind\n\n\n\n\nfind\n\n\nfind", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684STL\u3002\n\n\nstring\n\n\n\u4e0e\u5176\u4ed6\u7c7b\u578b\u76f8\u4e92\u8f6c\u5316\n\n\n\n\nstring\u8f6c\u5316\u4e3aint\n\n\nstring\u4e0eint\u76f8\u4e92\u8f6c\u5316\n\n\n\n\nfind\n\n\n\n\nfind\n\n\nfind\n\n\n\n\nbitset\n\n\nvector", 
             "title": "STL"
         }, 
         {
@@ -764,6 +809,16 @@
             "location": "/c++_STL/#find", 
             "text": "find  find", 
             "title": "find"
+        }, 
+        {
+            "location": "/c++_STL/#bitset", 
+            "text": "", 
+            "title": "bitset"
+        }, 
+        {
+            "location": "/c++_STL/#vector", 
+            "text": "", 
+            "title": "vector"
         }, 
         {
             "location": "/algorithm_algorithm/", 

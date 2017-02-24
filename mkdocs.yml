@@ -15,7 +15,11 @@ pages:
 - 董伟明的知乎回答: python_董伟明的知乎回答.md
 - 赖明星的知乎回答: python_赖明星的知乎回答.md
 - 条件和循环:       python_条件和循环.md
+- 类:               python_类.md
+- 元类:             python_元类.md
+- 装饰器:           python_装饰器.md
 - 命名空间和作用域: python_命名空间和作用域.md
+- 源码剖析:         python_源码剖析.md
 - c:                c_c.md
 - c++:              c++_c++.md
 - 规范:             c++_规范.md
