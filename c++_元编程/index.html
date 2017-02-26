@@ -241,6 +241,9 @@
         
             <ul>
             
+                <li class="toctree-l3"><a href="#_1">特化</a></li>
+                
+            
             </ul>
         
     </li>
@@ -305,6 +308,50 @@
 <li><a href="https://github.com/wuye9036/CppTemplateTutorial">CppTemplateTutorial</a></li>
 <li><a href="https://book.douban.com/subject/1755195">Modern C++ Design</a></li>
 </ul>
+<h2 id="_1">特化</h2>
+<pre><code class="c++">#include &lt;iostream&gt;
+using namespace std;
+
+template &lt;typename T&gt; class TypeToID
+{
+    public:
+        static int const ID = -1;
+};
+
+template &lt;&gt; class TypeToID&lt;int&gt;
+{
+    public:
+        static int const ID = 0;
+};
+
+template &lt;&gt; class TypeToID&lt;float&gt;
+{
+    public:
+        static int const ID = 0xF10A7;
+};
+
+template &lt;typename T&gt; class TypeToID&lt;T*&gt;
+{
+    public:
+        static int const ID = 0x80000000;
+};
+
+template &lt;&gt; class TypeToID&lt;int*&gt;
+{
+    public:
+        static int const ID = 0x12345678;
+};
+
+int main()
+{
+    cout &lt;&lt; &quot;ID of int: &quot;    &lt;&lt; TypeToID&lt;int&gt;::ID    &lt;&lt; endl;
+    cout &lt;&lt; &quot;ID of float: &quot;  &lt;&lt; TypeToID&lt;float&gt;::ID  &lt;&lt; endl;
+    cout &lt;&lt; &quot;ID of flaot*: &quot; &lt;&lt; TypeToID&lt;float*&gt;::ID &lt;&lt; endl;
+    cout &lt;&lt; &quot;ID of int*: &quot;   &lt;&lt; TypeToID&lt;int*&gt;::ID   &lt;&lt; endl;
+    cout &lt;&lt; &quot;ID of char: &quot;   &lt;&lt; TypeToID&lt;char&gt;::ID   &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
               
             </div>
           </div>

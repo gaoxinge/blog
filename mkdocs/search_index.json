@@ -787,8 +787,13 @@
         }, 
         {
             "location": "/c++_\u5143\u7f16\u7a0b/", 
-            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684\u5143\u7f16\u7a0b\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nCppTemplateTutorial\n\n\nModern C++ Design", 
+            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684\u5143\u7f16\u7a0b\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nCppTemplateTutorial\n\n\nModern C++ Design\n\n\n\n\n\u7279\u5316\n\n\n#include \niostream\n\nusing namespace std;\n\ntemplate \ntypename T\n class TypeToID\n{\n    public:\n        static int const ID = -1;\n};\n\ntemplate \n class TypeToID\nint\n\n{\n    public:\n        static int const ID = 0;\n};\n\ntemplate \n class TypeToID\nfloat\n\n{\n    public:\n        static int const ID = 0xF10A7;\n};\n\ntemplate \ntypename T\n class TypeToID\nT*\n\n{\n    public:\n        static int const ID = 0x80000000;\n};\n\ntemplate \n class TypeToID\nint*\n\n{\n    public:\n        static int const ID = 0x12345678;\n};\n\nint main()\n{\n    cout \n \nID of int: \n    \n TypeToID\nint\n::ID    \n endl;\n    cout \n \nID of float: \n  \n TypeToID\nfloat\n::ID  \n endl;\n    cout \n \nID of flaot*: \n \n TypeToID\nfloat*\n::ID \n endl;\n    cout \n \nID of int*: \n   \n TypeToID\nint*\n::ID   \n endl;\n    cout \n \nID of char: \n   \n TypeToID\nchar\n::ID   \n endl;\n    return 0;\n}", 
             "title": "\u5143\u7f16\u7a0b"
+        }, 
+        {
+            "location": "/c++_\u5143\u7f16\u7a0b/#_1", 
+            "text": "#include  iostream \nusing namespace std;\n\ntemplate  typename T  class TypeToID\n{\n    public:\n        static int const ID = -1;\n};\n\ntemplate   class TypeToID int \n{\n    public:\n        static int const ID = 0;\n};\n\ntemplate   class TypeToID float \n{\n    public:\n        static int const ID = 0xF10A7;\n};\n\ntemplate  typename T  class TypeToID T* \n{\n    public:\n        static int const ID = 0x80000000;\n};\n\ntemplate   class TypeToID int* \n{\n    public:\n        static int const ID = 0x12345678;\n};\n\nint main()\n{\n    cout    ID of int:        TypeToID int ::ID      endl;\n    cout    ID of float:      TypeToID float ::ID    endl;\n    cout    ID of flaot*:     TypeToID float* ::ID   endl;\n    cout    ID of int*:       TypeToID int* ::ID     endl;\n    cout    ID of char:       TypeToID char ::ID     endl;\n    return 0;\n}", 
+            "title": "\u7279\u5316"
         }, 
         {
             "location": "/c++_STL/", 
