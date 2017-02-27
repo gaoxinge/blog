@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>模板 - blog</title>
+  <title>模板元编程 - blog</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u6a21\u677f";
-    var mkdocs_page_input_path = "c++_\u6a21\u677f.md";
-    var mkdocs_page_url = "/c++_\u6a21\u677f/";
+    var mkdocs_page_name = "\u6a21\u677f\u5143\u7f16\u7a0b";
+    var mkdocs_page_input_path = "c++_\u6a21\u677f\u5143\u7f16\u7a0b.md";
+    var mkdocs_page_url = "/c++_\u6a21\u677f\u5143\u7f16\u7a0b/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -230,7 +230,7 @@
           
             <li>
     <li class="toctree-l1 current">
-        <a class="current" href="./">模板</a>
+        <a class="current" href="./">模板元编程</a>
         
             <ul>
             
@@ -243,14 +243,13 @@
                 <li class="toctree-l3"><a href="#_3">类模板</a></li>
                 
             
+                <li class="toctree-l3"><a href="#_4">特化和偏特化</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_5">不定长</a></li>
+                
+            
             </ul>
-        
-    </li>
-<li>
-          
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../c%2B%2B_%E5%85%83%E7%BC%96%E7%A8%8B/">元编程</a>
         
     </li>
 <li>
@@ -298,7 +297,7 @@
     
       
     
-    <li>模板</li>
+    <li>模板元编程</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -313,6 +312,7 @@
 <ul>
 <li><a href="http://blog.csdn.net/chenchen410/article/details/39502199">C++模板(template)使用介绍</a></li>
 <li><a href="https://github.com/wuye9036/CppTemplateTutorial">CppTemplateTutorial</a></li>
+<li><a href="https://book.douban.com/subject/1755195">Modern C++ Design</a></li>
 </ul>
 <h2 id="_1">函数模板</h2>
 <pre><code class="c++">#include &lt;iostream&gt;
@@ -325,11 +325,11 @@ int main()
 {
    int n1 = 2;
    int n2 = 10;
-   cout &lt;&lt; Min(n1, n2) &lt;&lt; endl;
+   cout &lt;&lt; Min&lt;int&gt;(n1, n2) &lt;&lt; endl;
 
    double d1 = 1.5;
    double d2 = 5.6;
-   cout &lt;&lt; Min(d1, d2) &lt;&lt; endl;
+   cout &lt;&lt; Min&lt;double&gt;(d1, d2) &lt;&lt; endl;
 
    return 0;
 }
@@ -406,6 +406,77 @@ int main()
    return 0;
 }
 </code></pre>
+
+<h2 id="_4">特化和偏特化</h2>
+<pre><code class="c++">#include &lt;iostream&gt;
+using namespace std;
+
+template &lt;typename T&gt; class TypeToID
+{
+    public:
+        static int const ID = -1;
+};
+
+template &lt;&gt; class TypeToID&lt;int&gt;
+{
+    public:
+        static int const ID = 0;
+};
+
+template &lt;&gt; class TypeToID&lt;float&gt;
+{
+    public:
+        static int const ID = 0xF10A7;
+};
+
+template &lt;typename T&gt; class TypeToID&lt;T*&gt;
+{
+    public:
+        static int const ID = 0x80000000;
+};
+
+template &lt;&gt; class TypeToID&lt;int*&gt;
+{
+    public:
+        static int const ID = 0x12345678;
+};
+
+int main()
+{
+    cout &lt;&lt; &quot;ID of int: &quot;    &lt;&lt; TypeToID&lt;int&gt;::ID    &lt;&lt; endl;
+    cout &lt;&lt; &quot;ID of float: &quot;  &lt;&lt; TypeToID&lt;float&gt;::ID  &lt;&lt; endl;
+    cout &lt;&lt; &quot;ID of flaot*: &quot; &lt;&lt; TypeToID&lt;float*&gt;::ID &lt;&lt; endl;
+    cout &lt;&lt; &quot;ID of int*: &quot;   &lt;&lt; TypeToID&lt;int*&gt;::ID   &lt;&lt; endl;
+    cout &lt;&lt; &quot;ID of char: &quot;   &lt;&lt; TypeToID&lt;char&gt;::ID   &lt;&lt; endl;
+    return 0;
+}
+</code></pre>
+
+<h2 id="_5">不定长</h2>
+<ul>
+<li>C++98/03</li>
+</ul>
+<pre><code class="c++">template &lt;typename T0, typename T1 = void&gt; struct DoWork;
+
+template &lt;typename T&gt; struct DoWork&lt;T&gt; {};
+template &lt;&gt;           struct DoWork&lt;int&gt; {};
+template &lt;&gt;           struct DoWork&lt;float&gt; {};
+template &lt;&gt;           struct DoWork&lt;int, int&gt; {};
+
+DoWork&lt;int&gt; i;
+DoWork&lt;float&gt; f;
+DoWork&lt;double&gt; d;
+DoWork&lt;int, int&gt; ii;
+</code></pre>
+
+<ul>
+<li>C++11</li>
+</ul>
+<pre><code class="c++">template &lt;typename... Ts&gt;             class X {};           // ok 
+template &lt;typename... Ts, typename U&gt; class X {};           // error
+template &lt;typename... Ts, typename U&gt; class X&lt;U, Ts...&gt; {}; // ok
+template &lt;typename... Ts, typename U&gt; class X&lt;Ts..., U&gt; {}; // error
+</code></pre>
               
             </div>
           </div>
@@ -413,7 +484,7 @@ int main()
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../c%2B%2B_%E5%85%83%E7%BC%96%E7%A8%8B/" class="btn btn-neutral float-right" title="元编程">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../c%2B%2B_STL/" class="btn btn-neutral float-right" title="STL">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../c%2B%2B_%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" class="btn btn-neutral" title="面对对象编程"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -445,7 +516,7 @@ int main()
         <span><a href="../c%2B%2B_%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../c%2B%2B_%E5%85%83%E7%BC%96%E7%A8%8B/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../c%2B%2B_STL/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
