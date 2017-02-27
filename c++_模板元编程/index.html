@@ -246,7 +246,10 @@
                 <li class="toctree-l3"><a href="#_4">特化和偏特化</a></li>
                 
             
-                <li class="toctree-l3"><a href="#_5">不定长</a></li>
+                <li class="toctree-l3"><a href="#_5">默认参数</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_6">不定长</a></li>
                 
             
             </ul>
@@ -452,10 +455,7 @@ int main()
 }
 </code></pre>
 
-<h2 id="_5">不定长</h2>
-<ul>
-<li>C++98/03</li>
-</ul>
+<h2 id="_5">默认参数</h2>
 <pre><code class="c++">template &lt;typename T0, typename T1 = void&gt; struct DoWork;
 
 template &lt;typename T&gt; struct DoWork&lt;T&gt; {};
@@ -469,9 +469,7 @@ DoWork&lt;double&gt; d;
 DoWork&lt;int, int&gt; ii;
 </code></pre>
 
-<ul>
-<li>C++11</li>
-</ul>
+<h2 id="_6">不定长</h2>
 <pre><code class="c++">template &lt;typename... Ts&gt;             class X {};           // ok 
 template &lt;typename... Ts, typename U&gt; class X {};           // error
 template &lt;typename... Ts, typename U&gt; class X&lt;U, Ts...&gt; {}; // ok
