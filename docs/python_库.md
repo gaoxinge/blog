@@ -60,8 +60,9 @@ pip list --outdated
 
 - [关于python中的setup.py](http://python.jobbole.com/82077)
 - [Python包管理工具解惑](http://www.tuicool.com/articles/FNJZNr)
-- [将自己写的Python代码打包放到PyPI上](http://blog.useasp.net/archive/2014/09/09/packaging-python-libraries-and-upload-to-pypi-python-package-index.aspx)
 - [如何将自己的程序发布到PyPI](https://zhuanlan.zhihu.com/p/26159930)
+- [将自己写的Python代码打包放到PyPI上](http://blog.useasp.net/archive/2014/09/09/packaging-python-libraries-and-upload-to-pypi-python-package-index.aspx)
+- [发布你自己的轮子](https://segmentfault.com/a/1190000008663126)
 
 ## 下载，安装，升级和卸载
 
