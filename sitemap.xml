@@ -163,6 +163,22 @@
 
     
     <url>
+     <loc>/c_数组/</loc>
+     <lastmod>2017-05-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/c_标准库/</loc>
+     <lastmod>2017-05-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
      <loc>/c++_c++/</loc>
      <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
@@ -220,6 +236,14 @@
     
     <url>
      <loc>/c++_STL/</loc>
+     <lastmod>2017-05-01</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/c++_第三方库/</loc>
      <lastmod>2017-05-01</lastmod>
      <changefreq>daily</changefreq>
     </url>
