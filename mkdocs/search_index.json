@@ -662,8 +662,18 @@
         }, 
         {
             "location": "/c_\u6807\u51c6\u5e93/", 
-            "text": "\ufeff", 
+            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684\u6807\u51c6\u5e93\u3002\n\n\nstdio\n\n\nmath", 
             "title": "\u6807\u51c6\u5e93"
+        }, 
+        {
+            "location": "/c_\u6807\u51c6\u5e93/#stdio", 
+            "text": "", 
+            "title": "stdio"
+        }, 
+        {
+            "location": "/c_\u6807\u51c6\u5e93/#math", 
+            "text": "", 
+            "title": "math"
         }, 
         {
             "location": "/c++_c++/", 
@@ -817,7 +827,7 @@
         }, 
         {
             "location": "/c++_STL/", 
-            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684STL\u3002\n\n\nstring\n\n\n\u4e0e\u5176\u4ed6\u7c7b\u578b\u76f8\u4e92\u8f6c\u5316\n\n\n\n\nstring\u8f6c\u5316\u4e3aint\n\n\nstring\u4e0eint\u76f8\u4e92\u8f6c\u5316\n\n\n\n\nfind\n\n\n\n\nfind\n\n\nfind\n\n\n\n\nbitset\n\n\nvector", 
+            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684STL\u3002\n\n\nstring\n\n\n\u4e0e\u5176\u4ed6\u7c7b\u578b\u76f8\u4e92\u8f6c\u5316\n\n\n\n\nstring\u8f6c\u5316\u4e3aint\n\n\nstring\u4e0eint\u76f8\u4e92\u8f6c\u5316\n\n\n\n\nfind\n\n\n\n\nfind\n\n\nfind\n\n\n\n\nbitset\n\n\nvector", 
             "title": "STL"
         }, 
         {
