@@ -662,7 +662,7 @@
         }, 
         {
             "location": "/c_\u6807\u51c6\u5e93/", 
-            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684\u6807\u51c6\u5e93\u3002\n\n\nstdio\n\n\nmath", 
+            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684\u6807\u51c6\u5e93\u3002\n\n\nstdio\n\n\n- scanf, printf\n\n\nmath\n\n\nctype", 
             "title": "\u6807\u51c6\u5e93"
         }, 
         {
@@ -671,9 +671,19 @@
             "title": "stdio"
         }, 
         {
+            "location": "/c_\u6807\u51c6\u5e93/#-scanf-printf", 
+            "text": "", 
+            "title": "- scanf, printf"
+        }, 
+        {
             "location": "/c_\u6807\u51c6\u5e93/#math", 
             "text": "", 
             "title": "math"
+        }, 
+        {
+            "location": "/c_\u6807\u51c6\u5e93/#ctype", 
+            "text": "", 
+            "title": "ctype"
         }, 
         {
             "location": "/c++_c++/", 
