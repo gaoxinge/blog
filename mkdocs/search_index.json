@@ -662,18 +662,13 @@
         }, 
         {
             "location": "/c_\u6807\u51c6\u5e93/", 
-            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684\u6807\u51c6\u5e93\u3002\n\n\nstdio\n\n\n- scanf, printf\n\n\nmath\n\n\nctype", 
+            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684\u6807\u51c6\u5e93\u3002\n\n\nstdio\n\n\n\n\nscanf, printf\n\n\ngetchar, putchar\n\n\n\n\nmath\n\n\nctype\n\n\n\n\nisalnum, isalpha, isblank, iscntrl, isdigit, isgraph, islower, isprint, ispunct, isspace, isupper, isxdigit\n\n\ntolower, toupper", 
             "title": "\u6807\u51c6\u5e93"
         }, 
         {
             "location": "/c_\u6807\u51c6\u5e93/#stdio", 
-            "text": "", 
+            "text": "scanf, printf  getchar, putchar", 
             "title": "stdio"
-        }, 
-        {
-            "location": "/c_\u6807\u51c6\u5e93/#-scanf-printf", 
-            "text": "", 
-            "title": "- scanf, printf"
         }, 
         {
             "location": "/c_\u6807\u51c6\u5e93/#math", 
@@ -682,7 +677,7 @@
         }, 
         {
             "location": "/c_\u6807\u51c6\u5e93/#ctype", 
-            "text": "", 
+            "text": "isalnum, isalpha, isblank, iscntrl, isdigit, isgraph, islower, isprint, ispunct, isspace, isupper, isxdigit  tolower, toupper", 
             "title": "ctype"
         }, 
         {
