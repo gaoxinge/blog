@@ -9,7 +9,7 @@
 
 - [math.h](http://baike.baidu.com/link?url=OCi3X5OBlmQk_k8o8fPIMnlXsnWMejBrW8DNtW3i4HV1MP2sTq6fT4aB2mhuld84ZJem2zEvYuS1FHLL4H4TCK)
 - [math.h](http://c.biancheng.net/cpp/u/math_h/)
-- [<math.h>-C语言标准库](http://www.yiibai.com/c_standard_library/math_h.html)
+- [math.h](http://www.yiibai.com/c_standard_library/math_h.html)
 
 ## ctype
 
