@@ -127,3 +127,87 @@ a = A()
 # a.g() = a.__class__.__dict__['g'].__get__(a, A)() = h.__get__(a, A)() = g(A)
 # a.h() = a.__class__.__dict__['h'].__get__(a, A)() = g.__get__(a, A)() = h()
 ```
+
+## __init__和__new__
+
+- [Python中__init__和__new__的区别详解](http://www.ynpxrz.com/n685992c2025.aspx)
+
+```python
+'''
+basic
+'''
+class Person(object):
+    
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    def __str__(self):
+        return '<Person: %s(%s)>' % (self.name, self.age)
+
+class Person1(object):
+
+    def __new__(cls, name, age):
+        print '__new__ called'
+        return super(Person1, cls).__new__(cls, name, age)
+    
+    def __init__(self, name, age):
+        print '__init__ called'
+        self.name = name
+        self.age = age
+        
+    def __str__(self):
+        return '<Person: %s(%s)>' % (self.name, self.age)
+        
+piglei = Person('piglei', 24)
+print piglei
+piglei = Person1('piglei', 24)
+print piglei        
+
+'''
+immutable object
+'''
+class PositiveInteger(int):
+    
+    def __init__(self, value):
+        super(PositiveInteger, self).__init__(self, abs(value))
+        
+class PositiveInteger1(int):
+    
+    def __new__(cls, value):
+        return super(PositiveInteger1, cls).__new__(cls, abs(value))
+        
+i = PositiveInteger(-3)
+print i
+i = PositiveInteger1(-3)
+print i
+
+'''
+metaclass
+'''
+class A(type):
+    
+    def __init__(self, a):
+        self.a = a
+
+a = A(1)
+# print a
+    
+'''
+singleton
+''' 
+class Singleton(object):
+    
+    def __new__(cls):
+        if not hasattr(cls, 'instance'):
+            cls.instance = super(Singleton, cls).__new__(cls)
+        return cls.instance
+        
+print hasattr(Singleton, 'instance')
+obj1 = Singleton()
+print hasattr(Singleton, 'instance')
+obj2 = Singleton()
+obj1.attr1 = 'value1'
+print obj1.attr1, obj2.attr1
+print obj1 is obj2
+```

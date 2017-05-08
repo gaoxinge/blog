@@ -1,10 +1,11 @@
-﻿此博客用于学习语言和算法。
+此博客用于学习语言和算法。
 
 ## python
 
 - [Python核心编程](https://book.douban.com/subject/3112503)
 - [Python源码剖析](https://book.douban.com/subject/3117898)
 - [Python Documentation](https://docs.python.org/2)
+- [Python 3](http://python-3-patterns-idioms-test.readthedocs.io/en/latest/index.html)
 
 ## c
 

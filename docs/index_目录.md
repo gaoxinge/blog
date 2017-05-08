@@ -1,4 +1,4 @@
-﻿这是博客的目录。
+这是博客的目录。
 
 ## python
 
@@ -23,6 +23,8 @@
 ## c
 
 - [c](https://gaoxinge.github.io/blog/c_c/)
+- [数组](https://gaoxinge.github.io/blog/c_%E6%95%B0%E7%BB%84/)
+- [标准库](https://gaoxinge.github.io/blog/c_%E6%A0%87%E5%87%86%E5%BA%93/)
 
 ## c++
 
@@ -34,7 +36,7 @@
 - [面对对象编程](https://gaoxinge.github.io/blog/c%2B%2B_%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/)
 - [模板元编程](https://gaoxinge.github.io/blog/c%2B%2B_%E6%A8%A1%E6%9D%BF%E5%85%83%E7%BC%96%E7%A8%8B/)
 - [STL](https://gaoxinge.github.io/blog/c++_STL/)
-- [第三方库]()
+- [第三方库](https://gaoxinge.github.io/blog/c++_%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/)
 
 ## 算法
 
