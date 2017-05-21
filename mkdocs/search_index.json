@@ -657,8 +657,23 @@
         }, 
         {
             "location": "/c_\u6570\u7ec4/", 
-            "text": "\ufeff", 
+            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684\u6570\u7ec4\u3002\n\n\n\u58f0\u660e\n\n\n#define SIZE 4\n\nint main()\n{\n  int a[4];\n  int a[SIZE];\n  int n = 4;\n  int a[n];\n  return 0;\n}\n\n\n\n\n\u521d\u59cb\u5316\n\n\nint main()\n{\n  int a;                       // 0\n  int a1[4];                   // undefined\n  int a2[4] = {};              // {0, 0, 0, 0}\n  int a3[4] = {1, 2, 3, 4, 5}; // {1, 2, 3, 4}, but warning: excess elements in array initializer\n  return 0;\n}\n\n\n\n\n#define SIZE 4\n\nint main()\n{\n  int a[] = {1, 2, 3, 4};\n  int a[4] = {1, 2, 3, 4};\n  int a[SIZE] = {1, 2, 3, 4};\n  int n = 4;\n  int a[n];\n  for(int i=0; i\nn; ++i)\n    printf(\n%d\\n\n, a[i]);\n  return 0;\n}\n\n\n\n\n\u7d22\u5f15\n\n\n#include \nstdio.h\n\n#define SIZE 4\n\nint main()\n{\n  int value1 = 44;\n  int arr[SIZE];\n  int value2 = 88;\n\n  printf(\nvalue1 = %d, value2 = %d\\n\n, value1, value2);\n  for(int i=-1; i\n=SIZE; ++i)\n    arr[i] = 2 * i + 1;\n  for(int i=-1; i\n7; ++i)\n    printf(\n%2d %d\\n\n, i, arr[i]);\n  printf(\nvalue1 = %d, value2 = %d\\n\n, value1, value2);\n\n  return 0;\n}", 
             "title": "\u6570\u7ec4"
+        }, 
+        {
+            "location": "/c_\u6570\u7ec4/#_1", 
+            "text": "#define SIZE 4\n\nint main()\n{\n  int a[4];\n  int a[SIZE];\n  int n = 4;\n  int a[n];\n  return 0;\n}", 
+            "title": "\u58f0\u660e"
+        }, 
+        {
+            "location": "/c_\u6570\u7ec4/#_2", 
+            "text": "int main()\n{\n  int a;                       // 0\n  int a1[4];                   // undefined\n  int a2[4] = {};              // {0, 0, 0, 0}\n  int a3[4] = {1, 2, 3, 4, 5}; // {1, 2, 3, 4}, but warning: excess elements in array initializer\n  return 0;\n}  #define SIZE 4\n\nint main()\n{\n  int a[] = {1, 2, 3, 4};\n  int a[4] = {1, 2, 3, 4};\n  int a[SIZE] = {1, 2, 3, 4};\n  int n = 4;\n  int a[n];\n  for(int i=0; i n; ++i)\n    printf( %d\\n , a[i]);\n  return 0;\n}", 
+            "title": "\u521d\u59cb\u5316"
+        }, 
+        {
+            "location": "/c_\u6570\u7ec4/#_3", 
+            "text": "#include  stdio.h \n#define SIZE 4\n\nint main()\n{\n  int value1 = 44;\n  int arr[SIZE];\n  int value2 = 88;\n\n  printf( value1 = %d, value2 = %d\\n , value1, value2);\n  for(int i=-1; i =SIZE; ++i)\n    arr[i] = 2 * i + 1;\n  for(int i=-1; i 7; ++i)\n    printf( %2d %d\\n , i, arr[i]);\n  printf( value1 = %d, value2 = %d\\n , value1, value2);\n\n  return 0;\n}", 
+            "title": "\u7d22\u5f15"
         }, 
         {
             "location": "/c_\u5934\u6587\u4ef6/", 
@@ -742,7 +757,7 @@
         }, 
         {
             "location": "/c++_\u51fd\u6570/", 
-            "text": "\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684function\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\n\u503c\u4f20\u9012\u3001\u6307\u9488\u4f20\u9012\u3001\u5f15\u7528\u4f20\u9012\u7684\u533a\u522b\n\n\n\n\n\u503c\u4f20\u9012\n\n\n#include \niostream\n\nusing namespace std;\n\nvoid swap(int a, int b)\n{\n    int temp;\n\n    temp = a;\n    a    = b;\n    b    = temp;\n\n    cout \n a \n \n, \n \n b \n endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(x, y);\n    cout \n x \n \n, \n \n y \n endl; // 1, 2\n\n    return 0;\n}\n\n\n\n\n\u6307\u9488\u4f20\u9012\n\n\n#include \niostream\n\nusing namespace std;\n\nvoid swap(int *a, int *b)\n{\n    int *temp;\n\n    temp = a;\n    a    = b;\n    b    = temp;\n\n    cout \n *a \n \n, \n \n *b \n endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(\nx, \ny);\n    cout \n x \n \n, \n \n y \n endl;  // 1, 2\n\n    return 0;\n}\n\n\n\n\n#include \niostream\n\nusing namespace std;\n\nvoid swap(int *a, int *b)\n{\n    int temp;\n\n    temp = *a;\n    *a   = *b;\n    *b   = temp;\n\n    cout \n *a \n \n, \n \n *b \n endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(\nx, \ny);\n    cout \n x \n \n, \n \n y \n endl;  // 2, 1\n\n    return 0;\n}\n\n\n\n\n\u5f15\u7528\u4f20\u9012\n\n\n#include \niostream\n\nusing namespace std;\n\nvoid swap(int \na,int \nb)\n{\n     int temp;\n\n     temp = a;\n     a    = b;\n     b    = temp;\n\n     cout \n a \n \n, \n \n b \n endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(x,y);\n    cout \n x \n \n, \n \n y \n endl; // 2, 1\n\n    return 0;\n}", 
+            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684function\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\n\u503c\u4f20\u9012\u3001\u6307\u9488\u4f20\u9012\u3001\u5f15\u7528\u4f20\u9012\u7684\u533a\u522b\n\n\n\n\n\u503c\u4f20\u9012\n\n\n#include \niostream\n\nusing namespace std;\n\nvoid swap(int a, int b)\n{\n    int temp;\n\n    temp = a;\n    a    = b;\n    b    = temp;\n\n    cout \n a \n \n, \n \n b \n endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(x, y);\n    cout \n x \n \n, \n \n y \n endl; // 1, 2\n\n    return 0;\n}\n\n\n\n\n\u6307\u9488\u4f20\u9012\n\n\n#include \niostream\n\nusing namespace std;\n\nvoid swap(int *a, int *b)\n{\n    int *temp;\n\n    temp = a;\n    a    = b;\n    b    = temp;\n\n    cout \n *a \n \n, \n \n *b \n endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(\nx, \ny);\n    cout \n x \n \n, \n \n y \n endl;  // 1, 2\n\n    return 0;\n}\n\n\n\n\n#include \niostream\n\nusing namespace std;\n\nvoid swap(int *a, int *b)\n{\n    int temp;\n\n    temp = *a;\n    *a   = *b;\n    *b   = temp;\n\n    cout \n *a \n \n, \n \n *b \n endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(\nx, \ny);\n    cout \n x \n \n, \n \n y \n endl;  // 2, 1\n\n    return 0;\n}\n\n\n\n\n\u5f15\u7528\u4f20\u9012\n\n\n#include \niostream\n\nusing namespace std;\n\nvoid swap(int \na,int \nb)\n{\n     int temp;\n\n     temp = a;\n     a    = b;\n     b    = temp;\n\n     cout \n a \n \n, \n \n b \n endl; // 2, 1\n}\n\nint main()\n{\n    int x = 1;\n    int y = 2;\n\n    swap(x,y);\n    cout \n x \n \n, \n \n y \n endl; // 2, 1\n\n    return 0;\n}", 
             "title": "\u51fd\u6570"
         }, 
         {
