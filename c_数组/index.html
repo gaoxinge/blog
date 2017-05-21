@@ -161,6 +161,9 @@
     <li class="toctree-l2"><a href="#_3">索引</a></li>
     
 
+    <li class="toctree-l2"><a href="#_4">指针</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -318,6 +321,19 @@ int main()
     printf(&quot;%2d %d\n&quot;, i, arr[i]);
   printf(&quot;value1 = %d, value2 = %d\n&quot;, value1, value2);
 
+  return 0;
+}
+</code></pre>
+
+<h2 id="_4">指针</h2>
+<pre><code class="c">int main()
+{
+  /* a      == &amp;a[0]
+   * a+1    == &amp;a[1]
+   * *a     == a[0]
+   * *(a+1) == a[1]
+   */
+  int a[] = {1, 2};
   return 0;
 }
 </code></pre>
