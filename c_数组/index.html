@@ -164,6 +164,9 @@
     <li class="toctree-l2"><a href="#_4">指针</a></li>
     
 
+    <li class="toctree-l2"><a href="#_5">函数</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -336,6 +339,36 @@ int main()
   int a[] = {1, 2};
   return 0;
 }
+</code></pre>
+
+<h2 id="_5">函数</h2>
+<pre><code class="c">// 函数原型
+int sum(int *);
+int sum(int *, int);
+int sum(int [], int);
+int sum(int *, int *);
+
+// 函数定义
+int sum(int ar) {}
+int sum(int *ar, int n) {}
+int sum(int ar[], int n) {}
+int sum(int *start, int *end) {}
+</code></pre>
+
+<pre><code class="c">#include &lt;stdio.h&gt;
+long s(int *);
+
+int main()
+{
+  int a[] = {1, 2, 3};
+  printf(&quot;%ld\n&quot;, sizeof(a));     # 12
+  printf(&quot;%ld\n&quot;, s(a));          # 8
+  printf(&quot;%ld\n&quot;, sizeof(int));   # 4
+  printf(&quot;%ld\n&quot;, sizeof(int *)); # 8
+  return 0;
+}
+
+long s(int *a) {return sizeof(a);}
 </code></pre>
               
             </div>
