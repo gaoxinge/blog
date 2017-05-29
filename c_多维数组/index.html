@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>调试 - blog</title>
+  <title>多维数组 - blog</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u8c03\u8bd5";
-    var mkdocs_page_input_path = "python_\u8c03\u8bd5.md";
-    var mkdocs_page_url = "/python_\u8c03\u8bd5/";
+    var mkdocs_page_name = "\u591a\u7ef4\u6570\u7ec4";
+    var mkdocs_page_input_path = "c_\u591a\u7ef4\u6570\u7ec4.md";
+    var mkdocs_page_url = "/c_\u591a\u7ef4\u6570\u7ec4/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -87,12 +87,9 @@
     <a class="" href="../python_%E5%BA%93/">库</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">调试</a>
-    <ul class="subnav">
-            
-    </ul>
+    <a class="" href="../python_%E8%B0%83%E8%AF%95/">调试</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -165,9 +162,18 @@
     <a class="" href="../c_%E6%95%B0%E7%BB%84/">数组</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../c_%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84/">多维数组</a>
+    <a class="current" href="./">多维数组</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#_1">指针</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_2">函数</a></li>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -257,7 +263,7 @@
     
       
     
-    <li>调试</li>
+    <li>多维数组</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -267,17 +273,21 @@
           <div role="main">
             <div class="section">
               
-                <p>﻿python调试方法分为三种：</p>
-<ul>
-<li>使用print，assert</li>
-<li>使用模块logging，pdb</li>
-<li>基于编辑器，如PyCharm</li>
-</ul>
-<p>具体方法可参见：</p>
-<ul>
-<li><a href="https://www.zhihu.com/question/21572891">Python 程序如何高效地调试</a></li>
-<li><a href="http://www.ibm.com/developerworks/cn/linux/l-cn-pythondebugger">Python 代码调试技巧</a></li>
-</ul>
+                <p>下面我们研究一下c中的多维数组。</p>
+<h2 id="_1">指针</h2>
+<pre><code class="c">int *ip[4]; // 指向int指针的数组
+int (*ip)[4]; // 指向int数组的指针
+</code></pre>
+
+<h2 id="_2">函数</h2>
+<pre><code class="c">// 函数原型
+void f(int (*)[4]);
+void f(int [][4]);
+
+// 函数定义
+void f(int (*a)[4]) {}
+void f(int a[][4]) {}
+</code></pre>
               
             </div>
           </div>
@@ -285,10 +295,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../python_%E6%B5%8B%E8%AF%95/" class="btn btn-neutral float-right" title="测试">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../c_%E5%A4%B4%E6%96%87%E4%BB%B6/" class="btn btn-neutral float-right" title="头文件">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../python_%E5%BA%93/" class="btn btn-neutral" title="库"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../c_%E6%95%B0%E7%BB%84/" class="btn btn-neutral" title="数组"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -314,10 +324,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../python_%E5%BA%93/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../c_%E6%95%B0%E7%BB%84/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../python_%E6%B5%8B%E8%AF%95/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../c_%E5%A4%B4%E6%96%87%E4%BB%B6/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

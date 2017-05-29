@@ -37,7 +37,7 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/", 
-            "text": "\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u6761\u4ef6\u548c\u5faa\u73af\n\n\n\u7c7b\n\n\n\u5143\u7c7b\n\n\n\u88c5\u9970\u5668\n\n\n\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df\n\n\n\u6e90\u7801\u5256\u6790\n\n\n\n\nc\n\n\n\n\nc\n\n\nconst\n\n\n\u6307\u9488\n\n\n\u6570\u7ec4\n\n\n\u5934\u6587\u4ef6\n\n\n\u6807\u51c6\u5e93\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b\n\n\n\u6a21\u677f\u5143\u7f16\u7a0b\n\n\nSTL\n\n\n\u7b2c\u4e09\u65b9\u5e93\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
+            "text": "\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u6761\u4ef6\u548c\u5faa\u73af\n\n\n\u7c7b\n\n\n\u5143\u7c7b\n\n\n\u88c5\u9970\u5668\n\n\n\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df\n\n\n\u6e90\u7801\u5256\u6790\n\n\n\n\nc\n\n\n\n\nc\n\n\nconst\n\n\n\u6307\u9488\n\n\n\u6570\u7ec4\n\n\n\u591a\u7ef4\u6570\u7ec4\n\n\n\u5934\u6587\u4ef6\n\n\n\u6807\u51c6\u5e93\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b\n\n\n\u6a21\u677f\u5143\u7f16\u7a0b\n\n\nSTL\n\n\n\u7b2c\u4e09\u65b9\u5e93\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
             "title": "\u76ee\u5f55"
         }, 
         {
@@ -47,7 +47,7 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/#c", 
-            "text": "c  const  \u6307\u9488  \u6570\u7ec4  \u5934\u6587\u4ef6  \u6807\u51c6\u5e93", 
+            "text": "c  const  \u6307\u9488  \u6570\u7ec4  \u591a\u7ef4\u6570\u7ec4  \u5934\u6587\u4ef6  \u6807\u51c6\u5e93", 
             "title": "c"
         }, 
         {
@@ -723,6 +723,21 @@
         {
             "location": "/c_\u6570\u7ec4/#_5", 
             "text": "// \u51fd\u6570\u539f\u578b\nint sum(int *);\nint sum(int *, int);\nint sum(int [], int);\nint sum(int *, int *);\n\n// \u51fd\u6570\u5b9a\u4e49\nint sum(int ar) {}\nint sum(int *ar, int n) {}\nint sum(int ar[], int n) {}\nint sum(int *start, int *end) {}  #include  stdio.h \nlong s(int *);\n\nint main()\n{\n  int a[] = {1, 2, 3};\n  printf( %ld\\n , sizeof(a));     # 12\n  printf( %ld\\n , s(a));          # 8\n  printf( %ld\\n , sizeof(int));   # 4\n  printf( %ld\\n , sizeof(int *)); # 8\n  return 0;\n}\n\nlong s(int *a) {return sizeof(a);}", 
+            "title": "\u51fd\u6570"
+        }, 
+        {
+            "location": "/c_\u591a\u7ef4\u6570\u7ec4/", 
+            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684\u591a\u7ef4\u6570\u7ec4\u3002\n\n\n\u6307\u9488\n\n\nint *ip[4]; // \u6307\u5411int\u6307\u9488\u7684\u6570\u7ec4\nint (*ip)[4]; // \u6307\u5411int\u6570\u7ec4\u7684\u6307\u9488\n\n\n\n\n\u51fd\u6570\n\n\n// \u51fd\u6570\u539f\u578b\nvoid f(int (*)[4]);\nvoid f(int [][4]);\n\n// \u51fd\u6570\u5b9a\u4e49\nvoid f(int (*a)[4]) {}\nvoid f(int a[][4]) {}", 
+            "title": "\u591a\u7ef4\u6570\u7ec4"
+        }, 
+        {
+            "location": "/c_\u591a\u7ef4\u6570\u7ec4/#_1", 
+            "text": "int *ip[4]; // \u6307\u5411int\u6307\u9488\u7684\u6570\u7ec4\nint (*ip)[4]; // \u6307\u5411int\u6570\u7ec4\u7684\u6307\u9488", 
+            "title": "\u6307\u9488"
+        }, 
+        {
+            "location": "/c_\u591a\u7ef4\u6570\u7ec4/#_2", 
+            "text": "// \u51fd\u6570\u539f\u578b\nvoid f(int (*)[4]);\nvoid f(int [][4]);\n\n// \u51fd\u6570\u5b9a\u4e49\nvoid f(int (*a)[4]) {}\nvoid f(int a[][4]) {}", 
             "title": "\u51fd\u6570"
         }, 
         {
