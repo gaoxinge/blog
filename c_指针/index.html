@@ -275,6 +275,15 @@
 <li>比较</li>
 </ul>
 <h2 id="_2">非法操作</h2>
+<pre><code class="c">// 对未初始化的指针取值
+int *pt;
+*pt = 5;
+</code></pre>
+
+<pre><code class="c">// 对数组进行指针操作
+int urn[3];
+urn++;
+</code></pre>
               
             </div>
           </div>
