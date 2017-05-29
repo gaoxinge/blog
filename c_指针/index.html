@@ -158,6 +158,9 @@
     <li class="toctree-l2"><a href="#_2">非法操作</a></li>
     
 
+    <li class="toctree-l2"><a href="#_3">函数传递</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -273,6 +276,7 @@
 <li>减整数（或者自减）</li>
 <li>求差值（differencing）</li>
 <li>比较</li>
+<li>sizeof</li>
 </ul>
 <h2 id="_2">非法操作</h2>
 <pre><code class="c">// 对未初始化的指针取值
@@ -283,6 +287,115 @@ int *pt;
 <pre><code class="c">// 对数组进行指针操作
 int urn[3];
 urn++;
+</code></pre>
+
+<h2 id="_3">函数传递</h2>
+<pre><code class="c">// 值传递
+#include &lt;stdio.h&gt;
+void swap(int, int);
+
+int main()
+{
+  int x = 1;
+  int y = 2;
+
+  swap(x, y);
+  printf(&quot;%d %d\n&quot;, x, y); // 1, 2
+
+  return 0;
+}
+
+void swap(int a, int b)
+{
+  int temp;
+
+  temp = a;
+  a    = b;
+  b    = temp;
+
+  printf(&quot;%d %d\n&quot;, a, b); // 2, 1
+}
+</code></pre>
+
+<pre><code class="c">// 指针传递
+#include &lt;stdio.h&gt;
+void swap(int *, int *);
+
+int main()
+{
+  int x = 1;
+  int y = 2;
+
+  swap(&amp;x, &amp;y);
+  printf(&quot;%d %d\n&quot;, x, y);   // 1, 2
+
+  return 0;
+}
+
+void swap(int *a, int *b)
+{
+  int temp;
+
+  temp = a;
+  a    = b;
+  b    = temp;
+
+  printf(&quot;%d %d\n&quot;, *a, *b); // 2, 1
+}
+</code></pre>
+
+<pre><code class="c">// 指针传递
+#include &lt;stdio.h&gt;
+void swap(int *, int *);
+
+int main()
+{
+  int x = 1;
+  int y = 2;
+
+  swap(&amp;x, &amp;y);
+  printf(&quot;%d %d\n&quot;, x, y);  // 2, 1
+
+  return 0;
+}
+
+void swap(int *a, int *b)
+{
+  int temp;
+
+  *temp = *a;
+  *a    = *b;
+  *b    = *temp;
+
+  printf(&quot;%d %d\n&quot;, *a, *b); // 2, 1
+}
+</code></pre>
+
+<pre><code class="c">// 引用传递
+#include &lt;stdio.h&gt;
+void swap(int, int);
+
+int main()
+{
+  int x = 1;
+  int y = 2;
+
+  swap(x,y);
+  printf(&quot;%d %d\n&quot;, x, y);   // 2, 1
+
+  return 0;
+}
+
+void swap(int &amp;a,int &amp;b)
+{
+  int temp;
+
+  temp = a;
+  a    = b;
+  b    = temp;
+
+  printf(&quot;%d %d\n&quot;, *a, *b); // 2, 1
+}
 </code></pre>
               
             </div>
