@@ -21,7 +21,12 @@ pages:
 - 命名空间和作用域: python_命名空间和作用域.md
 - 源码剖析:         python_源码剖析.md
 - c:                c_c.md
+- const:            c_const.md
+- 指针:             c_指针.md
 - 数组:             c_数组.md
+- 多维数组:         c_多维数组.md
+- 字符串:           c_字符串.md
+- 头文件:           c_头文件.md
 - 标准库:           c_标准库.md
 - c++:              c++_c++.md
 - 规范:             c++_规范.md

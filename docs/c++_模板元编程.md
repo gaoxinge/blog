@@ -4,7 +4,7 @@
 
 - [C++模板(template)使用介绍](http://blog.csdn.net/chenchen410/article/details/39502199)
 - [CppTemplateTutorial](https://github.com/wuye9036/CppTemplateTutorial)
-- [Modern C++ Design](https://book.douban.com/subject/1755195)
+- [Modern C++ Design](https://book.douban.com/subject/1755195/)
 
 ## 函数模板
 

@@ -23,7 +23,12 @@
 ## c
 
 - [c](https://gaoxinge.github.io/blog/c_c/)
+- [const](https://gaoxinge.github.io/blog/c_const/)
+- [指针](https://gaoxinge.github.io/blog/c_%E6%8C%87%E9%92%88/)
 - [数组](https://gaoxinge.github.io/blog/c_%E6%95%B0%E7%BB%84/)
+- [多维数组](https://gaoxinge.github.io/blog/c_%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84/)
+- [字符串](https://gaoxinge.github.io/blog/c_%E5%AD%97%E7%AC%A6%E4%B8%B2/)
+- [头文件]()
 - [标准库](https://gaoxinge.github.io/blog/c_%E6%A0%87%E5%87%86%E5%BA%93/)
 
 ## c++

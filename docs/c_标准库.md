@@ -4,6 +4,13 @@
 
 - scanf, printf
 - getchar, putchar
+- gets, puts, fgets, fputs
+- fopen, fclose, getc
+- EOF
+
+## stdlib
+
+- exit
 
 ## math
 
