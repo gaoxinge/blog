@@ -301,7 +301,7 @@ char a[] = {'1', '2', '3', '4', '\0'};
 
 int main()
 {
-  printf(&quot;%p&quot;, &quot;1234&quot;); // 其他常量不行
+  printf(&quot;%p&quot;, *&quot;1234&quot;); // 其他常量不行
   return 0;
 }
 </code></pre>
