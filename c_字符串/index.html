@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>指针 - blog</title>
+  <title>字符串 - blog</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u6307\u9488";
-    var mkdocs_page_input_path = "c_\u6307\u9488.md";
-    var mkdocs_page_url = "/c_\u6307\u9488/";
+    var mkdocs_page_name = "\u5b57\u7b26\u4e32";
+    var mkdocs_page_input_path = "c_\u5b57\u7b26\u4e32.md";
+    var mkdocs_page_url = "/c_\u5b57\u7b26\u4e32/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -152,21 +152,9 @@
     <a class="" href="../c_const/">const</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">指针</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#_1">操作和运算</a></li>
-    
-
-    <li class="toctree-l2"><a href="#_2">非法操作</a></li>
-    
-
-    <li class="toctree-l2"><a href="#_3">函数传递</a></li>
-    
-
-    </ul>
+    <a class="" href="../c_%E6%8C%87%E9%92%88/">指针</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -179,9 +167,21 @@
     <a class="" href="../c_%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84/">多维数组</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../c_%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+    <a class="current" href="./">字符串</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#char">char数组</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_1">指针</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_2">区别</a></li>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -271,7 +271,7 @@
     
       
     
-    <li>指针</li>
+    <li>字符串</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -281,135 +281,28 @@
           <div role="main">
             <div class="section">
               
-                <p>下面我们研究一下c中的指针。</p>
-<h2 id="_1">操作和运算</h2>
+                <p>下面我们研究一下c中的字符串。</p>
+<h2 id="char">char数组</h2>
+<pre><code class="c">char a[] = &quot;1234&quot;;
+char a[] = {'1', '2', '3', '4', '\0'};
+</code></pre>
+
+<h2 id="_1">指针</h2>
+<pre><code class="c">char *a = &quot;1234&quot;;
+</code></pre>
+
+<h2 id="_2">区别</h2>
 <ul>
-<li>赋值（assignment）</li>
-<li>取值（dereferencing）：地址运算符&amp;</li>
-<li>取地址：间接运算符*</li>
-<li>加整数（或者自增）</li>
-<li>减整数（或者自减）</li>
-<li>求差值（differencing）</li>
-<li>比较</li>
-<li>sizeof</li>
+<li>字符串常量属于静态存储（static storage）类，被引用的字符串位于静态存储区</li>
+<li>数组初始化是从静态存储区把一个字符串复制给数组</li>
+<li>指针初始化是复制字符串的地址</li>
 </ul>
-<h2 id="_2">非法操作</h2>
-<pre><code class="c">// 对未初始化的指针取值
-int *pt;
-*pt = 5;
-</code></pre>
-
-<pre><code class="c">// 对数组进行指针操作
-int urn[3];
-urn++;
-</code></pre>
-
-<h2 id="_3">函数传递</h2>
-<pre><code class="c">// 值传递
-#include &lt;stdio.h&gt;
-void swap(int, int);
+<pre><code class="c">#include &lt;stdio.h&gt;
 
 int main()
 {
-  int x = 1;
-  int y = 2;
-
-  swap(x, y);
-  printf(&quot;%d %d\n&quot;, x, y); // 1, 2
-
+  printf(&quot;%p&quot;, &quot;1234&quot;); // 其他常量不行
   return 0;
-}
-
-void swap(int a, int b)
-{
-  int temp;
-
-  temp = a;
-  a    = b;
-  b    = temp;
-
-  printf(&quot;%d %d\n&quot;, a, b); // 2, 1
-}
-</code></pre>
-
-<pre><code class="c">// 指针传递
-#include &lt;stdio.h&gt;
-void swap(int *, int *);
-
-int main()
-{
-  int x = 1;
-  int y = 2;
-
-  swap(&amp;x, &amp;y);
-  printf(&quot;%d %d\n&quot;, x, y);   // 1, 2
-
-  return 0;
-}
-
-void swap(int *a, int *b)
-{
-  int temp;
-
-  temp = a;
-  a    = b;
-  b    = temp;
-
-  printf(&quot;%d %d\n&quot;, *a, *b); // 2, 1
-}
-</code></pre>
-
-<pre><code class="c">// 指针传递
-#include &lt;stdio.h&gt;
-void swap(int *, int *);
-
-int main()
-{
-  int x = 1;
-  int y = 2;
-
-  swap(&amp;x, &amp;y);
-  printf(&quot;%d %d\n&quot;, x, y);  // 2, 1
-
-  return 0;
-}
-
-void swap(int *a, int *b)
-{
-  int temp;
-
-  *temp = *a;
-  *a    = *b;
-  *b    = *temp;
-
-  printf(&quot;%d %d\n&quot;, *a, *b); // 2, 1
-}
-</code></pre>
-
-<pre><code class="c">// 引用传递
-#include &lt;stdio.h&gt;
-void swap(int, int);
-
-int main()
-{
-  int x = 1;
-  int y = 2;
-
-  swap(x,y);
-  printf(&quot;%d %d\n&quot;, x, y);   // 2, 1
-
-  return 0;
-}
-
-void swap(int &amp;a,int &amp;b)
-{
-  int temp;
-
-  temp = a;
-  a    = b;
-  b    = temp;
-
-  printf(&quot;%d %d\n&quot;, *a, *b); // 2, 1
 }
 </code></pre>
               
@@ -419,10 +312,10 @@ void swap(int &amp;a,int &amp;b)
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../c_%E6%95%B0%E7%BB%84/" class="btn btn-neutral float-right" title="数组">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../c_%E5%A4%B4%E6%96%87%E4%BB%B6/" class="btn btn-neutral float-right" title="头文件">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../c_const/" class="btn btn-neutral" title="const"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../c_%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84/" class="btn btn-neutral" title="多维数组"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -448,10 +341,10 @@ void swap(int &amp;a,int &amp;b)
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../c_const/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../c_%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../c_%E6%95%B0%E7%BB%84/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../c_%E5%A4%B4%E6%96%87%E4%BB%B6/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
