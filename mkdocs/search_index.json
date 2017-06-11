@@ -767,7 +767,7 @@
         }, 
         {
             "location": "/c_\u6807\u51c6\u5e93/", 
-            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684\u6807\u51c6\u5e93\u3002\n\n\nstdio\n\n\n\n\nscanf, printf, sprintf\n\n\ngetchar, putchar\n\n\ngets, puts, fgets, fputs\n\n\nfopen, fclose, getc\n\n\nEOF\n\n\n\n\nstdlib\n\n\n\n\natoi, atof, atol\n\n\nstrtol, strtoul, strtod\n\n\nexit\n\n\n\n\nmath\n\n\n\n\nmath.h\n\n\nmath.h\n\n\nmath.h\n\n\n\n\nctype\n\n\n\n\nisalnum, isalpha, isblank, iscntrl, isdigit, isgraph, islower, isprint, ispunct, isspace, isupper, isxdigit\n\n\ntolower, toupper\n\n\n\n\nstring\n\n\n\n\nstrlen, strchr, strbprk, strrchr, strstr\n\n\nstrcat, strncat\n\n\nstrcmp, strncmp\n\n\nstrcpy, strncpy", 
+            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684\u6807\u51c6\u5e93\u3002\n\n\nstdio\n\n\n\n\nscanf, printf, sprintf\n\n\ngetchar, putchar\n\n\ngets, puts, fgets, fputs\n\n\nfopen, fclose, getc\n\n\nEOF\n\n\n\n\nstdlib\n\n\n\n\natoi, atof, atol\n\n\nstrtol, strtoul, strtod\n\n\nrand, srand\n\n\nexit\n\n\n\n\ntime\n\n\n\n\ntime\n\n\n\n\nmath\n\n\n\n\nmath.h\n\n\nmath.h\n\n\nmath.h\n\n\n\n\nctype\n\n\n\n\nisalnum, isalpha, isblank, iscntrl, isdigit, isgraph, islower, isprint, ispunct, isspace, isupper, isxdigit\n\n\ntolower, toupper\n\n\n\n\nstring\n\n\n\n\nstrlen, strchr, strbprk, strrchr, strstr\n\n\nstrcat, strncat\n\n\nstrcmp, strncmp\n\n\nstrcpy, strncpy", 
             "title": "\u6807\u51c6\u5e93"
         }, 
         {
@@ -777,8 +777,13 @@
         }, 
         {
             "location": "/c_\u6807\u51c6\u5e93/#stdlib", 
-            "text": "atoi, atof, atol  strtol, strtoul, strtod  exit", 
+            "text": "atoi, atof, atol  strtol, strtoul, strtod  rand, srand  exit", 
             "title": "stdlib"
+        }, 
+        {
+            "location": "/c_\u6807\u51c6\u5e93/#time", 
+            "text": "time", 
+            "title": "time"
         }, 
         {
             "location": "/c_\u6807\u51c6\u5e93/#math", 
