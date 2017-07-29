@@ -180,6 +180,9 @@
     <li class="toctree-l2"><a href="#_1">定义和声明</a></li>
     
 
+    <li class="toctree-l2"><a href="#typedef">typedef</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -291,6 +294,24 @@ struct book {
 
 int main() {
     struct book Book; // can't omit struct
+    gets(Book.title);
+    printf(&quot;%s&quot;, Book.title);
+    return 0;
+}
+</code></pre>
+
+<h2 id="typedef">typedef</h2>
+<pre><code class="c">#include &lt;stdio.h&gt;
+#define MAXTITL 41
+
+struct book {
+    char title[MAXTITL];
+};
+
+typedef struct book BOOK;
+
+int main() {
+    BOOK Book;
     gets(Book.title);
     printf(&quot;%s&quot;, Book.title);
     return 0;

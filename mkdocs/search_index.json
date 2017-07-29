@@ -762,13 +762,18 @@
         }, 
         {
             "location": "/c_\u7ed3\u6784\u4f53/", 
-            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684\u7ed3\u6784\u4f53\u3002\n\n\n\u5b9a\u4e49\u548c\u58f0\u660e\n\n\n#include \nstdio.h\n\n#define MAXTITL 41\n\nstruct book {\n    char title[MAXTITL];\n};\n\nint main() {\n    struct book Book; // can't omit struct\n    gets(Book.title);\n    printf(\n%s\n, Book.title);\n    return 0;\n}", 
+            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684\u7ed3\u6784\u4f53\u3002\n\n\n\u5b9a\u4e49\u548c\u58f0\u660e\n\n\n#include \nstdio.h\n\n#define MAXTITL 41\n\nstruct book {\n    char title[MAXTITL];\n};\n\nint main() {\n    struct book Book; // can't omit struct\n    gets(Book.title);\n    printf(\n%s\n, Book.title);\n    return 0;\n}\n\n\n\n\ntypedef\n\n\n#include \nstdio.h\n\n#define MAXTITL 41\n\nstruct book {\n    char title[MAXTITL];\n};\n\ntypedef struct book BOOK;\n\nint main() {\n    BOOK Book;\n    gets(Book.title);\n    printf(\n%s\n, Book.title);\n    return 0;\n}", 
             "title": "\u7ed3\u6784\u4f53"
         }, 
         {
             "location": "/c_\u7ed3\u6784\u4f53/#_1", 
             "text": "#include  stdio.h \n#define MAXTITL 41\n\nstruct book {\n    char title[MAXTITL];\n};\n\nint main() {\n    struct book Book; // can't omit struct\n    gets(Book.title);\n    printf( %s , Book.title);\n    return 0;\n}", 
             "title": "\u5b9a\u4e49\u548c\u58f0\u660e"
+        }, 
+        {
+            "location": "/c_\u7ed3\u6784\u4f53/#typedef", 
+            "text": "#include  stdio.h \n#define MAXTITL 41\n\nstruct book {\n    char title[MAXTITL];\n};\n\ntypedef struct book BOOK;\n\nint main() {\n    BOOK Book;\n    gets(Book.title);\n    printf( %s , Book.title);\n    return 0;\n}", 
+            "title": "typedef"
         }, 
         {
             "location": "/c_\u5934\u6587\u4ef6/", 
