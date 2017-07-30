@@ -183,6 +183,9 @@
     <li class="toctree-l2"><a href="#typedef">typedef</a></li>
     
 
+    <li class="toctree-l2"><a href="#_2">函数指针</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -315,6 +318,21 @@ int main() {
     gets(Book.title);
     printf(&quot;%s&quot;, Book.title);
     return 0;
+}
+</code></pre>
+
+<h2 id="_2">函数指针</h2>
+<pre><code class="c">#include &lt;stdio.h&gt;
+int id(int);
+
+int main() {
+    printf(&quot;%d\n&quot;, id(1));    // result is 1
+    printf(&quot;%d\n&quot;, (*id)(1)); // result is 1
+    return 0;
+}
+
+int id(int x) {
+    return x;
 }
 </code></pre>
               
