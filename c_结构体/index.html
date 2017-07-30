@@ -328,6 +328,9 @@ int id(int);
 int main() {
     printf(&quot;%d\n&quot;, id(1));    // result is 1
     printf(&quot;%d\n&quot;, (*id)(1)); // result is 1
+    printf(&quot;%d\n&quot;, id);
+    printf(&quot;%d\n&quot;, *id);
+    printf(&quot;%d\n&quot;, &amp;id);
     return 0;
 }
 
