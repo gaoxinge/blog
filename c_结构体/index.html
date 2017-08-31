@@ -186,6 +186,9 @@
     <li class="toctree-l2"><a href="#_2">函数指针</a></li>
     
 
+    <li class="toctree-l2"><a href="#_3">面向对象编程</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -341,6 +344,79 @@ int main() {
 
 int id(int x) {
     return x;
+}
+</code></pre>
+
+<h2 id="_3">面向对象编程</h2>
+<pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+/*
+ * c语言中：
+ * 1. 不使用指针，就是按值传递；
+ * 2. 没有按引用传递，&amp;是C++中的。 
+ */
+
+struct Father {
+    char name[20];
+};
+
+void fatherConstructer(struct Father this, const char* name) {
+    strcpy(this.name, name);
+}
+
+void sing(struct Father this) {
+    printf(&quot;singing~~~\n&quot;);
+}
+
+struct Mother {
+    char age[20];
+};
+
+void motherConstructer(struct Mother this, const char* age) {
+    strcpy(this.age, age);
+}
+
+void dance(struct Mother this) {
+    printf(&quot;dancing~~~\n&quot;);
+}
+
+struct Child {
+    struct Father father;
+    struct Mother mother;
+};
+
+void childConstructer(struct Child this, const char* name, const char* age) {
+    fatherConstructer(this.father, name);
+    motherConstructer(this.mother, age);
+}
+
+void cry(struct Child this) {
+    printf(&quot;mmm~~~\n&quot;);
+}
+
+int main () {
+    struct Father father;
+    struct Mother mother;
+    struct Child child;
+
+    fatherConstructer(father, &quot;a&quot;);
+    motherConstructer(mother, &quot;1&quot;);
+    childConstructer(child, &quot;b&quot;, &quot;2&quot;);
+
+    printf(&quot;%s&quot;, father.name);
+    sing(father);
+
+    printf(&quot;%s&quot;, mother.age);
+    dance(mother);
+
+    printf(&quot;%s&quot;, child.father.name);
+    printf(&quot;%s&quot;, child.mother.age);
+    sing(child.father);
+    dance(child.mother);
+    cry(child);
+
+    return 0;
 }
 </code></pre>
               
