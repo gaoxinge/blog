@@ -205,6 +205,9 @@
     <li class="toctree-l2"><a href="#string">string</a></li>
     
 
+    <li class="toctree-l2"><a href="#stdarg">stdarg</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -338,6 +341,26 @@
 <li>strcmp, strncmp</li>
 <li>strcpy, strncpy</li>
 </ul>
+<h2 id="stdarg">stdarg</h2>
+<pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;stdarg.h&gt;
+double sum(int, ...);
+
+int main() {
+    printf(&quot;%f&quot;, sum(3, 1.0, 2.0, 3.0));
+    return 0;
+}
+
+double sum(int n, ...) {
+    double s = 0.0;
+    va_list ap;
+    va_start(ap, n);
+    for (int i = 0; i &lt; n; ++i) 
+        s += va_arg(ap, double);
+    va_end(ap);
+    return s;
+}
+</code></pre>
               
             </div>
           </div>
