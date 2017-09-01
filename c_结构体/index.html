@@ -419,6 +419,81 @@ int main () {
     return 0;
 }
 </code></pre>
+
+<pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+/*
+ * C语言中：
+ * 1. 从子类到父类要使用&amp;this-&gt;father或者&amp;child.father；
+ * 2. 从子类到第一个父类可以使用((struct Father*) this)或者((struct Father*) &amp;child)；
+ * 3. 从子类到第二个父类可以使用offsetof；
+ * 4. 从父类到子类要使用offsetof；
+ * 5. offset函数在stddef.h头文件中。
+ */
+
+struct Father {
+    char name[20];
+};
+
+void fatherConstructer(struct Father* this, const char* name) {
+    strcpy(this-&gt;name, name);
+}
+
+void sing(struct Father* this) {
+    printf(&quot;singing~~~\n&quot;);
+}
+
+struct Mother {
+    char age[20];
+};
+
+void motherConstructer(struct Mother* this, const char* age) {
+    strcpy(this-&gt;age, age);
+}
+
+void dance(struct Mother* this) {
+    printf(&quot;dancing~~~\n&quot;);
+}
+
+struct Child {
+    struct Father father;
+    struct Mother mother;
+};
+
+void childConstructer(struct Child* this, const char* name, const char* age) {
+    fatherConstructer(&amp;this-&gt;father, name);
+    motherConstructer(&amp;this-&gt;mother, age);
+}
+
+void cry(struct Child* this) {
+    printf(&quot;mmm~~~\n&quot;);
+}
+
+int main() {
+    struct Father father;
+    struct Mother mother;
+    struct Child child;
+
+    fatherConstructer(&amp;father, &quot;a&quot;);
+    motherConstructer(&amp;mother, &quot;2&quot;);
+    childConstructer(&amp;child, &quot;b&quot;, &quot;1&quot;);
+
+    sing(&amp;father);
+    printf(&quot;%s\n&quot;, father.name);
+
+    dance(&amp;mother);
+    printf(&quot;%s\n&quot;, mother.age);
+
+    sing(&amp;child.father);
+    printf(&quot;%s\n&quot;, child.father.name);
+    dance(&amp;child.mother);
+    printf(&quot;%s\n&quot;, child.mother.age);
+    cry(&amp;child);
+
+    return 0;
+}
+</code></pre>
               
             </div>
           </div>

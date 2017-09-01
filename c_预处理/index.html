@@ -182,6 +182,12 @@
     <a class="current" href="./">预处理</a>
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#_1">预处理</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_2">头文件</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -280,9 +286,33 @@
                 <p>下面我们研究一下c中的预处理。</p>
 <p>参考资料如下：</p>
 <ul>
-<li><a href="https://zhuanlan.zhihu.com/wheel-creatation">造轮子手记</a></li>
 <li><a href="http://onevcat.com/2014/01/black-magic-in-macro">宏定义的黑魔法-宏菜鸟起飞手册</a></li>
+<li><a href="https://zhuanlan.zhihu.com/wheel-creatation">造轮子手记</a></li>
+<li><a href="https://github.com/pfultz2/Cloak">Cloak</a></li>
 </ul>
+<h2 id="_1">预处理</h2>
+<pre><code class="c">#include &lt;stdio.h&gt;
+#define _STDIO_H
+// #define _STDIO_H 1
+#define p
+#define q 1
+
+int main() {
+    printf(&quot;%s\n&quot;, __DATE__);
+    printf(&quot;%s\n&quot;, __TIME__);
+    printf(&quot;%d\n&quot;, __FILE__);
+    printf(&quot;%d\n&quot;, __LINE__);
+    printf(&quot;%d\n&quot;, __STDC__);
+    printf(&quot;%d\n&quot;, __STDC_HOSTED__);
+    printf(&quot;%d\n&quot;, __STDC_VERSION__);
+    // printf(&quot;%d\n&quot;, _STDIO_H);
+    // printf(&quot;%d\n&quot;, p);
+    printf(&quot;%d\n&quot;, q);
+    return 0;
+}
+</code></pre>
+
+<h2 id="_2">头文件</h2>
 <pre><code class="c">// usehotel.c
 #include &lt;stdio.h&gt;
 #include &quot;hotel.h&quot;
