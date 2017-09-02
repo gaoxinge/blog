@@ -37,7 +37,7 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/", 
-            "text": "\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u6761\u4ef6\u548c\u5faa\u73af\n\n\n\u7c7b\n\n\n\u5143\u7c7b\n\n\n\u88c5\u9970\u5668\n\n\n\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df\n\n\n\u6e90\u7801\u5256\u6790\n\n\n\n\nc\n\n\n\n\nc\n\n\nconst\n\n\n\u6307\u9488\n\n\n\u6570\u7ec4\n\n\n\u591a\u7ef4\u6570\u7ec4\n\n\n\u5b57\u7b26\u4e32\n\n\n\u7ed3\u6784\u4f53\n\n\n\u9884\u5904\u7406\n\n\n\u6807\u51c6\u5e93\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b\n\n\n\u6a21\u677f\u5143\u7f16\u7a0b\n\n\nSTL\n\n\n\u7b2c\u4e09\u65b9\u5e93\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
+            "text": "\u8fd9\u662f\u535a\u5ba2\u7684\u76ee\u5f55\u3002\n\n\npython\n\n\n\n\npython\n\n\n\u89c4\u8303\n\n\n\u7f29\u8fdb\n\n\n\u7f16\u7801\n\n\n\u6a21\u5757\n\n\n\u5e93\n\n\n\u8c03\u8bd5\n\n\n\u6d4b\u8bd5\n\n\nc\u548cc++\n\n\n\u8463\u4f1f\u660e\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54\n\n\n\u6761\u4ef6\u548c\u5faa\u73af\n\n\n\u7c7b\n\n\n\u5143\u7c7b\n\n\n\u88c5\u9970\u5668\n\n\n\u547d\u540d\u7a7a\u95f4\u548c\u4f5c\u7528\u57df\n\n\n\u6e90\u7801\u5256\u6790\n\n\n\n\nc\n\n\n\n\nc\n\n\nconst\n\n\nmalloc\n\n\n\u6307\u9488\n\n\n\u6570\u7ec4\n\n\n\u591a\u7ef4\u6570\u7ec4\n\n\n\u5b57\u7b26\u4e32\n\n\n\u7ed3\u6784\u4f53\n\n\n\u9884\u5904\u7406\n\n\n\u6807\u51c6\u5e93\n\n\nADT\n\n\n\n\nc++\n\n\n\n\nc++\n\n\n\u89c4\u8303\n\n\n\u51fd\u6570\n\n\n\u7ed3\u6784\u4f53\n\n\n\u7c7b\n\n\n\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b\n\n\n\u6a21\u677f\u5143\u7f16\u7a0b\n\n\nSTL\n\n\n\u7b2c\u4e09\u65b9\u5e93\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7b97\u6cd5\n\n\n\n\n\u7f51\u7ad9\n\n\n\n\n\u7f51\u7ad9", 
             "title": "\u76ee\u5f55"
         }, 
         {
@@ -47,7 +47,7 @@
         }, 
         {
             "location": "/index_\u76ee\u5f55/#c", 
-            "text": "c  const  \u6307\u9488  \u6570\u7ec4  \u591a\u7ef4\u6570\u7ec4  \u5b57\u7b26\u4e32  \u7ed3\u6784\u4f53  \u9884\u5904\u7406  \u6807\u51c6\u5e93", 
+            "text": "c  const  malloc  \u6307\u9488  \u6570\u7ec4  \u591a\u7ef4\u6570\u7ec4  \u5b57\u7b26\u4e32  \u7ed3\u6784\u4f53  \u9884\u5904\u7406  \u6807\u51c6\u5e93  ADT", 
             "title": "c"
         }, 
         {
@@ -622,7 +622,7 @@
         }, 
         {
             "location": "/c_c/", 
-            "text": "\ufeffc\u8bed\u8a00\u7531Thompson\u548cRitchie\u5f00\u53d1\u3002\n\n\n\u6807\u51c6\n\n\n\n\n1989\u5e74\uff0cANSI\u53d1\u5e03\u4e86ANSI C\uff0c\u5b9a\u4e49\u4e86\u8bed\u8a00\u548c\u6807\u51c6\u5e93\uff0c\u79f0\u4e3aC89\u3002\n\n\n1990\u5e74\uff0cISO\u53d1\u5e03\u4e86C90\u3002\n\n\n1999\u5e74\uff0cISO\u53d1\u5e03\u4e86C99\u3002\n\n\n2011\u5e74\uff0cISO\u53d1\u5e03\u4e86C11\u3002\n\n\n\n\n\u7f16\u8bd1\u5668\n\n\nc\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709\n\n\n\n\ngcc\uff1aGNU\n\n\ncl\uff1aMicrosoft\n\n\nclang\n\n\n\n\nUNIX\n\n\nUNIX\u81ea\u5e26\u7f16\u8bd1\u5668cc\uff0c\u4e0d\u5c5e\u4e8e\u4e0a\u8ff0\u7684\u4efb\u4f55\u4e00\u79cd\u3002\n\n\nLinux\n\n\nLinux\u81ea\u5e26\u7f16\u8bd1\u5668gcc\uff0c\u4e0b\u9762\u8bf4\u4e00\u4e0b\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ncc/gcc/g++ test.c # \u751f\u6210a.out\n./a.out           # \u8fd0\u884c\n\ncc/gcc/g++ -o test test.c # \u751f\u6210test\n./test                    # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho $?\n\n\n\n\nWindows\n\n\nWindows\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528vc\uff0cvs\u7b49ide\uff0c\u63d0\u4f9b\u7f16\u8bd1\u5668cl\uff0c\u4f46\u7531\u4e8e\u4f53\u79ef\u8fc7\u5927\uff0c\u672c\u4eba\u5e76\u6ca1\u6709\u5b89\u88c5\u3002\n\n\n\u672c\u4eba\u5b89\u88c5\u4e86MinGW+Notepad++\uff0c\u5373\u4f7f\u7528gcc\uff0c\u4e0b\u9762\u662f\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ngcc/g++ test.c # \u751f\u6210a.exe\na/a.exe        # \u8fd0\u884c\n\ngcc/g++ -o test test.c # \u751f\u6210test.exe\ntest/test.exe          # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho %ERRORLEVEL%\n\n\n\n\nMac\n\n\nMac\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528\u96c6\u6210\u73af\u5883Xcode\uff0c\u5176\u63d0\u4f9b\u591a\u79cdc\u7f16\u8bd1\u5668\u3002", 
+            "text": "\ufeffc\u8bed\u8a00\u7531Thompson\u548cRitchie\u5f00\u53d1\u3002\n\n\n\u6807\u51c6\n\n\n\n\n1989\u5e74\uff0cANSI\u53d1\u5e03\u4e86ANSI C\uff0c\u5b9a\u4e49\u4e86\u8bed\u8a00\u548c\u6807\u51c6\u5e93\uff0c\u79f0\u4e3aC89\u3002\n\n\n1990\u5e74\uff0cISO\u53d1\u5e03\u4e86C90\u3002\n\n\n1999\u5e74\uff0cISO\u53d1\u5e03\u4e86C99\u3002\n\n\n2011\u5e74\uff0cISO\u53d1\u5e03\u4e86C11\u3002\n\n\n\n\n\u7f16\u8bd1\u5668\n\n\nc\u7684\u7f16\u8bd1\u5668\u4e3b\u8981\u6709\n\n\n\n\ngcc\uff1aGNU\n\n\ncl\uff1aMicrosoft\n\n\nclang\n\n\n\n\nUNIX\n\n\nUNIX\u81ea\u5e26\u7f16\u8bd1\u5668cc\uff0c\u4e0d\u5c5e\u4e8e\u4e0a\u8ff0\u7684\u4efb\u4f55\u4e00\u79cd\u3002\n\n\nLinux\n\n\nLinux\u81ea\u5e26\u7f16\u8bd1\u5668gcc\uff0c\u4e0b\u9762\u8bf4\u4e00\u4e0b\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ncc/gcc/g++ test.c # \u751f\u6210a.out\n./a.out           # \u8fd0\u884c\n\ncc/gcc/g++ -o test test.c # \u751f\u6210test\n./test                    # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho $?\n\n\n\n\nWindows\n\n\nWindows\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528vc\uff0cvs\u7b49ide\uff0c\u63d0\u4f9b\u7f16\u8bd1\u5668cl\uff0c\u4f46\u7531\u4e8e\u4f53\u79ef\u8fc7\u5927\uff0c\u672c\u4eba\u5e76\u6ca1\u6709\u5b89\u88c5\u3002\n\n\n\u672c\u4eba\u5b89\u88c5\u4e86MinGW+Notepad++\uff0c\u5373\u4f7f\u7528gcc\uff0c\u4e0b\u9762\u662f\u6ce8\u610f\u4e8b\u9879\n\n\n\n\n\u540e\u7f00c\n\n\n\u547d\u4ee4\n\n\n\n\ngcc/g++ test.c # \u751f\u6210a.exe\na/a.exe        # \u8fd0\u884c\n\ngcc/g++ -o test test.c # \u751f\u6210test.exe\ntest/test.exe          # \u8fd0\u884c\n\n\n\n\n\n\n\u67e5\u770bmain\u51fd\u6570\u4e2d\u7684return\n\n\n\n\necho %ERRORLEVEL%\n\n\n\n\nMac\n\n\nMac\u65e0\u81ea\u5e26\u7f16\u8bd1\u5668\uff0c\u63a8\u8350\u4f7f\u7528\u96c6\u6210\u73af\u5883Xcode\uff0c\u5176\u63d0\u4f9b\u591a\u79cdc\u7f16\u8bd1\u5668\u3002\n\n\n\u5176\u4ed6\n\n\n\n\nLinux \u7cfb\u7edf\u7ed3\u6784\u8be6\u89e3\n\n\nC\u7a0b\u5e8f\u7f16\u8bd1\u8fc7\u7a0b\u6d45\u6790\n\n\n\u901a\u8fc7\u8fd99\u672c\u5f00\u6e90\u597d\u4e66\u5b66\u4e60C\u8bed\u8a00\n\n\n\u7528C\u8bed\u8a00\u5199\u4e00\u4e2a\u7b80\u5355\u7684Unix Shell", 
             "title": "c"
         }, 
         {
@@ -656,6 +656,11 @@
             "title": "Mac"
         }, 
         {
+            "location": "/c_c/#_3", 
+            "text": "Linux \u7cfb\u7edf\u7ed3\u6784\u8be6\u89e3  C\u7a0b\u5e8f\u7f16\u8bd1\u8fc7\u7a0b\u6d45\u6790  \u901a\u8fc7\u8fd99\u672c\u5f00\u6e90\u597d\u4e66\u5b66\u4e60C\u8bed\u8a00  \u7528C\u8bed\u8a00\u5199\u4e00\u4e2a\u7b80\u5355\u7684Unix Shell", 
+            "title": "\u5176\u4ed6"
+        }, 
+        {
             "location": "/c_const/", 
             "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684const\u3002\n\n\n\u57fa\u7840\n\n\n#include \nstdio.h\n\n\nint main()\n{\n  const int a = 1;\n  const int b = a;\n  // a = 2; compile error\n  // b = 2; compile error\n  printf(\n%d\\n\n, a); # 1\n  printf(\n%d\\n\n, b); # 1\n  return 0;\n}\n\n\n\n\n#include \nstdio.h\n\n\nint main()\n{\n  const int a = 1;\n  int b = a;\n  // a = 2; compile error\n  b = 2;\n  printf(\n%d\\n\n, a); # 1\n  printf(\n%d\\n\n, b); # 2\n  return 0;\n}\n\n\n\n\n#include \nstdio.h\n\n\nint main()\n{\n  int a = 1;\n  const int b = a;\n  a = 2;\n  // b = 2; compile error\n  printf(\n%d\\n\n, a); # 2\n  printf(\n%d\\n\n, b); # 1\n  return 0;\n}\n\n\n\n\n#include \nstdio.h\n\n\nint main()\n{\n  int a = 1;\n  int b = a;\n  a = 2;\n  b = 2;\n  printf(\n%d\\n\n, a); # 2\n  printf(\n%d\\n\n, b); # 2\n  return 0;\n}\n\n\n\n\n\u6307\u9488\u548c\u6570\u7ec4\n\n\n\n\n\u4e00\u822c\u6307\u9488\n\n\n\n\nint *a; // \u53ea\u80fd\u6307\u5411\u975e\u5e38\u91cf\u6570\u636e\n\n\n\n\n\n\n\u6307\u5411\u5e38\u91cf\u5bf9\u8c61\u7684\u6307\u9488\n\n\n\n\nconst int *a; // \u80fd\u6307\u5411\u5e38\u91cf\u548c\u975e\u5e38\u91cf\u6570\u636e\uff0c\u4e0d\u80fd\u6539\u53d8\u6570\u636e\u7684\u503c\uff0c\u4f46\u80fd\u6539\u53d8\u81ea\u5df1\u7684\u503c\n\n\n\n\n\n\n\u5e38\u91cf\u6307\u9488\n\n\n\n\nint *const a; // \u53ea\u80fd\u6307\u5411\u975e\u5e38\u91cf\u6570\u636e\uff0c\u80fd\u6539\u53d8\u6570\u636e\u7684\u503c\uff0c\u4f46\u4e0d\u80fd\u6539\u53d8\u81ea\u5df1\u7684\u503c\n\n\n\n\n\n\n\u6307\u5411\u5e38\u91cf\u5bf9\u8c61\u7684\u5e38\u91cf\u6307\u9488\n\n\n\n\nconst int* const a;\n\n\n\n\n\n\n\u6570\u7ec4\n\n\n\n\nconst int a[] = {1, 2, 3};\nint const a[] = {1, 2, 3};\nconst int const a[] = {1, 2, 3};\n\n\n\n\n\u51fd\u6570\n\n\n\u53ef\u4ee5\u4f7f\u7528const\u4fee\u9970\u5f62\u53c2\u3002", 
             "title": "const"
@@ -674,6 +679,11 @@
             "location": "/c_const/#_3", 
             "text": "\u53ef\u4ee5\u4f7f\u7528const\u4fee\u9970\u5f62\u53c2\u3002", 
             "title": "\u51fd\u6570"
+        }, 
+        {
+            "location": "/c_malloc/", 
+            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684malloc\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\nmalloc\u51fd\u6570\u8be6\u89e3\n\n\nmalloc\u548cfree\u51fd\u6570\u8be6\u89e3\n\n\n\u5982\u4f55\u5b9e\u73b0\u4e00\u4e2amalloc\n\n\nmalloc\u80cc\u540e\u7684\u7cfb\u7edf\u77e5\u8bc6\n\n\nnew\u548cmalloc\u7684\u533a\u522b", 
+            "title": "malloc"
         }, 
         {
             "location": "/c_\u6307\u9488/", 
@@ -839,6 +849,11 @@
             "location": "/c_\u6807\u51c6\u5e93/#stdarg", 
             "text": "#include  stdio.h \n#include  stdarg.h \ndouble sum(int, ...);\n\nint main() {\n    printf( %f , sum(3, 1.0, 2.0, 3.0));\n    return 0;\n}\n\ndouble sum(int n, ...) {\n    double s = 0.0;\n    va_list ap;\n    va_start(ap, n);\n    for (int i = 0; i   n; ++i) \n        s += va_arg(ap, double);\n    va_end(ap);\n    return s;\n}", 
             "title": "stdarg"
+        }, 
+        {
+            "location": "/c_ADT/", 
+            "text": "\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc\u4e2d\u7684ADT\u3002\n\n\n\u53c2\u8003\u8d44\u6599\u5982\u4e0b\uff1a\n\n\n\n\n\u6570\u636e\u7ed3\u6784\u4e0e\u7b97\u6cd5: C\u8bed\u8a00\u5b9e\u73b0\n\n\nwrite a hash table\n\n\n\u6570\u636e\u7ed3\u6784\n\n\n\u6570\u636e\u7ed3\u6784\u4e0e\u7b97\u6cd5\u5206\u6790", 
+            "title": "ADT"
         }, 
         {
             "location": "/c++_c++/", 
