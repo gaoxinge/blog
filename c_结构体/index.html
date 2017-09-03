@@ -191,9 +191,6 @@
     <li class="toctree-l2"><a href="#_2">函数指针</a></li>
     
 
-    <li class="toctree-l2"><a href="#_3">面向对象编程</a></li>
-    
-
     </ul>
 	    </li>
           
@@ -205,6 +202,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../c_%E6%A0%87%E5%87%86%E5%BA%93/">标准库</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_OOP/">OOP</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -264,7 +266,12 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../leetcode_leetcode/">网站</a>
+    <a class="" href="../leetcode_leetcode/">网站1</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../lintcode_lintcode/">网站2</a>
 	    </li>
           
         </ul>
@@ -300,11 +307,6 @@
             <div class="section">
               
                 <p>下面我们研究一下c中的结构体。</p>
-<p>参考资料如下：</p>
-<ul>
-<li><a href="https://zhuanlan.zhihu.com/enjoyable-lab">有趣的Coding实验</a></li>
-<li><a href="http://blog.csdn.net/foruok/article/details/18192167">C语言面向对象编程</a></li>
-</ul>
 <h2 id="_1">定义和声明</h2>
 <pre><code class="c">#include &lt;stdio.h&gt;
 #define MAXTITL 41
@@ -354,154 +356,6 @@ int main() {
 
 int id(int x) {
     return x;
-}
-</code></pre>
-
-<h2 id="_3">面向对象编程</h2>
-<pre><code class="c">#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
-
-/*
- * C语言中：
- * 1. 不使用指针，就是按值传递；
- * 2. 没有按引用传递，&amp;是C++中的。 
- */
-
-struct Father {
-    char name[20];
-};
-
-void fatherConstructer(struct Father this, const char* name) {
-    strcpy(this.name, name);
-}
-
-void sing(struct Father this) {
-    printf(&quot;singing~~~\n&quot;);
-}
-
-struct Mother {
-    char age[20];
-};
-
-void motherConstructer(struct Mother this, const char* age) {
-    strcpy(this.age, age);
-}
-
-void dance(struct Mother this) {
-    printf(&quot;dancing~~~\n&quot;);
-}
-
-struct Child {
-    struct Father father;
-    struct Mother mother;
-};
-
-void childConstructer(struct Child this, const char* name, const char* age) {
-    fatherConstructer(this.father, name);
-    motherConstructer(this.mother, age);
-}
-
-void cry(struct Child this) {
-    printf(&quot;mmm~~~\n&quot;);
-}
-
-int main () {
-    struct Father father;
-    struct Mother mother;
-    struct Child child;
-
-    fatherConstructer(father, &quot;a&quot;);
-    motherConstructer(mother, &quot;1&quot;);
-    childConstructer(child, &quot;b&quot;, &quot;2&quot;);
-
-    printf(&quot;%s&quot;, father.name);
-    sing(father);
-
-    printf(&quot;%s&quot;, mother.age);
-    dance(mother);
-
-    printf(&quot;%s&quot;, child.father.name);
-    printf(&quot;%s&quot;, child.mother.age);
-    sing(child.father);
-    dance(child.mother);
-    cry(child);
-
-    return 0;
-}
-</code></pre>
-
-<pre><code class="c">#include &lt;stdio.h&gt;
-#include &lt;string.h&gt;
-
-/*
- * C语言中：
- * 1. 从子类到父类要使用&amp;this-&gt;father或者&amp;child.father；
- * 2. 从子类到第一个父类可以使用((struct Father*) this)或者((struct Father*) &amp;child)；
- * 3. 从子类到第二个父类可以使用offsetof；
- * 4. 从父类到子类要使用offsetof；
- * 5. offset函数在stddef.h头文件中。
- */
-
-struct Father {
-    char name[20];
-};
-
-void fatherConstructer(struct Father* this, const char* name) {
-    strcpy(this-&gt;name, name);
-}
-
-void sing(struct Father* this) {
-    printf(&quot;singing~~~\n&quot;);
-}
-
-struct Mother {
-    char age[20];
-};
-
-void motherConstructer(struct Mother* this, const char* age) {
-    strcpy(this-&gt;age, age);
-}
-
-void dance(struct Mother* this) {
-    printf(&quot;dancing~~~\n&quot;);
-}
-
-struct Child {
-    struct Father father;
-    struct Mother mother;
-};
-
-void childConstructer(struct Child* this, const char* name, const char* age) {
-    fatherConstructer(&amp;this-&gt;father, name);
-    motherConstructer(&amp;this-&gt;mother, age);
-}
-
-void cry(struct Child* this) {
-    printf(&quot;mmm~~~\n&quot;);
-}
-
-int main() {
-    struct Father father;
-    struct Mother mother;
-    struct Child child;
-
-    fatherConstructer(&amp;father, &quot;a&quot;);
-    motherConstructer(&amp;mother, &quot;2&quot;);
-    childConstructer(&amp;child, &quot;b&quot;, &quot;1&quot;);
-
-    sing(&amp;father);
-    printf(&quot;%s\n&quot;, father.name);
-
-    dance(&amp;mother);
-    printf(&quot;%s\n&quot;, mother.age);
-
-    sing(&amp;child.father);
-    printf(&quot;%s\n&quot;, child.father.name);
-    dance(&amp;child.mother);
-    printf(&quot;%s\n&quot;, child.mother.age);
-    cry(&amp;child);
-
-    return 0;
 }
 </code></pre>
               

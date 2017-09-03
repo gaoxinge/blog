@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>字符串 - blog</title>
+  <title>OOP - blog</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u5b57\u7b26\u4e32";
-    var mkdocs_page_input_path = "c_\u5b57\u7b26\u4e32.md";
-    var mkdocs_page_url = "/c_\u5b57\u7b26\u4e32/";
+    var mkdocs_page_name = "OOP";
+    var mkdocs_page_input_path = "c_OOP.md";
+    var mkdocs_page_url = "/c_OOP/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -172,21 +172,9 @@
     <a class="" href="../c_%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84/">多维数组</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">字符串</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#char">char数组</a></li>
-    
-
-    <li class="toctree-l2"><a href="#_1">指针</a></li>
-    
-
-    <li class="toctree-l2"><a href="#_2">区别</a></li>
-    
-
-    </ul>
+    <a class="" href="../c_%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -204,9 +192,15 @@
     <a class="" href="../c_%E6%A0%87%E5%87%86%E5%BA%93/">标准库</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../c_OOP/">OOP</a>
+    <a class="current" href="./">OOP</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#_1">面向对象编程</a></li>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -296,7 +290,7 @@
     
       
     
-    <li>字符串</li>
+    <li>OOP</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -306,28 +300,157 @@
           <div role="main">
             <div class="section">
               
-                <p>下面我们研究一下c中的字符串。</p>
-<h2 id="char">char数组</h2>
-<pre><code class="c">char a[] = &quot;1234&quot;;
-char a[] = {'1', '2', '3', '4', '\0'};
-</code></pre>
-
-<h2 id="_1">指针</h2>
-<pre><code class="c">char *a = &quot;1234&quot;;
-</code></pre>
-
-<h2 id="_2">区别</h2>
+                <p>下面我们研究一下c中的OOP。</p>
+<p>参考资料如下：</p>
 <ul>
-<li>字符串常量属于静态存储（static storage）类，被引用的字符串位于静态存储区</li>
-<li>数组初始化是从静态存储区把一个字符串复制给数组</li>
-<li>指针初始化是复制字符串的地址</li>
+<li><a href="https://zhuanlan.zhihu.com/enjoyable-lab">有趣的Coding实验</a></li>
+<li><a href="http://blog.csdn.net/foruok/article/details/18192167">C语言面向对象编程</a></li>
 </ul>
+<h2 id="_1">面向对象编程</h2>
 <pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
 
-int main()
-{
-  printf(&quot;%p&quot;, *&quot;1234&quot;); // 其他常量不行
-  return 0;
+/*
+ * C语言中：
+ * 1. 不使用指针，就是按值传递；
+ * 2. 没有按引用传递，&amp;是C++中的。 
+ */
+
+struct Father {
+    char name[20];
+};
+
+void fatherConstructer(struct Father this, const char* name) {
+    strcpy(this.name, name);
+}
+
+void sing(struct Father this) {
+    printf(&quot;singing~~~\n&quot;);
+}
+
+struct Mother {
+    char age[20];
+};
+
+void motherConstructer(struct Mother this, const char* age) {
+    strcpy(this.age, age);
+}
+
+void dance(struct Mother this) {
+    printf(&quot;dancing~~~\n&quot;);
+}
+
+struct Child {
+    struct Father father;
+    struct Mother mother;
+};
+
+void childConstructer(struct Child this, const char* name, const char* age) {
+    fatherConstructer(this.father, name);
+    motherConstructer(this.mother, age);
+}
+
+void cry(struct Child this) {
+    printf(&quot;mmm~~~\n&quot;);
+}
+
+int main () {
+    struct Father father;
+    struct Mother mother;
+    struct Child child;
+
+    fatherConstructer(father, &quot;a&quot;);
+    motherConstructer(mother, &quot;1&quot;);
+    childConstructer(child, &quot;b&quot;, &quot;2&quot;);
+
+    printf(&quot;%s&quot;, father.name);
+    sing(father);
+
+    printf(&quot;%s&quot;, mother.age);
+    dance(mother);
+
+    printf(&quot;%s&quot;, child.father.name);
+    printf(&quot;%s&quot;, child.mother.age);
+    sing(child.father);
+    dance(child.mother);
+    cry(child);
+
+    return 0;
+}
+</code></pre>
+
+<pre><code class="c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+/*
+ * C语言中：
+ * 1. 从子类到父类要使用&amp;this-&gt;father或者&amp;child.father；
+ * 2. 从子类到第一个父类可以使用((struct Father*) this)或者((struct Father*) &amp;child)；
+ * 3. 从子类到第二个父类可以使用offsetof；
+ * 4. 从父类到子类要使用offsetof；
+ * 5. offset函数在stddef.h头文件中。
+ */
+
+struct Father {
+    char name[20];
+};
+
+void fatherConstructer(struct Father* this, const char* name) {
+    strcpy(this-&gt;name, name);
+}
+
+void sing(struct Father* this) {
+    printf(&quot;singing~~~\n&quot;);
+}
+
+struct Mother {
+    char age[20];
+};
+
+void motherConstructer(struct Mother* this, const char* age) {
+    strcpy(this-&gt;age, age);
+}
+
+void dance(struct Mother* this) {
+    printf(&quot;dancing~~~\n&quot;);
+}
+
+struct Child {
+    struct Father father;
+    struct Mother mother;
+};
+
+void childConstructer(struct Child* this, const char* name, const char* age) {
+    fatherConstructer(&amp;this-&gt;father, name);
+    motherConstructer(&amp;this-&gt;mother, age);
+}
+
+void cry(struct Child* this) {
+    printf(&quot;mmm~~~\n&quot;);
+}
+
+int main() {
+    struct Father father;
+    struct Mother mother;
+    struct Child child;
+
+    fatherConstructer(&amp;father, &quot;a&quot;);
+    motherConstructer(&amp;mother, &quot;2&quot;);
+    childConstructer(&amp;child, &quot;b&quot;, &quot;1&quot;);
+
+    sing(&amp;father);
+    printf(&quot;%s\n&quot;, father.name);
+
+    dance(&amp;mother);
+    printf(&quot;%s\n&quot;, mother.age);
+
+    sing(&amp;child.father);
+    printf(&quot;%s\n&quot;, child.father.name);
+    dance(&amp;child.mother);
+    printf(&quot;%s\n&quot;, child.mother.age);
+    cry(&amp;child);
+
+    return 0;
 }
 </code></pre>
               
@@ -337,10 +460,10 @@ int main()
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../c_%E7%BB%93%E6%9E%84%E4%BD%93/" class="btn btn-neutral float-right" title="结构体">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../c_ADT/" class="btn btn-neutral float-right" title="ADT">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../c_%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84/" class="btn btn-neutral" title="多维数组"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../c_%E6%A0%87%E5%87%86%E5%BA%93/" class="btn btn-neutral" title="标准库"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -366,10 +489,10 @@ int main()
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../c_%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../c_%E6%A0%87%E5%87%86%E5%BA%93/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../c_%E7%BB%93%E6%9E%84%E4%BD%93/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../c_ADT/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
