@@ -415,6 +415,29 @@ int main()
 
 long s(int *a) {return sizeof(a);}
 </code></pre>
+
+<pre><code class="c">#include &lt;stdio.h&gt;
+int s1(int *);
+int s2(int []);
+long s3(int *);
+
+int main() {
+    int a[] = {1, 2, 3};
+    int *b = a;
+    printf(&quot;%d\n&quot;, sizeof(a));      # 12
+    printf(&quot;%d\n&quot;, sizeof(b));      # 4
+    printf(&quot;%d\n&quot;, sizeof(int));    # 4
+    printf(&quot;%d\n&quot;, sizeof(int *));  # 4
+    printf(&quot;%d\n&quot;, s1(a));          # 4
+    printf(&quot;%d\n&quot;, s2(a));          # 4
+    printf(&quot;%d\n&quot;, s3(a));          # 4
+    return 0;
+}
+
+int s1(int *a) {return sizeof(a);}
+int s2(int a[]) {return sizeof(a);}
+long s3(int *a) {return sizeof(a);}
+</code></pre>
               
             </div>
           </div>
