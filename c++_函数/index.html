@@ -226,6 +226,9 @@
     <li class="toctree-l2"><a href="#_3">引用传递</a></li>
     
 
+    <li class="toctree-l2"><a href="#_4">常量引用传递</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -415,6 +418,27 @@ int main()
     cout &lt;&lt; x &lt;&lt; &quot;, &quot; &lt;&lt; y &lt;&lt; endl; // 2, 1
 
     return 0;
+}
+</code></pre>
+
+<h2 id="_4">常量引用传递</h2>
+<pre><code class="c++">#include &lt;iostream&gt;
+using namespace std;
+
+int f(const int &amp;a) {
+    return a;
+}
+
+int main() {
+   int a = 1;
+   int &amp;b = a;
+   const int &amp;c = a;
+   cout &lt;&lt; f(1) &lt;&lt; endl;
+   cout &lt;&lt; f(1+2) &lt;&lt; endl;
+   cout &lt;&lt; f(a) &lt;&lt; endl;
+   cout &lt;&lt; f(b) &lt;&lt; endl;
+   cout &lt;&lt; f(c) &lt;&lt; endl;
+   return 0;
 }
 </code></pre>
               
