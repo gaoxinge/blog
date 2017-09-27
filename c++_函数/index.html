@@ -229,6 +229,9 @@
     <li class="toctree-l2"><a href="#_4">常量引用传递</a></li>
     
 
+    <li class="toctree-l2"><a href="#_5">引用返回</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -439,6 +442,24 @@ int main() {
    cout &lt;&lt; f(b) &lt;&lt; endl;
    cout &lt;&lt; f(c) &lt;&lt; endl;
    return 0;
+}
+</code></pre>
+
+<h2 id="_5">引用返回</h2>
+<pre><code class="c++">#include &lt;iostream&gt;
+using namespace std;
+
+char &amp;get_val(string &amp;str, string::size_type ix) {return str[ix];}
+
+int main() {
+    string s(&quot;a value&quot;);
+    cout &lt;&lt; s &lt;&lt; endl;
+    cout &lt;&lt; get_val(s, 0) &lt;&lt; endl;
+
+    get_val(s, 0) = 'A';
+    cout &lt;&lt; s &lt;&lt; endl;
+    cout &lt;&lt; get_val(s, 0) &lt;&lt; endl;
+    return 0;
 }
 </code></pre>
               
