@@ -232,6 +232,12 @@
     <li class="toctree-l2"><a href="#_5">引用返回</a></li>
     
 
+    <li class="toctree-l2"><a href="#_6">重载</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_7">函数指针</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -460,6 +466,59 @@ int main() {
     cout &lt;&lt; s &lt;&lt; endl;
     cout &lt;&lt; get_val(s, 0) &lt;&lt; endl;
     return 0;
+}
+</code></pre>
+
+<h2 id="_6">重载</h2>
+<pre><code class="c++">#include &lt;iostream&gt;
+using namespace std;
+int f(int);
+double f(double, double);
+int g(int);
+int g(int); // redeclare
+
+int main() {
+    cout &lt;&lt; f(123) &lt;&lt; endl;
+    cout &lt;&lt; f(1.23, 2.45) &lt;&lt; endl;
+    cout &lt;&lt; g(3) &lt;&lt; endl;
+    return 0;
+}
+
+int f(int x) {
+    return x;
+}
+
+double f(double x, double y) {
+    return y;
+}
+
+int g(int x) {
+    return x;
+}
+</code></pre>
+
+<h2 id="_7">函数指针</h2>
+<pre><code class="c++">#include &lt;iostream&gt;
+using namespace std;
+int f(int*, int);
+int g(int*, int);
+
+int main() {
+    typedef int (*PF)(int*, int);
+    typedef int func(int*, int); // function type is not a pointer to functions
+
+    PF p = f;
+    // g = f; // error
+    // func = f; // error
+    return 0;
+}
+
+int f(int* x, int y) {
+    return y;
+}
+
+int g(int* x, int y) {
+    return y+1;
 }
 </code></pre>
               
