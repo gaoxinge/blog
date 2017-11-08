@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>模块 - blog</title>
+  <title>容器 - blog</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u6a21\u5757";
-    var mkdocs_page_input_path = "python_\u6a21\u5757.md";
-    var mkdocs_page_url = "/python_\u6a21\u5757/";
+    var mkdocs_page_name = "\u5bb9\u5668";
+    var mkdocs_page_input_path = "c++_\u5bb9\u5668.md";
+    var mkdocs_page_url = "/c++_\u5bb9\u5668/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -77,12 +77,9 @@
     <a class="" href="../python_%E7%BC%96%E7%A0%81/">编码</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">模块</a>
-    <ul class="subnav">
-            
-    </ul>
+    <a class="" href="../python_%E6%A8%A1%E5%9D%97/">模块</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -220,9 +217,18 @@
     <a class="" href="../c%2B%2B_%E5%87%BD%E6%95%B0/">函数</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../c%2B%2B_%E5%AE%B9%E5%99%A8/">容器</a>
+    <a class="current" href="./">容器</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#_1">默认构造</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_2">二维向量</a></li>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -292,7 +298,7 @@
     
       
     
-    <li>模块</li>
+    <li>容器</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -302,22 +308,66 @@
           <div role="main">
             <div class="section">
               
-                <p>﻿一般结构如下：</p>
-<pre><code>mycompany
--- web
-   -- __init__.py
-   -- utils.py
-   -- www.py
--- __init__.py
--- abc.py
--- utils.py
--- xyz.py
+                <p>下面我们研究一下c++中的容器。</p>
+<h2 id="_1">默认构造</h2>
+<pre><code class="c++">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+class Foo {
+
+    private:
+        int x;
+
+    public:
+        Foo(int);
+        void setX(int);
+        int getX();
+};
+
+Foo::Foo(int x) {this-&gt;x = x;}
+void Foo::setX(int x) {this-&gt;x = x;}
+int Foo::getX() {return this-&gt;x;}
+
+int main() {
+    /*
+     * error: no constructor Foo::Foo()
+     *
+     * Foo f;
+     * f.setX(1);
+     * cout &lt;&lt; f.getX() &lt;&lt; endl;
+     */
+
+    vector&lt;Foo&gt; v1;
+    // error: no constructor Foo::Foo()
+    // vector&lt;Foo&gt; v2(5);
+    vector&lt;Foo&gt; v3(5, 1);
+    return 0;
+}
 </code></pre>
 
-<p>使用的语句为</p>
-<pre><code class="python">from xxx
-import xxx
-as xxx
+<h2 id="_2">二维向量</h2>
+<pre><code class="c++">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using namespace std;
+
+int main() {
+    vector&lt;vector&lt;int&gt;&gt; v(5, vector&lt;int&gt;(5, 0));
+
+    cin &gt;&gt; v[0][0];
+    cin &gt;&gt; v[1][1];
+    cin &gt;&gt; v[2][2];
+    cin &gt;&gt; v[3][3];
+    cin &gt;&gt; v[4][4];
+
+    for (int m = 0; m &lt; v.size(); ++m) {
+        for (int n = 0; n &lt; v[m].size(); ++n)
+            cout &lt;&lt; v[m][n] &lt;&lt; &quot; &quot;;
+        cout &lt;&lt; &quot;\n&quot;;
+    }
+
+    return 0;
+}
 </code></pre>
               
             </div>
@@ -326,10 +376,10 @@ as xxx
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../python_%E5%BA%93/" class="btn btn-neutral float-right" title="库">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../c%2B%2B_%E7%BB%93%E6%9E%84%E4%BD%93/" class="btn btn-neutral float-right" title="结构体">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../python_%E7%BC%96%E7%A0%81/" class="btn btn-neutral" title="编码"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../c%2B%2B_%E5%87%BD%E6%95%B0/" class="btn btn-neutral" title="函数"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -355,10 +405,10 @@ as xxx
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../python_%E7%BC%96%E7%A0%81/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../c%2B%2B_%E5%87%BD%E6%95%B0/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../python_%E5%BA%93/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../c%2B%2B_%E7%BB%93%E6%9E%84%E4%BD%93/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
