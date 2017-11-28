@@ -228,6 +228,9 @@
     <li class="toctree-l2"><a href="#_2">二维向量</a></li>
     
 
+    <li class="toctree-l2"><a href="#_3">算法</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -366,6 +369,25 @@ int main() {
         cout &lt;&lt; &quot;\n&quot;;
     }
 
+    return 0;
+}
+</code></pre>
+
+<h2 id="_3">算法</h2>
+<pre><code class="cc">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int main() {
+    string ws[] = {&quot;the&quot;, &quot;quick&quot;, &quot;red&quot;, &quot;fox&quot;, &quot;jumps&quot;, &quot;over&quot;, &quot;the&quot;, &quot;slow&quot;, &quot;red&quot;, &quot;turtle&quot;};
+    vector&lt;string&gt; words(ws, ws+9);
+    sort(words.begin(), words.end());
+    vector&lt;string&gt;::iterator end_unique = unique(words.begin(), words.end());
+    words.erase(end_unique, words.end());
+    for (vector&lt;string&gt;::iterator iter = words.begin(); iter != words.end(); ++iter)
+        cout &lt;&lt; *iter &lt;&lt; endl;;
     return 0;
 }
 </code></pre>
