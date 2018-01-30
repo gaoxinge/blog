@@ -232,6 +232,9 @@
     <a class="current" href="./">类</a>
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#_1">类型查找</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -302,7 +305,74 @@
           <div role="main">
             <div class="section">
               
-                <p>﻿</p>
+                <p>﻿下面我们研究一下c++中的类。</p>
+<h2 id="_1">类型查找</h2>
+<pre><code class="cc">typedef double Money;
+class Account {
+    public:
+        Money balance() {return bal;} // ok
+    private:
+        Money bal;
+};
+
+
+class Account {
+    public:
+        typedef double Money;
+        Money balance() {return bal;} // ok
+    private:
+        Money bal;
+};
+
+
+class Account {
+    public:
+        Money balance() {return bal;} // error
+    private:
+        typedef double Money;
+        Money bal;
+};
+
+
+typedef double Money;
+class Account {
+    public:
+        typedef int Money;            // ok
+        Money balance() {return bal;} // Money is int
+    private:
+        Money bal = 1.22;             // Money is int
+};
+
+
+typedef double Money;
+class Account {
+    public:
+        Money balance() {return bal;} // Money is double
+    private:
+        typedef int Money;            // ok
+        Money bal = 1.22;             // Money is int
+};
+
+
+typedef double Money;
+class Account {
+    public:
+        Money balance() {return bal;} // Money is double
+    private:
+        Money bal = 1.22;             // Money is double
+        typedef int Money;            // ok
+};
+
+
+class Account {
+    public:
+        typedef double Money;
+        Money balance() {return bal;}
+    private:
+        typedef int Money;            // error
+        Money bal;
+};
+</code></pre>
               
             </div>
           </div>
