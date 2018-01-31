@@ -235,6 +235,9 @@
     <li class="toctree-l2"><a href="#_1">类型查找</a></li>
     
 
+    <li class="toctree-l2"><a href="#_2">构造器</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -372,6 +375,61 @@ class Account {
         typedef int Money;            // error
         Money bal;
 };
+</code></pre>
+
+<h2 id="_2">构造器</h2>
+<pre><code class="cc">#include &lt;iostream&gt;
+
+int main() {
+    int a(9);
+    std::cout &lt;&lt; a &lt;&lt; std::endl;
+
+    int b = 9;
+    std::cout &lt;&lt; b &lt;&lt; std::endl;
+
+    return 0;
+}
+</code></pre>
+
+<pre><code class="cc">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class Sales_item {
+    public:
+        std::string isbn;
+        unsigned units_sold;
+        double revenue;
+        Sales_item(const std::string &amp;book):
+        isbn(book), units_sold(0), revenue(0.0) {}
+};
+
+int main() {
+    Sales_item sales_item(&quot;book&quot;);
+    std::cout &lt;&lt; sales_item.isbn &lt;&lt; std::endl;
+    return 0;
+}
+</code></pre>
+
+<pre><code class="cc">#include &lt;iostream&gt;
+#include &lt;string&gt;
+
+class Sales_item {
+    public:
+        std::string isbn;
+        unsigned units_sold;
+        double revenue;
+        Sales_item(const std::string &amp;book) {
+            isbn = book;
+            units_sold = 0;
+            revenue = 0.0;
+        }
+};
+
+int main() {
+    Sales_item sales_item(&quot;book&quot;);
+    std::cout &lt;&lt; sales_item.isbn &lt;&lt; std::endl;
+    return 0;
+}
 </code></pre>
               
             </div>
