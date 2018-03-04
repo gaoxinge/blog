@@ -66,3 +66,11 @@ echo %ERRORLEVEL%
 ## Mac
 
 Mac无自带编译器，推荐使用集成环境Xcode，其提供多种c编译器。
+
+## 其他
+
+- [Linux 系统结构详解](http://blog.jobbole.com/103511/?utm_source=blog.jobbole.com&utm_medium=relatedPosts)
+- [C程序编译过程浅析](http://blog.jobbole.com/109399/?utm_source=blog.jobbole.com&utm_medium=relatedPosts)
+- [通过这9本开源好书学习C语言](http://blog.jobbole.com/110148/?utm_source=blog.jobbole.com&utm_medium=relatedPosts)
+- [C语言有什么奇技淫巧？](https://www.zhihu.com/question/27417946)
+- [用C语言写一个简单的Unix Shell](http://blog.jobbole.com/111738/?utm_source=blog.jobbole.com&utm_medium=relatedPosts)

@@ -24,18 +24,23 @@
 
 - [c](https://gaoxinge.github.io/blog/c_c/)
 - [const](https://gaoxinge.github.io/blog/c_const/)
+- [malloc](https://gaoxinge.github.io/blog/c_malloc/)
 - [指针](https://gaoxinge.github.io/blog/c_%E6%8C%87%E9%92%88/)
 - [数组](https://gaoxinge.github.io/blog/c_%E6%95%B0%E7%BB%84/)
 - [多维数组](https://gaoxinge.github.io/blog/c_%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84/)
 - [字符串](https://gaoxinge.github.io/blog/c_%E5%AD%97%E7%AC%A6%E4%B8%B2/)
-- [头文件]()
+- [结构体](https://gaoxinge.github.io/blog/c_%E7%BB%93%E6%9E%84%E4%BD%93/)
+- [预处理](https://gaoxinge.github.io/blog/c_%E9%A2%84%E5%A4%84%E7%90%86/)
 - [标准库](https://gaoxinge.github.io/blog/c_%E6%A0%87%E5%87%86%E5%BA%93/)
+- [OOP](https://gaoxinge.github.io/blog/c_OOP/)
+- [ADT](https://gaoxinge.github.io/blog/c_ADT/)
 
 ## c++
 
 - [c++](https://gaoxinge.github.io/blog/c%2B%2B_c%2B%2B/)
 - [规范](https://gaoxinge.github.io/blog/c++_%E8%A7%84%E8%8C%83/)
 - [函数](https://gaoxinge.github.io/blog/c%2B%2B_%E5%87%BD%E6%95%B0/)
+- [容器](https://gaoxinge.github.io/blog/c%2B%2B_%E5%AE%B9%E5%99%A8/)
 - [结构体](https://gaoxinge.github.io/blog/c%2B%2B_%E7%BB%93%E6%9E%84%E4%BD%93/)
 - [类](https://gaoxinge.github.io/blog/c%2B%2B_%E7%B1%BB/)
 - [面对对象编程](https://gaoxinge.github.io/blog/c%2B%2B_%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/)
@@ -49,4 +54,5 @@
 
 ## 网站
 
-- [网站](https://gaoxinge.github.io/blog/leetcode_leetcode/)
+- [网站1](https://gaoxinge.github.io/blog/leetcode_leetcode/)
+- [网站2](https://gaoxinge.github.io/blog/lintcode_lintcode/)

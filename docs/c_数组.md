@@ -99,18 +99,53 @@ int sum(int *start, int *end) {}
 ```
 
 ```c
+// ubuntu 64位，c 64位
 #include <stdio.h>
-long s(int *);
+int s1(int *);
+int s2(int []);
+long s3(int *);
 
-int main()
-{
-  int a[] = {1, 2, 3};
-  printf("%ld\n", sizeof(a));     # 12
-  printf("%ld\n", s(a));          # 8
-  printf("%ld\n", sizeof(int));   # 4
-  printf("%ld\n", sizeof(int *)); # 8
-  return 0;
+int main() {
+    int a[] = {1, 2, 3};
+    int *b = a;
+    printf("%d\n", sizeof(a));      # 12
+    printf("%d\n", sizeof(b));      # 8
+    printf("%d\n", sizeof(int));    # 4
+    printf("%d\n", sizeof(int *));  # 8
+    printf("%d\n", s1(a));          # 8
+    printf("%d\n", s2(a));          # 8
+    printf("%d\n", s3(a));          # 8
+    return 0;
 }
 
-long s(int *a) {return sizeof(a);}
+int s1(int *a) {return sizeof(a);}
+int s2(int a[]) {return sizeof(a);}
+long s3(int *a) {return sizeof(a);}
 ```
+
+```c
+// windows 64位，c 32位
+#include <stdio.h>
+int s1(int *);
+int s2(int []);
+long s3(int *);
+
+int main() {
+    int a[] = {1, 2, 3};
+    int *b = a;
+    printf("%d\n", sizeof(a));      # 12
+    printf("%d\n", sizeof(b));      # 4
+    printf("%d\n", sizeof(int));    # 4
+    printf("%d\n", sizeof(int *));  # 4
+    printf("%d\n", s1(a));          # 4
+    printf("%d\n", s2(a));          # 4
+    printf("%d\n", s3(a));          # 4
+    return 0;
+}
+
+int s1(int *a) {return sizeof(a);}
+int s2(int a[]) {return sizeof(a);}
+long s3(int *a) {return sizeof(a);}
+```
+
+- sizeof的值只与作用的对象类型有关，与输出的占位符类型无关

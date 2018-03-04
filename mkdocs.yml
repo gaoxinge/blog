@@ -22,15 +22,20 @@ pages:
 - 源码剖析:         python_源码剖析.md
 - c:                c_c.md
 - const:            c_const.md
+- malloc:           c_malloc.md
 - 指针:             c_指针.md
 - 数组:             c_数组.md
 - 多维数组:         c_多维数组.md
 - 字符串:           c_字符串.md
-- 头文件:           c_头文件.md
+- 结构体:           c_结构体.md
+- 预处理:           c_预处理.md
 - 标准库:           c_标准库.md
+- OOP:              c_OOP.md
+- ADT:              c_ADT.md
 - c++:              c++_c++.md
 - 规范:             c++_规范.md
 - 函数:             c++_函数.md
+- 容器:             c++_容器.md
 - 结构体:           c++_结构体.md
 - 类:               c++_类.md
 - 面对对象编程:    c++_面对对象编程.md
@@ -38,6 +43,7 @@ pages:
 - STL:              c++_STL.md
 - 第三方库:         c++_第三方库.md
 - 算法:             algorithm_algorithm.md
-- 网站:             leetcode_leetcode.md
+- 网站1:            leetcode_leetcode.md
+- 网站2:            lintcode_lintcode.md
 
 theme: readthedocs
