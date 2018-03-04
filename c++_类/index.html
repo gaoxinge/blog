@@ -238,6 +238,9 @@
     <li class="toctree-l2"><a href="#_2">构造器</a></li>
     
 
+    <li class="toctree-l2"><a href="#friend">friend</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -429,6 +432,23 @@ int main() {
     Sales_item sales_item(&quot;book&quot;);
     std::cout &lt;&lt; sales_item.isbn &lt;&lt; std::endl;
     return 0;
+}
+</code></pre>
+
+<h2 id="friend">friend</h2>
+<ul>
+<li><a href="https://stackoverflow.com/questions/4269034/what-is-the-meaning-of-prepended-double-colon">What is the meaning of prepended double colon “::”?</a></li>
+<li><a href="https://stackoverflow.com/questions/2282725/c-what-is-for">C++ : what is :: for?</a></li>
+</ul>
+<pre><code class="cc">class X {
+    friend class Y;   // class: Y defined before X or in X
+    friend void f();  // nonmember function: f defined before X or in X
+    friend A&amp; A::relocate(A::index, A::index, X&amp;);  // member function: A defined before X, relocate defined in X
+};
+
+class Z {
+    Y *ymem;
+    void g() {return ::f();};
 }
 </code></pre>
               
