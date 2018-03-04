@@ -128,3 +128,21 @@ int main() {
     return 0;
 }
 ```
+
+## friend
+
+- [What is the meaning of prepended double colon “::”?](https://stackoverflow.com/questions/4269034/what-is-the-meaning-of-prepended-double-colon)
+- [C++ : what is :: for?](https://stackoverflow.com/questions/2282725/c-what-is-for)
+
+```cc
+class X {
+    friend class Y;   // class: Y defined before X or in X
+    friend void f();  // nonmember function: f defined before X or in X
+	friend A& A::relocate(A::index, A::index, X&);  // member function: A defined before X, relocate defined in X
+};
+
+class Z {
+    Y *ymem;
+    void g() {return ::f();};
+}
+```

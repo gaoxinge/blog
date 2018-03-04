@@ -74,6 +74,7 @@ Mac无自带编译器，推荐使用集成环境Xcode，其提供多种c++编译
 
 ## 其他
 
+- [毫无编程基础的小白准备学习C语言，用VC6还是VS2015？](https://www.zhihu.com/question/40929777)
 - [通过这9本开源书，学好C++](http://blog.jobbole.com/110975/)
 - [CppCon2017](https://github.com/CppCon/CppCon2017)
 - [C++有哪些奇技淫巧？](https://www.zhihu.com/question/27338446)
