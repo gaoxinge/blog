@@ -237,6 +237,9 @@
     <a class="current" href="./">面对对象编程</a>
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#defining-base-and-derived-classes">Defining Base and Derived Classes</a></li>
+    
+
     </ul>
 	    </li>
           
@@ -302,7 +305,56 @@
           <div role="main">
             <div class="section">
               
-                <p>﻿</p>
+                <p>﻿﻿下面我们研究一下c++中的面向对象编程。</p>
+<h2 id="defining-base-and-derived-classes">Defining Base and Derived Classes</h2>
+<pre><code class="cc">#include&lt;iostream&gt;
+using namespace std;
+
+class Shape {
+    public:
+        void draw() {
+            cout &lt;&lt; &quot;draw Shape&quot; &lt;&lt; endl;
+        }   
+};
+
+class Circle: public Shape {
+    public:
+        void draw() {
+            cout &lt;&lt; &quot;draw Circle&quot; &lt;&lt; endl;
+        }      
+};
+
+int main() {
+    Shape* s = new Circle();
+    s-&gt;draw(); // draw Shape
+    return 0;
+}
+</code></pre>
+
+<pre><code>#include&lt;iostream&gt;
+using namespace std;
+
+class Shape {
+    public:
+        virtual void draw() {
+            cout &lt;&lt; &quot;draw Shape&quot; &lt;&lt; endl;
+        }   
+};
+
+class Circle: public Shape {
+    public:
+        virtual void draw() {
+            cout &lt;&lt; &quot;draw Circle&quot; &lt;&lt; endl;
+        }      
+};
+
+int main() {
+    Shape* s = new Circle();
+    s-&gt;draw(); // draw Circle
+    s-&gt;Shape::draw(); // draw Shape
+    return 0;
+}
+</code></pre>
               
             </div>
           </div>
