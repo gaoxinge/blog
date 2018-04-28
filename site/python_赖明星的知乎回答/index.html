@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>赖明星的知乎回答 - blog</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54";
+    var mkdocs_page_input_path = "python_\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54.md";
+    var mkdocs_page_url = "/python_\u8d56\u660e\u661f\u7684\u77e5\u4e4e\u56de\u7b54/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> blog</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">博客</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../index_%E7%9B%AE%E5%BD%95/">目录</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_python/">python</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%A7%84%E8%8C%83/">规范</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E7%BC%A9%E8%BF%9B/">缩进</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E7%BC%96%E7%A0%81/">编码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E6%A8%A1%E5%9D%97/">模块</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E5%BA%93/">库</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%B0%83%E8%AF%95/">调试</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E6%B5%8B%E8%AF%95/">测试</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_c%E5%92%8Cc%2B%2B/">c和c++</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%91%A3%E4%BC%9F%E6%98%8E%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/">董伟明的知乎回答</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">赖明星的知乎回答</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#python">python之禅</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_1">切片</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_2">列表推导式</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_3">数据结构</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_4">元组</a></li>
+        
+            <li><a class="toctree-l3" href="#_5">字典</a></li>
+        
+            <li><a class="toctree-l3" href="#_6">时间复杂度</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#else">else</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_7">内置函数</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_8">交换</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_9">报错</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_10">全局变量</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_11">上下文管理器</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_12">文件</a></li>
+        
+            <li><a class="toctree-l3" href="#_13">锁</a></li>
+        
+            <li><a class="toctree-l3" href="#_14">游标</a></li>
+        
+            <li><a class="toctree-l3" href="#_15">运算精度</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#_16">并发</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_17">装饰器</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_18">动态类型语言</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_19">设计模式</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_20">单例模式</a></li>
+        
+            <li><a class="toctree-l3" href="#_21">工厂模式</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E6%9D%A1%E4%BB%B6%E5%92%8C%E5%BE%AA%E7%8E%AF/">条件和循环</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E7%B1%BB/">类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E5%85%83%E7%B1%BB/">元类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%A3%85%E9%A5%B0%E5%99%A8/">装饰器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/">命名空间和作用域</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90/">源码剖析</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_c/">c</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_const/">const</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_malloc/">malloc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E6%8C%87%E9%92%88/">指针</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E6%95%B0%E7%BB%84/">数组</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84/">多维数组</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E7%BB%93%E6%9E%84%E4%BD%93/">结构体</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E9%A2%84%E5%A4%84%E7%90%86/">预处理</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E6%A0%87%E5%87%86%E5%BA%93/">标准库</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_OOP/">OOP</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_ADT/">ADT</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_c%2B%2B/">c++</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E8%A7%84%E8%8C%83/">规范</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E5%87%BD%E6%95%B0/">函数</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E5%AE%B9%E5%99%A8/">容器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E7%BB%93%E6%9E%84%E4%BD%93/">结构体</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E7%B1%BB/">类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/">面对对象编程</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E6%A8%A1%E6%9D%BF%E5%85%83%E7%BC%96%E7%A8%8B/">模板元编程</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_STL/">STL</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">第三方库</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../algorithm_algorithm/">算法</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../leetcode_leetcode/">网站1</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../lintcode_lintcode/">网站2</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">blog</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>赖明星的知乎回答</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>整理了赖明星的知乎回答。</p>
+<ul>
+<li><a href="https://www.zhihu.com/question/19794855/answer/129270643">怎么样才算是精通Python</a></li>
+<li><a href="https://www.zhihu.com/question/21408921/answer/129036707">怎样才能写出pythonic的代码</a></li>
+<li><a href="https://www.zhihu.com/question/37751951/answer/73425339">Python有哪些优雅的代码实现</a></li>
+</ul>
+<h2 id="python">python之禅</h2>
+<pre><code class="python">&gt;&gt;&gt; import this
+The Zen of Python, by Tim Peters
+
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let's do more of those!
+</code></pre>
+
+<h2 id="_1">切片</h2>
+<p>切片操作由三部分组成：起点，终点，步长。</p>
+<pre><code class="python">&gt;&gt;&gt; L = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+&gt;&gt;&gt; L[2:-2]
+[3, 4, 5, 6, 7]
+&gt;&gt;&gt; L[-2:2] # 表示L[-2:2:1]
+[]
+&gt;&gt;&gt; L[-2:2:-1]
+[8, 7, 6, 5, 4]
+</code></pre>
+
+<h2 id="_2">列表推导式</h2>
+<pre><code class="python">&gt;&gt;&gt; [i*i for i in range(1, 21) if i% 2 == 0]
+[4, 16, 36, 64, 100, 144, 196, 256, 324, 400] # 列表
+&gt;&gt;&gt; {i*i for i in range(1, 21) if i% 2 == 0}
+set([64, 144, 36, 100, 324, 256, 16, 400, 196, 4]) # 集合
+&gt;&gt;&gt; {i:i*i for i in range(1, 21) if i% 2 == 0}
+{2: 4, 4: 16, 6: 36, 8: 64, 10: 100, 12: 144, 14: 196, 16: 256, 18: 324, 20: 400} # 字典
+
+&gt;&gt;&gt; [item for item in os.listdir(os.path.expanduser('.')) if os.path.isfile(item)]
+&gt;&gt;&gt; [item for item in os.listdir(os.path.expanduser('.')) if os.path.isdir(item)]
+&gt;&gt;&gt; {item: os.path.realpath(item) for item in os.listdir(os.path.expanduser('.'))}
+</code></pre>
+
+<h2 id="_3">数据结构</h2>
+<h3 id="_4">元组</h3>
+<pre><code class="python">from collections import namedtuple
+
+DiskDevice = namedtuple('DiskDevice', ['major_number minor_number device_name read_count read_merged_count',
+                                       'read_sections time_spent_reading write_count write_merged_count ',
+                                       'write_sections time_spent_write io_requests time_spent_doing_io',
+                                       ' weighted_time_spent_doing_io'])
+
+def get_disk_info(disk_name):
+    with open('/proc/diskstats') as f:
+        for line in f:
+            if line.split()[2] == disk_name:
+                return DiskDevice(*(line.split()))
+</code></pre>
+
+<h3 id="_5">字典</h3>
+<p>Bad:</p>
+<pre><code class="python">port = kwargs.get('port')
+if port is None:
+    port = 3306
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">port = kwargs.get('port', 3306)
+</code></pre>
+
+<p>Bad:</p>
+<pre><code class="python">d = {}
+for key, value in pairs:
+    if key not in d:
+        d[key] = []
+    d[key].append(value)
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">from collections import defaultdict
+
+d = defaultdict(list)
+for key, value in pairs:
+    d[key].append(value)
+</code></pre>
+
+<p>Bad:</p>
+<pre><code class="python">d = {}
+with open('/etc/passwd') as f:
+    for line in f:
+        for word in line.strip().split(':'):
+            if word not in d:
+                d[word] = 0
+            d[word] += 1
+</code></pre>
+
+<p>Better:</p>
+<pre><code class="python">from collections import defaultdict
+
+d = defaultdict(int)
+with open('/etc/passwd') as f:
+    for line in f:
+        for word in line.strip().split(':'):
+            d[word] += 1
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">from collections import Counter
+
+word_counts = Counter()
+with open('test.txt') as f:
+    for line in f:
+        word_counts.update(line.strip().split(':'))
+</code></pre>
+
+<p>Bad:</p>
+<pre><code class="python">result = sorted(zip(d.values(), d.keys()), reverse=True)[:3]
+for val, key in result:
+    print  key, ':', val
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">for key, val in word_counts.most_common(3):
+    print key, ':', val
+</code></pre>
+
+<h3 id="_6">时间复杂度</h3>
+<pre><code>list              --- 数组，判断元素有无：慢
+collections.deque --- 双向链表
+set               --- hash表，判断元素有无：快
+</code></pre>
+
+<h2 id="else">else</h2>
+<pre><code class="python">if xxx:
+    pass
+else:
+    pass
+</code></pre>
+
+<pre><code class="python">while xxx:
+    pass
+else:
+    pass
+</code></pre>
+
+<pre><code class="python">try:
+    pass
+except:
+    pass
+else:
+    pass
+finally:
+    pass
+</code></pre>
+
+<h2 id="_7">内置函数</h2>
+<ul>
+<li>sum</li>
+<li>sort</li>
+<li>max</li>
+<li>min</li>
+<li>any</li>
+</ul>
+<pre><code class="python">any(...)
+    any(iterable) -&gt; bool
+
+    Return True if bool(x) is True for any x in the iterable.
+    If the iterable is empty, return False.
+</code></pre>
+
+<ul>
+<li>all</li>
+</ul>
+<pre><code class="python">all(...)
+    all(iterable) -&gt; bool
+
+    Return True if bool(x) is True for all values x in the iterable.
+    If the iterable is empty, return True.
+</code></pre>
+
+<ul>
+<li>enumerate</li>
+</ul>
+<pre><code class="python">L = [i*i for i in range(5)]
+
+for index, data in enumerate(L):
+    print index + 1, ':', data
+
+for index, data in enumerate(L,1):
+    print index, ':', data
+</code></pre>
+
+<ul>
+<li>reversed</li>
+</ul>
+<pre><code class="python">L = [1, 2, 3, 4]
+
+for item in L[::-1]:
+    print item
+
+for item in reversed(L):
+    print item
+</code></pre>
+
+<h2 id="_8">交换</h2>
+<p>Bad:</p>
+<pre><code class="python">t = a
+a = b
+b = t
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">a, b = b, a
+</code></pre>
+
+<h2 id="_9">报错</h2>
+<p>Bad:</p>
+<pre><code class="python">import sys
+sys.stderr.write('It failed!')
+raise SystemExit(1)
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">raise SystemExit('It failed!')
+</code></pre>
+
+<h2 id="_10">全局变量</h2>
+<pre><code class="python">import sys
+import test
+
+a = 1
+
+def func1():
+    global a
+    a += 1
+
+def func2():
+    test.a += 1
+
+def func3():
+    module = sys.modules['test']
+    module.a += 1
+
+func1()
+func2()
+func3()
+</code></pre>
+
+<h2 id="_11">上下文管理器</h2>
+<h3 id="_12">文件</h3>
+<p>Bad:</p>
+<pre><code class="python">try:
+    f = open('/path/to/file', 'r')
+    print f.read()
+finally:
+    if f:
+        f.close()
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">with open('/path/to/file', 'r') as f:
+    print f.read()
+</code></pre>
+
+<p>Bad:</p>
+<pre><code class="python">with open('data.txt') as source:
+    with open('target.txt', 'w') as target:
+        target.write(source.read())
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">with open('data.txt') as source, open('target.txt', 'w') as target:
+    target.write(source.read())
+</code></pre>
+
+<h3 id="_13">锁</h3>
+<p>Bad:</p>
+<pre><code class="python">import threading
+import time
+
+def print_time(threadName, delay, counter):
+    lock.acquire()
+    print 'Staring', threadName
+    lock.release()
+    while counter:
+        time.sleep(delay)
+        lock.acquire()
+        print '%s: %s' % (threadName, time.ctime(time.time()))
+        lock.release()
+        counter -= 1
+    lock.acquire()
+    print 'Exiting', threadName
+    lock.release()
+
+lock = threading.Lock()
+
+t1 = threading.Thread(target=print_time, args=('Thread-1', 1, 5,))
+t2 = threading.Thread(target=print_time, args=('Thread-2', 2, 5,))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print 'Exiting Main Thread'
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">import threading
+import time
+
+def print_time(threadName, delay, counter):
+    with lock:
+        print 'Staring', threadName
+    while counter:
+        time.sleep(delay)
+        with lock:
+            print '%s: %s' % (threadName, time.ctime(time.time()))
+        counter -= 1
+    with lock:
+        print 'Exiting', threadName
+
+lock = threading.Lock()
+
+t1 = threading.Thread(target=print_time, args=('Thread-1', 1, 5,))
+t2 = threading.Thread(target=print_time, args=('Thread-2', 2, 5,))
+
+t1.start()
+t2.start()
+
+t1.join()
+t2.join()
+
+print 'Exiting Main Thread'
+</code></pre>
+
+<h3 id="_14">游标</h3>
+<pre><code class="python">import MySQLdb
+
+db = MySQLdb.connect('localhost', 'root', 'password')
+with db as cursor:
+    cursor.execute('show databases')
+    print cursor.fetchall()
+</code></pre>
+
+<h3 id="_15">运算精度</h3>
+<pre><code class="python">import decimal
+
+with decimal.localcontext() as ctx:
+    ctx.prec = 22
+    print decimal.getcontext().prec
+</code></pre>
+
+<h2 id="_16">并发</h2>
+<p>Bad:</p>
+<pre><code class="python">import time
+import random
+from threading import Thread, Condition
+
+queue = []
+MAX_NUM = 10
+condition = Condition()
+
+class ProducerThread(Thread):
+    def run(self):
+        nums = range(5)
+        global queue
+        while True:
+            condition.acquire()
+            if len(queue) == MAX_NUM:
+                print &quot;Queue full, producer is waiting&quot;
+                condition.wait()
+                print &quot;Space in queue, Consumer notified the producer&quot;
+            num = random.choice(nums)
+            queue.append(num)
+            print &quot;Produced&quot;, num
+            condition.notify()
+            condition.release()
+            time.sleep(random.random())
+
+
+class ConsumerThread(Thread):
+    def run(self):
+        global queue
+        while True:
+            condition.acquire()
+            if not queue:
+                print &quot;Nothing in queue, consumer is waiting&quot;
+                condition.wait()
+                print &quot;Producer added something to queue and notified the consumer&quot;
+            num = queue.pop(0)
+            print &quot;Consumed&quot;, num
+            condition.notify()
+            condition.release()
+            time.sleep(random.random())
+
+
+ProducerThread().start()
+ConsumerThread().start()
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">import time
+import random
+from Queue import Queue
+from threading import Thread
+
+queue = Queue(10)
+
+class ProducerThread(Thread):
+    def run(self):
+        nums = range(5)
+        global queue
+        while True:
+            num = random.choice(nums)
+            queue.put(num)
+            print &quot;Produced&quot;, num
+            time.sleep(random.random())
+
+class ConsumerThread(Thread):
+    def run(self):
+        global queue
+        while True:
+            num = queue.get()
+            queue.task_done()
+            print &quot;Consumed&quot;, num
+            time.sleep(random.random())
+
+ProducerThread().start()
+ConsumerThread().start()
+</code></pre>
+
+<pre><code class="python">import requests
+from multiprocessing import Pool
+
+def get_website_data(url):
+    print requests.get(url)
+
+if __name__ == '__main__':
+    pool = Pool(2)
+    urls = [
+        'http://www.google.com',
+        'http://www.baidu.com',
+        'http://www.163.com'
+    ]
+    pool.map(get_website_data, urls)
+</code></pre>
+
+<pre><code class="python">import requests
+from requests.exceptions import ConnectionError
+from multiprocessing.dummy import Pool as ThreadPool
+
+def scrape(url):
+    try:
+        print requests.get(url)
+    except ConnectionError:
+        print 'Error Occured', url
+    finally:
+        print 'URL', url, 'Scraped'
+
+pool = ThreadPool(processes=3)
+urls = [
+    'https://www.baidu.com',
+    'http://www.meituan.com',
+    'http://blog.csdn.net',
+    'http://xxxyxxx.net'
+]
+pool.map(scrape, urls)
+</code></pre>
+
+<h2 id="_17">装饰器</h2>
+<p>Bad:</p>
+<pre><code class="python">class Store(object):
+    def get_food(self, username, food):
+        if username != 'admin':
+            raise Exception(&quot;This user is not allowed to get food&quot;)
+        return self.storage.get(food)
+
+    def put_food(self, username, food):
+        if username != 'admin':
+            raise Exception(&quot;This user is not allowed to put food&quot;)
+        self.storage.put(food)
+</code></pre>
+
+<p>Better:</p>
+<pre><code class="python">def check_is_admin(username):
+    if username != 'admin':
+        raise Exception(&quot;This user is not allowed to get food&quot;)
+
+class Store(object):
+    def get_food(self, username, food):
+        check_is_admin(username)
+        return self.storage.get(food)
+
+    def put_food(self, username, food):
+        check_is_admin(username)
+        return self.storage.put(food)
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">def check_is_admin(f):
+    def wrapper(*args, **kwargs):
+        if kwargs.get('username') != 'admin':
+            raise Exception(&quot;This user is not allowed to get food&quot;)
+        return f(*arg, **kargs)
+    return wrapper
+
+class Storage(object):
+    @check_is_admin
+    def get_food(self, username, food):
+        return self.storage.get(food)
+
+    @check_is_admin
+    def put_food(self, username, food):
+        return storage.put(food)
+</code></pre>
+
+<p>Bad:</p>
+<pre><code class="python">def is_admin(f):
+    def wrapper(*args, **kwargs):
+        if kwargs.get('username') != 'admin':
+            raise Exception(&quot;This user is not allowed to get food&quot;)
+        return f(*args, **kwargs)
+    return wrapper
+
+
+@is_admin
+def barfoo(username='someone'):
+    '''Do crazy stuff'''
+    pass
+
+print barfoo.func_doc
+print barfoo.__name__
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">import functools
+
+def is_admin(f):
+    @functools.wraps(f)
+    def wrapper(*args, **kwargs):
+        if kwargs.get(&quot;username&quot;) != 'admin':
+            raise Exception(&quot;This user is not allowed to get food&quot;)
+        return f(*args, **kwargs)
+    return wrapper
+
+
+@is_admin
+def barfoo(username='someone'):
+    '''Do crazy stuff'''
+    pass
+
+print barfoo.func_doc
+print barfoo.__name__
+</code></pre>
+
+<p>Bad:</p>
+<pre><code class="python">import functools
+
+def check_is_admin(f):
+    @functools.wraps(f)
+    def wrapper(*args, **kwargs):
+        if kwargs.get(&quot;username&quot;) != 'admin':
+            raise Exception(&quot;This user is not allowed to get food&quot;)
+        return f(*args, **kwargs)
+    return wrapper
+
+
+@check_is_admin
+def get_food(username, food='chocolate'):
+    return &quot;{0} get food: {1}&quot;.format(username, food)
+
+print get_food('admin')
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">import functools
+import inspect
+
+def check_is_admin(f):
+    @functools.wraps(f)
+    def wrapper(*args, **kwargs):
+        func_args = inspect.getcallargs(f, *args, **kwargs)
+        if func_args.get(&quot;username&quot;) != 'admin':
+            raise Exception(&quot;This user is not allowed to get food&quot;)
+        return f(*args, **kwargs)
+    return wrapper
+
+
+@check_is_admin
+def get_food(username, food='chocolate'):
+    return &quot;{0} get food: {1}&quot;.format(username, food)
+
+print get_food('admin')
+</code></pre>
+
+<pre><code class="python">import inspect
+import functools
+
+def check_args(parameters):
+    def decorated(f):
+        @functools.wraps
+        def wrapper(*args, **kwargs):
+            func_args = inspect.getcallargs(f, *args, **kwargs)
+            msg = func_args.get('msg')
+
+            for item in parameters:
+                if msg.body_dict.get(item) is None:
+                    return False, &quot;check failed, %s is not found&quot; % item
+
+            return f(*args, **kwargs)
+        return wrapper
+    return decorated
+
+class AsyncMsgHandler(MsgHandler):
+    @check.check_args(['ContainerIdentifier', 'MonitorSecretKey', &quot;InstanceID&quot;, &quot;UUID&quot;])
+    def init_container(self, msg):
+        pass
+</code></pre>
+
+<h2 id="_18">动态类型语言</h2>
+<p>Bad:</p>
+<pre><code class="python">def a():
+    return 'a'
+
+def b():
+    return 'b'
+
+def c():
+    return 'c'
+
+cmd = raw_input('&gt; ')
+if cmd == 'a':
+    print a()
+elif cmd == 'b':
+    print b()
+elif cmd == 'c':
+    print c()
+else:
+    raise Exception('Action not found')
+</code></pre>
+
+<p>Good:</p>
+<pre><code class="python">class A:
+    def fetch_func(self, action):
+        func= getattr(self, action, None)
+        return func
+
+    def execute(self, action):
+        func= self.fetch_func(action)
+        if func is None:
+            return False
+        return func()
+
+    def a(self):
+        return 'a'
+
+    def b(self, msg):
+        return 'b'
+
+    def c(self, msg):
+        return 'c'
+
+i = A()
+cmd = raw_input('&gt; ')
+result = i.execute(cmd)
+if result:
+    print result
+else:
+    raise Exception('Action not found')
+</code></pre>
+
+<h2 id="_19">设计模式</h2>
+<h3 id="_20">单例模式</h3>
+<pre><code class="python">class Borg:
+    _shared_state = {}
+
+    def __init__(self):
+        self.__dict__ = self.__shared_state
+</code></pre>
+
+<pre><code class="python">def get():
+    if not get.rates:
+        _URL = 'http://www.bankofcanada.ca/stats/assets/csv/fx-seven-day.csv'
+            with urllib.request.urlopen(_URL) as file:
+                for line in file:
+                    pass
+    return get.rates
+</code></pre>
+
+<h3 id="_21">工厂模式</h3>
+<pre><code class="python">class Shape:
+    pass
+
+class Circle(Shape):
+    pass
+
+class Square(Shape):
+    pass
+
+for name in [&quot;Circle&quot;, &quot;Square&quot;]:
+    cls = globals()[name]
+    obj = cls()
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../python_%E6%9D%A1%E4%BB%B6%E5%92%8C%E5%BE%AA%E7%8E%AF/" class="btn btn-neutral float-right" title="条件和循环">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../python_%E8%91%A3%E4%BC%9F%E6%98%8E%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/" class="btn btn-neutral" title="董伟明的知乎回答"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../python_%E8%91%A3%E4%BC%9F%E6%98%8E%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../python_%E6%9D%A1%E4%BB%B6%E5%92%8C%E5%BE%AA%E7%8E%AF/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

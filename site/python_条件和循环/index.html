@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>条件和循环 - blog</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u6761\u4ef6\u548c\u5faa\u73af";
+    var mkdocs_page_input_path = "python_\u6761\u4ef6\u548c\u5faa\u73af.md";
+    var mkdocs_page_url = "/python_\u6761\u4ef6\u548c\u5faa\u73af/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> blog</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">博客</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../index_%E7%9B%AE%E5%BD%95/">目录</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_python/">python</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%A7%84%E8%8C%83/">规范</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E7%BC%A9%E8%BF%9B/">缩进</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E7%BC%96%E7%A0%81/">编码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E6%A8%A1%E5%9D%97/">模块</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E5%BA%93/">库</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%B0%83%E8%AF%95/">调试</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E6%B5%8B%E8%AF%95/">测试</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_c%E5%92%8Cc%2B%2B/">c和c++</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%91%A3%E4%BC%9F%E6%98%8E%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/">董伟明的知乎回答</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%B5%96%E6%98%8E%E6%98%9F%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/">赖明星的知乎回答</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">条件和循环</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#for">for</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_1">容器</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_2">可迭代对象</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_3">迭代器</a></li>
+    
+
+    <li class="toctree-l2"><a href="#_4">生成器</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E7%B1%BB/">类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E5%85%83%E7%B1%BB/">元类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%A3%85%E9%A5%B0%E5%99%A8/">装饰器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/">命名空间和作用域</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90/">源码剖析</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_c/">c</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_const/">const</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_malloc/">malloc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E6%8C%87%E9%92%88/">指针</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E6%95%B0%E7%BB%84/">数组</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84/">多维数组</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E7%BB%93%E6%9E%84%E4%BD%93/">结构体</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E9%A2%84%E5%A4%84%E7%90%86/">预处理</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E6%A0%87%E5%87%86%E5%BA%93/">标准库</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_OOP/">OOP</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_ADT/">ADT</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_c%2B%2B/">c++</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E8%A7%84%E8%8C%83/">规范</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E5%87%BD%E6%95%B0/">函数</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E5%AE%B9%E5%99%A8/">容器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E7%BB%93%E6%9E%84%E4%BD%93/">结构体</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E7%B1%BB/">类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/">面对对象编程</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E6%A8%A1%E6%9D%BF%E5%85%83%E7%BC%96%E7%A8%8B/">模板元编程</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_STL/">STL</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">第三方库</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../algorithm_algorithm/">算法</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../leetcode_leetcode/">网站1</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../lintcode_lintcode/">网站2</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">blog</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>条件和循环</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>﻿下面我们研究python中的条件和循环。</p>
+<p>参考资料如下：</p>
+<ul>
+<li><a href="http://www.cnblogs.com/scolia/p/5690210.html">自定义序列</a></li>
+<li><a href="http://nvie.com/posts/iterators-vs-generators">Iterables vs. Iterators vs. Generators</a></li>
+</ul>
+<h2 id="for">for</h2>
+<p>使用的是可迭代对象。</p>
+<h2 id="_1">容器</h2>
+<p>实现了<strong>getitem</strong>方法。</p>
+<ul>
+<li>列表推导式</li>
+</ul>
+<pre><code class="python">class Foo(object):
+    def __init__(self):
+        self.x = {}
+        self.__index = -1
+
+    def __setitem__(self, key, value):
+        self.x[key] = value 
+
+    def __getitem__(self, key):
+        self.__index += 1
+        if self.__index == len(self.x):
+            self.__index = -1
+            raise IndexError # raise StopIteration or raise StopIteration()
+        return self.x[self.__index]
+
+foo = Foo()
+foo[0] = 1
+foo[1] = 2
+foo[2] = 3
+for i in foo:
+    print i
+</code></pre>
+
+<h2 id="_2">可迭代对象</h2>
+<p>实现了<strong>iter</strong>方法。</p>
+<h2 id="_3">迭代器</h2>
+<p>实现了next方法。</p>
+<h2 id="_4">生成器</h2>
+<p>不通过<strong>iter</strong>和next实现，只可以迭代一次。</p>
+<ul>
+<li>
+<p>生成器表达式</p>
+</li>
+<li>
+<p>生成器函数</p>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../python_%E7%B1%BB/" class="btn btn-neutral float-right" title="类">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../python_%E8%B5%96%E6%98%8E%E6%98%9F%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/" class="btn btn-neutral" title="赖明星的知乎回答"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../python_%E8%B5%96%E6%98%8E%E6%98%9F%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../python_%E7%B1%BB/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

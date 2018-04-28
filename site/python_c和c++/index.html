@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>c和c++ - blog</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "c\u548cc++";
+    var mkdocs_page_input_path = "python_c\u548cc++.md";
+    var mkdocs_page_url = "/python_c\u548cc++/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> blog</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">博客</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../index_%E7%9B%AE%E5%BD%95/">目录</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_python/">python</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%A7%84%E8%8C%83/">规范</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E7%BC%A9%E8%BF%9B/">缩进</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E7%BC%96%E7%A0%81/">编码</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E6%A8%A1%E5%9D%97/">模块</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E5%BA%93/">库</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%B0%83%E8%AF%95/">调试</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E6%B5%8B%E8%AF%95/">测试</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">c和c++</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#ccpython">c/c++调用Python（基础篇）</a></li>
+    
+
+    <li class="toctree-l2"><a href="#pythoncc">Python调用c/c++（基础篇）</a></li>
+    
+
+    <li class="toctree-l2"><a href="#pythoncc_1">Python调用c/c++（高级篇）</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#ctypes">ctypes</a></li>
+        
+            <li><a class="toctree-l3" href="#_1">基本类型</a></li>
+        
+            <li><a class="toctree-l3" href="#_2">数组</a></li>
+        
+            <li><a class="toctree-l3" href="#_3">指针</a></li>
+        
+            <li><a class="toctree-l3" href="#_4">函数指针</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%91%A3%E4%BC%9F%E6%98%8E%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/">董伟明的知乎回答</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%B5%96%E6%98%8E%E6%98%9F%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/">赖明星的知乎回答</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E6%9D%A1%E4%BB%B6%E5%92%8C%E5%BE%AA%E7%8E%AF/">条件和循环</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E7%B1%BB/">类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E5%85%83%E7%B1%BB/">元类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E8%A3%85%E9%A5%B0%E5%99%A8/">装饰器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/">命名空间和作用域</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../python_%E6%BA%90%E7%A0%81%E5%89%96%E6%9E%90/">源码剖析</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_c/">c</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_const/">const</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_malloc/">malloc</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E6%8C%87%E9%92%88/">指针</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E6%95%B0%E7%BB%84/">数组</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E5%A4%9A%E7%BB%B4%E6%95%B0%E7%BB%84/">多维数组</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E7%BB%93%E6%9E%84%E4%BD%93/">结构体</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E9%A2%84%E5%A4%84%E7%90%86/">预处理</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_%E6%A0%87%E5%87%86%E5%BA%93/">标准库</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_OOP/">OOP</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c_ADT/">ADT</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_c%2B%2B/">c++</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E8%A7%84%E8%8C%83/">规范</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E5%87%BD%E6%95%B0/">函数</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E5%AE%B9%E5%99%A8/">容器</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E7%BB%93%E6%9E%84%E4%BD%93/">结构体</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E7%B1%BB/">类</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/">面对对象编程</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E6%A8%A1%E6%9D%BF%E5%85%83%E7%BC%96%E7%A8%8B/">模板元编程</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_STL/">STL</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../c%2B%2B_%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93/">第三方库</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../algorithm_algorithm/">算法</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../leetcode_leetcode/">网站1</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../lintcode_lintcode/">网站2</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">blog</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>c和c++</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>﻿具体可参见</p>
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/20150641?refer=python-dev">Python与C/C++混合编程</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/20152309?refer=python-dev">聊聊Python ctypes模块</a></li>
+</ul>
+<h2 id="ccpython">c/c++调用Python（基础篇）</h2>
+<p>代码</p>
+<pre><code class="c">//my_python.c
+#include &lt;Python.h&gt;
+
+int main(int argc, char *argv[])
+{
+    Py_SetPythonHome(&quot;C:/Python27&quot;);
+    Py_SetProgramName(argv[0]);
+    Py_Initialize();
+    PyRun_SimpleString(&quot;print 'Hello Python!'\n&quot;);
+    Py_Finalize();
+    return 0;
+}
+</code></pre>
+
+<p>编译</p>
+<pre><code>cl my_python.c -I C:\Python27\include C:\Python27\libs\python27.lib
+</code></pre>
+
+<p>运行</p>
+<pre><code>Hello Python!
+</code></pre>
+
+<p>代码</p>
+<pre><code class="python">#great_module.py
+def great_function(a):
+    return a + 1
+</code></pre>
+
+<pre><code class="c">//my_python.c
+#include &lt;Python.h&gt;
+int great_function_from_python(int a);
+
+int great_function_from_python(int a) 
+{
+    int res;
+    PyObject *pModule, *pFunc;
+    PyObject *pArgs, *pValue;
+
+    // import
+    pModule = PyImport_Import(PyString_FromString(&quot;great_module&quot;));
+
+    // great_module.great_function
+    pFunc = PyObject_GetAttrString(pModule, &quot;great_function&quot;); 
+
+    // build args
+    pArgs = PyTuple_New(1);
+    PyTuple_SetItem(pArgs,0, PyInt_FromLong(a));
+
+    // call
+    pValue = PyObject_CallObject(pFunc, pArgs);
+
+    res = PyInt_AsLong(pValue);
+    return res;
+}
+
+int main(int argc, char *argv[])
+{
+    Py_SetPythonHome(&quot;C:/Python27&quot;);
+    Py_Initialize();
+    printf(&quot;%d&quot;, great_function_from_python(2));
+    Py_Finalize();
+    return 0;
+}
+</code></pre>
+
+<p>编译</p>
+<pre><code>cl my_python.c -I C:\Python27\include C:\Python27\libs\python27.lib
+</code></pre>
+
+<p>运行</p>
+<pre><code>3
+</code></pre>
+
+<h2 id="pythoncc">Python调用c/c++（基础篇）</h2>
+<p>代码</p>
+<pre><code class="c">//great_module.c
+#include &lt;Python.h&gt;
+
+int great_function(int a) {
+    return a + 1;
+}
+
+static PyObject * _great_function(PyObject *self, PyObject *args)
+{
+    int _a;
+    int res;
+
+    if (!PyArg_ParseTuple(args, &quot;i&quot;, &amp;_a))
+        return NULL;
+    res = great_function(_a);
+    return PyLong_FromLong(res);
+}
+
+static PyMethodDef GreateModuleMethods[] = {
+    {
+        &quot;great_function&quot;,
+        _great_function,
+        METH_VARARGS,
+        &quot;&quot;
+    },
+    {NULL, NULL, 0, NULL}
+};
+
+PyMODINIT_FUNC initgreat_module(void) {
+    (void) Py_InitModule(&quot;great_module&quot;, GreateModuleMethods);
+}
+</code></pre>
+
+<p>编译</p>
+<pre><code>cl /LD great_module.c /o great_module.pyd -I C:\Python27\include C:\Python27\libs\python27.lib
+</code></pre>
+
+<p>运行</p>
+<pre><code class="python">&gt;&gt;&gt; from great_module import great_function 
+&gt;&gt;&gt; great_function(2)
+3L
+</code></pre>
+
+<h2 id="pythoncc_1">Python调用c/c++（高级篇）</h2>
+<h3 id="ctypes">ctypes</h3>
+<pre><code class="c">//great_module.c
+#include &lt;nmmintrin.h&gt;
+
+#ifdef _MSC_VER
+    #define DLL_EXPORT __declspec( dllexport ) 
+#else
+    #define DLL_EXPORT
+#endif
+
+DLL_EXPORT int great_function(unsigned int n) {
+    return _mm_popcnt_u32(n);
+}
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; from ctypes import *
+&gt;&gt;&gt; great_module = cdll.LoadLibrary('./great_module.dll')
+&gt;&gt;&gt; print great_module.great_function(13)
+</code></pre>
+
+<h3 id="_1">基本类型</h3>
+<pre><code class="python">from ctypes import *
+from platform import *
+
+cdll_names = {
+            'Darwin': 'libc.dylib',
+            'Linux': 'libc.so.6',
+            'Windows': 'msvcrt.dll'
+    }
+
+clib = cdll.LoadLibrary(cdll_names[system()])
+
+# 1
+clib.printf(c_char_p(&quot;Hello %d %f&quot;), c_int(15), c_double(2.3))
+
+# 2
+str_format = c_char_p()
+int_val = c_int()
+double_val = c_double()
+str_format.value = &quot;Hello %d %f&quot;
+int_val.value = 15
+double_val.value = 2.3
+clib.printf(str_format,int_val,double_val)
+</code></pre>
+
+<pre><code class="python">from ctypes import *
+from platform import *
+
+cdll_names = {
+            'Darwin': 'libc.dylib',
+            'Linux': 'libc.so.6',
+            'Windows': 'msvcrt.dll'
+    }
+
+clib = cdll.LoadLibrary(cdll_names[system()])
+
+# 1
+s1 = c_char_p('a')
+s2 = c_char_p('b')
+s3 = clib.strcat(s1, s2)
+print s1.value
+
+# 2
+s1 = c_char_p('a')
+s3 = clib.strcat(s1, 'b')
+print s1.value
+
+# 3
+s3 = clib.strcat('a', 'b')
+print s3
+
+# 4
+clib.strcat.restype = c_char_p
+s4 = clib.strcat('c', 'd')
+print s4
+</code></pre>
+
+<h3 id="_2">数组</h3>
+<pre><code class="c">//great_module.c
+
+#ifdef _MSC_VER
+    #define DLL_EXPORT __declspec( dllexport ) 
+#else
+    #define DLL_EXPORT
+#endif 
+
+DLL_EXPORT int array_get(int a[], int index) {
+    return a[index];
+}
+</code></pre>
+
+<pre><code class="python">&gt;&gt;&gt; from ctypes import *
+&gt;&gt;&gt; great_module = cdll.LoadLibrary('./great_module.dll')
+&gt;&gt;&gt; type_int_array_10 = c_int * 10
+&gt;&gt;&gt; my_array = type_int_array_10()
+&gt;&gt;&gt; my_array[2] = c_int(5)
+&gt;&gt;&gt; print great_module.array_get(my_array,2)
+</code></pre>
+
+<pre><code class="python">from ctypes import *
+
+type_int_array_10 = c_int * 10
+my_array = type_int_array_10()
+my_array[2] = c_int(5)
+</code></pre>
+
+<pre><code class="python">from ctypes import *
+
+type_int_array_10 = c_int * 10
+type_int_array_10_10 = type_int_array_10 * 10
+my_array = type_int_array_10_10()
+my_array[1][2] = 3
+print my_array[1][2]
+</code></pre>
+
+<h3 id="_3">指针</h3>
+<pre><code class="python">from ctypes import *
+
+type_p_int = POINTER(c_int)
+v = c_int(4)
+p_int = type_p_int(v)
+print p_int[0]
+print p_int.contents
+</code></pre>
+
+<pre><code class="python">from ctypes import *
+
+type_p_int = POINTER(c_int)
+v = c_int(4)
+p_int = pointer(v)
+print type(p_int)
+print p_int[0]
+print p_int.contents
+</code></pre>
+
+<h3 id="_4">函数指针</h3>
+<pre><code class="python">from ctypes import *
+from platform import *
+
+cdll_names = {
+            'Darwin' : 'libc.dylib',
+            'Linux'  : 'libc.so.6',
+            'Windows': 'msvcrt.dll'
+        }
+
+clib = cdll.LoadLibrary(cdll_names[system()])
+CMPFUNC = CFUNCTYPE(c_int, POINTER(c_int), POINTER(c_int))
+
+def py_cmp_func(a, b):
+    print type(a)
+    print 'py_cmp_func', a[0], b[0]
+    return a[0] - b[0]
+
+type_array_5 = c_int * 5
+ia = type_array_5(5, 1, 7, 33, 99)
+clib.qsort(ia, len(ia), sizeof(c_int), CMPFUNC(py_cmp_func))
+</code></pre>
+
+<pre><code class="python">from ctypes import *
+from ctypes import wintypes
+
+WNDENUMPROC = WINFUNCTYPE(wintypes.BOOL, wintypes.HWND, wintypes.LPARAM)
+user32 = windll.LoadLibrary('user32.dll')
+
+def EnumWindowsProc(hwnd, lParam):
+    length = user32.GetWindowTextLengthW(hwnd) + 1
+    buffer = create_unicode_buffer(length)
+    user32.GetWindowTextW(hwnd, buffer, length)
+    print buffer.value
+    return True
+
+user32.EnumWindows(WNDENUMPROC(EnumWindowsProc), 0)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../python_%E8%91%A3%E4%BC%9F%E6%98%8E%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/" class="btn btn-neutral float-right" title="董伟明的知乎回答">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../python_%E6%B5%8B%E8%AF%95/" class="btn btn-neutral" title="测试"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../python_%E6%B5%8B%E8%AF%95/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../python_%E8%91%A3%E4%BC%9F%E6%98%8E%E7%9A%84%E7%9F%A5%E4%B9%8E%E5%9B%9E%E7%AD%94/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
