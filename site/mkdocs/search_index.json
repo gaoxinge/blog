@@ -1047,8 +1047,13 @@
         }, 
         {
             "location": "/c++_\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b/", 
-            "text": "\ufeff", 
+            "text": "\ufeff\ufeff\u4e0b\u9762\u6211\u4eec\u7814\u7a76\u4e00\u4e0bc++\u4e2d\u7684\u9762\u5411\u5bf9\u8c61\u7f16\u7a0b\u3002\n\n\nDefining Base and Derived Classes\n\n\n#include\niostream\n\nusing namespace std;\n\nclass Shape {\n    public:\n        void draw() {\n            cout \n \ndraw Shape\n \n endl;\n        }   \n};\n\nclass Circle: public Shape {\n    public:\n        void draw() {\n            cout \n \ndraw Circle\n \n endl;\n        }      \n};\n\nint main() {\n    Shape* s = new Circle();\n    s-\ndraw(); // draw Shape\n    return 0;\n}\n\n\n\n\n#include\niostream\n\nusing namespace std;\n\nclass Shape {\n    public:\n        virtual void draw() {\n            cout \n \ndraw Shape\n \n endl;\n        }   \n};\n\nclass Circle: public Shape {\n    public:\n        virtual void draw() {\n            cout \n \ndraw Circle\n \n endl;\n        }      \n};\n\nint main() {\n    Shape* s = new Circle();\n    s-\ndraw(); // draw Circle\n    s-\nShape::draw(); // draw Shape\n    return 0;\n}", 
             "title": "\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b"
+        }, 
+        {
+            "location": "/c++_\u9762\u5bf9\u5bf9\u8c61\u7f16\u7a0b/#defining-base-and-derived-classes", 
+            "text": "#include iostream \nusing namespace std;\n\nclass Shape {\n    public:\n        void draw() {\n            cout    draw Shape    endl;\n        }   \n};\n\nclass Circle: public Shape {\n    public:\n        void draw() {\n            cout    draw Circle    endl;\n        }      \n};\n\nint main() {\n    Shape* s = new Circle();\n    s- draw(); // draw Shape\n    return 0;\n}  #include iostream \nusing namespace std;\n\nclass Shape {\n    public:\n        virtual void draw() {\n            cout    draw Shape    endl;\n        }   \n};\n\nclass Circle: public Shape {\n    public:\n        virtual void draw() {\n            cout    draw Circle    endl;\n        }      \n};\n\nint main() {\n    Shape* s = new Circle();\n    s- draw(); // draw Circle\n    s- Shape::draw(); // draw Shape\n    return 0;\n}", 
+            "title": "Defining Base and Derived Classes"
         }, 
         {
             "location": "/c++_\u6a21\u677f\u5143\u7f16\u7a0b/", 
